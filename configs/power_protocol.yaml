@@ -1,0 +1,81 @@
+project:
+  title: "EGMS-Drive: A Prospective Evaluation Protocol and Simulation-Based Power Analysis"
+  version: "1.0.0"
+  status: prospective_design_only
+  empirical_data_present: false
+  empirical_performance_claims: false
+  protocol_frozen: true
+  frozen_date: "2026-08-10"
+
+primary_design:
+  endpoint: episode_level_collision
+  endpoint_definition: "At least one physical collision during one prespecified evaluation episode."
+  estimand: candidate_minus_control_risk_difference
+  primary_comparison: "future EGMS-Drive implementation versus aligned/no-graph comparator"
+  control_rate_assumption: 0.06
+  candidate_rate_assumption: 0.03
+  assumption_source: reviewer_requested_planning_scenario_not_observed_data
+  alpha: 0.05
+  sidedness: two-sided
+  target_power: 0.80
+  allocation_ratio: 1.0
+  independent_test: pooled_null_unpooled_alternative_score_approximation
+  paired_test: exact_mcnemar
+
+simulation:
+  master_seed: 20260810
+  canonical_repetitions: 50000
+  exploratory_repetitions: 10000
+  monte_carlo_confidence: 0.95
+  sample_sizes: [150, 300, 450, 600, 749, 765, 900, 1000, 1200, 1500]
+  power_curve_start: 50
+  power_curve_stop: 2000
+  power_curve_step: 10
+
+paired_design:
+  correlations: [-0.04, 0.0, 0.1, 0.2, 0.4, 0.6]
+  planning_correlation: -0.04
+  report_joint_probabilities: true
+
+clustered_design:
+  mean_cluster_size: 9
+  cluster_size_cv_values: [0.0, 0.25, 0.50]
+  icc_values: [0.0, 0.01, 0.05, 0.10, 0.20]
+  planning_icc: 0.05
+  invalid_episode_fraction: 0.05
+  note: "ICC is distinct from cross-method paired correlation. Design-effect results are planning approximations."
+
+scenario_matrix:
+  scenario_families: 5
+  environments: 3
+  traffic_densities: 3
+  allocation_block: 45
+  cluster_interpretation: "One scenario-seed cluster contains nine environment-density episodes."
+
+multiplicity:
+  primary_comparisons: 1
+  secondary_adjustment: holm
+  ablation_comparisons: 4
+  conservative_ablation_alpha: 0.0125
+
+sensitivity:
+  control_rates: [0.03, 0.06, 0.10, 0.15]
+  absolute_reductions: [0.01, 0.02, 0.03, 0.04]
+  target_powers: [0.80, 0.90]
+  precision_half_widths: [0.02, 0.015, 0.01]
+  representative_ci_sample_sizes: [150, 450, 749, 765, 900, 1200, 1500]
+
+ablation_planning:
+  collision_scenarios:
+    - label: headline_6_to_3_percent
+      control_rate: 0.06
+      candidate_rate: 0.03
+    - label: two_events_in_150_gap
+      control_rate: 0.06
+      candidate_rate: 0.04666666666666667
+  module_specific_endpoints:
+    no_cross_modal_alignment: [macro_f1, ece, nll]
+    no_temporal_consistency: [temporal_flip_rate, minade, minfde, miss_rate]
+    no_scene_graph: [relation_f1, decision_error]
+    no_explanation_verifier: [entailment_accuracy, false_accept_rate, fallback_rate]
+  rule: "Every learned ablation must be independently retrained across multiple training seeds."

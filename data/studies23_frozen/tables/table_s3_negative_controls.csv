@@ -1,0 +1,3 @@
+negative_control,endpoint,equivalence_margin,difference_full_minus_ablation,ci_low,ci_high,descriptive_equivalence_met,ci_method,note
+independent: Full vs No graph,minFDE_K (m),0.25,0.06748753074512252,-0.062396826832390284,0.21396219946224113,True,95% paired crossed bootstrap over training replicate and scene (10000 draws),Prespecified descriptive margin; entire crossed-bootstrap CI must lie within it; not TOST.
+spatial: Full vs Spatial-only graph,minFDE_K (m),0.25,0.19849327820750656,-0.017819392009632687,0.5431535434812688,False,95% paired crossed bootstrap over training replicate and scene (10000 draws),Prespecified descriptive margin; entire crossed-bootstrap CI must lie within it; not TOST.

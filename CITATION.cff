@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or its generated publication artifacts, please cite
+  this archived software release and preserve its evidence-boundary statements.
+title: EGMS-Drive Publication Reproducibility
+type: software
+version: 1.1.0
+date-released: 2026-08-16
+authors:
+  - family-names: Lin
+    given-names: Shih-Lin
+    orcid: https://orcid.org/0000-0002-0234-8786
+    affiliation: National Changhua University of Education
+    email: lin040@cc.ncue.edu.tw
+abstract: >-
+  Code-first reproduction package for the EGMS-Drive manuscript figures,
+  tables, compact supplementary material, controlled synthetic mechanism
+  analyses, and prospective collision-power analysis. This source-only edition
+  omits generated outputs and persisted prediction archives. Study 1 is limited to
+  an audited exported-results snapshot; Studies 2-3 are controlled synthetic
+  surrogates; power outputs are conditional planning quantities. The release
+  contains no CARLA, public-dataset, real-vehicle, or empirical LLM evidence.
+keywords:
+  - autonomous driving
+  - controlled synthetic mechanism evaluation
+  - multisensor fusion
+  - temporal scene graph
+  - power analysis
+  - reproducible research
+license: MIT

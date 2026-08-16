@@ -1,0 +1,16 @@
+# Exact top-level versions used for the archived publication reproduction.
+# Install the package itself afterward with: pip install -e . --no-deps
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+seaborn==0.13.2
+PyYAML==6.0.3
+Pillow==12.3.0
+
+# Development, CI, and notebook validation
+pytest==8.4.1
+nbformat==5.10.4
+nbclient==0.10.4
+ipykernel==7.2.0

@@ -1,0 +1,85 @@
+project:
+  id: EGMS_DRIVE_STUDIES_2_3
+  title: Controlled mechanism validation for EGMS-Drive Eqs. (4)-(19)
+  evidence_label: CONTROLLED_SYNTHETIC_MECHANISM_VALIDATION_NOT_EMPIRICAL_DATASET
+  real_datasets_executed: false
+  carla_executed: false
+  preregistered: false
+  analysis_plan_frozen_before_final_full_run: true
+
+common:
+  modalities: [camera, lidar, radar, ego]
+  pilot_training_seeds: [2211, 2521, 2551, 2591, 2621, 2659, 2687, 2711, 2741, 2777, 2801]
+  training_seeds: [3109, 3163, 3203, 3251, 3299, 3343, 3389, 3449, 3491, 3533]
+  bootstrap_repetitions: 10000
+  confidence_level: 0.95
+  calibration_bins: 15
+  calibration_binning: equal_mass
+
+study2:
+  data_seed: 22001
+  sequence_length: 10
+  train_sequences: 800
+  validation_sequences: 200
+  test_sequences: 400
+  stress_sequences: 300
+  latent_dim: 6
+  raw_dim: 10
+  embedding_dim: 8
+  reliability_temperature: 4.0
+  temporal_strength: 0.40
+  modality_dropout_probability: 0.35
+  classifier_C: 1.0
+  classifier_max_iter: 800
+  retrieval_pool_sequences: 300
+  methods:
+    - Full
+    - Equal weighting
+    - No alignment
+    - No temporal consistency
+    - No modality dropout-distillation
+  missing_patterns:
+    - none
+    - camera
+    - lidar
+    - radar
+    - ego
+    - camera+lidar
+  primary_endpoints:
+    Equal weighting: stress_nll
+    No alignment: sas
+    No temporal consistency: feature_drift
+    No modality dropout-distillation: mean_missing_macro_f1_drop
+
+study3:
+  data_seed: 23001
+  train_scenes: 2500
+  validation_scenes: 500
+  test_scenes: 800
+  history_steps: 50
+  future_steps: 60
+  sample_period_s: 0.1
+  modes: 6
+  miss_threshold_m: 2.0
+  max_neighbors: 6
+  intent_classes: [straight, slowing, stopping, cut_in, lane_change, turn_left, turn_right, crossing]
+  classifier_C: 0.3
+  classifier_max_iter: 1000
+  prototypes_per_intent: 3
+  methods:
+    - Full temporal graph
+    - No graph
+    - Spatial-only graph
+    - No predicted-intent gating
+    - Single mode K=1
+  primary_endpoints:
+    No graph: history_dependent_minFDE_K
+    Spatial-only graph: history_dependent_minFDE_K
+    No predicted-intent gating: Brier-minFDE_K
+    Single mode K=1: MR_1
+
+execution_status:
+  CARLA_0.9.16: N/A_NOT_EXECUTED
+  nuScenes: N/A_NOT_DOWNLOADED
+  RADIATE: N/A_NOT_DOWNLOADED
+  Argoverse_2_Motion: N/A_NOT_DOWNLOADED

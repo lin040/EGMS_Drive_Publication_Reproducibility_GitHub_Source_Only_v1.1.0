@@ -1,0 +1,7 @@
+study_module,comparison_endpoint,effect,ci_low,ci_high,effect_display,ci_display,evidence_status
+S1 action,Structured vs Baseline B; macro-F1 up,0.0129,0.0081,0.0175,+0.0129,+0.0081 to +0.0175,Supports synthetic held-out classification improvement
+S1 safety proxy,Structured vs Baseline B; collision rate down,1.11,-3.89,6.39,+1.11 pp,-3.89 to +6.39 pp,Safety superiority not established
+S1 proxy,Near-miss rate down,-9.44,-19.17,0.00,-9.44 pp,-19.17 to 0.00 pp,Boundary-level proxy evidence
+S1 completion,Mean route completion up,3.28,-1.16,7.87,+3.28 pp,-1.16 to +7.87 pp,Improvement not clearly established
+S1 conditional TTC,Collision-free TTC-P5 up,0.377,,, +0.377 s,---,Conditional descriptive estimate
+S1 jerk proxy,Mean episode jerk-P95 down,-9.7624,-11.7983,-7.8408,-9.7624,-11.7983 to -7.8408,Supports synthetic kinematic smoothness proxy
