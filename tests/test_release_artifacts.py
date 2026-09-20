@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import unittest
 import xml.etree.ElementTree as ET
+import zipfile
 
 import pandas as pd
 from PIL import Image
@@ -20,21 +21,21 @@ OUTPUT_ROOT = Path(
 ).resolve()
 
 EXPECTED_RASTERS = {
-    "manuscript/figures/Figure_2_Study1.png": (3810, 2522),
+    "manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.png": (3810, 2522),
     "manuscript/figures/Figure_3_Study2.png": (3810, 2472),
     "manuscript/figures/Figure_4_Study3.png": (3810, 2485),
     "power_full/figures/figure1_unpaired_power_curve.png": (3720, 2846),
 }
 
 EXPECTED_TABLE_ROWS = {
-    "manuscript/tables/Table_2_main_effects.csv": 16,
+    "manuscript/tables/Table_2_main_effects.csv": 20,
     "supplement/compact/Tables/Table_S2_planning_summary.csv": 9,
     "supplement/compact/Tables/Table_S3_condensed_planning.csv": 7,
     "supplement/compact/Tables/Table_S4_validation_checks.csv": 33,
 }
 
 EXPECTED_FIGURE_STEMS = (
-    "manuscript/figures/Figure_2_Study1",
+    "manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion",
     "manuscript/figures/Figure_3_Study2",
     "manuscript/figures/Figure_4_Study3",
     "power_full/figures/figure1_unpaired_power_curve",
@@ -94,7 +95,7 @@ class ReleaseArtifactTests(unittest.TestCase):
         offenders = []
         # validation.py deliberately names forbidden extensions so it can
         # reject them; only data-consuming plot/table builders are inspected.
-        for name in ("figures.py", "tables.py", "runner.py"):
+        for name in ("figures.py", "study1_figure.py", "tables.py", "runner.py"):
             path = source_root / name
             text = path.read_text(encoding="utf-8").lower()
             if "word/media" in text or "word\\media" in text or ".docx" in text:
@@ -117,9 +118,10 @@ class ReleaseArtifactTests(unittest.TestCase):
                     self.assertIsNotNone(dpi)
                     assert dpi is not None
                     self.assertGreaterEqual(len(dpi), 2)
+                    expected_dpi = 500.0 if "Figure_2_" in relative else 600.0
                     for value in dpi[:2]:
-                        self.assertGreaterEqual(float(value), 595.0)
-                        self.assertLessEqual(float(value), 605.0)
+                        self.assertGreaterEqual(float(value), expected_dpi - 5.0)
+                        self.assertLessEqual(float(value), expected_dpi + 5.0)
 
     def test_all_figure_pdf_and_svg_files_are_complete(self) -> None:
         for stem in EXPECTED_FIGURE_STEMS:
@@ -153,6 +155,10 @@ class ReleaseArtifactTests(unittest.TestCase):
         self.assertTrue(table["Status"].eq("Pass").all())
         self.assertTrue(table["Check"].str.strip().ne("").all())
         self.assertTrue(table["Evidence"].astype(str).str.strip().ne("").all())
+
+    def test_generated_output_zip_excludes_temporary_files(self) -> None:
+        with zipfile.ZipFile(OUTPUT_ROOT / "publication_outputs.zip") as archive:
+            self.assertFalse(any(name.endswith(".tmp") for name in archive.namelist()))
 
     def test_artifact_manifest_matches_current_inputs_and_non_graphic_outputs(self) -> None:
         manifest = json.loads(

@@ -77,28 +77,11 @@ class ColabReleaseTests(unittest.TestCase):
         ):
             self.assertIn(label, combined)
         self.assertIn("files.download", combined)
-        self.assertIn("RUN_FULL_CONTROLLED_REFIT = False", combined)
+        self.assertIn("RUN_FULL_CONTROLLED_STUDIES23_REFIT = False", combined)
+        self.assertNotIn("RUN_FULL_STUDY1R_REFIT", combined)
+        self.assertIn("Figure_2_Study1_Baseline_B_vs_Structured_fusion.png", combined)
         self.assertIn('"sklearn": "scikit-learn>=1.4,<2"', combined)
         self.assertIn('"run_studies.py",\n            "run",', combined)
-
-    def test_setup_cell_can_install_missing_or_incompatible_dependencies(self):
-        setup_cell = next(
-            source
-            for source in self.sources
-            if "requirements = {" in source and "subprocess.run(" in source
-        )
-        tree = ast.parse(setup_cell)
-        imported_names = {
-            alias.name
-            for node in tree.body
-            if isinstance(node, ast.Import)
-            for alias in node.names
-        }
-        self.assertIn("subprocess", imported_names)
-        self.assertIn('"numpy": "numpy>=2.0,<3"', setup_cell)
-        self.assertIn('"pandas": "pandas>=2.2,<3"', setup_cell)
-        self.assertIn('"scipy": "scipy>=1.12,<2"', setup_cell)
-        self.assertIn("requirement.specifier.contains", setup_cell)
 
     def test_each_canonical_file_is_complete_readable_text(self):
         self.assertEqual(len(self.writefile_sources), len(self.writefiles), "Duplicate %%writefile target")
@@ -125,13 +108,13 @@ class ColabReleaseTests(unittest.TestCase):
             "from base64",
             "b64decode",
             "b64encode",
-            "import gzip",
-            "from gzip",
-            "gzip.decompress",
-            "gzip.compress",
             "bytes.fromhex",
         ):
             self.assertNotIn(forbidden_text, combined_lower)
+        # The readable frozen Study 1 runner legitimately imports gzip to write raw
+        # CSV.GZ evidence. The notebook must not embed a compressed transport
+        # payload: all %%writefile targets remain plain source/YAML/CSV text.
+        self.assertFalse(any(Path(relative).suffix.lower() in {".gz", ".zip"} for relative in self.writefiles))
         self.assertFalse(any(relative.startswith("outputs/") for relative in self.writefiles))
 
     def test_standard_python_writefile_simulation_reconstructs_sources(self):

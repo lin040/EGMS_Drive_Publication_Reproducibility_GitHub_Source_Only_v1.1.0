@@ -1,0 +1,52 @@
+{
+  "schema": "egms-drive-study1-publication-provenance-2.1",
+  "analysis_classification": "post_hoc_exploratory_controlled_synthetic_evaluation",
+  "public_methods": [
+    "Baseline B",
+    "Structured fusion"
+  ],
+  "public_naming_rule": "Figures, tables, and canonical publication CSVs use only Baseline B and Structured fusion.",
+  "archived_machine_identifier_note": "The frozen evaluation source and audit records retain Structured-R2 as the machine identifier for the modified Structured fusion implementation. It is not a third method.",
+  "implementation_disclosure": "The Structured fusion implementation was modified after the earlier result, selected using development/validation data, frozen before the once-only final evaluation, and is reported as post-hoc exploratory.",
+  "capacity_disclosure": "Baseline B used 56 input features, 4,012 fitted parameters, and 50 epochs; Structured fusion used 145 input features, 29,156 fitted parameters, and 80 epochs. The comparison is not capacity- or optimization-budget-matched and does not isolate fusion alone.",
+  "canonical_publication_inputs": {
+    "study1_metric_summary.csv": "eae78eb3df89029ea484196dabfffa70f190b208599fe0ffcb756ad37a9521a5",
+    "study1_paired_contrasts.csv": "dbf20b812e2ee6d7fd9666bec88b8872bc20cd9974ff120794e19bbc186cb510",
+    "study1_replicate_effects.csv": "66524dd7cdc237df8f2fee09055c60bc0c794810e60aa342fcbb03ee179d58f8"
+  },
+  "validated_internal_inputs": {
+    "provenance/study1_metric_summary_internal.csv": "a263e17a2b2fd9eb5ad294d828cb84d5f10bca9933e142bda8b0864f6e2464bc",
+    "provenance/study1_paired_contrasts_internal.csv": "286624614cf44e96fabe251c39a82f70b165ba6e3b45ff5d4bf28af4b0ba3aa9",
+    "provenance/study1_replicate_effects_internal.csv": "af0e543cc8b7fe5ece65d8af9e9fa7442e3b4ea65ea4a567b0cd42df55366ab3"
+  },
+  "expected_publication_assets": {
+    "Figure_2_Study1_Baseline_B_vs_Structured_fusion.png": "786e10a5fc734d8848ea5d19ffca4dd51dc1e7ef65ccb8131c5a67445f4dcfb9",
+    "Figure_2_Study1_Baseline_B_vs_Structured_fusion.pdf": "69e161678cd36714467d947e2457ca6272d3761d0efa98dce731a5410cd763f2",
+    "Figure_2_Study1_Baseline_B_vs_Structured_fusion.svg": "365f83593dca87a20b95065b7558f0d5382d0e3124bd37b3d06e46d00a78d75a",
+    "Table_2_main_effects.csv": "6e040bb7e393438dbfda91ebdc3df5a1b5d61a6213328eea197c869bdaaa5baa",
+    "Table_2_main_effects.md": "1e68c993bb5d69c7a53b7d5f9994321cbf56526549f0e475909033f99abcf0a7",
+    "Table_2_main_effects.tex": "6e56d57bf657629358ba1f4accff63a7a4122df831bc71362f5b3c826ed80eaf"
+  },
+  "validated_run_counts": {
+    "training_replicates": 10,
+    "fitted_checkpoints": 20,
+    "fixed_test_episodes_per_replicate": 360,
+    "fixed_rollout_episodes_per_replicate": 360,
+    "offline_frame_prediction_rows": 115200,
+    "frame_action_rows": 144000,
+    "event_rows": 10606,
+    "episode_rows": 7200,
+    "bootstrap_rows": 100000,
+    "paired_endpoint_rows": 10
+  },
+  "validation": {
+    "passed": true,
+    "direction_neutral": true,
+    "requires_structured_improvement": false,
+    "raw_recomputation": "All ten endpoints and intervals were recomputed from archived raw rows.",
+    "checkpoint_replay": "All 20 checkpoints reloaded and reproduced fixed-test and rollout logits."
+  },
+  "evidence_boundary": "No CARLA server, public-dataset benchmark, real-vehicle record, or empirical LLM output was used. Rollout endpoints are controlled-synthetic proxies and are not deployment-safety evidence.",
+  "companion_evidence_archive": "EGMS_Drive_Study1R2_Complete_Evidence_v1.0.zip",
+  "legacy_inputs_allowed": false
+}

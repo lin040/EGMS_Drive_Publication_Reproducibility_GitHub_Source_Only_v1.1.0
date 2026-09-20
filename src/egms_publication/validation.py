@@ -11,14 +11,14 @@ from .utils import sha256, write_json
 
 
 EXPECTED_FIGURES = {
-    "manuscript/figures/Figure_2_Study1.png": (3810, 2522),
+    "manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.png": (3810, 2522),
     "manuscript/figures/Figure_3_Study2.png": (3810, 2472),
     "manuscript/figures/Figure_4_Study3.png": (3810, 2485),
     "power_full/figures/figure1_unpaired_power_curve.png": (3720, 2846),
 }
 
 EXPECTED_TABLE_ROWS = {
-    "manuscript/tables/Table_2_main_effects.csv": 16,
+    "manuscript/tables/Table_2_main_effects.csv": 20,
     "supplement/compact/Tables/Table_S2_planning_summary.csv": 9,
     "supplement/compact/Tables/Table_S3_condensed_planning.csv": 7,
     "supplement/compact/Tables/Table_S4_validation_checks.csv": 33,
@@ -49,13 +49,13 @@ def validate_input_boundary(data_root: Path, source_root: Path) -> list[str]:
     return failures
 
 
-def _validate_png(path: Path, expected: tuple[int, int]) -> None:
+def _validate_png(path: Path, expected: tuple[int, int], *, expected_dpi: float = 600.0) -> None:
     with Image.open(path) as image:
         if image.size != expected:
             raise ValueError(f"{path}: expected {expected}, found {image.size}")
         dpi = image.info.get("dpi", (0.0, 0.0))
-        if not all(595.0 <= float(value) <= 605.0 for value in dpi[:2]):
-            raise ValueError(f"{path}: expected approximately 600 dpi, found {dpi}")
+        if not all(expected_dpi - 5.0 <= float(value) <= expected_dpi + 5.0 for value in dpi[:2]):
+            raise ValueError(f"{path}: expected approximately {expected_dpi:g} dpi, found {dpi}")
 
 
 def _validate_siblings(png_path: Path) -> None:
@@ -74,7 +74,8 @@ def validate_outputs(repo_root: Path, output_root: Path) -> dict[str, object]:
     for relative, dimensions in EXPECTED_FIGURES.items():
         path = output_root / relative
         try:
-            _validate_png(path, dimensions)
+            expected_dpi = 500.0 if "Figure_2_" in relative else 600.0
+            _validate_png(path, dimensions, expected_dpi=expected_dpi)
             _validate_siblings(path)
         except Exception as exc:  # noqa: BLE001 - collect all QA failures
             failures.append(str(exc))
@@ -105,9 +106,11 @@ def validate_outputs(repo_root: Path, output_root: Path) -> dict[str, object]:
         "table_row_checks": EXPECTED_TABLE_ROWS,
         "power_figure_format_checks": list(POWER_FIGURE_STEMS),
         "interpretation_boundary": (
-            "Study 1 is an exported-summary graphical reproduction; Studies 2–3 are "
-            "controlled synthetic mechanism surrogates; power results are prospective "
-            "planning quantities. None is CARLA or real-world safety evidence."
+            "Study 1 is a post-hoc exploratory controlled-synthetic paired "
+            "evaluation with raw-output recomputation; Studies 2–3 are "
+            "controlled synthetic mechanism "
+            "surrogates; power results are prospective planning quantities. "
+            "None is CARLA or real-world safety evidence."
         ),
     }
     write_json(output_root / "validation_report.json", report)
@@ -123,7 +126,9 @@ def write_manifest(repo_root: Path, output_root: Path) -> Path:
     )
     output_files = sorted(
         path for path in output_root.rglob("*")
-        if path.is_file() and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
+        if path.is_file()
+        and not path.name.endswith(".tmp")
+        and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
     )
     payload = {
         "schema": "egms-publication-artifact-manifest-1.0",

@@ -10,8 +10,8 @@ and the repository root remain the executable canonical source. CSV/JSON/NPZ
 inputs are intentionally not duplicated here; see `SOURCE_CODE_INDEX.md` for
 their roles and provenance.
 
-- Included files: **24**
-- Aggregate source SHA-256: `78e38163fd949175e1e6bef492f6fd3c7f815925a0e024af6ec10f2954f514db`
+- Included files: **45**
+- Aggregate source SHA-256: `6fa7afc3572ac5105451bce75dc4b55aec4c794721c70b6b1f4db45acff90dde`
 
 ## File inventory
 
@@ -19,21 +19,26 @@ their roles and provenance.
 |---|---:|---:|---:|---|
 | `configs/power_protocol.yaml` | yaml | 81 | 2814 | `153d25f3faf70de159a0f0f96e72c654cad62c3808ac498133a1975ef9993e6f` |
 | `configs/studies23.yaml` | yaml | 85 | 2293 | `dbf401c42ebd076a05a344c419a898d562f51ab7fea497cdb3bd979c5899264e` |
+| `configs/study1r2_development.yaml` | yaml | 227 | 8086 | `f2d2fc3d19e19897c873371061b556eb08cd2b17db9485ef53b27dff0eb829fd` |
+| `configs/study1r2_evaluation_frozen.yaml` | yaml | 223 | 7618 | `e0417b77987cb5ab50d6e1aa45353a1dd00d642d6d38985b1169ded28c357513` |
 | `run_publication.py` | python | 13 | 238 | `808842fa11f8552fb1667d9318842845100df586ea40ec1fc140fbe7bff38059` |
 | `run_studies.py` | python | 17 | 348 | `85b411e70ed5251cd182f6bccadcb61bdb4907b1d088ff0a792d9abcec5aa948` |
-| `src/egms_power/__init__.py` | python | 19 | 497 | `644856e8526a4fdd5e2db3cac02c7a74e8d5cd010cbb4eed8593ecb53027c72d` |
+| `run_study1.py` | python | 25 | 642 | `10a0581e060f2059234fb89fd73473ce93ceb884a4abb50c71af6407a32f36fc` |
+| `run_study1r2.py` | python | 19 | 397 | `91a3b4c2442a8b2e5fd0f355edfbdd9f9981ec1d5539d1bcc96b87a8de31d85b` |
+| `src/egms_power/__init__.py` | python | 19 | 497 | `8ef84653f4514480e703bb41b39cbe76aea748cf85d57b47f23b494266228ffa` |
 | `src/egms_power/cli.py` | python | 62 | 1807 | `ca1e11acfbaf8595a85bd15df1904bfd5f444977f03badcccd985ede8beae4f6` |
 | `src/egms_power/config.py` | python | 150 | 6082 | `55bdca4987e53737c3cc16dc4cd56a7b712c7bc334a6190879fcaf077cba13c5` |
 | `src/egms_power/pipeline.py` | python | 1201 | 52660 | `e12b45dd4856b6af741e9b7126d85d46be1f99ed2a998929e13ce7ac8d991a95` |
 | `src/egms_power/statistics.py` | python | 525 | 17637 | `4e89b5e94979244ced4238ee13fe151cd2c2ab2adddc70c5b7588024830b08bc` |
-| `src/egms_publication/__init__.py` | python | 3 | 89 | `fa0a0705c8a61bdb72145aec3b50a3255f412372f89ec99e7c43f7729b75d4c7` |
-| `src/egms_publication/figures.py` | python | 513 | 19140 | `ea8830203d838ae0503bf7945d507b9faf1b888da48686fbac053cf77e8bafca` |
-| `src/egms_publication/runner.py` | python | 302 | 12055 | `3ab9303e1502db7f2b0301e7a64f32f76e3302d0ae2d3877964f693d5296de91` |
+| `src/egms_publication/__init__.py` | python | 3 | 89 | `05d7fe720b4df5a1ed0ebdf98f966221e178ff221f880f0d7bddce3fe61688dd` |
+| `src/egms_publication/figures.py` | python | 357 | 13093 | `195f6c8932912818b9892f6bf0b40a90a0d1bdfdb562d17ded259f6b6c717b1b` |
+| `src/egms_publication/runner.py` | python | 331 | 13152 | `8e4b526f93bc7d19dc28ad7efeb3508ce62d4ed5d95ba098441674b19c543c3e` |
+| `src/egms_publication/study1_figure.py` | python | 382 | 13658 | `d0b434425cb6ae33a29d2fc094736a840bed1e226a861947a6f956357e4a4a0a` |
 | `src/egms_publication/style.py` | python | 114 | 3916 | `b83f463863e12c4441ee08d0108ec9fd6c2c6aae3740050e8a88cd8e0fc10969` |
-| `src/egms_publication/tables.py` | python | 329 | 14497 | `d7ef477d356c64150752dae8845bbfbf4d4dcb884d3f5581effdab8c20412876` |
+| `src/egms_publication/tables.py` | python | 369 | 16403 | `60dc8026a0884e74ac4ee7bc9ef4ed95235c20d5999163f3464583cc38f14db6` |
 | `src/egms_publication/utils.py` | python | 78 | 2728 | `12fe7ca58cd64c235f24b78cc11feac2d805e420091a30c9d7cf0300a8f795c4` |
-| `src/egms_publication/validation.py` | python | 155 | 6161 | `76f9a1f41e34a9d16f1221d418087e20664863e098f5630004ac9ab5e0f2024b` |
-| `src/egms_studies23/__init__.py` | python | 3 | 93 | `712de5162d097cc5acf72b98c091d79b029c6d4c45878af7d8a0d894256abdb8` |
+| `src/egms_publication/validation.py` | python | 160 | 6492 | `acdc2639bbdd2b4d9762e079dc75920761abc5f8debb13229e94a060faf8e2a8` |
+| `src/egms_studies23/__init__.py` | python | 4 | 94 | `53d91643ee78f14f866fd6006d28016670801f0ff968f547b956b63791b9e01d` |
 | `src/egms_studies23/common.py` | python | 204 | 7346 | `80405ee26c91bd85b99eebfc087f716d2a3b1355522bcdb254c06d33358c171a` |
 | `src/egms_studies23/plots.py` | python | 398 | 17969 | `245ae8ce8f1a55a17e964b6e7f0a520cf69d9b7dbf2a0d40890aca9c7f3e1ec6` |
 | `src/egms_studies23/reporting.py` | python | 611 | 24423 | `9926cc96bfa781fcd9509f059440095f27d51fb878277b82c3b39af4389d9ec1` |
@@ -41,6 +46,22 @@ their roles and provenance.
 | `src/egms_studies23/study2.py` | python | 800 | 36448 | `4d0a42e5e67a912021483bc871a6fa687a912f6d4973f13abfb82a57c4c1a1a4` |
 | `src/egms_studies23/study3.py` | python | 717 | 32302 | `df3592b5ebed376481044fff53f2d320063970db99a3f67329e27b7e9c69a3a9` |
 | `src/egms_studies23/validation.py` | python | 351 | 22571 | `252b65b19e0d709742ca5c9a2f948da548af69549eb28e91fbb931f76d84fc22` |
+| `src/egms_study1r/__init__.py` | python | 11 | 407 | `3ffeda60dee9ff329291bd8615a51fd2ca0070c58203edfb00e8328e39cdecb5` |
+| `src/egms_study1r/common.py` | python | 3 | 131 | `9070acfc3e7639918e84ef695d52eab0d6df855eeeac8c35c4cb306a116fbbaf` |
+| `src/egms_study1r/generator.py` | python | 790 | 31553 | `acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0` |
+| `src/egms_study1r/runner.py` | python | 5 | 138 | `b8ce1459c624118908cb466e04f21e0cd4357771d988dea9405154246c03c39d` |
+| `src/egms_study1r2/__init__.py` | python | 32 | 706 | `a2b894983aaf98a507e78bc4fc4a7080329d01debfb3b29e1b6be4edf8680701` |
+| `src/egms_study1r2/common.py` | python | 298 | 11683 | `d56f08b66c69aafff2f40ec7bfc196b26c19001390b78717deea4a46e30d0e86` |
+| `src/egms_study1r2/development.py` | python | 334 | 14831 | `0e52b541530babe37d660fc6db39efaac8f8b32b093b66793bd77523c58ed6f1` |
+| `src/egms_study1r2/generator.py` | python | 790 | 31553 | `acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0` |
+| `src/egms_study1r2/models.py` | python | 918 | 36841 | `9dd5691fc5f5615fdf7f0186b8d78c16f320a66d45681645c8abef20ccec04c8` |
+| `src/egms_study1r2/plotting.py` | python | 336 | 11755 | `3f5292d615acd40c784e8b8dd83f8a3058e105f56dc8e787e445921d80653a6c` |
+| `src/egms_study1r2/reporting.py` | python | 244 | 9799 | `3a8fc906a8870968d4898f43e232a921c4b685cf9c8d9ee75e3d36f66aea9529` |
+| `src/egms_study1r2/rollout.py` | python | 298 | 13370 | `4ed6c941be08ac3e67a7d9827aeb4270d6c41909cbc520a79791d60d2a145920` |
+| `src/egms_study1r2/runner.py` | python | 763 | 33020 | `38ede81ceb932e60b7c89fb38a228a52b19753ba507bca5b2c2a6fb29ae7a004` |
+| `src/egms_study1r2/statistics.py` | python | 786 | 31472 | `acb8f009acc5aaadbd56e8d9cba8115607854896d725324f95fdfba7e094470b` |
+| `src/egms_study1r2/training.py` | python | 564 | 22191 | `7e160d25e3b73b3074519ed74fe5861d48808c925c620909f4dd66e0b24bf090` |
+| `src/egms_study1r2/validation.py` | python | 560 | 27717 | `d383895a431e826f702254169a0e5b55692afe6a46a8e654333eb6d9b567477c` |
 
 ## Full source
 
@@ -226,6 +247,472 @@ execution_status:
   Argoverse_2_Motion: N/A_NOT_DOWNLOADED
 ~~~~
 
+### `configs/study1r2_development.yaml`
+
+- SHA-256: `f2d2fc3d19e19897c873371061b556eb08cd2b17db9485ef53b27dff0eb829fd`
+- Bytes: `8086`
+
+~~~~yaml
+project:
+  id: EGMS_DRIVE_STUDY_1R2_DEVELOPMENT
+  title: Post-hoc exploratory development of Structured-R2 versus Baseline B
+  version: 1.0.0-development
+  evidence_label: EXPLORATORY_CONTROLLED_SYNTHETIC_STUDY1R2_NOT_REAL_WORLD_SAFETY_EVIDENCE
+  frozen_on: 2026-08-26
+  protocol_status: DEVELOPMENT_ONLY_NOT_FINAL_EVALUATION
+  carla_executed: false
+  public_datasets_executed: false
+  real_vehicle_executed: false
+
+actions:
+  names: [KEEP, SLOW, YIELD, STOP]
+  class_ids: [0, 1, 2, 3]
+
+scenario_matrix:
+  families: [cut_in, platoon_brake, occluded_crossing, right_turn, merge]
+  environments: [clear, rain, fog]
+  densities: [low, medium, high]
+  expected_cells: 45
+
+data:
+  dt_s: 0.2
+  frames_per_episode: 16
+  rollout_frames: 20
+  train_episodes_per_cell: 4
+  validation_episodes_per_cell: 2
+  test_episodes_per_cell: 8
+  rollout_episodes_per_cell: 8
+  fixed_validation_seed: 21013
+  fixed_test_seed: 21017
+  fixed_rollout_seed: 21019
+  training_data_seeds: [5129, 5171, 5227, 5273, 5323, 5381, 5431, 5471, 5521, 5573]
+  formal_training_replicates: 10
+  pilot_training_data_seeds: [1129, 1171, 1227]
+
+generator:
+  semantic_variables: [gap_m, closing_speed_mps, ego_speed_mps, crossing_risk, route_urgency]
+  modalities: [camera, lidar, radar, ego]
+  observation_clips:
+    gap_m: [-5.0, 80.0]
+    closing_speed_mps: [-12.0, 20.0]
+    ego_speed_mps: [0.0, 30.0]
+    crossing_risk: [0.0, 1.0]
+    route_urgency: [0.0, 1.0]
+  environment_quality:
+    clear: {camera: 0.94, lidar: 0.93, radar: 0.88, ego: 0.99}
+    rain:  {camera: 0.55, lidar: 0.65, radar: 0.91, ego: 0.98}
+    fog:   {camera: 0.34, lidar: 0.58, radar: 0.92, ego: 0.98}
+  density_quality_reduction: {low: 0.00, medium: 0.03, high: 0.07}
+  base_noise_sd:
+    camera: {gap_m: 2.00, closing_speed_mps: 1.10, ego_speed_mps: 0.60, crossing_risk: 0.10, route_urgency: 0.10}
+    lidar:  {gap_m: 0.70, closing_speed_mps: 0.55, ego_speed_mps: 0.45, crossing_risk: 0.18, route_urgency: 0.15}
+    radar:  {gap_m: 1.30, closing_speed_mps: 0.25, ego_speed_mps: 0.55, crossing_risk: 0.22, route_urgency: 0.20}
+    ego:    {gap_m: 4.00, closing_speed_mps: 1.80, ego_speed_mps: 0.08, crossing_risk: 0.16, route_urgency: 0.04}
+  density_profiles:
+    low:    {initial_gap_m: 34.0, initial_ego_speed_mps: 15.0, background_crossing_risk: 0.04}
+    medium: {initial_gap_m: 25.0, initial_ego_speed_mps: 12.5, background_crossing_risk: 0.08}
+    high:   {initial_gap_m: 18.0, initial_ego_speed_mps: 10.0, background_crossing_risk: 0.13}
+  family_profiles:
+    cut_in:
+      gap_adjustment_m: -3.0
+      initial_closing_speed_mps: 2.3
+      lead_acceleration_peak_mps2: -1.0
+      gap_impulse_m: -7.0
+      crossing_risk_peak: 0.46
+      route_urgency_peak: 0.30
+    platoon_brake:
+      gap_adjustment_m: 0.0
+      initial_closing_speed_mps: 1.0
+      lead_acceleration_peak_mps2: -4.0
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.20
+      route_urgency_peak: 0.24
+    occluded_crossing:
+      gap_adjustment_m: 8.0
+      initial_closing_speed_mps: 0.2
+      lead_acceleration_peak_mps2: -0.4
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.97
+      route_urgency_peak: 0.44
+    right_turn:
+      gap_adjustment_m: 3.0
+      initial_closing_speed_mps: 0.8
+      lead_acceleration_peak_mps2: -1.5
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.74
+      route_urgency_peak: 0.91
+    merge:
+      gap_adjustment_m: -2.0
+      initial_closing_speed_mps: 1.6
+      lead_acceleration_peak_mps2: -1.2
+      gap_impulse_m: -4.0
+      crossing_risk_peak: 0.69
+      route_urgency_peak: 0.78
+  initial_gap_sd_m: 2.5
+  initial_speed_sd_mps: 0.8
+  initial_closing_speed_sd_mps: 0.45
+  event_center_fraction: 0.55
+  event_center_jitter_sd: 0.05
+  event_width_fraction: 0.14
+  exogenous_acceleration_noise_sd_mps2: 0.12
+  episode_health_low: 0.85
+  episode_health_high: 1.05
+  quality_observation_sd: 0.04
+  dropout_base_probability: 0.02
+  dropout_quality_slope: 0.12
+  outlier_base_probability: 0.01
+  outlier_quality_slope: 0.05
+  outlier_scale: 6.0
+
+oracle:
+  ttc_cap_s: 20.0
+  comfortable_deceleration_mps2: 4.5
+  standstill_gap_m: 2.0
+  reaction_time_s: 0.7
+  stop_ttc_s: 1.20
+  stop_crossing_risk: 0.88
+  yield_ttc_s: 2.40
+  yield_crossing_risk: 0.66
+  slow_ttc_s: 5.00
+  slow_crossing_risk: 0.36
+  yield_stopping_margin_m: 0.0
+  slow_stopping_margin_m: 5.0
+
+dynamics:
+  acceleration_lag: 0.55
+  maximum_acceleration_mps2: 2.0
+  maximum_deceleration_mps2: -6.0
+  slow_command_mps2: -1.2
+  yield_command_mps2: -2.8
+  stop_command_mps2: -5.0
+  keep_speed_gain: 0.8
+  keep_acceleration_limit_mps2: 1.4
+  collision_gap_m: 0.75
+  near_miss_ttc_s: 1.50
+  near_miss_gap_m: 3.0
+  crossing_collision_risk: 0.985
+  crossing_collision_speed_mps: 4.0
+  crossing_near_miss_risk: 0.80
+  route_goal_fraction_of_nominal_progress: 0.72
+
+models:
+  shared_head:
+    hidden_layer_sizes: [48, 24]
+    activation: relu
+    solver: adam
+    alpha: 0.0001
+    batch_size: 128
+    learning_rate_init: 0.002
+    epochs: 50
+    class_weighting: inverse_frequency_balanced_from_training_split
+    checkpoint_selection: minimum_fixed_validation_nll
+  baseline_b:
+    encoder: quality_gated_raw_temporal_concatenation_with_availability
+    missing_value_handling: zero_after_quality_gating
+    input_feature_count: 56
+    scaling: training_standardization
+  structured:
+    encoder: dual_path_raw_plus_compact_plus_inverse_variance_physics
+    missing_value_handling: zero_when_no_reliable_support
+    derived_physics_features: [ttc_s, positive_closing_gap_ratio, crossing_closing_interaction, urgency_crossing_interaction]
+    input_feature_count: 145
+  baseline_b_training:
+    hidden_layer_sizes: [48, 24]
+    alpha: 0.0001
+    batch_size: 128
+    learning_rate_init: 0.002
+    epochs: 50
+    class_weighting: inverse_frequency_balanced_from_training_split
+  structured_r2_training:
+    hidden_layer_sizes: [96, 48]
+    alpha: 0.0005
+    batch_size: 128
+    learning_rate_init: 0.0015
+    epochs: 70
+    class_weighting: inverse_frequency_balanced_from_training_split
+    scaling: training_standardization
+  model_training_seeds: [6121, 6173, 6229, 6271, 6323, 6389, 6421, 6473, 6521, 6571]
+  temperature_scaling:
+    enabled: true
+    lower_bound: 0.5
+    upper_bound: 5.0
+    fitted_on: fixed_validation
+
+metrics:
+  action: [macro_f1, nll, multiclass_brier, ece]
+  action_classes: 4
+  ece_bins: 15
+  ece_binning: equal_width
+  episode: [collision_rate, near_miss_rate, critical_event_rate, route_completion_rate, ttc_p5_s, jerk_p95_mps3]
+  ttc_conditioning: jointly_collision_free_episode_pairs_only
+  jerk_definition: per_episode_p95_absolute_acceleration_difference_over_dt
+
+statistics:
+  estimand: structured_r2_minus_baseline_b
+  paired_dimensions: [training_replicate, fixed_test_episode]
+  bootstrap_type: paired_crossed_cluster_percentile
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 121031
+  confidence_level: 0.95
+  quantile_algorithm: numpy_linear
+  directionality_tolerance: 1.0e-12
+  sign_flip_tests: exact_all_1024_sign_patterns
+  multiplicity_adjustment: holm
+
+artifacts:
+  float_output_decimals: 10
+  compressed_csv_gzip_mtime: 0
+  checkpoint_format: deterministic_portable_json
+  hash_algorithm: SHA-256
+  legacy_study1_summary_inputs_allowed: false
+
+study1r2_development:
+  post_hoc_after_study1r: true
+  not_preregistered: true
+  training_replicates_used_for_selection: 5
+  candidates:
+    - {candidate_id: r2_c01, hidden_layer_sizes: [64, 32], epochs: 60, learning_rate_init: 0.0020, alpha: 0.0001}
+    - {candidate_id: r2_c02, hidden_layer_sizes: [96, 48], epochs: 70, learning_rate_init: 0.0015, alpha: 0.0005}
+    - {candidate_id: r2_c03, hidden_layer_sizes: [128, 64, 32], epochs: 80, learning_rate_init: 0.0010, alpha: 0.0010}
+    - {candidate_id: r2_c04, hidden_layer_sizes: [96, 48], epochs: 90, learning_rate_init: 0.0010, alpha: 0.0001}
+  selection_rule:
+    primary: lowest_mean_development_validation_nll
+    safety_constraint: structured_r2_mean_critical_event_rate_not_above_baseline_b
+    tie_breakers: [highest_mean_macro_f1, lowest_parameter_count, lexical_candidate_id]
+  final_evaluation_seeds_are_forbidden: true
+~~~~
+
+### `configs/study1r2_evaluation_frozen.yaml`
+
+- SHA-256: `e0417b77987cb5ab50d6e1aa45353a1dd00d642d6d38985b1169ded28c357513`
+- Bytes: `7618`
+
+~~~~yaml
+project:
+  id: EGMS_DRIVE_STUDY_1R2
+  title: Post-hoc exploratory evaluation of Structured-R2 versus Baseline B
+  version: 1.0.0
+  evidence_label: EXPLORATORY_CONTROLLED_SYNTHETIC_STUDY1R2_NOT_REAL_WORLD_SAFETY_EVIDENCE
+  frozen_on: 2026-08-26
+  protocol_status: FROZEN_AFTER_EXPLORATORY_DEVELOPMENT_BEFORE_FINAL_EVALUATION
+  carla_executed: false
+  public_datasets_executed: false
+  real_vehicle_executed: false
+
+actions:
+  names: [KEEP, SLOW, YIELD, STOP]
+  class_ids: [0, 1, 2, 3]
+
+scenario_matrix:
+  families: [cut_in, platoon_brake, occluded_crossing, right_turn, merge]
+  environments: [clear, rain, fog]
+  densities: [low, medium, high]
+  expected_cells: 45
+
+data:
+  dt_s: 0.2
+  frames_per_episode: 16
+  rollout_frames: 20
+  train_episodes_per_cell: 4
+  validation_episodes_per_cell: 2
+  test_episodes_per_cell: 8
+  rollout_episodes_per_cell: 8
+  fixed_validation_seed: 31013
+  fixed_test_seed: 31019
+  fixed_rollout_seed: 31033
+  training_data_seeds: [8101, 8111, 8117, 8123, 8147, 8161, 8171, 8191, 8209, 8219]
+  formal_training_replicates: 10
+  pilot_training_data_seeds: [5129, 5171, 5227, 5273, 5323]
+
+generator:
+  semantic_variables: [gap_m, closing_speed_mps, ego_speed_mps, crossing_risk, route_urgency]
+  modalities: [camera, lidar, radar, ego]
+  observation_clips:
+    gap_m: [-5.0, 80.0]
+    closing_speed_mps: [-12.0, 20.0]
+    ego_speed_mps: [0.0, 30.0]
+    crossing_risk: [0.0, 1.0]
+    route_urgency: [0.0, 1.0]
+  environment_quality:
+    clear: {camera: 0.94, lidar: 0.93, radar: 0.88, ego: 0.99}
+    rain:  {camera: 0.55, lidar: 0.65, radar: 0.91, ego: 0.98}
+    fog:   {camera: 0.34, lidar: 0.58, radar: 0.92, ego: 0.98}
+  density_quality_reduction: {low: 0.00, medium: 0.03, high: 0.07}
+  base_noise_sd:
+    camera: {gap_m: 2.00, closing_speed_mps: 1.10, ego_speed_mps: 0.60, crossing_risk: 0.10, route_urgency: 0.10}
+    lidar:  {gap_m: 0.70, closing_speed_mps: 0.55, ego_speed_mps: 0.45, crossing_risk: 0.18, route_urgency: 0.15}
+    radar:  {gap_m: 1.30, closing_speed_mps: 0.25, ego_speed_mps: 0.55, crossing_risk: 0.22, route_urgency: 0.20}
+    ego:    {gap_m: 4.00, closing_speed_mps: 1.80, ego_speed_mps: 0.08, crossing_risk: 0.16, route_urgency: 0.04}
+  density_profiles:
+    low:    {initial_gap_m: 34.0, initial_ego_speed_mps: 15.0, background_crossing_risk: 0.04}
+    medium: {initial_gap_m: 25.0, initial_ego_speed_mps: 12.5, background_crossing_risk: 0.08}
+    high:   {initial_gap_m: 18.0, initial_ego_speed_mps: 10.0, background_crossing_risk: 0.13}
+  family_profiles:
+    cut_in:
+      gap_adjustment_m: -3.0
+      initial_closing_speed_mps: 2.3
+      lead_acceleration_peak_mps2: -1.0
+      gap_impulse_m: -7.0
+      crossing_risk_peak: 0.46
+      route_urgency_peak: 0.30
+    platoon_brake:
+      gap_adjustment_m: 0.0
+      initial_closing_speed_mps: 1.0
+      lead_acceleration_peak_mps2: -4.0
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.20
+      route_urgency_peak: 0.24
+    occluded_crossing:
+      gap_adjustment_m: 8.0
+      initial_closing_speed_mps: 0.2
+      lead_acceleration_peak_mps2: -0.4
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.97
+      route_urgency_peak: 0.44
+    right_turn:
+      gap_adjustment_m: 3.0
+      initial_closing_speed_mps: 0.8
+      lead_acceleration_peak_mps2: -1.5
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.74
+      route_urgency_peak: 0.91
+    merge:
+      gap_adjustment_m: -2.0
+      initial_closing_speed_mps: 1.6
+      lead_acceleration_peak_mps2: -1.2
+      gap_impulse_m: -4.0
+      crossing_risk_peak: 0.69
+      route_urgency_peak: 0.78
+  initial_gap_sd_m: 2.5
+  initial_speed_sd_mps: 0.8
+  initial_closing_speed_sd_mps: 0.45
+  event_center_fraction: 0.55
+  event_center_jitter_sd: 0.05
+  event_width_fraction: 0.14
+  exogenous_acceleration_noise_sd_mps2: 0.12
+  episode_health_low: 0.85
+  episode_health_high: 1.05
+  quality_observation_sd: 0.04
+  dropout_base_probability: 0.02
+  dropout_quality_slope: 0.12
+  outlier_base_probability: 0.01
+  outlier_quality_slope: 0.05
+  outlier_scale: 6.0
+
+oracle:
+  ttc_cap_s: 20.0
+  comfortable_deceleration_mps2: 4.5
+  standstill_gap_m: 2.0
+  reaction_time_s: 0.7
+  stop_ttc_s: 1.20
+  stop_crossing_risk: 0.88
+  yield_ttc_s: 2.40
+  yield_crossing_risk: 0.66
+  slow_ttc_s: 5.00
+  slow_crossing_risk: 0.36
+  yield_stopping_margin_m: 0.0
+  slow_stopping_margin_m: 5.0
+
+dynamics:
+  acceleration_lag: 0.55
+  maximum_acceleration_mps2: 2.0
+  maximum_deceleration_mps2: -6.0
+  slow_command_mps2: -1.2
+  yield_command_mps2: -2.8
+  stop_command_mps2: -5.0
+  keep_speed_gain: 0.8
+  keep_acceleration_limit_mps2: 1.4
+  collision_gap_m: 0.75
+  near_miss_ttc_s: 1.50
+  near_miss_gap_m: 3.0
+  crossing_collision_risk: 0.985
+  crossing_collision_speed_mps: 4.0
+  crossing_near_miss_risk: 0.80
+  route_goal_fraction_of_nominal_progress: 0.72
+
+models:
+  shared_head:
+    hidden_layer_sizes: [48, 24]
+    activation: relu
+    solver: adam
+    alpha: 0.0001
+    batch_size: 128
+    learning_rate_init: 0.002
+    epochs: 50
+    class_weighting: inverse_frequency_balanced_from_training_split
+    checkpoint_selection: minimum_fixed_validation_nll
+  baseline_b:
+    encoder: quality_gated_raw_temporal_concatenation_with_availability
+    missing_value_handling: zero_after_quality_gating
+    input_feature_count: 56
+    scaling: training_standardization
+  structured:
+    encoder: dual_path_raw_plus_compact_plus_inverse_variance_physics
+    missing_value_handling: zero_when_no_reliable_support
+    derived_physics_features: [ttc_s, positive_closing_gap_ratio, crossing_closing_interaction, urgency_crossing_interaction]
+    input_feature_count: 145
+  baseline_b_training:
+    hidden_layer_sizes: [48, 24]
+    alpha: 0.0001
+    batch_size: 128
+    learning_rate_init: 0.002
+    epochs: 50
+    class_weighting: inverse_frequency_balanced_from_training_split
+  structured_r2_training:
+    candidate_id: r2_c03
+    hidden_layer_sizes: [128, 64, 32]
+    alpha: 0.0010
+    batch_size: 128
+    learning_rate_init: 0.0010
+    epochs: 80
+    class_weighting: inverse_frequency_balanced_from_training_split
+    scaling: training_standardization
+  model_training_seeds: [9103, 9127, 9133, 9151, 9173, 9181, 9199, 9209, 9221, 9239]
+  temperature_scaling:
+    enabled: true
+    lower_bound: 0.5
+    upper_bound: 5.0
+    fitted_on: fixed_validation
+
+metrics:
+  action: [macro_f1, nll, multiclass_brier, ece]
+  action_classes: 4
+  ece_bins: 15
+  ece_binning: equal_width
+  episode: [collision_rate, near_miss_rate, critical_event_rate, route_completion_rate, ttc_p5_s, jerk_p95_mps3]
+  ttc_conditioning: jointly_collision_free_episode_pairs_only
+  jerk_definition: per_episode_p95_absolute_acceleration_difference_over_dt
+
+statistics:
+  estimand: structured_r2_minus_baseline_b
+  paired_dimensions: [training_replicate, fixed_test_episode]
+  bootstrap_type: paired_crossed_cluster_percentile
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 171031
+  confidence_level: 0.95
+  quantile_algorithm: numpy_linear
+  directionality_tolerance: 1.0e-12
+  sign_flip_tests: exact_all_1024_sign_patterns
+  multiplicity_adjustment: holm
+
+artifacts:
+  float_output_decimals: 10
+  compressed_csv_gzip_mtime: 0
+  checkpoint_format: deterministic_portable_json
+  hash_algorithm: SHA-256
+  legacy_study1_summary_inputs_allowed: false
+
+study1r2_evaluation:
+  post_hoc_after_study1r: true
+  not_preregistered: true
+  selected_candidate_id: r2_c03
+  development_ledger_sha256: c756ef260f1eb4b97a6a94c38e34301238eff0a2100578103b80abb7711bfc89
+  freeze_manifest_sha256_recorded_in_run_manifest: true
+  original_study1r_replaced: false
+  final_evaluation_once_only: true
+  validation_rule_requires_improvement: false
+~~~~
+
 ### `run_publication.py`
 
 - SHA-256: `808842fa11f8552fb1667d9318842845100df586ea40ec1fc140fbe7bff38059`
@@ -271,9 +758,69 @@ if __name__ == "__main__":
     main()
 ~~~~
 
+### `run_study1.py`
+
+- SHA-256: `10a0581e060f2059234fb89fd73473ce93ceb884a4abb50c71af6407a32f36fc`
+- Bytes: `642`
+
+~~~~python
+#!/usr/bin/env python3
+"""Public entry point for the frozen Study 1 evaluation code.
+
+Reader-facing outputs use the two method names ``Baseline B`` and
+``Structured fusion``.  The imported implementation retains its archived
+machine identifier so the frozen source hashes and checkpoint provenance can
+be verified exactly.
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+import sys
+
+
+ROOT = Path(__file__).resolve().parent
+SOURCE = ROOT / "src"
+if str(SOURCE) not in sys.path:
+    sys.path.insert(0, str(SOURCE))
+
+from egms_study1r2.runner import main  # noqa: E402
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+~~~~
+
+### `run_study1r2.py`
+
+- SHA-256: `91a3b4c2442a8b2e5fd0f355edfbdd9f9981ec1d5539d1bcc96b87a8de31d85b`
+- Bytes: `397`
+
+~~~~python
+#!/usr/bin/env python3
+"""Command-line entry point for exploratory Study 1-R2."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import sys
+
+
+ROOT = Path(__file__).resolve().parent
+SOURCE = ROOT / "src"
+if str(SOURCE) not in sys.path:
+    sys.path.insert(0, str(SOURCE))
+
+from egms_study1r2.runner import main  # noqa: E402
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+~~~~
+
 ### `src/egms_power/__init__.py`
 
-- SHA-256: `644856e8526a4fdd5e2db3cac02c7a74e8d5cd010cbb4eed8593ecb53027c72d`
+- SHA-256: `8ef84653f4514480e703bb41b39cbe76aea748cf85d57b47f23b494266228ffa`
 - Bytes: `497`
 
 ~~~~python
@@ -295,7 +842,7 @@ __all__ = [
     "two_independent_proportions_power",
 ]
 
-__version__ = "1.1.0"
+__version__ = "1.0.3"
 ~~~~
 
 ### `src/egms_power/cli.py`
@@ -2270,19 +2817,19 @@ def stable_stream_seed(master_seed: int, components: Iterable[object]) -> int:
 
 ### `src/egms_publication/__init__.py`
 
-- SHA-256: `fa0a0705c8a61bdb72145aec3b50a3255f412372f89ec99e7c43f7729b75d4c7`
+- SHA-256: `05d7fe720b4df5a1ed0ebdf98f966221e178ff221f880f0d7bddce3fe61688dd`
 - Bytes: `89`
 
 ~~~~python
 """Publication-level reproducibility utilities for EGMS-Drive."""
 
-__version__ = "1.1.0"
+__version__ = "2.1.0"
 ~~~~
 
 ### `src/egms_publication/figures.py`
 
-- SHA-256: `ea8830203d838ae0503bf7945d507b9faf1b888da48686fbac053cf77e8bafca`
-- Bytes: `19140`
+- SHA-256: `195f6c8932912818b9892f6bf0b40a90a0d1bdfdb562d17ded259f6b6c717b1b`
+- Bytes: `13093`
 
 ~~~~python
 from __future__ import annotations
@@ -2362,161 +2909,6 @@ def _endpoint_label(
         fontsize=8.2,
         color=TEXT,
     )
-
-
-def _benefit_oriented(row: pd.Series) -> tuple[float, float, float]:
-    estimate = float(row["estimate"])
-    low = float(row["ci_low"])
-    high = float(row["ci_high"])
-    if row["orientation"] == "lower_is_better":
-        return -estimate, -high, -low
-    return estimate, low, high
-
-
-def build_figure2(study1_csv: Path, stem: Path) -> dict[str, Path]:
-    """Generate manuscript Figure 2 from the frozen Study-1 audit snapshot.
-
-    This is a graphical reproduction of exported/audited summary estimates.
-    Study-1 raw data, model training code, and some original CI procedures are
-    unavailable; this function must not be described as a raw recomputation.
-    """
-
-    frame = pd.read_csv(study1_csv)
-    apply_style()
-    width_px, height_px = 3810, 2522
-    fig, axes = plt.subplots(2, 2, figsize=(width_px / 600, height_px / 600), dpi=600)
-    fig.subplots_adjust(left=0.105, right=0.982, bottom=0.105, top=0.950, wspace=0.43, hspace=0.50)
-
-    # (a) Offline action and probability scores, displayed in a benefit direction.
-    ax = axes[0, 0]
-    metrics = ["Macro-F1", "NLL", "Brier", "ECE"]
-    ys = np.arange(3, -1, -1, dtype=float)
-    for row_index, (metric, y) in enumerate(zip(metrics, ys)):
-        row = select_one(frame, panel="action", metric=metric)
-        estimate, low, high = _benefit_oriented(row)
-        supported = low > 0
-        color = NAVY if supported else RED
-        _horizontal_ci(
-            ax,
-            estimate=estimate,
-            low=low,
-            high=high,
-            y=y,
-            color=color,
-            filled=supported,
-        )
-        ax.annotate(
-            f"{estimate:+.4f}",
-            (high, y),
-            xytext=(5, -5 if row_index == 0 else 5),
-            textcoords="offset points",
-            ha="left",
-            va="top" if row_index == 0 else "bottom",
-            fontsize=8.2,
-        )
-    ax.axvline(0, color=TEAL, ls="--", lw=1.4)
-    ax.set_xlim(-0.0077, 0.0425)
-    ax.set_xticks([0.00, 0.01, 0.02, 0.03, 0.04])
-    ax.set_yticks(ys, metrics)
-    ax.set_ylim(-0.15, 3.15)
-    ax.set_xlabel("Benefit-oriented raw difference")
-    panel_title(ax, "(a) Offline action and probability scores")
-    format_axes(ax)
-
-    # (b) Event and completion proxies, also transformed to a benefit direction.
-    ax = axes[0, 1]
-    metrics = ["Collision", "Near miss", "Critical event", "Route completion"]
-    labels = ["Collision", "Near miss", "Critical event", "Route completion"]
-    ys = np.arange(3, -1, -1, dtype=float)
-    label_sides = ["right", "left", "left", "right"]
-    for row_index, (metric, y, side) in enumerate(zip(metrics, ys, label_sides)):
-        row = select_one(frame, panel="event", metric=metric)
-        estimate, low, high = _benefit_oriented(row)
-        _horizontal_ci(
-            ax,
-            estimate=estimate,
-            low=low,
-            high=high,
-            y=y,
-            color=RED,
-            filled=False,
-        )
-        anchor = high if side == "right" else low
-        ax.annotate(
-            f"{estimate:+.2f} pp",
-            (anchor, y),
-            xytext=(5 if side == "right" else -5, -5 if row_index == 0 else 5),
-            textcoords="offset points",
-            ha="left" if side == "right" else "right",
-            va="top" if row_index == 0 else "bottom",
-            fontsize=8.2,
-        )
-    ax.axvline(0, color=TEAL, ls="--", lw=1.4)
-    ax.set_xlim(-7.6, 20.6)
-    ax.set_yticks(ys, labels)
-    ax.set_ylim(-0.15, 3.15)
-    ax.set_xlabel("Benefit-oriented paired difference (pp)")
-    panel_title(ax, "(b) Event and completion proxies")
-    format_axes(ax)
-
-    # (c) Conditional TTC descriptor. Marginal intervals are audit-snapshot values.
-    ax = axes[1, 0]
-    conditions = [
-        ("Baseline B", 0.34, NAVY, "right"),
-        ("Structured fusion", 0.66, RED, "left"),
-    ]
-    for condition, y, color, side in conditions:
-        row = select_one(frame, panel="conditional_ttc", metric="TTC-P5", condition=condition)
-        estimate, low, high = (float(row[key]) for key in ("estimate", "ci_low", "ci_high"))
-        _horizontal_ci(ax, estimate=estimate, low=low, high=high, y=y, color=color)
-        _endpoint_label(
-            ax,
-            f"{estimate:.3f} s",
-            low=low,
-            high=high,
-            y=y,
-            side=side,
-        )
-        ax.plot([], [], "o", color=color, markerfacecolor="white", markeredgewidth=1.2,
-                markersize=5.3, label=condition)
-    ax.set_xlim(0.58, 1.39)
-    ax.set_ylim(0.18, 0.82)
-    ax.set_yticks([])
-    ax.set_xlabel("Collision-free TTC-P5 (s)")
-    panel_title(ax, "(c) Conditional TTC descriptor")
-    format_axes(ax)
-    ax.legend(loc="upper center", ncol=2, bbox_to_anchor=(0.50, 1.00), handletextpad=0.4, columnspacing=1.0)
-
-    # (d) Kinematic smoothness proxy. Marginal intervals are audit-snapshot values.
-    ax = axes[1, 1]
-    conditions = [
-        ("Baseline B", 0.34, NAVY, "left"),
-        ("Structured fusion", 0.66, RED, "right"),
-    ]
-    for condition, y, color, side in conditions:
-        row = select_one(frame, panel="jerk", metric="Jerk-P95", condition=condition)
-        estimate, low, high = (float(row[key]) for key in ("estimate", "ci_low", "ci_high"))
-        _horizontal_ci(ax, estimate=estimate, low=low, high=high, y=y, color=color)
-        _endpoint_label(
-            ax,
-            f"{estimate:.2f}",
-            low=low,
-            high=high,
-            y=y,
-            side=side,
-        )
-        ax.plot([], [], "o", color=color, markerfacecolor="white", markeredgewidth=1.2,
-                markersize=5.3, label=condition)
-    ax.set_xlim(20.4, 35.7)
-    ax.set_xticks(np.arange(22, 35, 2))
-    ax.set_ylim(0.18, 0.82)
-    ax.set_yticks([])
-    ax.set_xlabel("Mean episode jerk-P95 (m/s³)")
-    panel_title(ax, "(d) Kinematic smoothness proxy")
-    format_axes(ax)
-    ax.legend(loc="upper center", ncol=2, bbox_to_anchor=(0.50, 1.00), handletextpad=0.4, columnspacing=1.0)
-
-    return save_figure(fig, stem, width_px=width_px, height_px=height_px)
 
 
 def build_figure3(contrast_csv: Path, stem: Path) -> dict[str, Path]:
@@ -2801,8 +3193,8 @@ def build_figure4(tables_dir: Path, stem: Path) -> dict[str, Path]:
 
 ### `src/egms_publication/runner.py`
 
-- SHA-256: `3ab9303e1502db7f2b0301e7a64f32f76e3302d0ae2d3877964f693d5296de91`
-- Bytes: `12055`
+- SHA-256: `8e4b526f93bc7d19dc28ad7efeb3508ce62d4ed5d95ba098441674b19c543c3e`
+- Bytes: `13152`
 
 ~~~~python
 from __future__ import annotations
@@ -2817,7 +3209,8 @@ import pandas as pd
 
 from egms_power.pipeline import run_power_analysis
 
-from .figures import build_figure2, build_figure3, build_figure4
+from .figures import build_figure3, build_figure4
+from .study1_figure import build as build_figure2
 from .tables import build_main_table2, build_table_s2, build_table_s3, build_table_s4
 from .utils import sha256, write_table
 from .validation import validate_outputs, verify_manifest, write_manifest
@@ -2831,6 +3224,10 @@ REQUIRED_CONTROLLED_TABLES = (
     "table_s3_main.csv",
     "table_s3_negative_controls.csv",
     "table_s3_primary_contrasts.csv",
+)
+REQUIRED_STUDY1_TABLES = (
+    "study1_metric_summary.csv",
+    "study1_paired_contrasts.csv",
 )
 
 
@@ -2858,7 +3255,7 @@ def _prepare_output(root: Path, requested: Path, overwrite: bool) -> Path:
 def _publication_input_tables(root: Path) -> Path:
     """Return the small, frozen Study 2--3 tables used by publication mode.
 
-    This source-only release intentionally omits persisted prediction frames and
+    This compact GitHub release intentionally omits persisted prediction frames and
     previously generated result directories.  A full controlled-synthetic refit
     remains available through ``run_studies.py run``; publication mode uses only
     the six verified summary tables needed by Figures 3--4 and Table 2.
@@ -2869,6 +3266,21 @@ def _publication_input_tables(root: Path) -> Path:
     if missing:
         raise FileNotFoundError(
             "Missing publication input table(s): " + ", ".join(missing)
+        )
+    return tables
+
+
+def _study1_input_tables(root: Path) -> Path:
+    """Return the frozen reader-facing Study 1 publication inputs."""
+
+    tables = root / "data" / "study1_frozen"
+    missing = [name for name in REQUIRED_STUDY1_TABLES if not (tables / name).is_file()]
+    if missing:
+        raise FileNotFoundError(
+            "Missing Study 1 publication input table(s): "
+            + ", ".join(missing)
+            + ". Restore the validated public inputs recorded in "
+            "data/study1_frozen/PROVENANCE.json."
         )
     return tables
 
@@ -2884,7 +3296,7 @@ Supplementary Section S4 in the compact manuscript.
 
 | Manuscript item | Generated file |
 |---|---|
-| Figure 2 | `manuscript/figures/Figure_2_Study1.*` |
+| Figure 2 | `manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.*` |
 | Figure 3 | `manuscript/figures/Figure_3_Study2.*` |
 | Figure 4 | `manuscript/figures/Figure_4_Study3.*` |
 | Table 2 | `manuscript/tables/Table_2_main_effects.*` |
@@ -2936,12 +3348,14 @@ The complete six-figure and eleven-table planning outputs remain in
 
 The generated inventory lists source, configuration, frozen numeric inputs,
 derived tables, figures, and validation artifacts with SHA-256 hashes. Study 1
-is limited to an exported/audited summary snapshot; the original model,
-checkpoint, split manifest, raw frames, and several interval algorithms are
-not available. Studies 2-3 are executable controlled synthetic mechanism
-surrogates, not the full neural EGMS-Drive architecture. The power analysis is
-prospective. No CARLA, public-dataset, real-vehicle, or empirical LLM result is
-contained in this package.
+is a post-hoc exploratory controlled-synthetic evaluation generated from a
+method-blind protocol, ten paired training replicates, raw outputs, manifests,
+checkpoints, and a direction-neutral validator. Its public comparison is
+Baseline B versus Structured fusion. Studies
+2-3 are executable controlled synthetic mechanism surrogates, not the full
+neural EGMS-Drive architecture. The power analysis is prospective. No CARLA,
+public-dataset, real-vehicle, or empirical LLM result is contained in this
+package.
 """
     (compact / "S3_Digital_Reproducibility_Inventory.md").write_text(inventory_text, encoding="utf-8")
     earlier = output / "supplement" / "earlier_full_numbering"
@@ -2975,7 +3389,9 @@ def _write_inventory(root: Path, output: Path) -> pd.DataFrame:
         )
     candidates.extend(
         path for path in output.rglob("*")
-        if path.is_file() and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
+        if path.is_file()
+        and not path.name.endswith(".tmp")
+        and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
     )
     for path in sorted(candidates):
         if path.is_relative_to(output):
@@ -3017,7 +3433,7 @@ def _zip_outputs(output: Path) -> Path:
     destination = output / "publication_outputs.zip"
     with zipfile.ZipFile(destination, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in sorted(output.rglob("*")):
-            if path.is_file() and path != destination:
+            if path.is_file() and path != destination and not path.name.endswith(".tmp"):
                 relative = path.relative_to(output).as_posix()
                 info = zipfile.ZipInfo(relative, date_time=(1980, 1, 1, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
@@ -3040,15 +3456,20 @@ def run_publication(
     root = project_root()
     output = _prepare_output(root, output_request, overwrite)
     tables_dir = _publication_input_tables(root)
+    study1_dir = _study1_input_tables(root)
+
+    manuscript_figures = output / "manuscript" / "figures"
+    # Render Figure 2 before the independent power-analysis plotters mutate
+    # global Matplotlib defaults. This preserves the exact manuscript PNG.
+    build_figure2(
+        study1_dir / "study1_metric_summary.csv",
+        study1_dir / "study1_paired_contrasts.csv",
+        manuscript_figures,
+    )
 
     power_output = output / "power_full"
     run_power_analysis(root / "configs" / "power_protocol.yaml", power_output)
 
-    manuscript_figures = output / "manuscript" / "figures"
-    build_figure2(
-        root / "data" / "study1" / "study1_figure_inputs.csv",
-        manuscript_figures / "Figure_2_Study1",
-    )
     build_figure3(
         tables_dir / "table_s2_primary_contrasts.csv",
         manuscript_figures / "Figure_3_Study2",
@@ -3056,7 +3477,7 @@ def run_publication(
     build_figure4(tables_dir, manuscript_figures / "Figure_4_Study3")
 
     table2 = build_main_table2(
-        root / "data" / "study1" / "study1_table2_inputs.csv",
+        study1_dir / "study1_paired_contrasts.csv",
         tables_dir,
         output / "manuscript" / "tables" / "Table_2_main_effects",
     )
@@ -3107,6 +3528,396 @@ def main(argv: list[str] | None = None) -> int:
     )
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
+~~~~
+
+### `src/egms_publication/study1_figure.py`
+
+- SHA-256: `d0b434425cb6ae33a29d2fc094736a840bed1e226a861947a6f956357e4a4a0a`
+- Bytes: `13658`
+
+~~~~python
+#!/usr/bin/env python3
+"""Build manuscript Figure 2 from validated, reader-facing Study 1 CSVs.
+
+The canonical plotting inputs contain only the public method names
+``Baseline B`` and ``Structured fusion``.  Archived machine identifiers are
+kept separately under ``data/study1_frozen/provenance`` for source-hash and
+checkpoint auditing.  No model, raw output, endpoint, interval, or p value is
+changed by this display layer.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+import numpy as np
+import pandas as pd
+
+
+INTERNAL_BASELINE = "Baseline B"
+INTERNAL_STRUCTURED = "Structured fusion"
+DISPLAY_BASELINE = "Baseline B"
+DISPLAY_STRUCTURED = "Structured fusion"
+
+ENDPOINTS = (
+    "macro_f1",
+    "nll",
+    "brier",
+    "ece",
+    "collision",
+    "near_miss",
+    "critical_event",
+    "route_completion",
+    "ttc_p5",
+    "jerk_p95",
+)
+
+BASELINE_COLOR = "#1f5a91"
+STRUCTURED_COLOR = "#cf4b5f"
+ZERO_COLOR = "#228f87"
+GRID_COLOR = "#d9dde2"
+TEXT_COLOR = "#17191c"
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _select_one(frame: pd.DataFrame, **filters: object) -> pd.Series:
+    mask = pd.Series(True, index=frame.index)
+    for column, value in filters.items():
+        mask &= frame[column].astype(str).eq(str(value))
+    selected = frame.loc[mask]
+    if len(selected) != 1:
+        raise ValueError(f"Expected one row for {filters}; found {len(selected)}")
+    return selected.iloc[0]
+
+
+def _validate(summary: pd.DataFrame, contrasts: pd.DataFrame) -> None:
+    if set(contrasts["endpoint"]) != set(ENDPOINTS):
+        raise ValueError("Paired-contrast table must contain the ten frozen endpoints")
+    if contrasts["endpoint"].duplicated().any():
+        raise ValueError("Paired-contrast endpoints must be unique")
+    expected_summary = {(endpoint, method) for endpoint in ENDPOINTS for method in (INTERNAL_BASELINE, INTERNAL_STRUCTURED)}
+    observed_summary = set(zip(summary["endpoint"].astype(str), summary["method"].astype(str)))
+    if observed_summary != expected_summary:
+        raise ValueError("Metric-summary method/endpoint grid is incomplete")
+    if not contrasts["total_training_replicates"].eq(10).all():
+        raise ValueError("Figure 2 requires exactly ten paired training replicates")
+    if not (
+        contrasts["benefit_ci_low"].le(contrasts["benefit_difference"])
+        & contrasts["benefit_difference"].le(contrasts["benefit_ci_high"])
+    ).all():
+        raise ValueError("At least one paired CI does not contain its point estimate")
+
+
+def _p_text(value: float) -> str:
+    return f"{value:.4f}" if value >= 0.0001 else "<0.0001"
+
+
+def _symmetric_limits(values: np.ndarray, floor: float) -> tuple[float, float]:
+    finite = np.asarray(values, dtype=float)
+    finite = finite[np.isfinite(finite)]
+    bound = max(float(np.max(np.abs(finite))) if len(finite) else floor, floor)
+    return -1.24 * bound, 1.24 * bound
+
+
+def _range_limits(values: np.ndarray) -> tuple[float, float]:
+    finite = np.asarray(values, dtype=float)
+    finite = finite[np.isfinite(finite)]
+    low = float(finite.min())
+    high = float(finite.max())
+    span = max(high - low, 0.08 * max(abs(low), abs(high), 1.0))
+    return max(0.0, low - 0.20 * span), high + 0.20 * span
+
+
+def _format_axis(ax: plt.Axes) -> None:
+    ax.grid(axis="x", color=GRID_COLOR, linewidth=0.65)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="both", labelsize=7.2, width=0.8)
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    for side in ("left", "bottom"):
+        ax.spines[side].set_color(TEXT_COLOR)
+        ax.spines[side].set_linewidth(0.8)
+
+
+def _forest_panel(
+    ax: plt.Axes,
+    contrasts: pd.DataFrame,
+    endpoints: tuple[str, ...],
+    *,
+    title: str,
+    xlabel: str,
+    scale: float,
+    decimals: int,
+    floor: float,
+) -> None:
+    rows = [_select_one(contrasts, endpoint=endpoint) for endpoint in endpoints]
+    estimates = scale * np.asarray([float(row["benefit_difference"]) for row in rows])
+    lows = scale * np.asarray([float(row["benefit_ci_low"]) for row in rows])
+    highs = scale * np.asarray([float(row["benefit_ci_high"]) for row in rows])
+    y = np.arange(len(rows) - 1, -1, -1, dtype=float)
+
+    # Baseline B is the reference contrast and therefore equals zero by
+    # definition in panels (a) and (b).  Plotting the reference markers makes
+    # the reader-facing Baseline-versus-Structured legend mathematically true.
+    ax.scatter(
+        np.zeros_like(y),
+        y,
+        marker="o",
+        s=24,
+        facecolor="white",
+        edgecolor=BASELINE_COLOR,
+        linewidth=1.15,
+        zorder=4,
+    )
+
+    for row, estimate, low, high, ypos in zip(rows, estimates, lows, highs, y):
+        ax.errorbar(
+            estimate,
+            ypos,
+            xerr=np.array([[estimate - low], [high - estimate]]),
+            fmt="o",
+            markersize=5.1,
+            markerfacecolor="white",
+            markeredgecolor=STRUCTURED_COLOR,
+            markeredgewidth=1.25,
+            ecolor=STRUCTURED_COLOR,
+            elinewidth=1.35,
+            capsize=3.0,
+            capthick=1.25,
+            zorder=3,
+        )
+        ax.annotate(
+            f"Delta={estimate:+.{decimals}f}",
+            (0.985, ypos),
+            xycoords=("axes fraction", "data"),
+            ha="right",
+            va="bottom",
+            fontsize=6.0,
+            color=TEXT_COLOR,
+            bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.82, "pad": 0.25},
+        )
+
+    ax.axvline(0.0, color=ZERO_COLOR, linestyle="--", linewidth=1.1, zorder=1)
+    ax.set_xlim(*_symmetric_limits(np.r_[estimates, lows, highs], floor))
+    ax.set_ylim(-0.38, len(rows) - 0.62)
+    ax.set_yticks(y, [str(row["metric"]) for row in rows])
+    ax.set_xlabel(xlabel, fontsize=7.1, labelpad=4)
+    ax.set_title(title, loc="left", fontsize=8.6, fontweight="bold", pad=6)
+    _format_axis(ax)
+
+
+def _method_panel(
+    ax: plt.Axes,
+    summary: pd.DataFrame,
+    contrasts: pd.DataFrame,
+    endpoint: str,
+    *,
+    title: str,
+    xlabel: str,
+    decimals: int,
+) -> None:
+    rows = (
+        _select_one(summary, endpoint=endpoint, method=INTERNAL_BASELINE),
+        _select_one(summary, endpoint=endpoint, method=INTERNAL_STRUCTURED),
+    )
+    colors = (BASELINE_COLOR, STRUCTURED_COLOR)
+    labels = (DISPLAY_BASELINE, DISPLAY_STRUCTURED)
+    y = (0.32, 0.68)
+    bounds: list[float] = []
+
+    for row, color, label, ypos in zip(rows, colors, labels, y):
+        estimate = float(row["estimate"])
+        low = float(row["ci_low"])
+        high = float(row["ci_high"])
+        bounds.extend((estimate, low, high))
+        ax.errorbar(
+            estimate,
+            ypos,
+            xerr=np.array([[estimate - low], [high - estimate]]),
+            fmt="o",
+            markersize=5.5,
+            markerfacecolor="white",
+            markeredgecolor=color,
+            markeredgewidth=1.35,
+            ecolor=color,
+            elinewidth=1.4,
+            capsize=3.1,
+            capthick=1.3,
+            zorder=3,
+        )
+        ax.annotate(
+            f"{estimate:.{decimals}f}",
+            (estimate, ypos),
+            xytext=(0, 6),
+            textcoords="offset points",
+            ha="center",
+            va="bottom",
+            fontsize=6.4,
+            color=TEXT_COLOR,
+        )
+
+    contrast = _select_one(contrasts, endpoint=endpoint)
+    delta = float(contrast["raw_difference_structured_minus_baseline"])
+    low = float(contrast["raw_ci_low"])
+    high = float(contrast["raw_ci_high"])
+    note = (
+        f"Paired difference={delta:+.{decimals}f} "
+        f"[{low:+.{decimals}f}, {high:+.{decimals}f}]; "
+        f"Holm p={_p_text(float(contrast['holm_adjusted_p']))}"
+    )
+    ax.text(0.50, 0.055, note, transform=ax.transAxes, ha="center", va="bottom", fontsize=5.9, color=TEXT_COLOR)
+    ax.set_xlim(*_range_limits(np.asarray(bounds)))
+    ax.set_ylim(0.10, 0.90)
+    ax.set_yticks(y, labels)
+    ax.set_xlabel(xlabel, fontsize=7.1, labelpad=4)
+    ax.set_title(title, loc="left", fontsize=8.6, fontweight="bold", pad=6)
+    _format_axis(ax)
+
+
+def _publication_inputs(summary: pd.DataFrame, contrasts: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    method_inputs = summary.copy()
+    method_inputs = method_inputs.drop(columns=["internal_method"], errors="ignore")
+    contrast_inputs = contrasts.copy()
+    if "display_contrast" not in contrast_inputs.columns:
+        contrast_inputs.insert(0, "display_contrast", f"{DISPLAY_STRUCTURED} - {DISPLAY_BASELINE}")
+    return method_inputs, contrast_inputs
+
+
+def build(summary_path: Path, contrasts_path: Path, output_dir: Path) -> dict[str, Path]:
+    summary = pd.read_csv(summary_path)
+    contrasts = pd.read_csv(contrasts_path)
+    _validate(summary, contrasts)
+
+    plt.rcParams.update(
+        {
+            "font.family": "DejaVu Serif",
+            "text.color": TEXT_COLOR,
+            "axes.labelcolor": TEXT_COLOR,
+            "xtick.color": TEXT_COLOR,
+            "ytick.color": TEXT_COLOR,
+            "svg.fonttype": "none",
+            "pdf.fonttype": 42,
+        }
+    )
+    fig, axes = plt.subplots(2, 2, figsize=(7.62, 5.044), dpi=500)
+    fig.subplots_adjust(left=0.135, right=0.985, bottom=0.135, top=0.865, wspace=0.43, hspace=0.60)
+
+    _forest_panel(
+        axes[0, 0],
+        contrasts,
+        ("macro_f1", "nll", "brier", "ece"),
+        title="(a) Offline action and probability metrics",
+        xlabel="Benefit-oriented paired difference\n(Baseline B = 0; positive favors Structured fusion)",
+        scale=1.0,
+        decimals=4,
+        floor=0.01,
+    )
+    _forest_panel(
+        axes[0, 1],
+        contrasts,
+        ("collision", "near_miss", "critical_event", "route_completion"),
+        title="(b) Closed-loop outcomes",
+        xlabel="Benefit-oriented paired difference (percentage points)\n(Baseline B = 0; positive favors Structured fusion)",
+        scale=100.0,
+        decimals=2,
+        floor=1.0,
+    )
+    _method_panel(
+        axes[1, 0],
+        summary,
+        contrasts,
+        "ttc_p5",
+        title="(c) Jointly collision-free TTC-P5",
+        xlabel="Mean episode TTC-P5 (s)",
+        decimals=3,
+    )
+    _method_panel(
+        axes[1, 1],
+        summary,
+        contrasts,
+        "jerk_p95",
+        title="(d) Episode kinematic smoothness",
+        xlabel="Mean episode jerk-P95 (m/s³)",
+        decimals=3,
+    )
+
+    handles = (
+        Line2D([0], [0], marker="o", linestyle="-", color=BASELINE_COLOR, markerfacecolor="white", markeredgecolor=BASELINE_COLOR, markersize=5.2, label=DISPLAY_BASELINE),
+        Line2D([0], [0], marker="o", linestyle="-", color=STRUCTURED_COLOR, markerfacecolor="white", markeredgecolor=STRUCTURED_COLOR, markersize=5.2, label=DISPLAY_STRUCTURED),
+    )
+    fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 0.975), ncol=2, frameon=False, fontsize=7.5)
+    fig.text(
+        0.5,
+        0.025,
+        "Ten paired training replicates; bars are 95% crossed-bootstrap confidence intervals. The revised Structured fusion evaluation is exploratory.",
+        ha="center",
+        va="bottom",
+        fontsize=6.0,
+        color=TEXT_COLOR,
+    )
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    stem = output_dir / "Figure_2_Study1_Baseline_B_vs_Structured_fusion"
+    outputs = {
+        "png": stem.with_suffix(".png"),
+        "pdf": stem.with_suffix(".pdf"),
+        "svg": stem.with_suffix(".svg"),
+    }
+    for path in outputs.values():
+        fig.savefig(path, dpi=500, facecolor="white")
+    plt.close(fig)
+
+    method_inputs, contrast_inputs = _publication_inputs(summary, contrasts)
+    method_csv = output_dir / "Figure_2_method_estimates.csv"
+    contrast_csv = output_dir / "Figure_2_paired_contrasts.csv"
+    method_inputs.to_csv(method_csv, index=False, float_format="%.17g", lineterminator="\n")
+    contrast_inputs.to_csv(contrast_csv, index=False, float_format="%.17g", lineterminator="\n")
+
+    manifest_path = output_dir / "Figure_2_publication_manifest.json"
+    manifest = {
+        "schema": "egms-drive-study1-publication-figure-1.0",
+        "display_labels": [DISPLAY_BASELINE, DISPLAY_STRUCTURED],
+        "display_only_alias": False,
+        "validated_inputs": {
+            str(summary_path): _sha256(summary_path),
+            str(contrasts_path): _sha256(contrasts_path),
+        },
+        "outputs": {},
+        "note": "Reader-facing names are canonical here; archived machine identifiers remain only in provenance files.",
+    }
+    for path in (*outputs.values(), method_csv, contrast_csv):
+        manifest["outputs"][path.name] = _sha256(path)
+    manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    outputs.update({"method_inputs": method_csv, "contrast_inputs": contrast_csv, "manifest": manifest_path})
+    return outputs
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--summary", type=Path, required=True)
+    parser.add_argument("--contrasts", type=Path, required=True)
+    parser.add_argument("--output-dir", type=Path, required=True)
+    args = parser.parse_args()
+    outputs = build(args.summary, args.contrasts, args.output_dir)
+    for name, path in outputs.items():
+        print(f"{name}: {path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
 ~~~~
 
 ### `src/egms_publication/style.py`
@@ -3233,8 +4044,8 @@ def save_figure(
 
 ### `src/egms_publication/tables.py`
 
-- SHA-256: `d7ef477d356c64150752dae8845bbfbf4d4dcb884d3f5581effdab8c20412876`
-- Bytes: `14497`
+- SHA-256: `60dc8026a0884e74ac4ee7bc9ef4ed95235c20d5999163f3464583cc38f14db6`
+- Bytes: `16403`
 
 ~~~~python
 from __future__ import annotations
@@ -3258,25 +4069,66 @@ def _signed(value: float, decimals: int = 4) -> str:
     return f"{value:+.{decimals}f}"
 
 
+def _signed_or_zero(value: float, decimals: int) -> str:
+    if abs(value) < 0.5 * 10 ** (-decimals):
+        return f"{0.0:.{decimals}f}"
+    return _signed(value, decimals)
+
+
+def _study1_rows(contrasts: pd.DataFrame) -> list[dict[str, str]]:
+    """Derive all ten manuscript Study 1 rows from the paired contrasts."""
+
+    specifications = (
+        ("macro_f1", "S1 action", "Structured fusion vs Baseline B; Macro-F1 ↑", 4, ""),
+        ("nll", "S1 probability", "NLL ↓", 4, ""),
+        ("brier", "S1 probability", "Brier ↓", 4, ""),
+        ("ece", "S1 calibration", "ECE ↓", 4, ""),
+        ("collision", "S1 collision proxy", "Collision rate ↓", 2, " pp"),
+        ("near_miss", "S1 near-miss proxy", "Near-miss rate ↓", 2, " pp"),
+        ("critical_event", "S1 critical-event proxy", "Critical-event rate ↓", 2, " pp"),
+        ("route_completion", "S1 completion", "Route completion ↑", 2, " pp"),
+        ("ttc_p5", "S1 conditional TTC", "TTC-P5 ↑", 4, " s"),
+        ("jerk_p95", "S1 jerk proxy", "Jerk-P95 ↓", 4, " m/s³"),
+    )
+    rows: list[dict[str, str]] = []
+    for endpoint, module, label, decimals, suffix in specifications:
+        row = select_one(contrasts, endpoint=endpoint)
+        scale = float(row["display_scale"])
+        effect = scale * float(row["raw_difference_structured_minus_baseline"])
+        low = scale * float(row["raw_ci_low"])
+        high = scale * float(row["raw_ci_high"])
+        direction = (
+            f"{int(row['favorable_replicates'])}/"
+            f"{int(row['tied_replicates'])}/"
+            f"{int(row['adverse_replicates'])}"
+        )
+        prefix = "Supported" if _as_bool(row["support_rule_met"]) else "Benefit not clearly established"
+        rows.append(
+            {
+                "Study/module": module,
+                "Comparison and endpoint": label,
+                "Effect*": f"{_signed(effect, decimals)}{suffix}",
+                "95% CI": (
+                    f"{_signed_or_zero(low, decimals)} to "
+                    f"{_signed_or_zero(high, decimals)}{suffix}"
+                ),
+                "Evidence status": (
+                    f"{prefix}; {direction}; Holm p = {float(row['holm_adjusted_p']):.4f}"
+                ),
+            }
+        )
+    return rows
+
+
 def build_main_table2(
-    study1_csv: Path,
+    study1_contrasts_csv: Path,
     studies_tables: Path,
     output_stem: Path,
 ) -> pd.DataFrame:
-    """Build the manuscript's 16-row Table 2 from numeric source tables."""
+    """Build the manuscript's 20-row Table 2 from numeric source tables."""
 
-    s1 = pd.read_csv(study1_csv, keep_default_na=False)
-    records: list[dict[str, str]] = []
-    for row in s1.itertuples(index=False):
-        records.append(
-            {
-                "Study/module": row.study_module,
-                "Comparison and endpoint": row.comparison_endpoint,
-                "Effect*": row.effect_display.strip(),
-                "95% CI": row.ci_display.strip(),
-                "Evidence status": row.evidence_status,
-            }
-        )
+    s1 = pd.read_csv(study1_contrasts_csv, keep_default_na=False)
+    records = _study1_rows(s1)
 
     s2 = pd.read_csv(studies_tables / "table_s2_primary_contrasts.csv")
     s2_specs = [
@@ -3415,8 +4267,8 @@ def build_main_table2(
         )
 
     table = pd.DataFrame.from_records(records)
-    if len(table) != 16:
-        raise ValueError(f"Table 2 must contain 16 rows; found {len(table)}")
+    if len(table) != 20:
+        raise ValueError(f"Table 2 must contain 20 rows; found {len(table)}")
     write_table(table, output_stem)
     return table
 
@@ -3655,8 +4507,8 @@ def write_json(path: Path, payload: Any) -> None:
 
 ### `src/egms_publication/validation.py`
 
-- SHA-256: `76f9a1f41e34a9d16f1221d418087e20664863e098f5630004ac9ab5e0f2024b`
-- Bytes: `6161`
+- SHA-256: `acdc2639bbdd2b4d9762e079dc75920761abc5f8debb13229e94a060faf8e2a8`
+- Bytes: `6492`
 
 ~~~~python
 from __future__ import annotations
@@ -3672,14 +4524,14 @@ from .utils import sha256, write_json
 
 
 EXPECTED_FIGURES = {
-    "manuscript/figures/Figure_2_Study1.png": (3810, 2522),
+    "manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.png": (3810, 2522),
     "manuscript/figures/Figure_3_Study2.png": (3810, 2472),
     "manuscript/figures/Figure_4_Study3.png": (3810, 2485),
     "power_full/figures/figure1_unpaired_power_curve.png": (3720, 2846),
 }
 
 EXPECTED_TABLE_ROWS = {
-    "manuscript/tables/Table_2_main_effects.csv": 16,
+    "manuscript/tables/Table_2_main_effects.csv": 20,
     "supplement/compact/Tables/Table_S2_planning_summary.csv": 9,
     "supplement/compact/Tables/Table_S3_condensed_planning.csv": 7,
     "supplement/compact/Tables/Table_S4_validation_checks.csv": 33,
@@ -3710,13 +4562,13 @@ def validate_input_boundary(data_root: Path, source_root: Path) -> list[str]:
     return failures
 
 
-def _validate_png(path: Path, expected: tuple[int, int]) -> None:
+def _validate_png(path: Path, expected: tuple[int, int], *, expected_dpi: float = 600.0) -> None:
     with Image.open(path) as image:
         if image.size != expected:
             raise ValueError(f"{path}: expected {expected}, found {image.size}")
         dpi = image.info.get("dpi", (0.0, 0.0))
-        if not all(595.0 <= float(value) <= 605.0 for value in dpi[:2]):
-            raise ValueError(f"{path}: expected approximately 600 dpi, found {dpi}")
+        if not all(expected_dpi - 5.0 <= float(value) <= expected_dpi + 5.0 for value in dpi[:2]):
+            raise ValueError(f"{path}: expected approximately {expected_dpi:g} dpi, found {dpi}")
 
 
 def _validate_siblings(png_path: Path) -> None:
@@ -3735,7 +4587,8 @@ def validate_outputs(repo_root: Path, output_root: Path) -> dict[str, object]:
     for relative, dimensions in EXPECTED_FIGURES.items():
         path = output_root / relative
         try:
-            _validate_png(path, dimensions)
+            expected_dpi = 500.0 if "Figure_2_" in relative else 600.0
+            _validate_png(path, dimensions, expected_dpi=expected_dpi)
             _validate_siblings(path)
         except Exception as exc:  # noqa: BLE001 - collect all QA failures
             failures.append(str(exc))
@@ -3766,9 +4619,11 @@ def validate_outputs(repo_root: Path, output_root: Path) -> dict[str, object]:
         "table_row_checks": EXPECTED_TABLE_ROWS,
         "power_figure_format_checks": list(POWER_FIGURE_STEMS),
         "interpretation_boundary": (
-            "Study 1 is an exported-summary graphical reproduction; Studies 2–3 are "
-            "controlled synthetic mechanism surrogates; power results are prospective "
-            "planning quantities. None is CARLA or real-world safety evidence."
+            "Study 1 is a post-hoc exploratory controlled-synthetic paired "
+            "evaluation with raw-output recomputation; Studies 2–3 are "
+            "controlled synthetic mechanism "
+            "surrogates; power results are prospective planning quantities. "
+            "None is CARLA or real-world safety evidence."
         ),
     }
     write_json(output_root / "validation_report.json", report)
@@ -3784,7 +4639,9 @@ def write_manifest(repo_root: Path, output_root: Path) -> Path:
     )
     output_files = sorted(
         path for path in output_root.rglob("*")
-        if path.is_file() and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
+        if path.is_file()
+        and not path.name.endswith(".tmp")
+        and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
     )
     payload = {
         "schema": "egms-publication-artifact-manifest-1.0",
@@ -3818,13 +4675,13 @@ def verify_manifest(output_root: Path, manifest: Path) -> None:
 
 ### `src/egms_studies23/__init__.py`
 
-- SHA-256: `712de5162d097cc5acf72b98c091d79b029c6d4c45878af7d8a0d894256abdb8`
-- Bytes: `93`
+- SHA-256: `53d91643ee78f14f866fd6006d28016670801f0ff968f547b956b63791b9e01d`
+- Bytes: `94`
 
 ~~~~python
 """EGMS-Drive controlled mechanism validation for Studies 2 and 3."""
 
-__version__ = "1.1.0"
+__version__ = "1.0.0"
 ~~~~
 
 ### `src/egms_studies23/common.py`
@@ -7288,4 +8145,6864 @@ def validate_output(output_dir: str | Path) -> dict[str, Any]:
     if errors:
         raise RuntimeError("Validation failed: " + "; ".join(errors))
     return report
+~~~~
+
+### `src/egms_study1r/__init__.py`
+
+- SHA-256: `3ffeda60dee9ff329291bd8615a51fd2ca0070c58203edfb00e8328e39cdecb5`
+- Bytes: `407`
+
+~~~~python
+"""Compatibility namespace for the frozen Study 1 source manifest.
+
+The public comparison is Baseline B versus Structured fusion.  This namespace
+keeps the original method-blind generator path and console entry point valid;
+the complete frozen implementation lives in :mod:`egms_study1r2` under its
+archived machine identifier.
+"""
+
+from egms_study1r2.common import ACTION_NAMES
+
+__all__ = ["ACTION_NAMES"]
+~~~~
+
+### `src/egms_study1r/common.py`
+
+- SHA-256: `9070acfc3e7639918e84ef695d52eab0d6df855eeeac8c35c4cb306a116fbbaf`
+- Bytes: `131`
+
+~~~~python
+"""Compatibility exports used by the byte-frozen method-blind generator."""
+
+from egms_study1r2.common import *  # noqa: F401,F403
+~~~~
+
+### `src/egms_study1r/generator.py`
+
+- SHA-256: `acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0`
+- Bytes: `31553`
+
+~~~~python
+"""Deterministic controlled-synthetic data generator for Study 1-R.
+
+This module owns only the data-generating process and common vehicle dynamics.
+It has no dependency on either candidate pipeline.  A split or scenario tape
+is generated once and is subsequently shared by both fitted pipelines.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Mapping
+
+import numpy as np
+import pandas as pd
+
+from .common import (
+    ACTION_NAMES,
+    MODALITIES,
+    SEMANTIC_STATE_INDICES,
+    SEMANTIC_VARIABLES,
+    STATE_COLUMNS,
+    STATE_INDEX,
+    array_sha256,
+    load_protocol,
+    observation_availability_column,
+    observation_quality_column,
+    observation_value_column,
+    scenario_cells,
+    stable_seed,
+    validate_protocol,
+)
+
+
+@dataclass(frozen=True)
+class ObservationBatch:
+    """Sensor observations for every episode at one time index."""
+
+    values: np.ndarray  # [episode, modality, semantic variable]
+    quality: np.ndarray  # [episode, modality]
+    available: np.ndarray  # [episode, modality]
+
+    def validate(self) -> None:
+        if self.values.ndim != 3:
+            raise ValueError("observation values must be [episode, modality, variable]")
+        expected = (self.values.shape[0], len(MODALITIES), len(SEMANTIC_VARIABLES))
+        if self.values.shape != expected:
+            raise ValueError(f"observation values have shape {self.values.shape}; expected {expected}")
+        if self.quality.shape != expected[:2] or self.available.shape != expected[:2]:
+            raise ValueError("observation quality/availability shape mismatch")
+        if np.any(~np.isfinite(self.quality)) or np.any(
+            (self.quality < 0.0) | (self.quality > 1.0)
+        ):
+            raise ValueError("observed quality must be finite and in [0,1]")
+        if np.any(np.isfinite(self.values[~self.available])):
+            raise ValueError("unavailable observations must be represented by NaN")
+        if np.any(~np.isfinite(self.values[self.available])):
+            raise ValueError("available observations must be finite")
+
+
+@dataclass(frozen=True)
+class ScenarioTape:
+    """Fixed exogenous inputs used by a vectorized closed-loop evaluation."""
+
+    split: str
+    data_seed: int
+    training_replicate: int
+    dt_s: float
+    steps: int
+    episode_id: np.ndarray
+    cell_id: np.ndarray
+    family: np.ndarray
+    environment: np.ndarray
+    density: np.ndarray
+    episode_index: np.ndarray
+    episode_seed: np.ndarray
+    initial_state: np.ndarray
+    desired_speed_mps: np.ndarray
+    route_goal_m: np.ndarray
+    lead_acceleration_mps2: np.ndarray
+    gap_impulse_m: np.ndarray
+    crossing_risk: np.ndarray
+    route_urgency: np.ndarray
+    quality_true: np.ndarray
+    quality_observed: np.ndarray
+    standard_noise: np.ndarray
+    dropout_uniform: np.ndarray
+    outlier_uniform: np.ndarray
+    outlier_noise: np.ndarray
+
+    @property
+    def n_episodes(self) -> int:
+        return int(len(self.episode_id))
+
+    def validate(self) -> None:
+        n = self.n_episodes
+        time_points = self.steps + 1
+        if self.initial_state.shape != (n, len(STATE_COLUMNS)):
+            raise ValueError("initial_state shape does not follow STATE_COLUMNS")
+        for name in (
+            "episode_id",
+            "cell_id",
+            "family",
+            "environment",
+            "density",
+            "episode_index",
+            "episode_seed",
+            "desired_speed_mps",
+            "route_goal_m",
+        ):
+            if np.asarray(getattr(self, name)).shape != (n,):
+                raise ValueError(f"{name} must have one value per episode")
+        if self.lead_acceleration_mps2.shape != (n, self.steps):
+            raise ValueError("lead_acceleration_mps2 shape mismatch")
+        if self.gap_impulse_m.shape != (n, self.steps):
+            raise ValueError("gap_impulse_m shape mismatch")
+        if self.crossing_risk.shape != (n, time_points):
+            raise ValueError("crossing_risk shape mismatch")
+        if self.route_urgency.shape != (n, time_points):
+            raise ValueError("route_urgency shape mismatch")
+        quality_shape = (n, time_points, len(MODALITIES))
+        if self.quality_true.shape != quality_shape:
+            raise ValueError("quality_true shape mismatch")
+        if self.quality_observed.shape != quality_shape:
+            raise ValueError("quality_observed shape mismatch")
+        observation_shape = quality_shape + (len(SEMANTIC_VARIABLES),)
+        if self.standard_noise.shape != observation_shape:
+            raise ValueError("standard_noise shape mismatch")
+        if self.outlier_noise.shape != observation_shape:
+            raise ValueError("outlier_noise shape mismatch")
+        if self.dropout_uniform.shape != quality_shape:
+            raise ValueError("dropout_uniform shape mismatch")
+        if self.outlier_uniform.shape != quality_shape:
+            raise ValueError("outlier_uniform shape mismatch")
+        if self.steps <= 0 or self.dt_s <= 0:
+            raise ValueError("tape steps and dt_s must be positive")
+        if len(set(self.episode_id.tolist())) != n:
+            raise ValueError("episode_id values must be unique")
+
+    def digest(self) -> str:
+        """Content digest used to prove paired use of one immutable tape."""
+
+        text_arrays = (
+            np.char.encode(np.asarray([self.split], dtype=str), "utf-8"),
+            np.char.encode(self.episode_id.astype(str), "utf-8"),
+            np.char.encode(self.cell_id.astype(str), "utf-8"),
+            np.char.encode(self.family.astype(str), "utf-8"),
+            np.char.encode(self.environment.astype(str), "utf-8"),
+            np.char.encode(self.density.astype(str), "utf-8"),
+        )
+        return array_sha256(
+            *text_arrays,
+            np.asarray(
+                [
+                    float(self.data_seed),
+                    float(self.training_replicate),
+                    float(self.dt_s),
+                    float(self.steps),
+                ],
+                dtype=np.float64,
+            ),
+            self.episode_index,
+            self.episode_seed,
+            self.initial_state,
+            self.desired_speed_mps,
+            self.route_goal_m,
+            self.lead_acceleration_mps2,
+            self.gap_impulse_m,
+            self.crossing_risk,
+            self.route_urgency,
+            self.quality_true,
+            self.quality_observed,
+            self.standard_noise,
+            self.dropout_uniform,
+            self.outlier_uniform,
+            self.outlier_noise,
+        )
+
+
+def _as_protocol(protocol: Mapping[str, object] | str | Path) -> dict:
+    if isinstance(protocol, (str, Path)):
+        return load_protocol(protocol)
+    value = dict(protocol)
+    validate_protocol(value)
+    return value
+
+
+def _split_specification(
+    protocol: Mapping[str, object], split: str, training_replicate: int | None
+) -> tuple[int, int, int]:
+    data = protocol["data"]
+    if split == "train":
+        if training_replicate is None:
+            raise ValueError("training_replicate is required for the train split")
+        replicate = int(training_replicate)
+        seeds = tuple(int(value) for value in data["training_data_seeds"])
+        if not 0 <= replicate < len(seeds):
+            raise ValueError(f"training_replicate must be in [0,{len(seeds) - 1}]")
+        return replicate, seeds[replicate], int(data["train_episodes_per_cell"])
+    if training_replicate is not None:
+        raise ValueError("training_replicate is only valid for the train split")
+    if split == "validation":
+        return -1, int(data["fixed_validation_seed"]), int(
+            data["validation_episodes_per_cell"]
+        )
+    if split == "test":
+        return -1, int(data["fixed_test_seed"]), int(data["test_episodes_per_cell"])
+    if split == "rollout":
+        return -1, int(data["fixed_rollout_seed"]), int(
+            data["rollout_episodes_per_cell"]
+        )
+    raise ValueError("split must be train, validation, test, or rollout")
+
+
+def _profile_array(profile: Mapping[str, float]) -> np.ndarray:
+    return np.asarray([float(profile[name]) for name in SEMANTIC_VARIABLES], dtype=float)
+
+
+def make_scenario_tape(
+    protocol: Mapping[str, object] | str | Path,
+    split: str,
+    training_replicate: int | None = None,
+    steps: int | None = None,
+) -> ScenarioTape:
+    """Generate all exogenous values before any fitted pipeline is evaluated."""
+
+    cfg = _as_protocol(protocol)
+    replicate, data_seed, episodes_per_cell = _split_specification(
+        cfg, split, training_replicate
+    )
+    if steps is None:
+        steps = (
+            int(cfg["data"]["rollout_frames"])
+            if split == "rollout"
+            else int(cfg["data"]["frames_per_episode"]) + 1
+        )
+    steps = int(steps)
+    if steps <= 0:
+        raise ValueError("steps must be positive")
+
+    cells = scenario_cells(cfg)
+    n = len(cells) * episodes_per_cell
+    n_time = steps + 1
+    n_modalities = len(MODALITIES)
+    n_variables = len(SEMANTIC_VARIABLES)
+    dt_s = float(cfg["data"]["dt_s"])
+    generator_cfg = cfg["generator"]
+    dynamics_cfg = cfg["dynamics"]
+
+    episode_ids: list[str] = []
+    cell_ids: list[str] = []
+    families: list[str] = []
+    environments: list[str] = []
+    densities: list[str] = []
+    episode_indices = np.empty(n, dtype=np.int16)
+    episode_seeds = np.empty(n, dtype=np.uint32)
+    initial_state = np.empty((n, len(STATE_COLUMNS)), dtype=float)
+    desired_speed = np.empty(n, dtype=float)
+    route_goal = np.empty(n, dtype=float)
+    lead_acceleration = np.empty((n, steps), dtype=float)
+    gap_impulse = np.zeros((n, steps), dtype=float)
+    crossing_risk = np.empty((n, n_time), dtype=float)
+    route_urgency = np.empty((n, n_time), dtype=float)
+    quality_true = np.empty((n, n_time, n_modalities), dtype=float)
+    quality_observed = np.empty_like(quality_true)
+    standard_noise = np.empty((n, n_time, n_modalities, n_variables), dtype=float)
+    dropout_uniform = np.empty((n, n_time, n_modalities), dtype=float)
+    outlier_uniform = np.empty_like(dropout_uniform)
+    outlier_noise = np.empty_like(standard_noise)
+
+    density_profiles = generator_cfg["density_profiles"]
+    family_profiles = generator_cfg["family_profiles"]
+    quality_profiles = generator_cfg["environment_quality"]
+    quality_reduction = generator_cfg["density_quality_reduction"]
+    if split == "train":
+        prefix = f"train_r{replicate:02d}"
+    elif split in {"test", "rollout"}:
+        # Offline and closed-loop endpoints use the same fixed 360 episode IDs
+        # so crossed resampling addresses a common evaluation-cell index.
+        prefix = "fixed_test"
+    else:
+        prefix = split
+    row_index = 0
+    normalized_time = np.linspace(0.0, 1.0, n_time)
+
+    for cell in cells:
+        density_profile = density_profiles[cell.density]
+        family_profile = family_profiles[cell.family]
+        for episode_index in range(episodes_per_cell):
+            episode_seed = stable_seed(
+                "study1r",
+                data_seed,
+                split,
+                replicate,
+                cell.family,
+                cell.environment,
+                cell.density,
+                episode_index,
+            )
+            rng = np.random.default_rng(episode_seed)
+            episode_id = f"{prefix}__{cell.cell_id}__e{episode_index:02d}"
+            episode_ids.append(episode_id)
+            cell_ids.append(cell.cell_id)
+            families.append(cell.family)
+            environments.append(cell.environment)
+            densities.append(cell.density)
+            episode_indices[row_index] = episode_index
+            episode_seeds[row_index] = episode_seed
+
+            ego_speed = max(
+                3.0,
+                float(density_profile["initial_ego_speed_mps"])
+                + rng.normal(0.0, float(generator_cfg["initial_speed_sd_mps"])),
+            )
+            closing_speed = (
+                float(family_profile["initial_closing_speed_mps"])
+                + rng.normal(
+                    0.0, float(generator_cfg["initial_closing_speed_sd_mps"])
+                )
+            )
+            gap = max(
+                5.0,
+                float(density_profile["initial_gap_m"])
+                + float(family_profile["gap_adjustment_m"])
+                + rng.normal(0.0, float(generator_cfg["initial_gap_sd_m"])),
+            )
+            desired = max(ego_speed + rng.normal(1.2, 0.35), ego_speed)
+            desired_speed[row_index] = desired
+            route_goal[row_index] = (
+                desired
+                * steps
+                * dt_s
+                * float(dynamics_cfg["route_goal_fraction_of_nominal_progress"])
+            )
+
+            center = float(
+                np.clip(
+                    float(generator_cfg["event_center_fraction"])
+                    + rng.normal(
+                        0.0, float(generator_cfg["event_center_jitter_sd"])
+                    ),
+                    0.30,
+                    0.75,
+                )
+            )
+            width = float(generator_cfg["event_width_fraction"])
+            pulse = np.exp(-0.5 * ((normalized_time - center) / width) ** 2)
+            background_risk = float(density_profile["background_crossing_risk"])
+            risk_peak = float(family_profile["crossing_risk_peak"])
+            risk_noise = rng.normal(0.0, 0.012, size=n_time)
+            crossing = background_risk + (risk_peak - background_risk) * pulse + risk_noise
+            crossing = np.clip(crossing, 0.0, 1.0)
+            crossing_risk[row_index] = crossing
+
+            urgency_peak = float(family_profile["route_urgency_peak"])
+            logistic = 1.0 / (1.0 + np.exp(-10.0 * (normalized_time - center)))
+            urgency = 0.06 + (urgency_peak - 0.06) * logistic
+            urgency += rng.normal(0.0, 0.008, size=n_time)
+            route_urgency[row_index] = np.clip(urgency, 0.0, 1.0)
+
+            lead_acceleration[row_index] = (
+                float(family_profile["lead_acceleration_peak_mps2"]) * pulse[:-1]
+                + rng.normal(
+                    0.0,
+                    float(generator_cfg["exogenous_acceleration_noise_sd_mps2"]),
+                    size=steps,
+                )
+            )
+            total_gap_impulse = float(family_profile["gap_impulse_m"])
+            if total_gap_impulse != 0.0:
+                pulse_steps = pulse[:-1]
+                gap_impulse[row_index] = total_gap_impulse * pulse_steps / np.maximum(
+                    pulse_steps.sum(), np.finfo(float).tiny
+                )
+
+            initial_state[row_index] = np.asarray(
+                [
+                    gap,
+                    closing_speed,
+                    ego_speed,
+                    0.0,
+                    0.0,
+                    crossing[0],
+                    route_urgency[row_index, 0],
+                ],
+                dtype=float,
+            )
+
+            episode_health = rng.uniform(
+                float(generator_cfg["episode_health_low"]),
+                float(generator_cfg["episode_health_high"]),
+                size=n_modalities,
+            )
+            for modality_index, modality in enumerate(MODALITIES):
+                base_quality = (
+                    float(quality_profiles[cell.environment][modality])
+                    - float(quality_reduction[cell.density])
+                )
+                innovations = rng.normal(0.0, 0.018, size=n_time)
+                quality_path = np.empty(n_time, dtype=float)
+                quality_path[0] = base_quality * episode_health[modality_index] + innovations[0]
+                for time_index in range(1, n_time):
+                    quality_path[time_index] = (
+                        0.82 * quality_path[time_index - 1]
+                        + 0.18 * base_quality * episode_health[modality_index]
+                        + innovations[time_index]
+                    )
+                quality_true[row_index, :, modality_index] = np.clip(
+                    quality_path, 0.08, 0.995
+                )
+            quality_observed[row_index] = np.clip(
+                quality_true[row_index]
+                + rng.normal(
+                    0.0,
+                    float(generator_cfg["quality_observation_sd"]),
+                    size=(n_time, n_modalities),
+                ),
+                0.05,
+                1.0,
+            )
+            standard_noise[row_index] = rng.normal(
+                0.0, 1.0, size=(n_time, n_modalities, n_variables)
+            )
+            dropout_uniform[row_index] = rng.random((n_time, n_modalities))
+            outlier_uniform[row_index] = rng.random((n_time, n_modalities))
+            outlier_noise[row_index] = rng.normal(
+                0.0, 1.0, size=(n_time, n_modalities, n_variables)
+            )
+            row_index += 1
+
+    tape = ScenarioTape(
+        split=split,
+        data_seed=data_seed,
+        training_replicate=replicate,
+        dt_s=dt_s,
+        steps=steps,
+        episode_id=np.asarray(episode_ids, dtype=str),
+        cell_id=np.asarray(cell_ids, dtype=str),
+        family=np.asarray(families, dtype=str),
+        environment=np.asarray(environments, dtype=str),
+        density=np.asarray(densities, dtype=str),
+        episode_index=episode_indices,
+        episode_seed=episode_seeds,
+        initial_state=initial_state,
+        desired_speed_mps=desired_speed,
+        route_goal_m=route_goal,
+        lead_acceleration_mps2=lead_acceleration,
+        gap_impulse_m=gap_impulse,
+        crossing_risk=crossing_risk,
+        route_urgency=route_urgency,
+        quality_true=quality_true,
+        quality_observed=quality_observed,
+        standard_noise=standard_noise,
+        dropout_uniform=dropout_uniform,
+        outlier_uniform=outlier_uniform,
+        outlier_noise=outlier_noise,
+    )
+    tape.validate()
+    return tape
+
+
+def _base_noise_matrix(protocol: Mapping[str, object]) -> np.ndarray:
+    noise = protocol["generator"]["base_noise_sd"]
+    return np.asarray(
+        [
+            [float(noise[modality][variable]) for variable in SEMANTIC_VARIABLES]
+            for modality in MODALITIES
+        ],
+        dtype=float,
+    )
+
+
+def observe_state(
+    state: np.ndarray,
+    tape: ScenarioTape,
+    frame_index: int,
+    protocol: Mapping[str, object] | str | Path,
+) -> ObservationBatch:
+    """Observe possibly divergent states using the same pre-generated noise tape."""
+
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    if values.shape != (tape.n_episodes, len(STATE_COLUMNS)):
+        raise ValueError(
+            f"state has shape {values.shape}; expected {(tape.n_episodes, len(STATE_COLUMNS))}"
+        )
+    index = int(frame_index)
+    if not 0 <= index <= tape.steps:
+        raise ValueError(f"frame_index must be in [0,{tape.steps}]")
+    generator_cfg = cfg["generator"]
+    semantic_state = values[:, SEMANTIC_STATE_INDICES]
+    quality_true = tape.quality_true[:, index, :]
+    quality_observed = tape.quality_observed[:, index, :]
+    noise_scale = _base_noise_matrix(cfg)[None, :, :] / (
+        0.25 + 0.75 * quality_true[:, :, None]
+    )
+    observed = semantic_state[:, None, :] + (
+        tape.standard_noise[:, index, :, :] * noise_scale
+    )
+
+    outlier_probability = float(generator_cfg["outlier_base_probability"]) + float(
+        generator_cfg["outlier_quality_slope"]
+    ) * (1.0 - quality_true)
+    outlier_mask = tape.outlier_uniform[:, index, :] < outlier_probability
+    observed += (
+        outlier_mask[:, :, None]
+        * tape.outlier_noise[:, index, :, :]
+        * noise_scale
+        * float(generator_cfg["outlier_scale"])
+    )
+
+    for variable_index, variable in enumerate(SEMANTIC_VARIABLES):
+        low, high = (float(value) for value in generator_cfg["observation_clips"][variable])
+        observed[:, :, variable_index] = np.clip(
+            observed[:, :, variable_index], low, high
+        )
+
+    dropout_probability = float(generator_cfg["dropout_base_probability"]) + float(
+        generator_cfg["dropout_quality_slope"]
+    ) * (1.0 - quality_true)
+    # Ego-state availability is physically much more stable than exteroceptive
+    # sensing, but remains nonzero and is generated before evaluation.
+    dropout_probability[:, MODALITIES.index("ego")] *= 0.10
+    available = tape.dropout_uniform[:, index, :] >= dropout_probability
+    observed[~available] = np.nan
+    batch = ObservationBatch(observed, quality_observed.copy(), available)
+    batch.validate()
+    return batch
+
+
+def state_diagnostics(
+    state: np.ndarray, protocol: Mapping[str, object] | str | Path
+) -> dict[str, np.ndarray]:
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    gap = values[:, STATE_INDEX["gap_m"]]
+    closing = values[:, STATE_INDEX["closing_speed_mps"]]
+    speed = values[:, STATE_INDEX["ego_speed_mps"]]
+    oracle_cfg = cfg["oracle"]
+    ttc_cap = float(oracle_cfg["ttc_cap_s"])
+    ttc = np.full(len(values), ttc_cap, dtype=float)
+    closing_mask = closing > 0.1
+    ttc[closing_mask] = np.clip(
+        gap[closing_mask] / closing[closing_mask], 0.0, ttc_cap
+    )
+    stopping_margin = gap - (
+        float(oracle_cfg["standstill_gap_m"])
+        + float(oracle_cfg["reaction_time_s"]) * speed
+        + np.maximum(closing, 0.0) ** 2
+        / (2.0 * float(oracle_cfg["comfortable_deceleration_mps2"]))
+    )
+    return {"ttc_s": ttc, "stopping_margin_m": stopping_margin}
+
+
+def oracle_actions(
+    state: np.ndarray, protocol: Mapping[str, object] | str | Path
+) -> np.ndarray:
+    """Assign one of four ordered expert actions from latent physical state."""
+
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    if values.ndim != 2 or values.shape[1] != len(STATE_COLUMNS):
+        raise ValueError("state must have shape [episode, len(STATE_COLUMNS)]")
+    diagnostics = state_diagnostics(values, cfg)
+    ttc = diagnostics["ttc_s"]
+    margin = diagnostics["stopping_margin_m"]
+    gap = values[:, STATE_INDEX["gap_m"]]
+    crossing = values[:, STATE_INDEX["crossing_risk"]]
+    oracle_cfg = cfg["oracle"]
+
+    actions = np.zeros(len(values), dtype=np.int8)
+    slow = (
+        (ttc < float(oracle_cfg["slow_ttc_s"]))
+        | (margin < float(oracle_cfg["slow_stopping_margin_m"]))
+        | (crossing > float(oracle_cfg["slow_crossing_risk"]))
+    )
+    actions[slow] = 1
+    yielding = (
+        (ttc < float(oracle_cfg["yield_ttc_s"]))
+        | (margin < float(oracle_cfg["yield_stopping_margin_m"]))
+        | (crossing > float(oracle_cfg["yield_crossing_risk"]))
+    )
+    actions[yielding] = 2
+    stopping = (
+        (ttc < float(oracle_cfg["stop_ttc_s"]))
+        | (crossing > float(oracle_cfg["stop_crossing_risk"]))
+        | (gap <= float(cfg["dynamics"]["collision_gap_m"]))
+    )
+    actions[stopping] = 3
+    return actions
+
+
+def step_dynamics(
+    state: np.ndarray,
+    executed_actions: np.ndarray,
+    tape: ScenarioTape,
+    frame_index: int,
+    protocol: Mapping[str, object] | str | Path,
+) -> tuple[np.ndarray, dict[str, np.ndarray]]:
+    """Advance all episodes one step with common action-to-control dynamics."""
+
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    if values.shape != (tape.n_episodes, len(STATE_COLUMNS)):
+        raise ValueError("state shape does not match the scenario tape")
+    actions = np.asarray(executed_actions, dtype=int)
+    if actions.shape != (tape.n_episodes,) or np.any((actions < 0) | (actions >= 4)):
+        raise ValueError("executed_actions must be one action ID per episode in [0,3]")
+    index = int(frame_index)
+    if not 0 <= index < tape.steps:
+        raise ValueError(f"frame_index must be in [0,{tape.steps - 1}]")
+
+    dt_s = float(cfg["data"]["dt_s"])
+    dynamics_cfg = cfg["dynamics"]
+    gap = values[:, STATE_INDEX["gap_m"]]
+    closing = values[:, STATE_INDEX["closing_speed_mps"]]
+    speed = values[:, STATE_INDEX["ego_speed_mps"]]
+    acceleration = values[:, STATE_INDEX["acceleration_mps2"]]
+    progress = values[:, STATE_INDEX["progress_m"]]
+    lead_speed = np.maximum(0.0, speed - closing)
+
+    keep_command = np.clip(
+        float(dynamics_cfg["keep_speed_gain"]) * (tape.desired_speed_mps - speed),
+        -float(dynamics_cfg["keep_acceleration_limit_mps2"]),
+        float(dynamics_cfg["keep_acceleration_limit_mps2"]),
+    )
+    commands = keep_command.copy()
+    commands[actions == 1] = float(dynamics_cfg["slow_command_mps2"])
+    commands[actions == 2] = float(dynamics_cfg["yield_command_mps2"])
+    commands[actions == 3] = float(dynamics_cfg["stop_command_mps2"])
+    lag = float(dynamics_cfg["acceleration_lag"])
+    next_acceleration = np.clip(
+        lag * acceleration + (1.0 - lag) * commands,
+        float(dynamics_cfg["maximum_deceleration_mps2"]),
+        float(dynamics_cfg["maximum_acceleration_mps2"]),
+    )
+    next_speed = np.maximum(0.0, speed + next_acceleration * dt_s)
+    next_lead_speed = np.maximum(
+        0.0, lead_speed + tape.lead_acceleration_mps2[:, index] * dt_s
+    )
+    next_closing = next_speed - next_lead_speed
+    next_gap = (
+        gap
+        + 0.5 * ((lead_speed - speed) + (next_lead_speed - next_speed)) * dt_s
+        + tape.gap_impulse_m[:, index]
+    )
+    next_progress = progress + 0.5 * (speed + next_speed) * dt_s
+    next_state = np.column_stack(
+        [
+            next_gap,
+            next_closing,
+            next_speed,
+            next_acceleration,
+            next_progress,
+            tape.crossing_risk[:, index + 1],
+            tape.route_urgency[:, index + 1],
+        ]
+    )
+
+    diagnostics = state_diagnostics(next_state, cfg)
+    crossing = next_state[:, STATE_INDEX["crossing_risk"]]
+    longitudinal_collision = next_gap <= float(dynamics_cfg["collision_gap_m"])
+    crossing_collision = (
+        (crossing >= float(dynamics_cfg["crossing_collision_risk"]))
+        & (next_speed >= float(dynamics_cfg["crossing_collision_speed_mps"]))
+    )
+    collision = longitudinal_collision | crossing_collision
+    near_miss = (~collision) & (
+        (diagnostics["ttc_s"] < float(dynamics_cfg["near_miss_ttc_s"]))
+        | (next_gap < float(dynamics_cfg["near_miss_gap_m"]))
+        | (
+            (crossing >= float(dynamics_cfg["crossing_near_miss_risk"]))
+            & (next_speed > 2.0)
+        )
+    )
+    critical = collision | near_miss
+    events = {
+        "command_acceleration_mps2": commands,
+        "jerk_mps3": (next_acceleration - acceleration) / dt_s,
+        "ttc_s": diagnostics["ttc_s"],
+        "stopping_margin_m": diagnostics["stopping_margin_m"],
+        "collision": collision,
+        "near_miss": near_miss,
+        "critical_event": critical,
+        "route_goal_reached": next_progress >= tape.route_goal_m,
+    }
+    return next_state, events
+
+
+def _append_observation(
+    row: dict[str, object], batch: ObservationBatch, episode_index: int, lag: str
+) -> None:
+    for modality_index, modality in enumerate(MODALITIES):
+        for variable_index, variable in enumerate(SEMANTIC_VARIABLES):
+            row[observation_value_column(modality, lag, variable)] = float(
+                batch.values[episode_index, modality_index, variable_index]
+            )
+        row[observation_quality_column(modality, lag)] = float(
+            batch.quality[episode_index, modality_index]
+        )
+        row[observation_availability_column(modality, lag)] = int(
+            batch.available[episode_index, modality_index]
+        )
+
+
+def generate_offline_split(
+    protocol: Mapping[str, object] | str | Path,
+    split: str,
+    training_replicate: int | None = None,
+) -> pd.DataFrame:
+    """Generate one labeled temporal split from the frozen physical process."""
+
+    if split == "rollout":
+        raise ValueError("use make_scenario_tape for closed-loop rollout")
+    cfg = _as_protocol(protocol)
+    frames = int(cfg["data"]["frames_per_episode"])
+    tape = make_scenario_tape(
+        cfg, split, training_replicate=training_replicate, steps=frames + 1
+    )
+    state = tape.initial_state.copy()
+    previous_observation = observe_state(state, tape, 0, cfg)
+    burn_in_action = oracle_actions(state, cfg)
+    state, _ = step_dynamics(state, burn_in_action, tape, 0, cfg)
+    rows: list[dict[str, object]] = []
+
+    for frame_index in range(frames):
+        tape_index = frame_index + 1
+        current_observation = observe_state(state, tape, tape_index, cfg)
+        labels = oracle_actions(state, cfg)
+        diagnostics = state_diagnostics(state, cfg)
+        for episode_position in range(tape.n_episodes):
+            row: dict[str, object] = {
+                "split": split,
+                "training_replicate": int(tape.training_replicate),
+                "data_seed": int(tape.data_seed),
+                "cell_id": str(tape.cell_id[episode_position]),
+                "episode_id": str(tape.episode_id[episode_position]),
+                "episode_index": int(tape.episode_index[episode_position]),
+                "episode_seed": int(tape.episode_seed[episode_position]),
+                "family": str(tape.family[episode_position]),
+                "environment": str(tape.environment[episode_position]),
+                "density": str(tape.density[episode_position]),
+                "frame": int(frame_index),
+                "time_s": float(frame_index * tape.dt_s),
+                "sample_id": f"{tape.episode_id[episode_position]}__f{frame_index:02d}",
+                "has_previous": 1,
+                "latent_ttc_s": float(diagnostics["ttc_s"][episode_position]),
+                "latent_stopping_margin_m": float(
+                    diagnostics["stopping_margin_m"][episode_position]
+                ),
+                "y_true": int(labels[episode_position]),
+                "action_name": ACTION_NAMES[int(labels[episode_position])],
+            }
+            for state_index, name in enumerate(STATE_COLUMNS):
+                row[f"latent_{name}"] = float(state[episode_position, state_index])
+            _append_observation(row, previous_observation, episode_position, "prev")
+            _append_observation(row, current_observation, episode_position, "current")
+            rows.append(row)
+
+        state, _ = step_dynamics(state, labels, tape, tape_index, cfg)
+        previous_observation = current_observation
+
+    frame = pd.DataFrame.from_records(rows)
+    frame = frame.sort_values(["cell_id", "episode_id", "frame"], kind="stable")
+    frame = frame.reset_index(drop=True)
+    observed_classes = set(int(value) for value in frame["y_true"].unique())
+    if observed_classes != set(range(len(ACTION_NAMES))):
+        raise RuntimeError(
+            f"{split} split generated action classes {sorted(observed_classes)}; expected 0..3"
+        )
+    if frame["sample_id"].duplicated().any():
+        raise RuntimeError("sample_id values are not unique")
+    return frame
+
+
+def generate_all_offline(
+    protocol: Mapping[str, object] | str | Path,
+) -> dict[str, pd.DataFrame]:
+    """Generate the ten formal training samples and the two fixed splits."""
+
+    cfg = _as_protocol(protocol)
+    outputs = {
+        f"train_{replicate:02d}": generate_offline_split(
+            cfg, "train", training_replicate=replicate
+        )
+        for replicate in range(int(cfg["data"]["formal_training_replicates"]))
+    }
+    outputs["validation"] = generate_offline_split(cfg, "validation")
+    outputs["test"] = generate_offline_split(cfg, "test")
+    return outputs
+~~~~
+
+### `src/egms_study1r/runner.py`
+
+- SHA-256: `b8ce1459c624118908cb466e04f21e0cd4357771d988dea9405154246c03c39d`
+- Bytes: `138`
+
+~~~~python
+"""Compatibility console entry point for the frozen Study 1 implementation."""
+
+from egms_study1r2.runner import main
+
+__all__ = ["main"]
+~~~~
+
+### `src/egms_study1r2/__init__.py`
+
+- SHA-256: `a2b894983aaf98a507e78bc4fc4a7080329d01debfb3b29e1b6be4edf8680701`
+- Bytes: `706`
+
+~~~~python
+"""Study 1-R controlled-synthetic paired refit package."""
+
+from .common import ACTION_NAMES, MODALITIES, SEMANTIC_VARIABLES, STATE_COLUMNS
+from .generator import (
+    ObservationBatch,
+    ScenarioTape,
+    generate_all_offline,
+    generate_offline_split,
+    make_scenario_tape,
+    observe_state,
+    oracle_actions,
+    state_diagnostics,
+    step_dynamics,
+)
+
+__all__ = [
+    "ACTION_NAMES",
+    "MODALITIES",
+    "SEMANTIC_VARIABLES",
+    "STATE_COLUMNS",
+    "ObservationBatch",
+    "ScenarioTape",
+    "generate_all_offline",
+    "generate_offline_split",
+    "make_scenario_tape",
+    "observe_state",
+    "oracle_actions",
+    "state_diagnostics",
+    "step_dynamics",
+]
+
+__version__ = "2.0.0"
+~~~~
+
+### `src/egms_study1r2/common.py`
+
+- SHA-256: `d56f08b66c69aafff2f40ec7bfc196b26c19001390b78717deea4a46e30d0e86`
+- Bytes: `11683`
+
+~~~~python
+"""Shared constants and deterministic helpers for Study 1-R.
+
+The data generator, model trainers, analysis, and validator import the column
+contract from this module.  Keeping the contract in one small module prevents
+the two candidate pipelines from silently receiving different data.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+import hashlib
+from itertools import product
+from pathlib import Path
+from typing import Iterable, Mapping
+
+import numpy as np
+import yaml
+
+
+ACTION_NAMES = ("KEEP", "SLOW", "YIELD", "STOP")
+MODALITIES = ("camera", "lidar", "radar", "ego")
+SEMANTIC_VARIABLES = (
+    "gap_m",
+    "closing_speed_mps",
+    "ego_speed_mps",
+    "crossing_risk",
+    "route_urgency",
+)
+STATE_COLUMNS = (
+    "gap_m",
+    "closing_speed_mps",
+    "ego_speed_mps",
+    "acceleration_mps2",
+    "progress_m",
+    "crossing_risk",
+    "route_urgency",
+)
+OBSERVATION_LAGS = ("prev", "current")
+
+STATE_INDEX = {name: index for index, name in enumerate(STATE_COLUMNS)}
+SEMANTIC_STATE_INDICES = np.asarray(
+    [STATE_INDEX[name] for name in SEMANTIC_VARIABLES], dtype=int
+)
+
+
+@dataclass(frozen=True, order=True)
+class ScenarioCell:
+    """One cell in the frozen family × environment × density matrix."""
+
+    family: str
+    environment: str
+    density: str
+
+    @property
+    def cell_id(self) -> str:
+        return f"{self.family}__{self.environment}__{self.density}"
+
+
+def stable_seed(*parts: object) -> int:
+    """Create a stable NumPy seed without relying on Python's salted hash."""
+
+    payload = "|".join(str(part) for part in parts).encode("utf-8")
+    return int.from_bytes(hashlib.sha256(payload).digest()[:8], "little") % (
+        2**32 - 1
+    )
+
+
+def sha256_file(path: str | Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def array_sha256(*arrays: np.ndarray) -> str:
+    """Hash array content together with dtype and shape metadata."""
+
+    digest = hashlib.sha256()
+    for value in arrays:
+        array = np.ascontiguousarray(np.asarray(value))
+        digest.update(str(array.dtype).encode("ascii"))
+        digest.update(str(tuple(array.shape)).encode("ascii"))
+        digest.update(array.tobytes())
+    return digest.hexdigest()
+
+
+def softmax(logits: np.ndarray, axis: int = -1) -> np.ndarray:
+    values = np.asarray(logits, dtype=float)
+    shifted = values - np.max(values, axis=axis, keepdims=True)
+    exponentials = np.exp(shifted)
+    return exponentials / np.maximum(
+        exponentials.sum(axis=axis, keepdims=True), np.finfo(float).tiny
+    )
+
+
+def load_protocol(path: str | Path) -> dict:
+    """Read and validate the frozen YAML protocol."""
+
+    with Path(path).open("r", encoding="utf-8") as handle:
+        protocol = yaml.safe_load(handle)
+    if not isinstance(protocol, dict):
+        raise ValueError("Study 1-R protocol must be a YAML mapping")
+    validate_protocol(protocol)
+    return protocol
+
+
+def scenario_cells(protocol: Mapping[str, object]) -> tuple[ScenarioCell, ...]:
+    matrix = protocol["scenario_matrix"]
+    if not isinstance(matrix, Mapping):
+        raise ValueError("scenario_matrix must be a mapping")
+    return tuple(
+        ScenarioCell(str(family), str(environment), str(density))
+        for family, environment, density in product(
+            matrix["families"], matrix["environments"], matrix["densities"]
+        )
+    )
+
+
+def observation_value_column(modality: str, lag: str, variable: str) -> str:
+    return f"{modality}_{lag}_{variable}"
+
+
+def observation_quality_column(modality: str, lag: str) -> str:
+    return f"q_{modality}_{lag}"
+
+
+def observation_availability_column(modality: str, lag: str) -> str:
+    return f"available_{modality}_{lag}"
+
+
+def observation_columns(
+    *, include_quality: bool = True, include_availability: bool = True
+) -> list[str]:
+    """Return the canonical temporal observation columns in stable order."""
+
+    columns: list[str] = []
+    for lag in OBSERVATION_LAGS:
+        for modality in MODALITIES:
+            columns.extend(
+                observation_value_column(modality, lag, variable)
+                for variable in SEMANTIC_VARIABLES
+            )
+            if include_quality:
+                columns.append(observation_quality_column(modality, lag))
+            if include_availability:
+                columns.append(observation_availability_column(modality, lag))
+    return columns
+
+
+def latent_columns() -> list[str]:
+    return [f"latent_{name}" for name in STATE_COLUMNS]
+
+
+def validate_protocol(protocol: Mapping[str, object]) -> None:
+    """Fail early if a run no longer matches the frozen Study 1-R contract."""
+
+    actions = protocol.get("actions", {})
+    if tuple(actions.get("names", ())) != ACTION_NAMES:
+        raise ValueError(f"actions.names must be exactly {ACTION_NAMES}")
+    if tuple(int(value) for value in actions.get("class_ids", ())) != tuple(
+        range(len(ACTION_NAMES))
+    ):
+        raise ValueError("actions.class_ids must be the contiguous values 0..3")
+
+    generator = protocol.get("generator", {})
+    if tuple(generator.get("modalities", ())) != MODALITIES:
+        raise ValueError(f"generator.modalities must be exactly {MODALITIES}")
+    if tuple(generator.get("semantic_variables", ())) != SEMANTIC_VARIABLES:
+        raise ValueError(
+            f"generator.semantic_variables must be exactly {SEMANTIC_VARIABLES}"
+        )
+
+    cells = scenario_cells(protocol)
+    expected_cells = int(protocol["scenario_matrix"]["expected_cells"])
+    if len(cells) != expected_cells or expected_cells != 45:
+        raise ValueError("the frozen scenario matrix must contain exactly 45 cells")
+    if len({cell.cell_id for cell in cells}) != len(cells):
+        raise ValueError("scenario cells are not unique")
+
+    data = protocol.get("data", {})
+    required_exact = {
+        "frames_per_episode": 16,
+        "rollout_frames": 20,
+        "train_episodes_per_cell": 4,
+        "validation_episodes_per_cell": 2,
+        "test_episodes_per_cell": 8,
+        "rollout_episodes_per_cell": 8,
+        "formal_training_replicates": 10,
+    }
+    for key, expected in required_exact.items():
+        if int(data.get(key, -1)) != expected:
+            raise ValueError(f"data.{key} must equal the frozen value {expected}")
+    if not np.isclose(float(data.get("dt_s", np.nan)), 0.2):
+        raise ValueError("data.dt_s must equal 0.2 s")
+
+    training_data_seeds = tuple(int(value) for value in data.get("training_data_seeds", ()))
+    if len(training_data_seeds) != 10 or len(set(training_data_seeds)) != 10:
+        raise ValueError("exactly 10 unique formal training-data seeds are required")
+    pilot_seeds = set(int(value) for value in data.get("pilot_training_data_seeds", ()))
+    if pilot_seeds.intersection(training_data_seeds):
+        raise ValueError("pilot and formal training-data seeds must not overlap")
+    fixed_seeds = {
+        int(data.get("fixed_validation_seed", -1)),
+        int(data.get("fixed_test_seed", -1)),
+        int(data.get("fixed_rollout_seed", -1)),
+    }
+    if len(fixed_seeds) != 3 or fixed_seeds.intersection(training_data_seeds):
+        raise ValueError(
+            "fixed validation/test/rollout seeds must be unique and formal-data disjoint"
+        )
+
+    model_seeds = tuple(
+        int(value) for value in protocol.get("models", {}).get("model_training_seeds", ())
+    )
+    if len(model_seeds) != 10 or len(set(model_seeds)) != 10:
+        raise ValueError("exactly 10 unique model-training seeds are required")
+
+    quality = generator.get("environment_quality", {})
+    for cell in cells:
+        if cell.environment not in quality:
+            raise ValueError(f"missing quality profile for {cell.environment}")
+        if set(quality[cell.environment]) != set(MODALITIES):
+            raise ValueError(
+                f"quality profile for {cell.environment} must cover all modalities"
+            )
+
+    noise = generator.get("base_noise_sd", {})
+    if set(noise) != set(MODALITIES):
+        raise ValueError("base_noise_sd must cover every modality")
+    for modality in MODALITIES:
+        if set(noise[modality]) != set(SEMANTIC_VARIABLES):
+            raise ValueError(
+                f"base_noise_sd.{modality} must cover every semantic variable"
+            )
+        if any(float(noise[modality][name]) <= 0 for name in SEMANTIC_VARIABLES):
+            raise ValueError("all base observation-noise scales must be positive")
+
+    density_profiles = generator.get("density_profiles", {})
+    expected_densities = set(protocol["scenario_matrix"]["densities"])
+    if set(density_profiles) != expected_densities:
+        raise ValueError("density_profiles must cover the frozen density levels")
+    quality_reduction = generator.get("density_quality_reduction", {})
+    if set(quality_reduction) != expected_densities:
+        raise ValueError("density_quality_reduction must cover the frozen density levels")
+
+    family_profiles = generator.get("family_profiles", {})
+    expected_families = set(protocol["scenario_matrix"]["families"])
+    if set(family_profiles) != expected_families:
+        raise ValueError("family_profiles must cover the frozen scenario families")
+    required_family_values = {
+        "gap_adjustment_m",
+        "initial_closing_speed_mps",
+        "lead_acceleration_peak_mps2",
+        "gap_impulse_m",
+        "crossing_risk_peak",
+        "route_urgency_peak",
+    }
+    for family, profile in family_profiles.items():
+        if set(profile) != required_family_values:
+            raise ValueError(f"family profile {family} does not match the frozen schema")
+
+    shared_head = protocol.get("models", {}).get("shared_head", {})
+    if tuple(int(value) for value in shared_head.get("hidden_layer_sizes", ())) != (48, 24):
+        raise ValueError("models.shared_head.hidden_layer_sizes must be [48, 24]")
+    if int(shared_head.get("epochs", -1)) != 50:
+        raise ValueError("models.shared_head.epochs must equal 50")
+    if shared_head.get("class_weighting") != "inverse_frequency_balanced_from_training_split":
+        raise ValueError("models.shared_head.class_weighting differs from the frozen rule")
+
+    metrics = protocol.get("metrics", {})
+    if metrics.get("ttc_conditioning") != "jointly_collision_free_episode_pairs_only":
+        raise ValueError("metrics.ttc_conditioning differs from the frozen paired estimand")
+    if int(metrics.get("ece_bins", -1)) != 15 or metrics.get("ece_binning") != "equal_width":
+        raise ValueError("Study 1-R requires 15 equal-width ECE bins")
+
+    statistics = protocol.get("statistics", {})
+    frozen_statistics = {
+        "estimand": "structured_r2_minus_baseline_b",
+        "bootstrap_type": "paired_crossed_cluster_percentile",
+        "bootstrap_repetitions": 10000,
+        "quantile_algorithm": "numpy_linear",
+        "sign_flip_tests": "exact_all_1024_sign_patterns",
+        "multiplicity_adjustment": "holm",
+    }
+    for key, expected in frozen_statistics.items():
+        if statistics.get(key) != expected:
+            raise ValueError(f"statistics.{key} must equal the frozen value {expected!r}")
+    bootstrap_seed = int(statistics.get("bootstrap_seed", -1))
+    if bootstrap_seed <= 0:
+        raise ValueError("statistics.bootstrap_seed must be a positive recorded integer")
+
+
+def require_columns(columns: Iterable[str], required: Iterable[str], label: str) -> None:
+    present = set(columns)
+    missing = sorted(set(required).difference(present))
+    if missing:
+        raise ValueError(f"{label} lacks required columns: {missing}")
+~~~~
+
+### `src/egms_study1r2/development.py`
+
+- SHA-256: `0e52b541530babe37d660fc6db39efaac8f8b32b093b66793bd77523c58ed6f1`
+- Bytes: `14831`
+
+~~~~python
+"""Validation-only candidate development for exploratory Study 1-R2.
+
+This module is deliberately unable to load or evaluate the final Study 1-R2
+test seeds.  It retains every declared candidate and every development
+replicate, including candidates that are adverse to Baseline B.
+"""
+
+from __future__ import annotations
+
+import copy
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import io
+import json
+from pathlib import Path
+import shutil
+from typing import Any, Mapping
+
+import numpy as np
+import pandas as pd
+from sklearn.metrics import f1_score
+
+from .common import load_protocol, sha256_file
+from .generator import generate_offline_split, make_scenario_tape
+from .models import MODEL_BASELINE_B, MODEL_STRUCTURED, multiclass_nll
+from .rollout import derive_episode_metrics, run_paired_rollouts
+from .training import train_paired_models
+
+
+def _write_csv(frame: pd.DataFrame, path: Path, *, compressed: bool = False) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    options: dict[str, Any] = {
+        "index": False,
+        "float_format": "%.17g",
+        "lineterminator": "\n",
+    }
+    if compressed:
+        with path.open("wb") as raw:
+            with gzip.GzipFile(
+                filename="", mode="wb", fileobj=raw, compresslevel=9, mtime=0
+            ) as zipped:
+                with io.TextIOWrapper(zipped, encoding="utf-8", newline="") as text:
+                    frame.to_csv(text, **options)
+    else:
+        frame.to_csv(path, **options)
+    return path
+
+
+def _write_json(path: Path, payload: Mapping[str, Any]) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True, allow_nan=False)
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    return path
+
+
+def _candidate_protocol(
+    protocol: Mapping[str, Any], candidate: Mapping[str, Any]
+) -> dict[str, Any]:
+    resolved = copy.deepcopy(dict(protocol))
+    training = dict(resolved["models"]["structured_r2_training"])
+    for key in (
+        "hidden_layer_sizes",
+        "epochs",
+        "learning_rate_init",
+        "alpha",
+    ):
+        training[key] = candidate[key]
+    training["candidate_id"] = str(candidate["candidate_id"])
+    resolved["models"]["structured_r2_training"] = training
+    return resolved
+
+
+def _prepare_output(root: Path, request: Path, overwrite: bool) -> Path:
+    allowed = (root / "outputs").resolve()
+    output = request if request.is_absolute() else root / request
+    output = output.resolve()
+    if output == allowed or not output.is_relative_to(allowed):
+        raise ValueError(f"Development output must be a named descendant of {allowed}")
+    if output.exists():
+        if not overwrite:
+            raise FileExistsError(f"Development output already exists: {output}")
+        shutil.rmtree(output)
+    output.mkdir(parents=True)
+    return output
+
+
+def _source_hashes(root: Path) -> dict[str, str]:
+    candidates = [
+        root / "configs" / "study1r2_development.yaml",
+        *sorted((root / "src" / "egms_study1r2").glob("*.py")),
+        *sorted((root / "src" / "egms_study1r").glob("*.py")),
+    ]
+    return {
+        str(path.relative_to(root)): sha256_file(path)
+        for path in candidates
+        if path.is_file()
+    }
+
+
+def run_development(
+    root: Path,
+    config_request: Path,
+    output_request: Path,
+    *,
+    overwrite: bool = False,
+) -> dict[str, Any]:
+    """Evaluate every declared candidate on development cohorts only."""
+
+    config_path = (
+        config_request if config_request.is_absolute() else root / config_request
+    ).resolve()
+    protocol = load_protocol(config_path)
+    if protocol["project"]["protocol_status"] != "DEVELOPMENT_ONLY_NOT_FINAL_EVALUATION":
+        raise ValueError("run_development accepts only the development protocol")
+    dev = protocol.get("study1r2_development", {})
+    if not bool(dev.get("final_evaluation_seeds_are_forbidden", False)):
+        raise ValueError("Development protocol must explicitly forbid final seeds")
+    candidates = list(dev.get("candidates", ()))
+    n_replicates = int(dev.get("training_replicates_used_for_selection", 0))
+    if not candidates or not 1 <= n_replicates <= 10:
+        raise ValueError("Development requires candidates and 1..10 replicates")
+    candidate_ids = [str(value["candidate_id"]) for value in candidates]
+    if len(candidate_ids) != len(set(candidate_ids)):
+        raise ValueError("Development candidate IDs must be unique")
+
+    output = _prepare_output(root, output_request, overwrite)
+    started = datetime.now(timezone.utc)
+    initial_hashes = _source_hashes(root)
+    copied_config = output / "development_config_resolved.yaml"
+    shutil.copy2(config_path, copied_config)
+    protocol_sha256 = sha256_file(copied_config)
+
+    validation = generate_offline_split(protocol, "validation")
+    validation_path = _write_csv(
+        validation, output / "generated" / "development_validation.csv.gz", compressed=True
+    )
+    rollout_tape = make_scenario_tape(protocol, "rollout")
+
+    training_seeds = [int(v) for v in protocol["data"]["training_data_seeds"]]
+    model_seeds = [int(v) for v in protocol["models"]["model_training_seeds"]]
+    replicate_rows: list[dict[str, Any]] = []
+    architecture_rows: list[pd.DataFrame] = []
+    episode_frames: list[pd.DataFrame] = []
+
+    for candidate_index, candidate in enumerate(candidates, start=1):
+        candidate_id = str(candidate["candidate_id"])
+        candidate_protocol = _candidate_protocol(protocol, candidate)
+        print(
+            f"candidate {candidate_index:02d}/{len(candidates):02d}: {candidate_id}",
+            flush=True,
+        )
+        for replicate_id in range(n_replicates):
+            print(f"  development replicate {replicate_id + 1:02d}/{n_replicates:02d}", flush=True)
+            train = generate_offline_split(
+                candidate_protocol, "train", training_replicate=replicate_id
+            )
+            train_path = output / "generated" / f"train_replicate_{replicate_id:02d}.csv.gz"
+            if not train_path.exists():
+                _write_csv(train, train_path, compressed=True)
+            fitted = train_paired_models(
+                train,
+                validation,
+                replicate_id=replicate_id,
+                training_seed=model_seeds[replicate_id],
+                config=candidate_protocol,
+                output_root=output / "candidates" / candidate_id / "checkpoints",
+            )
+            architecture = fitted.architecture.copy()
+            architecture.insert(0, "candidate_id", candidate_id)
+            architecture.insert(1, "development_replicate", replicate_id)
+            architecture_rows.append(architecture)
+
+            method_metrics: dict[str, dict[str, float]] = {}
+            labels = validation["y_true"].to_numpy(dtype=np.int64)
+            for method in (MODEL_BASELINE_B, MODEL_STRUCTURED):
+                model = fitted.models[method]
+                probabilities = model.predict_proba(validation, calibrated=True)
+                method_metrics[method] = {
+                    "validation_nll": multiclass_nll(labels, probabilities),
+                    "validation_macro_f1": float(
+                        f1_score(
+                            labels,
+                            probabilities.argmax(axis=1),
+                            labels=np.arange(4),
+                            average="macro",
+                            zero_division=0,
+                        )
+                    ),
+                }
+
+            actions, _ = run_paired_rollouts(
+                candidate_protocol,
+                rollout_tape,
+                fitted.models,
+                replicate_id=replicate_id,
+                training_seed=model_seeds[replicate_id],
+                protocol_sha256=protocol_sha256,
+            )
+            episodes = derive_episode_metrics(actions, candidate_protocol)
+            episodes.insert(0, "candidate_id", candidate_id)
+            episode_frames.append(episodes)
+            candidate_actions = output / "candidates" / candidate_id / "raw" / f"action_records_r{replicate_id:02d}.csv.gz"
+            _write_csv(actions, candidate_actions, compressed=True)
+
+            critical = episodes.groupby("method", sort=False)["critical_event"].mean()
+            row: dict[str, Any] = {
+                "candidate_id": candidate_id,
+                "development_replicate": replicate_id,
+                "training_data_seed": training_seeds[replicate_id],
+                "model_training_seed": model_seeds[replicate_id],
+                "development_validation_seed": int(protocol["data"]["fixed_validation_seed"]),
+                "development_rollout_seed": int(protocol["data"]["fixed_rollout_seed"]),
+                "train_data_sha256": sha256_file(train_path),
+                "validation_data_sha256": sha256_file(validation_path),
+                "baseline_validation_nll": method_metrics[MODEL_BASELINE_B]["validation_nll"],
+                "structured_r2_validation_nll": method_metrics[MODEL_STRUCTURED]["validation_nll"],
+                "baseline_validation_macro_f1": method_metrics[MODEL_BASELINE_B]["validation_macro_f1"],
+                "structured_r2_validation_macro_f1": method_metrics[MODEL_STRUCTURED]["validation_macro_f1"],
+                "baseline_critical_event_rate": float(critical.loc[MODEL_BASELINE_B]),
+                "structured_r2_critical_event_rate": float(critical.loc[MODEL_STRUCTURED]),
+            }
+            replicate_rows.append(row)
+
+    replicate_metrics = pd.DataFrame(replicate_rows)
+    episode_metrics = pd.concat(episode_frames, ignore_index=True)
+    architecture = pd.concat(architecture_rows, ignore_index=True)
+    _write_csv(replicate_metrics, output / "candidate_replicate_metrics.csv")
+    _write_csv(episode_metrics, output / "development_episode_metrics.csv.gz", compressed=True)
+    _write_csv(architecture, output / "candidate_architecture.csv")
+
+    ledger_rows: list[dict[str, Any]] = []
+    for candidate_id, group in replicate_metrics.groupby("candidate_id", sort=False):
+        architecture_group = architecture[
+            (architecture["candidate_id"] == candidate_id)
+            & (architecture["method"] == MODEL_STRUCTURED)
+        ]
+        baseline_critical = float(group["baseline_critical_event_rate"].mean())
+        structured_critical = float(group["structured_r2_critical_event_rate"].mean())
+        ledger_rows.append(
+            {
+                "candidate_id": candidate_id,
+                "mean_baseline_validation_nll": float(group["baseline_validation_nll"].mean()),
+                "mean_structured_r2_validation_nll": float(group["structured_r2_validation_nll"].mean()),
+                "mean_validation_nll_difference": float(
+                    (group["structured_r2_validation_nll"] - group["baseline_validation_nll"]).mean()
+                ),
+                "mean_baseline_macro_f1": float(group["baseline_validation_macro_f1"].mean()),
+                "mean_structured_r2_macro_f1": float(group["structured_r2_validation_macro_f1"].mean()),
+                "mean_macro_f1_difference": float(
+                    (group["structured_r2_validation_macro_f1"] - group["baseline_validation_macro_f1"]).mean()
+                ),
+                "mean_baseline_critical_event_rate": baseline_critical,
+                "mean_structured_r2_critical_event_rate": structured_critical,
+                "mean_critical_event_rate_difference": structured_critical - baseline_critical,
+                "safety_constraint_satisfied": structured_critical <= baseline_critical + 1.0e-12,
+                "parameter_count": int(architecture_group["parameter_count"].iloc[0]),
+            }
+        )
+    ledger = pd.DataFrame(ledger_rows)
+    eligible = ledger[ledger["safety_constraint_satisfied"]].copy()
+    if eligible.empty:
+        raise RuntimeError(
+            "No candidate satisfied the frozen development safety constraint; "
+            "no candidate may be frozen."
+        )
+    selected = eligible.sort_values(
+        [
+            "mean_structured_r2_validation_nll",
+            "mean_structured_r2_macro_f1",
+            "parameter_count",
+            "candidate_id",
+        ],
+        ascending=[True, False, True, True],
+        kind="stable",
+    ).iloc[0]
+    selected_id = str(selected["candidate_id"])
+    ledger["selected"] = ledger["candidate_id"].eq(selected_id)
+    ledger_path = _write_csv(ledger, output / "candidate_ledger.csv")
+    selected_spec = next(
+        dict(value) for value in candidates if str(value["candidate_id"]) == selected_id
+    )
+    selection = {
+        "schema": "egms-drive-study1r2-development-selection-1.0",
+        "analysis_status": "post_hoc_exploratory_model_development",
+        "selected_candidate_id": selected_id,
+        "selected_candidate": selected_spec,
+        "selection_rule": dev["selection_rule"],
+        "development_replicates": n_replicates,
+        "candidate_ledger_path": ledger_path.name,
+        "candidate_ledger_sha256": sha256_file(ledger_path),
+        "validation_data_sha256": sha256_file(validation_path),
+        "final_test_or_rollout_accessed": False,
+    }
+    selection_path = _write_json(output / "selection.json", selection)
+
+    final_hashes = _source_hashes(root)
+    if initial_hashes != final_hashes:
+        raise RuntimeError("Study 1-R2 source changed during development")
+    finished = datetime.now(timezone.utc)
+    manifest = {
+        "schema": "egms-drive-study1r2-development-manifest-1.0",
+        "project_id": protocol["project"]["id"],
+        "analysis_status": "post_hoc_exploratory_model_development",
+        "started_utc": started.isoformat(),
+        "finished_utc": finished.isoformat(),
+        "development_protocol_sha256": protocol_sha256,
+        "source_sha256": final_hashes,
+        "candidate_ids": candidate_ids,
+        "selection_sha256": sha256_file(selection_path),
+        "selected_candidate_id": selected_id,
+        "seed_firewall": {
+            "development_training_data_seeds": training_seeds[:n_replicates],
+            "development_model_training_seeds": model_seeds[:n_replicates],
+            "development_validation_seed": int(protocol["data"]["fixed_validation_seed"]),
+            "development_rollout_seed": int(protocol["data"]["fixed_rollout_seed"]),
+            "final_evaluation_seeds_accessed": False,
+        },
+    }
+    manifest_path = _write_json(output / "development_manifest.json", manifest)
+    return {
+        "status": "completed",
+        "output": str(output),
+        "selected_candidate_id": selected_id,
+        "candidate_ledger": str(ledger_path),
+        "development_manifest": str(manifest_path),
+    }
+
+
+__all__ = ["run_development"]
+~~~~
+
+### `src/egms_study1r2/generator.py`
+
+- SHA-256: `acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0`
+- Bytes: `31553`
+
+~~~~python
+"""Deterministic controlled-synthetic data generator for Study 1-R.
+
+This module owns only the data-generating process and common vehicle dynamics.
+It has no dependency on either candidate pipeline.  A split or scenario tape
+is generated once and is subsequently shared by both fitted pipelines.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Mapping
+
+import numpy as np
+import pandas as pd
+
+from .common import (
+    ACTION_NAMES,
+    MODALITIES,
+    SEMANTIC_STATE_INDICES,
+    SEMANTIC_VARIABLES,
+    STATE_COLUMNS,
+    STATE_INDEX,
+    array_sha256,
+    load_protocol,
+    observation_availability_column,
+    observation_quality_column,
+    observation_value_column,
+    scenario_cells,
+    stable_seed,
+    validate_protocol,
+)
+
+
+@dataclass(frozen=True)
+class ObservationBatch:
+    """Sensor observations for every episode at one time index."""
+
+    values: np.ndarray  # [episode, modality, semantic variable]
+    quality: np.ndarray  # [episode, modality]
+    available: np.ndarray  # [episode, modality]
+
+    def validate(self) -> None:
+        if self.values.ndim != 3:
+            raise ValueError("observation values must be [episode, modality, variable]")
+        expected = (self.values.shape[0], len(MODALITIES), len(SEMANTIC_VARIABLES))
+        if self.values.shape != expected:
+            raise ValueError(f"observation values have shape {self.values.shape}; expected {expected}")
+        if self.quality.shape != expected[:2] or self.available.shape != expected[:2]:
+            raise ValueError("observation quality/availability shape mismatch")
+        if np.any(~np.isfinite(self.quality)) or np.any(
+            (self.quality < 0.0) | (self.quality > 1.0)
+        ):
+            raise ValueError("observed quality must be finite and in [0,1]")
+        if np.any(np.isfinite(self.values[~self.available])):
+            raise ValueError("unavailable observations must be represented by NaN")
+        if np.any(~np.isfinite(self.values[self.available])):
+            raise ValueError("available observations must be finite")
+
+
+@dataclass(frozen=True)
+class ScenarioTape:
+    """Fixed exogenous inputs used by a vectorized closed-loop evaluation."""
+
+    split: str
+    data_seed: int
+    training_replicate: int
+    dt_s: float
+    steps: int
+    episode_id: np.ndarray
+    cell_id: np.ndarray
+    family: np.ndarray
+    environment: np.ndarray
+    density: np.ndarray
+    episode_index: np.ndarray
+    episode_seed: np.ndarray
+    initial_state: np.ndarray
+    desired_speed_mps: np.ndarray
+    route_goal_m: np.ndarray
+    lead_acceleration_mps2: np.ndarray
+    gap_impulse_m: np.ndarray
+    crossing_risk: np.ndarray
+    route_urgency: np.ndarray
+    quality_true: np.ndarray
+    quality_observed: np.ndarray
+    standard_noise: np.ndarray
+    dropout_uniform: np.ndarray
+    outlier_uniform: np.ndarray
+    outlier_noise: np.ndarray
+
+    @property
+    def n_episodes(self) -> int:
+        return int(len(self.episode_id))
+
+    def validate(self) -> None:
+        n = self.n_episodes
+        time_points = self.steps + 1
+        if self.initial_state.shape != (n, len(STATE_COLUMNS)):
+            raise ValueError("initial_state shape does not follow STATE_COLUMNS")
+        for name in (
+            "episode_id",
+            "cell_id",
+            "family",
+            "environment",
+            "density",
+            "episode_index",
+            "episode_seed",
+            "desired_speed_mps",
+            "route_goal_m",
+        ):
+            if np.asarray(getattr(self, name)).shape != (n,):
+                raise ValueError(f"{name} must have one value per episode")
+        if self.lead_acceleration_mps2.shape != (n, self.steps):
+            raise ValueError("lead_acceleration_mps2 shape mismatch")
+        if self.gap_impulse_m.shape != (n, self.steps):
+            raise ValueError("gap_impulse_m shape mismatch")
+        if self.crossing_risk.shape != (n, time_points):
+            raise ValueError("crossing_risk shape mismatch")
+        if self.route_urgency.shape != (n, time_points):
+            raise ValueError("route_urgency shape mismatch")
+        quality_shape = (n, time_points, len(MODALITIES))
+        if self.quality_true.shape != quality_shape:
+            raise ValueError("quality_true shape mismatch")
+        if self.quality_observed.shape != quality_shape:
+            raise ValueError("quality_observed shape mismatch")
+        observation_shape = quality_shape + (len(SEMANTIC_VARIABLES),)
+        if self.standard_noise.shape != observation_shape:
+            raise ValueError("standard_noise shape mismatch")
+        if self.outlier_noise.shape != observation_shape:
+            raise ValueError("outlier_noise shape mismatch")
+        if self.dropout_uniform.shape != quality_shape:
+            raise ValueError("dropout_uniform shape mismatch")
+        if self.outlier_uniform.shape != quality_shape:
+            raise ValueError("outlier_uniform shape mismatch")
+        if self.steps <= 0 or self.dt_s <= 0:
+            raise ValueError("tape steps and dt_s must be positive")
+        if len(set(self.episode_id.tolist())) != n:
+            raise ValueError("episode_id values must be unique")
+
+    def digest(self) -> str:
+        """Content digest used to prove paired use of one immutable tape."""
+
+        text_arrays = (
+            np.char.encode(np.asarray([self.split], dtype=str), "utf-8"),
+            np.char.encode(self.episode_id.astype(str), "utf-8"),
+            np.char.encode(self.cell_id.astype(str), "utf-8"),
+            np.char.encode(self.family.astype(str), "utf-8"),
+            np.char.encode(self.environment.astype(str), "utf-8"),
+            np.char.encode(self.density.astype(str), "utf-8"),
+        )
+        return array_sha256(
+            *text_arrays,
+            np.asarray(
+                [
+                    float(self.data_seed),
+                    float(self.training_replicate),
+                    float(self.dt_s),
+                    float(self.steps),
+                ],
+                dtype=np.float64,
+            ),
+            self.episode_index,
+            self.episode_seed,
+            self.initial_state,
+            self.desired_speed_mps,
+            self.route_goal_m,
+            self.lead_acceleration_mps2,
+            self.gap_impulse_m,
+            self.crossing_risk,
+            self.route_urgency,
+            self.quality_true,
+            self.quality_observed,
+            self.standard_noise,
+            self.dropout_uniform,
+            self.outlier_uniform,
+            self.outlier_noise,
+        )
+
+
+def _as_protocol(protocol: Mapping[str, object] | str | Path) -> dict:
+    if isinstance(protocol, (str, Path)):
+        return load_protocol(protocol)
+    value = dict(protocol)
+    validate_protocol(value)
+    return value
+
+
+def _split_specification(
+    protocol: Mapping[str, object], split: str, training_replicate: int | None
+) -> tuple[int, int, int]:
+    data = protocol["data"]
+    if split == "train":
+        if training_replicate is None:
+            raise ValueError("training_replicate is required for the train split")
+        replicate = int(training_replicate)
+        seeds = tuple(int(value) for value in data["training_data_seeds"])
+        if not 0 <= replicate < len(seeds):
+            raise ValueError(f"training_replicate must be in [0,{len(seeds) - 1}]")
+        return replicate, seeds[replicate], int(data["train_episodes_per_cell"])
+    if training_replicate is not None:
+        raise ValueError("training_replicate is only valid for the train split")
+    if split == "validation":
+        return -1, int(data["fixed_validation_seed"]), int(
+            data["validation_episodes_per_cell"]
+        )
+    if split == "test":
+        return -1, int(data["fixed_test_seed"]), int(data["test_episodes_per_cell"])
+    if split == "rollout":
+        return -1, int(data["fixed_rollout_seed"]), int(
+            data["rollout_episodes_per_cell"]
+        )
+    raise ValueError("split must be train, validation, test, or rollout")
+
+
+def _profile_array(profile: Mapping[str, float]) -> np.ndarray:
+    return np.asarray([float(profile[name]) for name in SEMANTIC_VARIABLES], dtype=float)
+
+
+def make_scenario_tape(
+    protocol: Mapping[str, object] | str | Path,
+    split: str,
+    training_replicate: int | None = None,
+    steps: int | None = None,
+) -> ScenarioTape:
+    """Generate all exogenous values before any fitted pipeline is evaluated."""
+
+    cfg = _as_protocol(protocol)
+    replicate, data_seed, episodes_per_cell = _split_specification(
+        cfg, split, training_replicate
+    )
+    if steps is None:
+        steps = (
+            int(cfg["data"]["rollout_frames"])
+            if split == "rollout"
+            else int(cfg["data"]["frames_per_episode"]) + 1
+        )
+    steps = int(steps)
+    if steps <= 0:
+        raise ValueError("steps must be positive")
+
+    cells = scenario_cells(cfg)
+    n = len(cells) * episodes_per_cell
+    n_time = steps + 1
+    n_modalities = len(MODALITIES)
+    n_variables = len(SEMANTIC_VARIABLES)
+    dt_s = float(cfg["data"]["dt_s"])
+    generator_cfg = cfg["generator"]
+    dynamics_cfg = cfg["dynamics"]
+
+    episode_ids: list[str] = []
+    cell_ids: list[str] = []
+    families: list[str] = []
+    environments: list[str] = []
+    densities: list[str] = []
+    episode_indices = np.empty(n, dtype=np.int16)
+    episode_seeds = np.empty(n, dtype=np.uint32)
+    initial_state = np.empty((n, len(STATE_COLUMNS)), dtype=float)
+    desired_speed = np.empty(n, dtype=float)
+    route_goal = np.empty(n, dtype=float)
+    lead_acceleration = np.empty((n, steps), dtype=float)
+    gap_impulse = np.zeros((n, steps), dtype=float)
+    crossing_risk = np.empty((n, n_time), dtype=float)
+    route_urgency = np.empty((n, n_time), dtype=float)
+    quality_true = np.empty((n, n_time, n_modalities), dtype=float)
+    quality_observed = np.empty_like(quality_true)
+    standard_noise = np.empty((n, n_time, n_modalities, n_variables), dtype=float)
+    dropout_uniform = np.empty((n, n_time, n_modalities), dtype=float)
+    outlier_uniform = np.empty_like(dropout_uniform)
+    outlier_noise = np.empty_like(standard_noise)
+
+    density_profiles = generator_cfg["density_profiles"]
+    family_profiles = generator_cfg["family_profiles"]
+    quality_profiles = generator_cfg["environment_quality"]
+    quality_reduction = generator_cfg["density_quality_reduction"]
+    if split == "train":
+        prefix = f"train_r{replicate:02d}"
+    elif split in {"test", "rollout"}:
+        # Offline and closed-loop endpoints use the same fixed 360 episode IDs
+        # so crossed resampling addresses a common evaluation-cell index.
+        prefix = "fixed_test"
+    else:
+        prefix = split
+    row_index = 0
+    normalized_time = np.linspace(0.0, 1.0, n_time)
+
+    for cell in cells:
+        density_profile = density_profiles[cell.density]
+        family_profile = family_profiles[cell.family]
+        for episode_index in range(episodes_per_cell):
+            episode_seed = stable_seed(
+                "study1r",
+                data_seed,
+                split,
+                replicate,
+                cell.family,
+                cell.environment,
+                cell.density,
+                episode_index,
+            )
+            rng = np.random.default_rng(episode_seed)
+            episode_id = f"{prefix}__{cell.cell_id}__e{episode_index:02d}"
+            episode_ids.append(episode_id)
+            cell_ids.append(cell.cell_id)
+            families.append(cell.family)
+            environments.append(cell.environment)
+            densities.append(cell.density)
+            episode_indices[row_index] = episode_index
+            episode_seeds[row_index] = episode_seed
+
+            ego_speed = max(
+                3.0,
+                float(density_profile["initial_ego_speed_mps"])
+                + rng.normal(0.0, float(generator_cfg["initial_speed_sd_mps"])),
+            )
+            closing_speed = (
+                float(family_profile["initial_closing_speed_mps"])
+                + rng.normal(
+                    0.0, float(generator_cfg["initial_closing_speed_sd_mps"])
+                )
+            )
+            gap = max(
+                5.0,
+                float(density_profile["initial_gap_m"])
+                + float(family_profile["gap_adjustment_m"])
+                + rng.normal(0.0, float(generator_cfg["initial_gap_sd_m"])),
+            )
+            desired = max(ego_speed + rng.normal(1.2, 0.35), ego_speed)
+            desired_speed[row_index] = desired
+            route_goal[row_index] = (
+                desired
+                * steps
+                * dt_s
+                * float(dynamics_cfg["route_goal_fraction_of_nominal_progress"])
+            )
+
+            center = float(
+                np.clip(
+                    float(generator_cfg["event_center_fraction"])
+                    + rng.normal(
+                        0.0, float(generator_cfg["event_center_jitter_sd"])
+                    ),
+                    0.30,
+                    0.75,
+                )
+            )
+            width = float(generator_cfg["event_width_fraction"])
+            pulse = np.exp(-0.5 * ((normalized_time - center) / width) ** 2)
+            background_risk = float(density_profile["background_crossing_risk"])
+            risk_peak = float(family_profile["crossing_risk_peak"])
+            risk_noise = rng.normal(0.0, 0.012, size=n_time)
+            crossing = background_risk + (risk_peak - background_risk) * pulse + risk_noise
+            crossing = np.clip(crossing, 0.0, 1.0)
+            crossing_risk[row_index] = crossing
+
+            urgency_peak = float(family_profile["route_urgency_peak"])
+            logistic = 1.0 / (1.0 + np.exp(-10.0 * (normalized_time - center)))
+            urgency = 0.06 + (urgency_peak - 0.06) * logistic
+            urgency += rng.normal(0.0, 0.008, size=n_time)
+            route_urgency[row_index] = np.clip(urgency, 0.0, 1.0)
+
+            lead_acceleration[row_index] = (
+                float(family_profile["lead_acceleration_peak_mps2"]) * pulse[:-1]
+                + rng.normal(
+                    0.0,
+                    float(generator_cfg["exogenous_acceleration_noise_sd_mps2"]),
+                    size=steps,
+                )
+            )
+            total_gap_impulse = float(family_profile["gap_impulse_m"])
+            if total_gap_impulse != 0.0:
+                pulse_steps = pulse[:-1]
+                gap_impulse[row_index] = total_gap_impulse * pulse_steps / np.maximum(
+                    pulse_steps.sum(), np.finfo(float).tiny
+                )
+
+            initial_state[row_index] = np.asarray(
+                [
+                    gap,
+                    closing_speed,
+                    ego_speed,
+                    0.0,
+                    0.0,
+                    crossing[0],
+                    route_urgency[row_index, 0],
+                ],
+                dtype=float,
+            )
+
+            episode_health = rng.uniform(
+                float(generator_cfg["episode_health_low"]),
+                float(generator_cfg["episode_health_high"]),
+                size=n_modalities,
+            )
+            for modality_index, modality in enumerate(MODALITIES):
+                base_quality = (
+                    float(quality_profiles[cell.environment][modality])
+                    - float(quality_reduction[cell.density])
+                )
+                innovations = rng.normal(0.0, 0.018, size=n_time)
+                quality_path = np.empty(n_time, dtype=float)
+                quality_path[0] = base_quality * episode_health[modality_index] + innovations[0]
+                for time_index in range(1, n_time):
+                    quality_path[time_index] = (
+                        0.82 * quality_path[time_index - 1]
+                        + 0.18 * base_quality * episode_health[modality_index]
+                        + innovations[time_index]
+                    )
+                quality_true[row_index, :, modality_index] = np.clip(
+                    quality_path, 0.08, 0.995
+                )
+            quality_observed[row_index] = np.clip(
+                quality_true[row_index]
+                + rng.normal(
+                    0.0,
+                    float(generator_cfg["quality_observation_sd"]),
+                    size=(n_time, n_modalities),
+                ),
+                0.05,
+                1.0,
+            )
+            standard_noise[row_index] = rng.normal(
+                0.0, 1.0, size=(n_time, n_modalities, n_variables)
+            )
+            dropout_uniform[row_index] = rng.random((n_time, n_modalities))
+            outlier_uniform[row_index] = rng.random((n_time, n_modalities))
+            outlier_noise[row_index] = rng.normal(
+                0.0, 1.0, size=(n_time, n_modalities, n_variables)
+            )
+            row_index += 1
+
+    tape = ScenarioTape(
+        split=split,
+        data_seed=data_seed,
+        training_replicate=replicate,
+        dt_s=dt_s,
+        steps=steps,
+        episode_id=np.asarray(episode_ids, dtype=str),
+        cell_id=np.asarray(cell_ids, dtype=str),
+        family=np.asarray(families, dtype=str),
+        environment=np.asarray(environments, dtype=str),
+        density=np.asarray(densities, dtype=str),
+        episode_index=episode_indices,
+        episode_seed=episode_seeds,
+        initial_state=initial_state,
+        desired_speed_mps=desired_speed,
+        route_goal_m=route_goal,
+        lead_acceleration_mps2=lead_acceleration,
+        gap_impulse_m=gap_impulse,
+        crossing_risk=crossing_risk,
+        route_urgency=route_urgency,
+        quality_true=quality_true,
+        quality_observed=quality_observed,
+        standard_noise=standard_noise,
+        dropout_uniform=dropout_uniform,
+        outlier_uniform=outlier_uniform,
+        outlier_noise=outlier_noise,
+    )
+    tape.validate()
+    return tape
+
+
+def _base_noise_matrix(protocol: Mapping[str, object]) -> np.ndarray:
+    noise = protocol["generator"]["base_noise_sd"]
+    return np.asarray(
+        [
+            [float(noise[modality][variable]) for variable in SEMANTIC_VARIABLES]
+            for modality in MODALITIES
+        ],
+        dtype=float,
+    )
+
+
+def observe_state(
+    state: np.ndarray,
+    tape: ScenarioTape,
+    frame_index: int,
+    protocol: Mapping[str, object] | str | Path,
+) -> ObservationBatch:
+    """Observe possibly divergent states using the same pre-generated noise tape."""
+
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    if values.shape != (tape.n_episodes, len(STATE_COLUMNS)):
+        raise ValueError(
+            f"state has shape {values.shape}; expected {(tape.n_episodes, len(STATE_COLUMNS))}"
+        )
+    index = int(frame_index)
+    if not 0 <= index <= tape.steps:
+        raise ValueError(f"frame_index must be in [0,{tape.steps}]")
+    generator_cfg = cfg["generator"]
+    semantic_state = values[:, SEMANTIC_STATE_INDICES]
+    quality_true = tape.quality_true[:, index, :]
+    quality_observed = tape.quality_observed[:, index, :]
+    noise_scale = _base_noise_matrix(cfg)[None, :, :] / (
+        0.25 + 0.75 * quality_true[:, :, None]
+    )
+    observed = semantic_state[:, None, :] + (
+        tape.standard_noise[:, index, :, :] * noise_scale
+    )
+
+    outlier_probability = float(generator_cfg["outlier_base_probability"]) + float(
+        generator_cfg["outlier_quality_slope"]
+    ) * (1.0 - quality_true)
+    outlier_mask = tape.outlier_uniform[:, index, :] < outlier_probability
+    observed += (
+        outlier_mask[:, :, None]
+        * tape.outlier_noise[:, index, :, :]
+        * noise_scale
+        * float(generator_cfg["outlier_scale"])
+    )
+
+    for variable_index, variable in enumerate(SEMANTIC_VARIABLES):
+        low, high = (float(value) for value in generator_cfg["observation_clips"][variable])
+        observed[:, :, variable_index] = np.clip(
+            observed[:, :, variable_index], low, high
+        )
+
+    dropout_probability = float(generator_cfg["dropout_base_probability"]) + float(
+        generator_cfg["dropout_quality_slope"]
+    ) * (1.0 - quality_true)
+    # Ego-state availability is physically much more stable than exteroceptive
+    # sensing, but remains nonzero and is generated before evaluation.
+    dropout_probability[:, MODALITIES.index("ego")] *= 0.10
+    available = tape.dropout_uniform[:, index, :] >= dropout_probability
+    observed[~available] = np.nan
+    batch = ObservationBatch(observed, quality_observed.copy(), available)
+    batch.validate()
+    return batch
+
+
+def state_diagnostics(
+    state: np.ndarray, protocol: Mapping[str, object] | str | Path
+) -> dict[str, np.ndarray]:
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    gap = values[:, STATE_INDEX["gap_m"]]
+    closing = values[:, STATE_INDEX["closing_speed_mps"]]
+    speed = values[:, STATE_INDEX["ego_speed_mps"]]
+    oracle_cfg = cfg["oracle"]
+    ttc_cap = float(oracle_cfg["ttc_cap_s"])
+    ttc = np.full(len(values), ttc_cap, dtype=float)
+    closing_mask = closing > 0.1
+    ttc[closing_mask] = np.clip(
+        gap[closing_mask] / closing[closing_mask], 0.0, ttc_cap
+    )
+    stopping_margin = gap - (
+        float(oracle_cfg["standstill_gap_m"])
+        + float(oracle_cfg["reaction_time_s"]) * speed
+        + np.maximum(closing, 0.0) ** 2
+        / (2.0 * float(oracle_cfg["comfortable_deceleration_mps2"]))
+    )
+    return {"ttc_s": ttc, "stopping_margin_m": stopping_margin}
+
+
+def oracle_actions(
+    state: np.ndarray, protocol: Mapping[str, object] | str | Path
+) -> np.ndarray:
+    """Assign one of four ordered expert actions from latent physical state."""
+
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    if values.ndim != 2 or values.shape[1] != len(STATE_COLUMNS):
+        raise ValueError("state must have shape [episode, len(STATE_COLUMNS)]")
+    diagnostics = state_diagnostics(values, cfg)
+    ttc = diagnostics["ttc_s"]
+    margin = diagnostics["stopping_margin_m"]
+    gap = values[:, STATE_INDEX["gap_m"]]
+    crossing = values[:, STATE_INDEX["crossing_risk"]]
+    oracle_cfg = cfg["oracle"]
+
+    actions = np.zeros(len(values), dtype=np.int8)
+    slow = (
+        (ttc < float(oracle_cfg["slow_ttc_s"]))
+        | (margin < float(oracle_cfg["slow_stopping_margin_m"]))
+        | (crossing > float(oracle_cfg["slow_crossing_risk"]))
+    )
+    actions[slow] = 1
+    yielding = (
+        (ttc < float(oracle_cfg["yield_ttc_s"]))
+        | (margin < float(oracle_cfg["yield_stopping_margin_m"]))
+        | (crossing > float(oracle_cfg["yield_crossing_risk"]))
+    )
+    actions[yielding] = 2
+    stopping = (
+        (ttc < float(oracle_cfg["stop_ttc_s"]))
+        | (crossing > float(oracle_cfg["stop_crossing_risk"]))
+        | (gap <= float(cfg["dynamics"]["collision_gap_m"]))
+    )
+    actions[stopping] = 3
+    return actions
+
+
+def step_dynamics(
+    state: np.ndarray,
+    executed_actions: np.ndarray,
+    tape: ScenarioTape,
+    frame_index: int,
+    protocol: Mapping[str, object] | str | Path,
+) -> tuple[np.ndarray, dict[str, np.ndarray]]:
+    """Advance all episodes one step with common action-to-control dynamics."""
+
+    cfg = _as_protocol(protocol)
+    values = np.asarray(state, dtype=float)
+    if values.shape != (tape.n_episodes, len(STATE_COLUMNS)):
+        raise ValueError("state shape does not match the scenario tape")
+    actions = np.asarray(executed_actions, dtype=int)
+    if actions.shape != (tape.n_episodes,) or np.any((actions < 0) | (actions >= 4)):
+        raise ValueError("executed_actions must be one action ID per episode in [0,3]")
+    index = int(frame_index)
+    if not 0 <= index < tape.steps:
+        raise ValueError(f"frame_index must be in [0,{tape.steps - 1}]")
+
+    dt_s = float(cfg["data"]["dt_s"])
+    dynamics_cfg = cfg["dynamics"]
+    gap = values[:, STATE_INDEX["gap_m"]]
+    closing = values[:, STATE_INDEX["closing_speed_mps"]]
+    speed = values[:, STATE_INDEX["ego_speed_mps"]]
+    acceleration = values[:, STATE_INDEX["acceleration_mps2"]]
+    progress = values[:, STATE_INDEX["progress_m"]]
+    lead_speed = np.maximum(0.0, speed - closing)
+
+    keep_command = np.clip(
+        float(dynamics_cfg["keep_speed_gain"]) * (tape.desired_speed_mps - speed),
+        -float(dynamics_cfg["keep_acceleration_limit_mps2"]),
+        float(dynamics_cfg["keep_acceleration_limit_mps2"]),
+    )
+    commands = keep_command.copy()
+    commands[actions == 1] = float(dynamics_cfg["slow_command_mps2"])
+    commands[actions == 2] = float(dynamics_cfg["yield_command_mps2"])
+    commands[actions == 3] = float(dynamics_cfg["stop_command_mps2"])
+    lag = float(dynamics_cfg["acceleration_lag"])
+    next_acceleration = np.clip(
+        lag * acceleration + (1.0 - lag) * commands,
+        float(dynamics_cfg["maximum_deceleration_mps2"]),
+        float(dynamics_cfg["maximum_acceleration_mps2"]),
+    )
+    next_speed = np.maximum(0.0, speed + next_acceleration * dt_s)
+    next_lead_speed = np.maximum(
+        0.0, lead_speed + tape.lead_acceleration_mps2[:, index] * dt_s
+    )
+    next_closing = next_speed - next_lead_speed
+    next_gap = (
+        gap
+        + 0.5 * ((lead_speed - speed) + (next_lead_speed - next_speed)) * dt_s
+        + tape.gap_impulse_m[:, index]
+    )
+    next_progress = progress + 0.5 * (speed + next_speed) * dt_s
+    next_state = np.column_stack(
+        [
+            next_gap,
+            next_closing,
+            next_speed,
+            next_acceleration,
+            next_progress,
+            tape.crossing_risk[:, index + 1],
+            tape.route_urgency[:, index + 1],
+        ]
+    )
+
+    diagnostics = state_diagnostics(next_state, cfg)
+    crossing = next_state[:, STATE_INDEX["crossing_risk"]]
+    longitudinal_collision = next_gap <= float(dynamics_cfg["collision_gap_m"])
+    crossing_collision = (
+        (crossing >= float(dynamics_cfg["crossing_collision_risk"]))
+        & (next_speed >= float(dynamics_cfg["crossing_collision_speed_mps"]))
+    )
+    collision = longitudinal_collision | crossing_collision
+    near_miss = (~collision) & (
+        (diagnostics["ttc_s"] < float(dynamics_cfg["near_miss_ttc_s"]))
+        | (next_gap < float(dynamics_cfg["near_miss_gap_m"]))
+        | (
+            (crossing >= float(dynamics_cfg["crossing_near_miss_risk"]))
+            & (next_speed > 2.0)
+        )
+    )
+    critical = collision | near_miss
+    events = {
+        "command_acceleration_mps2": commands,
+        "jerk_mps3": (next_acceleration - acceleration) / dt_s,
+        "ttc_s": diagnostics["ttc_s"],
+        "stopping_margin_m": diagnostics["stopping_margin_m"],
+        "collision": collision,
+        "near_miss": near_miss,
+        "critical_event": critical,
+        "route_goal_reached": next_progress >= tape.route_goal_m,
+    }
+    return next_state, events
+
+
+def _append_observation(
+    row: dict[str, object], batch: ObservationBatch, episode_index: int, lag: str
+) -> None:
+    for modality_index, modality in enumerate(MODALITIES):
+        for variable_index, variable in enumerate(SEMANTIC_VARIABLES):
+            row[observation_value_column(modality, lag, variable)] = float(
+                batch.values[episode_index, modality_index, variable_index]
+            )
+        row[observation_quality_column(modality, lag)] = float(
+            batch.quality[episode_index, modality_index]
+        )
+        row[observation_availability_column(modality, lag)] = int(
+            batch.available[episode_index, modality_index]
+        )
+
+
+def generate_offline_split(
+    protocol: Mapping[str, object] | str | Path,
+    split: str,
+    training_replicate: int | None = None,
+) -> pd.DataFrame:
+    """Generate one labeled temporal split from the frozen physical process."""
+
+    if split == "rollout":
+        raise ValueError("use make_scenario_tape for closed-loop rollout")
+    cfg = _as_protocol(protocol)
+    frames = int(cfg["data"]["frames_per_episode"])
+    tape = make_scenario_tape(
+        cfg, split, training_replicate=training_replicate, steps=frames + 1
+    )
+    state = tape.initial_state.copy()
+    previous_observation = observe_state(state, tape, 0, cfg)
+    burn_in_action = oracle_actions(state, cfg)
+    state, _ = step_dynamics(state, burn_in_action, tape, 0, cfg)
+    rows: list[dict[str, object]] = []
+
+    for frame_index in range(frames):
+        tape_index = frame_index + 1
+        current_observation = observe_state(state, tape, tape_index, cfg)
+        labels = oracle_actions(state, cfg)
+        diagnostics = state_diagnostics(state, cfg)
+        for episode_position in range(tape.n_episodes):
+            row: dict[str, object] = {
+                "split": split,
+                "training_replicate": int(tape.training_replicate),
+                "data_seed": int(tape.data_seed),
+                "cell_id": str(tape.cell_id[episode_position]),
+                "episode_id": str(tape.episode_id[episode_position]),
+                "episode_index": int(tape.episode_index[episode_position]),
+                "episode_seed": int(tape.episode_seed[episode_position]),
+                "family": str(tape.family[episode_position]),
+                "environment": str(tape.environment[episode_position]),
+                "density": str(tape.density[episode_position]),
+                "frame": int(frame_index),
+                "time_s": float(frame_index * tape.dt_s),
+                "sample_id": f"{tape.episode_id[episode_position]}__f{frame_index:02d}",
+                "has_previous": 1,
+                "latent_ttc_s": float(diagnostics["ttc_s"][episode_position]),
+                "latent_stopping_margin_m": float(
+                    diagnostics["stopping_margin_m"][episode_position]
+                ),
+                "y_true": int(labels[episode_position]),
+                "action_name": ACTION_NAMES[int(labels[episode_position])],
+            }
+            for state_index, name in enumerate(STATE_COLUMNS):
+                row[f"latent_{name}"] = float(state[episode_position, state_index])
+            _append_observation(row, previous_observation, episode_position, "prev")
+            _append_observation(row, current_observation, episode_position, "current")
+            rows.append(row)
+
+        state, _ = step_dynamics(state, labels, tape, tape_index, cfg)
+        previous_observation = current_observation
+
+    frame = pd.DataFrame.from_records(rows)
+    frame = frame.sort_values(["cell_id", "episode_id", "frame"], kind="stable")
+    frame = frame.reset_index(drop=True)
+    observed_classes = set(int(value) for value in frame["y_true"].unique())
+    if observed_classes != set(range(len(ACTION_NAMES))):
+        raise RuntimeError(
+            f"{split} split generated action classes {sorted(observed_classes)}; expected 0..3"
+        )
+    if frame["sample_id"].duplicated().any():
+        raise RuntimeError("sample_id values are not unique")
+    return frame
+
+
+def generate_all_offline(
+    protocol: Mapping[str, object] | str | Path,
+) -> dict[str, pd.DataFrame]:
+    """Generate the ten formal training samples and the two fixed splits."""
+
+    cfg = _as_protocol(protocol)
+    outputs = {
+        f"train_{replicate:02d}": generate_offline_split(
+            cfg, "train", training_replicate=replicate
+        )
+        for replicate in range(int(cfg["data"]["formal_training_replicates"]))
+    }
+    outputs["validation"] = generate_offline_split(cfg, "validation")
+    outputs["test"] = generate_offline_split(cfg, "test")
+    return outputs
+~~~~
+
+### `src/egms_study1r2/models.py`
+
+- SHA-256: `9dd5691fc5f5615fdf7f0186b8d78c16f320a66d45681645c8abef20ccec04c8`
+- Bytes: `36841`
+
+~~~~python
+"""Trainable Study 1-R classifiers and auditable feature encoders.
+
+Both encoders consume exactly the same method-blind observation columns.  For
+each modality ``m``, lag ``t`` and semantic variable ``v`` the input frame must
+contain::
+
+    {m}_{t}_{v}
+    q_{m}_{t}
+    available_{m}_{t}
+
+where ``t`` is ``prev`` or ``current``.  The canonical modalities and semantic
+variables are imported from :mod:`egms_study1r.generator`; the current frozen
+protocol uses ``camera``, ``lidar``, ``radar`` and ``ego`` with ``gap_m``,
+``closing_speed_mps``, ``ego_speed_mps``, ``crossing_risk`` and
+``route_urgency``.  Identifier, label and ``latent_*`` columns may coexist in
+the input DataFrame but are never selected by either encoder.
+
+``BaselineBEncoder`` concatenates quality-gated previous/current modality
+measurements and their observed quality/availability indicators.
+``StructuredEncoder`` derives reliability-weighted fused means, weighted
+disagreements, observation support, temporal changes, quality summaries and
+four observation-only physics descriptors from those same columns.  No
+method-specific term enters the data generator or either feature schema.
+
+The fitted classifier is a scikit-learn ``MLPClassifier`` trained externally
+with ``partial_fit``.  Checkpoints are deterministic, human-auditable JSON;
+they contain the scaler, all network arrays, temperature and feature schema,
+and can be reloaded without pickle or joblib.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+import json
+import math
+from pathlib import Path
+from typing import Any, Iterable, Mapping, Sequence
+
+import numpy as np
+import pandas as pd
+from scipy.optimize import minimize_scalar
+from sklearn.neural_network import MLPClassifier
+from sklearn.preprocessing import StandardScaler
+
+try:  # The fallback keeps this module importable while release files are built.
+    from .common import ACTION_NAMES, MODALITIES, SEMANTIC_VARIABLES
+except (ImportError, ModuleNotFoundError):  # pragma: no cover - build-time fallback
+    ACTION_NAMES = ("KEEP", "SLOW", "YIELD", "STOP")
+    MODALITIES = ("camera", "lidar", "radar", "ego")
+    SEMANTIC_VARIABLES = (
+        "gap_m",
+        "closing_speed_mps",
+        "ego_speed_mps",
+        "crossing_risk",
+        "route_urgency",
+    )
+
+
+N_CLASSES = len(ACTION_NAMES)
+MODEL_BASELINE_B = "Baseline B"
+MODEL_STRUCTURED = "Structured-R2"
+MODEL_SLUGS = {
+    MODEL_BASELINE_B: "baseline_b",
+    MODEL_STRUCTURED: "structured_r2",
+}
+EPS = 1.0e-12
+
+
+def _finite_float_list(values: np.ndarray) -> list[Any]:
+    """Return nested JSON floats while refusing NaN/Inf checkpoint values."""
+
+    array = np.asarray(values, dtype=np.float64)
+    if not np.all(np.isfinite(array)):
+        raise ValueError("Checkpoint array contains a non-finite value")
+    return array.tolist()
+
+
+def _softmax(logits: np.ndarray) -> np.ndarray:
+    values = np.asarray(logits, dtype=np.float64)
+    if values.ndim != 2 or values.shape[1] != N_CLASSES:
+        raise ValueError(f"Expected logits with shape [N,{N_CLASSES}], found {values.shape}")
+    shifted = values - np.max(values, axis=1, keepdims=True)
+    exp_values = np.exp(shifted)
+    return exp_values / np.maximum(exp_values.sum(axis=1, keepdims=True), EPS)
+
+
+def multiclass_nll(labels: Iterable[int], probabilities: np.ndarray) -> float:
+    """Mean multiclass negative log likelihood with strict shape checks."""
+
+    y = np.asarray(list(labels), dtype=np.int64)
+    p = np.asarray(probabilities, dtype=np.float64)
+    if p.shape != (len(y), N_CLASSES):
+        raise ValueError(f"Probability shape {p.shape} is incompatible with {len(y)} labels")
+    if len(y) == 0 or np.any((y < 0) | (y >= N_CLASSES)):
+        raise ValueError("Labels must be non-empty integers in [0, 3]")
+    if not np.all(np.isfinite(p)) or np.any(p < -1.0e-12):
+        raise ValueError("Probabilities must be finite and non-negative")
+    if not np.allclose(p.sum(axis=1), 1.0, atol=1.0e-8, rtol=0.0):
+        raise ValueError("Probability rows do not sum to one")
+    return float(-np.log(np.maximum(p[np.arange(len(y)), y], EPS)).mean())
+
+
+@dataclass(frozen=True)
+class FeatureSchema:
+    """Ordered method-blind observation schema stored in every checkpoint."""
+
+    modalities: tuple[str, ...] = tuple(MODALITIES)
+    semantic_variables: tuple[str, ...] = tuple(SEMANTIC_VARIABLES)
+    lags: tuple[str, ...] = ("prev", "current")
+
+    def __post_init__(self) -> None:
+        if not self.modalities or not self.semantic_variables:
+            raise ValueError("Feature schema requires modalities and semantic variables")
+        if self.lags != ("prev", "current"):
+            raise ValueError("Study 1-R requires ordered lags ('prev', 'current')")
+        for value in (*self.modalities, *self.semantic_variables):
+            if not value or not isinstance(value, str):
+                raise ValueError("Feature-schema names must be non-empty strings")
+
+    @property
+    def observation_columns(self) -> tuple[str, ...]:
+        columns: list[str] = []
+        for lag in self.lags:
+            for modality in self.modalities:
+                columns.extend(
+                    f"{modality}_{lag}_{variable}"
+                    for variable in self.semantic_variables
+                )
+                columns.append(f"q_{modality}_{lag}")
+                columns.append(f"available_{modality}_{lag}")
+        return tuple(columns)
+
+    def to_json_dict(self) -> dict[str, list[str]]:
+        return {
+            "modalities": list(self.modalities),
+            "semantic_variables": list(self.semantic_variables),
+            "lags": list(self.lags),
+        }
+
+    @classmethod
+    def from_json_dict(cls, value: Mapping[str, Sequence[str]]) -> "FeatureSchema":
+        return cls(
+            modalities=tuple(value["modalities"]),
+            semantic_variables=tuple(value["semantic_variables"]),
+            lags=tuple(value["lags"]),
+        )
+
+
+class ObservationEncoder:
+    """Base class for deterministic, stateless Study 1-R encoders."""
+
+    kind = "abstract"
+
+    def __init__(self, schema: FeatureSchema | None = None) -> None:
+        self.schema = schema or FeatureSchema()
+
+    @property
+    def expected_columns(self) -> tuple[str, ...]:
+        return self.schema.observation_columns
+
+    @property
+    def feature_names(self) -> tuple[str, ...]:
+        raise NotImplementedError
+
+    def _validated_arrays(
+        self, frame: pd.DataFrame
+    ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+        missing = [column for column in self.expected_columns if column not in frame.columns]
+        if missing:
+            preview = ", ".join(missing[:8])
+            suffix = " ..." if len(missing) > 8 else ""
+            raise ValueError(f"Missing Study 1-R observation columns: {preview}{suffix}")
+
+        n_rows = len(frame)
+        values = np.empty(
+            (
+                n_rows,
+                len(self.schema.lags),
+                len(self.schema.modalities),
+                len(self.schema.semantic_variables),
+            ),
+            dtype=np.float64,
+        )
+        quality = np.empty(
+            (n_rows, len(self.schema.lags), len(self.schema.modalities)),
+            dtype=np.float64,
+        )
+        available = np.empty_like(quality)
+        for lag_index, lag in enumerate(self.schema.lags):
+            for modality_index, modality in enumerate(self.schema.modalities):
+                quality[:, lag_index, modality_index] = pd.to_numeric(
+                    frame[f"q_{modality}_{lag}"], errors="coerce"
+                ).to_numpy(dtype=np.float64)
+                available[:, lag_index, modality_index] = pd.to_numeric(
+                    frame[f"available_{modality}_{lag}"], errors="coerce"
+                ).to_numpy(dtype=np.float64)
+                for variable_index, variable in enumerate(self.schema.semantic_variables):
+                    values[:, lag_index, modality_index, variable_index] = pd.to_numeric(
+                        frame[f"{modality}_{lag}_{variable}"], errors="coerce"
+                    ).to_numpy(dtype=np.float64)
+
+        if not np.all(np.isfinite(quality)):
+            raise ValueError("Quality columns contain non-finite values")
+        if np.any((quality < -1.0e-12) | (quality > 1.0 + 1.0e-12)):
+            raise ValueError("Quality values must be in [0, 1]")
+        if not np.all(np.isfinite(available)):
+            raise ValueError("Availability columns contain non-finite values")
+        if not np.all(np.isclose(available, 0.0) | np.isclose(available, 1.0)):
+            raise ValueError("Availability values must be binary")
+        return values, np.clip(quality, 0.0, 1.0), np.rint(available)
+
+    def transform(self, frame: pd.DataFrame) -> np.ndarray:
+        raise NotImplementedError
+
+    def to_json_dict(self) -> dict[str, Any]:
+        return {"kind": self.kind, "schema": self.schema.to_json_dict()}
+
+
+class BaselineBEncoder(ObservationEncoder):
+    """Flatten quality-gated modality observations without structured fusion."""
+
+    kind = "baseline_b"
+
+    @property
+    def feature_names(self) -> tuple[str, ...]:
+        names: list[str] = []
+        for lag in self.schema.lags:
+            for modality in self.schema.modalities:
+                names.extend(
+                    f"gated_{modality}_{lag}_{variable}"
+                    for variable in self.schema.semantic_variables
+                )
+                names.append(f"effective_q_{modality}_{lag}")
+                names.append(f"available_{modality}_{lag}")
+        return tuple(names)
+
+    def transform(self, frame: pd.DataFrame) -> np.ndarray:
+        values, quality, available = self._validated_arrays(frame)
+        finite = np.isfinite(values)
+        effective_q = quality * available
+        gated = np.where(finite, values, 0.0) * effective_q[..., None]
+        blocks: list[np.ndarray] = []
+        for lag_index in range(len(self.schema.lags)):
+            for modality_index in range(len(self.schema.modalities)):
+                blocks.append(gated[:, lag_index, modality_index, :])
+                blocks.append(effective_q[:, lag_index, modality_index, None])
+                blocks.append(available[:, lag_index, modality_index, None])
+        encoded = np.concatenate(blocks, axis=1)
+        if encoded.shape[1] != len(self.feature_names):
+            raise RuntimeError("Baseline feature-name and matrix dimensions disagree")
+        return encoded
+
+
+class CompactStructuredEncoder(ObservationEncoder):
+    """The compact 49-feature encoder used in frozen Study 1-R.
+
+    Study 1-R2 retains this path, but no longer forces it to replace the raw
+    quality-gated observations.  Keeping the original encoder as an explicit
+    sub-path makes the architectural change auditable.
+    """
+
+    kind = "structured_compact_v1"
+
+    @property
+    def feature_names(self) -> tuple[str, ...]:
+        names: list[str] = []
+        for lag in self.schema.lags:
+            names.extend(f"fused_{lag}_{v}" for v in self.schema.semantic_variables)
+            names.extend(f"disagreement_{lag}_{v}" for v in self.schema.semantic_variables)
+            names.extend(f"support_{lag}_{v}" for v in self.schema.semantic_variables)
+        names.extend(f"temporal_delta_{v}" for v in self.schema.semantic_variables)
+        for lag in self.schema.lags:
+            names.extend(
+                (
+                    f"q_mean_{lag}",
+                    f"q_min_{lag}",
+                    f"q_max_{lag}",
+                    f"q_std_{lag}",
+                    f"available_fraction_{lag}",
+                )
+            )
+        names.extend(
+            (
+                "physics_ttc_s",
+                "physics_closing_gap_ratio",
+                "physics_crossing_closing_interaction",
+                "physics_urgency_crossing_interaction",
+            )
+        )
+        return tuple(names)
+
+    def transform(self, frame: pd.DataFrame) -> np.ndarray:
+        values, quality, available = self._validated_arrays(frame)
+        finite = np.isfinite(values)
+        effective_q = quality * available
+        weights = effective_q[..., None] * finite.astype(np.float64)
+        safe_values = np.where(finite, values, 0.0)
+        weight_sum = weights.sum(axis=2)
+        fused = np.divide(
+            (weights * safe_values).sum(axis=2),
+            weight_sum,
+            out=np.zeros_like(weight_sum),
+            where=weight_sum > EPS,
+        )
+        centered = safe_values - fused[:, :, None, :]
+        variance = np.divide(
+            (weights * centered**2).sum(axis=2),
+            weight_sum,
+            out=np.zeros_like(weight_sum),
+            where=weight_sum > EPS,
+        )
+        disagreement = np.sqrt(np.maximum(variance, 0.0))
+        support = weight_sum / max(1, len(self.schema.modalities))
+
+        blocks: list[np.ndarray] = []
+        for lag_index in range(len(self.schema.lags)):
+            blocks.extend(
+                (
+                    fused[:, lag_index, :],
+                    disagreement[:, lag_index, :],
+                    support[:, lag_index, :],
+                )
+            )
+        blocks.append(fused[:, 1, :] - fused[:, 0, :])
+
+        for lag_index in range(len(self.schema.lags)):
+            q = effective_q[:, lag_index, :]
+            blocks.append(
+                np.column_stack(
+                    (
+                        q.mean(axis=1),
+                        q.min(axis=1),
+                        q.max(axis=1),
+                        q.std(axis=1),
+                        available[:, lag_index, :].mean(axis=1),
+                    )
+                )
+            )
+
+        variable_index = {
+            variable: index for index, variable in enumerate(self.schema.semantic_variables)
+        }
+
+        def current(name: str, default: float = 0.0) -> np.ndarray:
+            index = variable_index.get(name)
+            if index is None:
+                return np.full(len(frame), default, dtype=np.float64)
+            return fused[:, 1, index]
+
+        gap = np.maximum(current("gap_m"), 0.0)
+        closing = current("closing_speed_mps")
+        crossing = np.clip(current("crossing_risk"), 0.0, 1.0)
+        urgency = np.clip(current("route_urgency"), 0.0, 1.0)
+        positive_closing = np.maximum(closing, 0.0)
+        ttc = np.clip(gap / np.maximum(positive_closing, 0.1), 0.0, 20.0)
+        closing_gap = positive_closing / np.maximum(gap, 0.5)
+        physics = np.column_stack(
+            (
+                ttc,
+                closing_gap,
+                crossing * positive_closing,
+                urgency * crossing,
+            )
+        )
+        blocks.append(physics)
+        encoded = np.concatenate(blocks, axis=1)
+        if encoded.shape[1] != len(self.feature_names):
+            raise RuntimeError("Structured feature-name and matrix dimensions disagree")
+        if not np.all(np.isfinite(encoded)):
+            raise ValueError("Structured encoding produced non-finite values")
+        return encoded
+
+
+class StructuredEncoder(ObservationEncoder):
+    """Exploratory dual-path physics-informed encoder for Study 1-R2.
+
+    The encoder receives exactly the same method-blind observation columns as
+    Baseline B.  It concatenates (i) the complete Baseline-B quality-gated raw
+    path, (ii) the frozen Study-1R compact structured path, and (iii) robust
+    inverse-noise fusion and observation-only physics margins.  The constants
+    below are frozen properties of the controlled-synthetic observation and
+    oracle specifications; no final-test output is used to construct them.
+
+    This is intentionally a higher-capacity candidate.  Study 1-R2 therefore
+    evaluates a new dual-path model design, not a parameter-matched repeat of
+    the original representation-only comparison.
+    """
+
+    kind = "structured_r2_dual_path_v1"
+
+    _BASE_NOISE_SD = np.asarray(
+        [
+            [2.00, 1.10, 0.60, 0.10, 0.10],  # camera
+            [0.70, 0.55, 0.45, 0.18, 0.15],  # lidar
+            [1.30, 0.25, 0.55, 0.22, 0.20],  # radar
+            [4.00, 1.80, 0.08, 0.16, 0.04],  # ego
+        ],
+        dtype=np.float64,
+    )
+    _TTC_CAP_S = 20.0
+    _COMFORTABLE_DECELERATION_MPS2 = 4.5
+    _STANDSTILL_GAP_M = 2.0
+    _REACTION_TIME_S = 0.7
+    _STOP_TTC_S = 1.20
+    _YIELD_TTC_S = 2.40
+    _SLOW_TTC_S = 5.00
+    _STOP_CROSSING_RISK = 0.88
+    _YIELD_CROSSING_RISK = 0.66
+    _SLOW_CROSSING_RISK = 0.36
+    _YIELD_STOPPING_MARGIN_M = 0.0
+    _SLOW_STOPPING_MARGIN_M = 5.0
+    _COLLISION_GAP_M = 0.75
+
+    @property
+    def feature_names(self) -> tuple[str, ...]:
+        baseline = tuple(
+            f"raw_path__{name}" for name in BaselineBEncoder(self.schema).feature_names
+        )
+        compact = tuple(
+            f"compact_path__{name}"
+            for name in CompactStructuredEncoder(self.schema).feature_names
+        )
+        robust: list[str] = []
+        for lag in self.schema.lags:
+            robust.extend(f"robust_fused_{lag}_{v}" for v in self.schema.semantic_variables)
+            robust.extend(f"robust_spread_{lag}_{v}" for v in self.schema.semantic_variables)
+        robust.extend(f"robust_temporal_delta_{v}" for v in self.schema.semantic_variables)
+        robust.extend(
+            (
+                "proxy_ttc_s",
+                "proxy_stopping_margin_m",
+                "margin_ttc_stop_s",
+                "margin_ttc_yield_s",
+                "margin_ttc_slow_s",
+                "margin_crossing_stop",
+                "margin_crossing_yield",
+                "margin_crossing_slow",
+                "margin_stopping_yield_m",
+                "margin_stopping_slow_m",
+                "margin_collision_gap_m",
+                "proxy_action_KEEP",
+                "proxy_action_SLOW",
+                "proxy_action_YIELD",
+                "proxy_action_STOP",
+            )
+        )
+        return baseline + compact + tuple(robust)
+
+    def transform(self, frame: pd.DataFrame) -> np.ndarray:
+        values, quality, available = self._validated_arrays(frame)
+        finite = np.isfinite(values)
+        safe_values = np.where(finite, values, 0.0)
+
+        baseline = BaselineBEncoder(self.schema).transform(frame)
+        compact = CompactStructuredEncoder(self.schema).transform(frame)
+
+        # The generator scales each modality/variable noise by
+        # base_sd / (0.25 + 0.75 * quality).  Its reciprocal variance is the
+        # natural reliability weight.  Availability and finite-value masks are
+        # applied before normalization.
+        quality_factor = 0.25 + 0.75 * np.clip(quality, 0.0, 1.0)
+        precision = (
+            quality_factor[..., None] ** 2
+            / np.maximum(self._BASE_NOISE_SD[None, None, :, :] ** 2, EPS)
+        )
+        weights = precision * available[..., None] * finite.astype(np.float64)
+        weight_sum = weights.sum(axis=2)
+        fused = np.divide(
+            (weights * safe_values).sum(axis=2),
+            weight_sum,
+            out=np.zeros_like(weight_sum),
+            where=weight_sum > EPS,
+        )
+        centered = safe_values - fused[:, :, None, :]
+        variance = np.divide(
+            (weights * centered**2).sum(axis=2),
+            weight_sum,
+            out=np.zeros_like(weight_sum),
+            where=weight_sum > EPS,
+        )
+        spread = np.sqrt(np.maximum(variance, 0.0))
+
+        robust_blocks: list[np.ndarray] = []
+        for lag_index in range(len(self.schema.lags)):
+            robust_blocks.extend((fused[:, lag_index, :], spread[:, lag_index, :]))
+        robust_blocks.append(fused[:, 1, :] - fused[:, 0, :])
+
+        variable_index = {
+            variable: index for index, variable in enumerate(self.schema.semantic_variables)
+        }
+
+        def current(name: str, default: float = 0.0) -> np.ndarray:
+            index = variable_index.get(name)
+            if index is None:
+                return np.full(len(frame), default, dtype=np.float64)
+            return fused[:, 1, index]
+
+        gap = np.maximum(current("gap_m"), 0.0)
+        closing = current("closing_speed_mps")
+        speed = np.maximum(current("ego_speed_mps"), 0.0)
+        crossing = np.clip(current("crossing_risk"), 0.0, 1.0)
+        positive_closing = np.maximum(closing, 0.0)
+        ttc = np.full(len(frame), self._TTC_CAP_S, dtype=np.float64)
+        closing_mask = closing > 0.1
+        ttc[closing_mask] = np.clip(
+            gap[closing_mask] / closing[closing_mask], 0.0, self._TTC_CAP_S
+        )
+        stopping_margin = gap - (
+            self._STANDSTILL_GAP_M
+            + self._REACTION_TIME_S * speed
+            + positive_closing**2 / (2.0 * self._COMFORTABLE_DECELERATION_MPS2)
+        )
+
+        proxy = np.zeros(len(frame), dtype=np.int64)
+        proxy[
+            (ttc < self._SLOW_TTC_S)
+            | (stopping_margin < self._SLOW_STOPPING_MARGIN_M)
+            | (crossing > self._SLOW_CROSSING_RISK)
+        ] = 1
+        proxy[
+            (ttc < self._YIELD_TTC_S)
+            | (stopping_margin < self._YIELD_STOPPING_MARGIN_M)
+            | (crossing > self._YIELD_CROSSING_RISK)
+        ] = 2
+        proxy[
+            (ttc < self._STOP_TTC_S)
+            | (crossing > self._STOP_CROSSING_RISK)
+            | (gap <= self._COLLISION_GAP_M)
+        ] = 3
+        proxy_one_hot = np.eye(N_CLASSES, dtype=np.float64)[proxy]
+        physics = np.column_stack(
+            (
+                ttc,
+                stopping_margin,
+                ttc - self._STOP_TTC_S,
+                ttc - self._YIELD_TTC_S,
+                ttc - self._SLOW_TTC_S,
+                self._STOP_CROSSING_RISK - crossing,
+                self._YIELD_CROSSING_RISK - crossing,
+                self._SLOW_CROSSING_RISK - crossing,
+                stopping_margin - self._YIELD_STOPPING_MARGIN_M,
+                stopping_margin - self._SLOW_STOPPING_MARGIN_M,
+                gap - self._COLLISION_GAP_M,
+            )
+        )
+        robust_blocks.extend((physics, proxy_one_hot))
+
+        encoded = np.concatenate((baseline, compact, *robust_blocks), axis=1)
+        if encoded.shape[1] != len(self.feature_names):
+            raise RuntimeError("Study 1-R2 feature-name and matrix dimensions disagree")
+        if not np.all(np.isfinite(encoded)):
+            raise ValueError("Study 1-R2 encoding produced non-finite values")
+        return encoded
+
+
+def build_encoder(
+    method: str, schema: FeatureSchema | None = None
+) -> ObservationEncoder:
+    normalized = method.strip().lower().replace("_", " ")
+    if normalized in {"baseline b", "baseline"}:
+        return BaselineBEncoder(schema)
+    if normalized in {"structured-r2", "structured r2", "structured", "structured fusion"}:
+        return StructuredEncoder(schema)
+    raise ValueError(f"Unknown Study 1-R method: {method!r}")
+
+
+def mlp_parameter_count(
+    input_dim: int,
+    hidden_width: int | Sequence[int],
+    classes: int = N_CLASSES,
+) -> int:
+    """Parameter count for a fully connected multiclass MLP.
+
+    ``hidden_width`` accepts an integer for the one-layer helper API or the
+    frozen protocol's complete sequence (currently ``(48, 24)``).
+    """
+
+    hidden = (
+        (int(hidden_width),)
+        if isinstance(hidden_width, (int, np.integer))
+        else tuple(int(value) for value in hidden_width)
+    )
+    if input_dim < 1 or not hidden or any(value < 1 for value in hidden) or classes < 2:
+        raise ValueError("Network dimensions must be positive")
+    dimensions = (int(input_dim), *hidden, int(classes))
+    return int(
+        sum(
+            dimensions[index] * dimensions[index + 1] + dimensions[index + 1]
+            for index in range(len(dimensions) - 1)
+        )
+    )
+
+
+def matched_hidden_width(
+    *,
+    input_dim: int,
+    reference_input_dim: int,
+    reference_hidden_width: int,
+    trailing_hidden_layers: Sequence[int] = (),
+    classes: int = N_CLASSES,
+    minimum: int = 2,
+    maximum: int = 512,
+) -> int:
+    """Return the integer width whose parameter count is closest to reference."""
+
+    trailing = tuple(int(value) for value in trailing_hidden_layers)
+    target = mlp_parameter_count(
+        reference_input_dim,
+        (reference_hidden_width, *trailing),
+        classes,
+    )
+    candidates = np.arange(minimum, maximum + 1, dtype=int)
+    counts = np.asarray(
+        [
+            mlp_parameter_count(input_dim, (int(width), *trailing), classes)
+            for width in candidates
+        ]
+    )
+    distances = np.abs(counts - target)
+    # np.argmin deterministically selects the smaller width on an exact tie.
+    return int(candidates[int(np.argmin(distances))])
+
+
+@dataclass
+class Study1RClassifier:
+    """An encoder, fitted scaler, MLP and validation-fitted temperature."""
+
+    method: str
+    encoder: ObservationEncoder
+    estimator: MLPClassifier
+    scaler: StandardScaler = field(default_factory=StandardScaler)
+    temperature: float = 1.0
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def encoded(self, frame: pd.DataFrame) -> np.ndarray:
+        matrix = self.encoder.transform(frame)
+        if not hasattr(self.scaler, "mean_"):
+            raise RuntimeError("StandardScaler has not been fitted")
+        scaled = self.scaler.transform(matrix)
+        if not np.all(np.isfinite(scaled)):
+            raise ValueError("Scaled model input contains non-finite values")
+        return scaled
+
+    def _forward_logits(self, scaled: np.ndarray) -> np.ndarray:
+        if not hasattr(self.estimator, "coefs_"):
+            raise RuntimeError("MLPClassifier has not been fitted")
+        activation = np.asarray(scaled, dtype=np.float64)
+        for layer_index, (weights, bias) in enumerate(
+            zip(self.estimator.coefs_, self.estimator.intercepts_)
+        ):
+            activation = activation @ weights + bias
+            if layer_index == len(self.estimator.coefs_) - 1:
+                break
+            name = self.estimator.activation
+            if name == "relu":
+                activation = np.maximum(activation, 0.0)
+            elif name == "tanh":
+                activation = np.tanh(activation)
+            elif name == "logistic":
+                activation = 1.0 / (1.0 + np.exp(-np.clip(activation, -40.0, 40.0)))
+            elif name != "identity":
+                raise ValueError(f"Unsupported hidden activation: {name}")
+        if activation.ndim != 2 or activation.shape[1] != N_CLASSES:
+            raise RuntimeError(
+                f"Expected {N_CLASSES} output logits, found shape {activation.shape}"
+            )
+        return activation
+
+    def predict_logits(self, frame: pd.DataFrame) -> np.ndarray:
+        """Return uncalibrated raw logits with shape ``[N, 4]``."""
+
+        return self._forward_logits(self.encoded(frame))
+
+    def predict_proba(self, frame: pd.DataFrame, *, calibrated: bool = True) -> np.ndarray:
+        logits = self.predict_logits(frame)
+        temperature = self.temperature if calibrated else 1.0
+        if not math.isfinite(temperature) or temperature <= 0.0:
+            raise ValueError("Temperature must be finite and positive")
+        return _softmax(logits / temperature)
+
+    def predict(self, frame: pd.DataFrame) -> np.ndarray:
+        return np.argmax(self.predict_proba(frame), axis=1).astype(np.int64)
+
+    def fit_temperature(
+        self,
+        frame: pd.DataFrame,
+        labels: Iterable[int],
+        *,
+        lower_bound: float = 0.5,
+        upper_bound: float = 5.0,
+    ) -> float:
+        """Fit one positive temperature on the fixed validation set only."""
+
+        y = np.asarray(list(labels), dtype=np.int64)
+        logits = self.predict_logits(frame)
+        if len(y) != len(logits):
+            raise ValueError("Temperature labels and validation rows differ")
+
+        if not (0.0 < lower_bound < upper_bound):
+            raise ValueError("Temperature bounds must satisfy 0 < lower < upper")
+
+        def objective(log_temperature: float) -> float:
+            return multiclass_nll(y, _softmax(logits / math.exp(log_temperature)))
+
+        result = minimize_scalar(
+            objective,
+            method="bounded",
+            bounds=(math.log(lower_bound), math.log(upper_bound)),
+            options={"xatol": 1.0e-10, "maxiter": 500},
+        )
+        if not result.success or not math.isfinite(float(result.x)):
+            raise RuntimeError(f"Temperature fitting failed: {result.message}")
+        self.temperature = float(math.exp(float(result.x)))
+        return self.temperature
+
+    def parameter_count(self) -> int:
+        if not hasattr(self.estimator, "coefs_"):
+            hidden = tuple(int(value) for value in self.estimator.hidden_layer_sizes)
+            return mlp_parameter_count(len(self.encoder.feature_names), hidden, N_CLASSES)
+        return int(
+            sum(array.size for array in self.estimator.coefs_)
+            + sum(array.size for array in self.estimator.intercepts_)
+        )
+
+    def to_checkpoint_dict(self) -> dict[str, Any]:
+        if not hasattr(self.estimator, "coefs_") or not hasattr(self.scaler, "mean_"):
+            raise RuntimeError("Cannot checkpoint an unfitted model")
+        params = self.estimator.get_params(deep=False)
+        allowed_params = {
+            "activation",
+            "alpha",
+            "batch_size",
+            "beta_1",
+            "beta_2",
+            "early_stopping",
+            "epsilon",
+            "hidden_layer_sizes",
+            "learning_rate",
+            "learning_rate_init",
+            "max_fun",
+            "max_iter",
+            "momentum",
+            "n_iter_no_change",
+            "nesterovs_momentum",
+            "power_t",
+            "random_state",
+            "shuffle",
+            "solver",
+            "tol",
+            "validation_fraction",
+            "verbose",
+            "warm_start",
+        }
+        serializable_params: dict[str, Any] = {}
+        for key in sorted(allowed_params):
+            value = params[key]
+            if isinstance(value, tuple):
+                value = list(value)
+            if isinstance(value, np.generic):
+                value = value.item()
+            serializable_params[key] = value
+        n_seen = np.asarray(self.scaler.n_samples_seen_)
+        payload = {
+            "schema": "egms-drive-study1r-checkpoint-1.0",
+            "method": self.method,
+            "encoder": self.encoder.to_json_dict(),
+            "feature_names": list(self.encoder.feature_names),
+            "classes": [int(value) for value in np.asarray(self.estimator.classes_)],
+            "scaler": {
+                "mean": _finite_float_list(self.scaler.mean_),
+                "scale": _finite_float_list(self.scaler.scale_),
+                "var": _finite_float_list(self.scaler.var_),
+                "n_samples_seen": n_seen.tolist(),
+            },
+            "estimator_params": serializable_params,
+            "coefs": [_finite_float_list(value) for value in self.estimator.coefs_],
+            "intercepts": [
+                _finite_float_list(value) for value in self.estimator.intercepts_
+            ],
+            "temperature": float(self.temperature),
+            "parameter_count": self.parameter_count(),
+            "metadata": self.metadata,
+        }
+        # Enforce strict JSON compatibility before the payload can be written.
+        json.dumps(payload, allow_nan=False, sort_keys=True)
+        return payload
+
+    @classmethod
+    def from_checkpoint_dict(cls, payload: Mapping[str, Any]) -> "Study1RClassifier":
+        if payload.get("schema") != "egms-drive-study1r-checkpoint-1.0":
+            raise ValueError("Unsupported Study 1-R checkpoint schema")
+        encoder_payload = payload["encoder"]
+        schema = FeatureSchema.from_json_dict(encoder_payload["schema"])
+        encoder = build_encoder(str(payload["method"]), schema)
+        if encoder.kind != encoder_payload["kind"]:
+            raise ValueError("Checkpoint method and encoder kind disagree")
+        if list(encoder.feature_names) != list(payload["feature_names"]):
+            raise ValueError("Checkpoint feature names disagree with reconstructed encoder")
+
+        params = dict(payload["estimator_params"])
+        params["hidden_layer_sizes"] = tuple(int(value) for value in params["hidden_layer_sizes"])
+        estimator = MLPClassifier(**params)
+        classes = np.asarray(payload["classes"], dtype=np.int64)
+        if not np.array_equal(classes, np.arange(N_CLASSES, dtype=np.int64)):
+            raise ValueError("Checkpoint must contain ordered classes [0, 1, 2, 3]")
+        # Initialize sklearn's fitted attributes without relying on pickle, then
+        # replace the random arrays by the audited JSON values.
+        input_dim = len(encoder.feature_names)
+        dummy_x = np.zeros((N_CLASSES, input_dim), dtype=np.float64)
+        estimator.partial_fit(dummy_x, classes, classes=classes)
+        coefs = [np.asarray(value, dtype=np.float64) for value in payload["coefs"]]
+        intercepts = [
+            np.asarray(value, dtype=np.float64) for value in payload["intercepts"]
+        ]
+        if [array.shape for array in coefs] != [array.shape for array in estimator.coefs_]:
+            raise ValueError("Checkpoint coefficient shapes do not match estimator topology")
+        if [array.shape for array in intercepts] != [
+            array.shape for array in estimator.intercepts_
+        ]:
+            raise ValueError("Checkpoint intercept shapes do not match estimator topology")
+        estimator.coefs_ = coefs
+        estimator.intercepts_ = intercepts
+
+        scaler_payload = payload["scaler"]
+        scaler = StandardScaler()
+        scaler.mean_ = np.asarray(scaler_payload["mean"], dtype=np.float64)
+        scaler.scale_ = np.asarray(scaler_payload["scale"], dtype=np.float64)
+        scaler.var_ = np.asarray(scaler_payload["var"], dtype=np.float64)
+        n_seen = np.asarray(scaler_payload["n_samples_seen"])
+        scaler.n_samples_seen_ = n_seen.item() if n_seen.ndim == 0 else n_seen
+        scaler.n_features_in_ = input_dim
+        if any(len(value) != input_dim for value in (scaler.mean_, scaler.scale_, scaler.var_)):
+            raise ValueError("Checkpoint scaler dimension does not match encoder")
+
+        model = cls(
+            method=str(payload["method"]),
+            encoder=encoder,
+            estimator=estimator,
+            scaler=scaler,
+            temperature=float(payload["temperature"]),
+            metadata=dict(payload.get("metadata", {})),
+        )
+        if model.parameter_count() != int(payload["parameter_count"]):
+            raise ValueError("Checkpoint parameter count is inconsistent")
+        return model
+
+    def save_checkpoint(self, path: str | Path) -> Path:
+        destination = Path(path)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        text = json.dumps(
+            self.to_checkpoint_dict(),
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+            allow_nan=False,
+        )
+        destination.write_text(text + "\n", encoding="utf-8", newline="\n")
+        return destination
+
+    @classmethod
+    def load_checkpoint(cls, path: str | Path) -> "Study1RClassifier":
+        payload = json.loads(Path(path).read_text(encoding="utf-8"))
+        if not isinstance(payload, dict):
+            raise ValueError("Checkpoint root must be a JSON object")
+        return cls.from_checkpoint_dict(payload)
+
+
+def make_classifier(
+    *,
+    method: str,
+    encoder: ObservationEncoder,
+    hidden_layer_sizes: Sequence[int],
+    learning_rate_init: float,
+    alpha: float,
+    random_state: int,
+) -> Study1RClassifier:
+    """Construct an unfitted frozen-head partial-fit classifier."""
+
+    hidden = tuple(int(value) for value in hidden_layer_sizes)
+    if not hidden or any(value < 2 for value in hidden):
+        raise ValueError("Every hidden-layer width must be at least 2")
+    estimator = MLPClassifier(
+        hidden_layer_sizes=hidden,
+        activation="relu",
+        solver="adam",
+        alpha=float(alpha),
+        batch_size="auto",  # Batching is controlled explicitly by training.py.
+        learning_rate="constant",
+        learning_rate_init=float(learning_rate_init),
+        max_iter=1,
+        shuffle=False,
+        random_state=int(random_state),
+        tol=0.0,
+        n_iter_no_change=10_000,
+        early_stopping=False,
+        warm_start=False,
+    )
+    return Study1RClassifier(method=method, encoder=encoder, estimator=estimator)
+
+
+__all__ = [
+    "ACTION_NAMES",
+    "N_CLASSES",
+    "MODEL_BASELINE_B",
+    "MODEL_STRUCTURED",
+    "MODEL_SLUGS",
+    "FeatureSchema",
+    "ObservationEncoder",
+    "BaselineBEncoder",
+    "CompactStructuredEncoder",
+    "StructuredEncoder",
+    "Study1RClassifier",
+    "build_encoder",
+    "make_classifier",
+    "matched_hidden_width",
+    "mlp_parameter_count",
+    "multiclass_nll",
+]
+~~~~
+
+### `src/egms_study1r2/plotting.py`
+
+- SHA-256: `3f5292d615acd40c784e8b8dd83f8a3058e105f56dc8e787e445921d80653a6c`
+- Bytes: `11755`
+
+~~~~python
+"""Direction-neutral publication figures for exploratory Study 1-R2."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+import numpy as np
+import pandas as pd
+
+from egms_publication.style import GRAY, NAVY, TEAL, TEXT, apply_style, format_axes, panel_title, save_figure
+
+
+def _select_one(frame: pd.DataFrame, **filters: object) -> pd.Series:
+    mask = pd.Series(True, index=frame.index)
+    for column, value in filters.items():
+        mask &= frame[column].astype(str).eq(str(value))
+    selected = frame.loc[mask]
+    if len(selected) != 1:
+        raise ValueError(f"Expected one row for {filters}; found {len(selected)}")
+    return selected.iloc[0]
+
+
+def _symmetric_limits(values: np.ndarray, floor: float) -> tuple[float, float]:
+    finite = np.asarray(values, dtype=float)
+    finite = finite[np.isfinite(finite)]
+    limit = max(floor, float(np.max(np.abs(finite))) if len(finite) else floor)
+    return -1.22 * limit, 1.22 * limit
+
+
+def _range_limits(values: np.ndarray, *, nonnegative: bool = False) -> tuple[float, float]:
+    finite = np.asarray(values, dtype=float)
+    finite = finite[np.isfinite(finite)]
+    if len(finite) == 0:
+        return (0.0, 1.0)
+    low = float(finite.min())
+    high = float(finite.max())
+    span = max(high - low, 0.08 * max(abs(high), abs(low), 1.0))
+    lower = low - 0.18 * span
+    upper = high + 0.18 * span
+    if nonnegative:
+        lower = max(0.0, lower)
+    if upper <= lower:
+        upper = lower + 1.0
+    return lower, upper
+
+
+def _p_text(value: float) -> str:
+    return f"{value:.4f}" if value >= 0.0001 else "<0.0001"
+
+
+def _forest_panel(
+    ax: plt.Axes,
+    contrasts: pd.DataFrame,
+    endpoints: list[str],
+    *,
+    title: str,
+    xlabel: str,
+    scale: float,
+    decimals: int,
+    floor: float,
+) -> None:
+    rows = [_select_one(contrasts, endpoint=endpoint) for endpoint in endpoints]
+    estimates = scale * np.asarray([float(row["benefit_difference"]) for row in rows])
+    lows = scale * np.asarray([float(row["benefit_ci_low"]) for row in rows])
+    highs = scale * np.asarray([float(row["benefit_ci_high"]) for row in rows])
+    y = np.arange(len(rows) - 1, -1, -1, dtype=float)
+    for index, (row, estimate, low, high, ypos) in enumerate(zip(rows, estimates, lows, highs, y)):
+        ax.errorbar(
+            estimate,
+            ypos,
+            xerr=np.array([[estimate - low], [high - estimate]]),
+            fmt="o",
+            markersize=6.0,
+            markerfacecolor="white",
+            markeredgecolor=NAVY,
+            markeredgewidth=1.35,
+            ecolor=NAVY,
+            elinewidth=1.5,
+            capsize=3.6,
+            capthick=1.5,
+            zorder=3,
+        )
+        annotation = f"Δb={estimate:+.{decimals}f}"
+        ax.annotate(
+            annotation,
+            (0.985, ypos),
+            xycoords=("axes fraction", "data"),
+            xytext=(0, -6 if index == 0 else 5),
+            textcoords="offset points",
+            ha="right",
+            va="center",
+            fontsize=7.5,
+            color=TEXT,
+        )
+    ax.axvline(0.0, color=TEAL, linestyle="--", linewidth=1.35, zorder=1)
+    ax.set_xlim(*_symmetric_limits(np.r_[estimates, lows, highs], floor))
+    ax.set_ylim(-0.28, len(rows) - 0.72)
+    ax.set_yticks(y, [str(row["metric"]) for row in rows])
+    ax.set_xlabel(xlabel)
+    panel_title(ax, title)
+    format_axes(ax)
+
+
+def _marginal_panel(
+    ax: plt.Axes,
+    metric_summary: pd.DataFrame,
+    contrasts: pd.DataFrame,
+    endpoint: str,
+    *,
+    title: str,
+    xlabel: str,
+    decimals: int,
+) -> None:
+    rows = [
+        _select_one(metric_summary, endpoint=endpoint, method="Baseline B"),
+        _select_one(metric_summary, endpoint=endpoint, method="Structured-R2"),
+    ]
+    colors = [GRAY, NAVY]
+    y = [0.34, 0.66]
+    bounds: list[float] = []
+    for row, color, ypos in zip(rows, colors, y):
+        estimate = float(row["estimate"])
+        low = float(row["ci_low"])
+        high = float(row["ci_high"])
+        bounds.extend([estimate, low, high])
+        ax.errorbar(
+            estimate,
+            ypos,
+            xerr=np.array([[estimate - low], [high - estimate]]),
+            fmt="o",
+            markersize=6.2,
+            markerfacecolor="white",
+            markeredgecolor=color,
+            markeredgewidth=1.4,
+            ecolor=color,
+            elinewidth=1.55,
+            capsize=3.8,
+            capthick=1.55,
+            zorder=3,
+        )
+        ax.annotate(
+            f"{estimate:.{decimals}f}",
+            (estimate, ypos),
+            xytext=(0, 7),
+            textcoords="offset points",
+            ha="center",
+            va="bottom",
+            fontsize=8.0,
+            color=TEXT,
+        )
+    contrast = _select_one(contrasts, endpoint=endpoint)
+    delta = float(contrast["raw_difference_structured_minus_baseline"])
+    low = float(contrast["raw_ci_low"])
+    high = float(contrast["raw_ci_high"])
+    annotation = (
+        f"Paired Δ(S−B)={delta:+.{decimals}f} [{low:+.{decimals}f}, {high:+.{decimals}f}]\n"
+        f"favorable/tie/adverse={int(contrast['favorable_replicates'])}/"
+        f"{int(contrast['tied_replicates'])}/{int(contrast['adverse_replicates'])}; "
+        f"Holm p={_p_text(float(contrast['holm_adjusted_p']))}"
+    )
+    ax.text(
+        0.50,
+        0.08,
+        annotation,
+        transform=ax.transAxes,
+        ha="center",
+        va="bottom",
+        fontsize=7.2,
+        color=TEXT,
+    )
+    ax.set_xlim(*_range_limits(np.asarray(bounds), nonnegative=True))
+    ax.set_ylim(0.12, 0.88)
+    ax.set_yticks(y, ["Baseline B", "Structured-R2"])
+    ax.set_xlabel(xlabel)
+    panel_title(ax, title)
+    format_axes(ax)
+
+
+def build_figure2_study1r2(
+    metric_summary: pd.DataFrame | str | Path,
+    paired_contrasts: pd.DataFrame | str | Path,
+    stem: str | Path,
+) -> dict[str, Path]:
+    """Render the raw-recomputed four-panel exploratory Study 1-R2 figure."""
+
+    summary = (
+        metric_summary.copy()
+        if isinstance(metric_summary, pd.DataFrame)
+        else pd.read_csv(Path(metric_summary))
+    )
+    contrasts = (
+        paired_contrasts.copy()
+        if isinstance(paired_contrasts, pd.DataFrame)
+        else pd.read_csv(Path(paired_contrasts))
+    )
+    apply_style()
+    width_px, height_px = 3810, 2522
+    fig, axes = plt.subplots(2, 2, figsize=(width_px / 600, height_px / 600), dpi=600)
+    fig.subplots_adjust(left=0.135, right=0.985, bottom=0.105, top=0.950, wspace=0.42, hspace=0.50)
+
+    _forest_panel(
+        axes[0, 0],
+        contrasts,
+        ["macro_f1", "nll", "brier", "ece"],
+        title="(a) Offline action and probability metrics",
+        xlabel="Benefit-oriented raw difference\n(positive = Structured-R2 better)",
+        scale=1.0,
+        decimals=4,
+        floor=0.01,
+    )
+    _forest_panel(
+        axes[0, 1],
+        contrasts,
+        ["collision", "near_miss", "critical_event", "route_completion"],
+        title="(b) Closed-loop outcomes",
+        xlabel="Benefit-oriented difference (pp)\n(positive = Structured-R2 better)",
+        scale=100.0,
+        decimals=2,
+        floor=1.0,
+    )
+    _marginal_panel(
+        axes[1, 0],
+        summary,
+        contrasts,
+        "ttc_p5",
+        title="(c) Jointly collision-free TTC-P5",
+        xlabel="Mean episode TTC-P5 (s)",
+        decimals=3,
+    )
+    _marginal_panel(
+        axes[1, 1],
+        summary,
+        contrasts,
+        "jerk_p95",
+        title="(d) Episode kinematic smoothness",
+        xlabel="Mean episode jerk-P95 (m/s³)",
+        decimals=3,
+    )
+    return save_figure(
+        fig,
+        Path(stem),
+        width_px=width_px,
+        height_px=height_px,
+        dpi=600,
+    )
+
+
+# Compatibility aliases for copied orchestration code.
+build_figure2_study1r = build_figure2_study1r2
+build_figure2 = build_figure2_study1r2
+
+
+_VARIANT_STYLE = {
+    "Frozen Study 1-R": {"marker": "o", "color": GRAY, "face": "white", "offset": 0.11},
+    "Exploratory Study 1-R2": {"marker": "s", "color": NAVY, "face": NAVY, "offset": -0.11},
+}
+
+
+def _comparison_forest_panel(
+    ax: plt.Axes,
+    inputs: pd.DataFrame,
+    endpoints: tuple[str, ...],
+    *,
+    title: str,
+    xlabel: str,
+    floor: float,
+) -> None:
+    base_y = np.arange(len(endpoints) - 1, -1, -1, dtype=float)
+    bounds: list[float] = []
+    for variant, style in _VARIANT_STYLE.items():
+        rows = inputs.loc[inputs["study_variant"].eq(variant)].set_index("endpoint").loc[list(endpoints)]
+        estimate = rows["display_estimate"].to_numpy(float)
+        low = rows["display_ci_low"].to_numpy(float)
+        high = rows["display_ci_high"].to_numpy(float)
+        y = base_y + float(style["offset"])
+        bounds.extend(np.r_[estimate, low, high])
+        ax.errorbar(
+            estimate, y, xerr=np.vstack([estimate - low, high - estimate]),
+            fmt=str(style["marker"]), markersize=5.8,
+            markerfacecolor=str(style["face"]), markeredgecolor=str(style["color"]),
+            markeredgewidth=1.3, ecolor=str(style["color"]), elinewidth=1.45,
+            capsize=3.4, capthick=1.45, zorder=3,
+        )
+    ax.axvline(0.0, color=TEAL, linestyle="--", linewidth=1.35)
+    ax.set_xlim(*_symmetric_limits(np.asarray(bounds), floor))
+    ax.set_ylim(-0.38, len(endpoints) - 0.62)
+    labels = [str(inputs.loc[inputs["endpoint"].eq(e), "metric"].iloc[0]) for e in endpoints]
+    ax.set_yticks(base_y, labels)
+    ax.set_xlabel(xlabel)
+    panel_title(ax, title)
+    format_axes(ax)
+
+
+def build_figure2r_study1r_vs_r2(
+    comparison_inputs: pd.DataFrame | str | Path,
+    stem: str | Path,
+) -> dict[str, Path]:
+    frame = comparison_inputs.copy() if isinstance(comparison_inputs, pd.DataFrame) else pd.read_csv(Path(comparison_inputs))
+    if len(frame) != 20:
+        raise ValueError("Figure 2R requires two variants by ten endpoints")
+    apply_style()
+    width_px, height_px = 3810, 2522
+    fig, axes = plt.subplots(2, 2, figsize=(width_px / 600, height_px / 600), dpi=600)
+    fig.subplots_adjust(left=0.135, right=0.985, bottom=0.145, top=0.885, wspace=0.42, hspace=0.52)
+    _comparison_forest_panel(
+        axes[0, 0], frame, ("macro_f1", "nll", "brier", "ece"),
+        title="(a) Offline action and probability metrics",
+        xlabel="Within-study benefit-oriented difference\n(positive = candidate better)", floor=0.01,
+    )
+    _comparison_forest_panel(
+        axes[0, 1], frame, ("collision", "near_miss", "critical_event", "route_completion"),
+        title="(b) Closed-loop outcomes",
+        xlabel="Within-study benefit-oriented difference (pp)\n(positive = candidate better)", floor=1.0,
+    )
+    _comparison_forest_panel(
+        axes[1, 0], frame, ("ttc_p5",), title="(c) Jointly collision-free TTC-P5",
+        xlabel="Within-study benefit-oriented difference (s)", floor=0.05,
+    )
+    _comparison_forest_panel(
+        axes[1, 1], frame, ("jerk_p95",), title="(d) Episode kinematic smoothness",
+        xlabel="Within-study benefit-oriented difference (m/s³)", floor=0.05,
+    )
+    handles = [
+        Line2D([0], [0], marker=s["marker"], color=s["color"], markerfacecolor=s["face"],
+               markeredgecolor=s["color"], linestyle="-", markersize=6, label=v)
+        for v, s in _VARIANT_STYLE.items()
+    ]
+    fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 0.975), ncol=2, frameon=False)
+    fig.text(
+        0.5, 0.025,
+        "Within-study contrasts only; no direct R2-versus-R1 test. Study 1-R2 is post hoc exploratory and all endpoints are retained.",
+        ha="center", va="bottom", fontsize=7.5, color=TEXT,
+    )
+    return save_figure(fig, Path(stem), width_px=width_px, height_px=height_px, dpi=600)
+~~~~
+
+### `src/egms_study1r2/reporting.py`
+
+- SHA-256: `3a8fc906a8870968d4898f43e232a921c4b685cf9c8d9ee75e3d36f66aea9529`
+- Bytes: `9799`
+
+~~~~python
+"""Publication outputs for post-hoc exploratory Study 1-R2."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Mapping
+
+import pandas as pd
+
+from egms_publication.utils import write_table
+
+from .plotting import build_figure2_study1r2, build_figure2r_study1r_vs_r2
+from .statistics import METRIC_BY_ENDPOINT, summarize_study1r
+
+
+def _read_frame(value: pd.DataFrame | str | Path) -> pd.DataFrame:
+    if isinstance(value, pd.DataFrame):
+        return value.copy()
+    return pd.read_csv(Path(value))
+
+
+def _signed(value: float, decimals: int) -> str:
+    return f"{value:+.{decimals}f}"
+
+
+def build_figure_inputs(
+    metric_summary: pd.DataFrame,
+    paired_contrasts: pd.DataFrame,
+) -> pd.DataFrame:
+    """Return one fully auditable source row for every Figure 2 endpoint."""
+
+    rows: list[dict[str, object]] = []
+    for contrast in paired_contrasts.itertuples(index=False):
+        endpoint = str(contrast.endpoint)
+        marginal = metric_summary.loc[metric_summary["endpoint"].eq(endpoint)].set_index("method")
+        if set(marginal.index) != {"Baseline B", "Structured-R2"}:
+            raise ValueError(f"Expected two marginal rows for {endpoint}")
+        baseline = marginal.loc["Baseline B"]
+        structured = marginal.loc["Structured-R2"]
+        rows.append(
+            {
+                **contrast._asdict(),
+                "baseline_ci_low": float(baseline["ci_low"]),
+                "baseline_ci_high": float(baseline["ci_high"]),
+                "structured_ci_low": float(structured["ci_low"]),
+                "structured_ci_high": float(structured["ci_high"]),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def build_table2_source(paired_contrasts: pd.DataFrame) -> pd.DataFrame:
+    """Build manuscript-compatible Study 1-R rows from recomputed contrasts."""
+
+    module = {
+        "action": "S1-R2 action (exploratory)",
+        "event": "S1-R2 closed loop (exploratory)",
+        "ttc": "S1-R2 conditional TTC (exploratory)",
+        "jerk": "S1-R2 jerk proxy (exploratory)",
+    }
+    # Export six prespecified Study 1-R rows for the revised 20-row main Table 2;
+    # the remaining four endpoints stay in Figure 2-R and the full contrast table.
+    selected_endpoints = (
+        "macro_f1",
+        "collision",
+        "near_miss",
+        "route_completion",
+        "ttc_p5",
+        "jerk_p95",
+    )
+    selected = paired_contrasts.set_index("endpoint").loc[list(selected_endpoints)].reset_index()
+    rows: list[dict[str, object]] = []
+    for row in selected.itertuples(index=False):
+        spec = METRIC_BY_ENDPOINT[str(row.endpoint)]
+        scale = float(spec.display_scale)
+        effect = scale * float(row.raw_difference_structured_minus_baseline)
+        low = scale * float(row.raw_ci_low)
+        high = scale * float(row.raw_ci_high)
+        decimals = 2 if scale == 100.0 else 4 if spec.endpoint in {"macro_f1", "nll", "brier", "ece"} else 3
+        suffix = " pp" if scale == 100.0 else " s" if spec.endpoint == "ttc_p5" else " m/s^3" if spec.endpoint == "jerk_p95" else ""
+        arrow = "↑" if spec.orientation == "higher_is_better" else "↓"
+        if bool(row.support_rule_met):
+            status = "Structured-R2 benefit supported under the frozen R2 evaluation rule"
+        elif float(row.benefit_ci_high) < 0.0:
+            status = "Observed direction favors Baseline B; retained without filtering"
+        else:
+            status = "Difference not clearly established"
+        rows.append(
+            {
+                "study_module": module[spec.panel],
+                "comparison_endpoint": f"Structured-R2 vs Baseline B; {spec.label} {arrow}",
+                "effect": effect,
+                "ci_low": low,
+                "ci_high": high,
+                "effect_display": f"{_signed(effect, decimals)}{suffix}",
+                "ci_display": f"{_signed(low, decimals)} to {_signed(high, decimals)}{suffix}",
+                "evidence_status": status,
+                "favorable_replicates": int(row.favorable_replicates),
+                "tied_replicates": int(row.tied_replicates),
+                "adverse_replicates": int(row.adverse_replicates),
+                "holm_adjusted_p": float(row.holm_adjusted_p),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def write_study1r2_reports(
+    offline_predictions: pd.DataFrame | str | Path,
+    episode_metrics: pd.DataFrame | str | Path,
+    output_dir: str | Path,
+    *,
+    repetitions: int = 10_000,
+    confidence: float = 0.95,
+    bootstrap_seed: int = 171031,
+) -> dict[str, object]:
+    """Recompute statistics, write publication tables, and render Figure 2."""
+
+    output = Path(output_dir)
+    tables_dir = output / "tables"
+    figures_dir = output / "figures"
+    data_dir = output / "data"
+    for directory in (tables_dir, figures_dir, data_dir):
+        directory.mkdir(parents=True, exist_ok=True)
+
+    results = summarize_study1r(
+        _read_frame(offline_predictions),
+        _read_frame(episode_metrics),
+        repetitions=repetitions,
+        confidence=confidence,
+        bootstrap_seed=bootstrap_seed,
+    )
+    paths: dict[str, object] = {}
+    filenames = {
+        "metric_summary": "study1r2_metric_summary.csv",
+        "paired_contrasts": "study1r2_paired_contrasts.csv",
+        "replicate_effects": "study1r2_replicate_effects.csv",
+        "bootstrap_draws": "study1r2_bootstrap_draws.csv",
+    }
+    for name, filename in filenames.items():
+        path = data_dir / filename
+        results[name].to_csv(path, index=False, float_format="%.17g", lineterminator="\n")
+        paths[name] = path
+
+    figure_inputs = build_figure_inputs(
+        results["metric_summary"],
+        results["paired_contrasts"],
+    )
+    figure_input_path = data_dir / "Figure_2B_Study1R2_Exploratory_inputs.csv"
+    figure_inputs.to_csv(
+        figure_input_path,
+        index=False,
+        float_format="%.17g",
+        lineterminator="\n",
+    )
+    paths["figure_inputs"] = figure_input_path
+
+    table2 = build_table2_source(results["paired_contrasts"])
+    paths["table2"] = write_table(table2, tables_dir / "Table_2B_Study1R2_Exploratory")
+    paths["figure2"] = build_figure2_study1r2(
+        results["metric_summary"],
+        results["paired_contrasts"],
+        figures_dir / "Figure_2B_Study1R2_Exploratory",
+    )
+    paths["results"] = results
+    return paths
+
+
+# A concise alias for orchestration code.
+write_study1r_reports = write_study1r2_reports
+write_study1r_outputs = write_study1r2_reports
+
+
+FIGURE2R_ENDPOINTS = (
+    "macro_f1", "nll", "brier", "ece", "collision", "near_miss",
+    "critical_event", "route_completion", "ttc_p5", "jerk_p95",
+)
+
+
+def build_figure2r_inputs(
+    r1_paired_contrasts: pd.DataFrame | str | Path,
+    r2_paired_contrasts: pd.DataFrame | str | Path,
+) -> pd.DataFrame:
+    """Combine two within-study contrast tables without pooling their tapes."""
+
+    columns = [
+        "endpoint", "metric", "panel", "orientation", "unit", "display_scale",
+        "benefit_difference", "benefit_ci_low", "benefit_ci_high",
+        "favorable_replicates", "tied_replicates", "adverse_replicates",
+        "holm_adjusted_p",
+    ]
+    variants = (
+        ("Frozen Study 1-R", "Structured", "frozen_formal", _read_frame(r1_paired_contrasts)),
+        (
+            "Exploratory Study 1-R2", "Structured-R2",
+            "post_hoc_exploratory_final_evaluation", _read_frame(r2_paired_contrasts),
+        ),
+    )
+    blocks: list[pd.DataFrame] = []
+    expected = set(FIGURE2R_ENDPOINTS)
+    for variant, candidate, status, frame in variants:
+        missing = set(columns).difference(frame.columns)
+        if missing or set(frame["endpoint"]) != expected or frame["endpoint"].duplicated().any():
+            raise ValueError(f"{variant} has an invalid contrast table: {sorted(missing)}")
+        block = frame.loc[:, columns].copy()
+        block.insert(0, "analysis_status", status)
+        block.insert(0, "candidate", candidate)
+        block.insert(0, "study_variant", variant)
+        total = (
+            block["favorable_replicates"] + block["tied_replicates"]
+            + block["adverse_replicates"]
+        )
+        if not total.eq(10).all():
+            raise ValueError(f"{variant} directionality counts do not sum to ten")
+        block["display_estimate"] = block["display_scale"] * block["benefit_difference"]
+        block["display_ci_low"] = block["display_scale"] * block["benefit_ci_low"]
+        block["display_ci_high"] = block["display_scale"] * block["benefit_ci_high"]
+        blocks.append(block)
+    combined = pd.concat(blocks, ignore_index=True)
+    order = {endpoint: index for index, endpoint in enumerate(FIGURE2R_ENDPOINTS)}
+    variant_order = {"Frozen Study 1-R": 0, "Exploratory Study 1-R2": 1}
+    return combined.sort_values(
+        ["endpoint", "study_variant"],
+        key=lambda values: values.map(order if values.name == "endpoint" else variant_order),
+        kind="stable",
+    ).reset_index(drop=True)
+
+
+def write_figure2r_comparison(
+    r1_paired_contrasts: pd.DataFrame | str | Path,
+    r2_paired_contrasts: pd.DataFrame | str | Path,
+    output_dir: str | Path,
+) -> dict[str, object]:
+    output = Path(output_dir)
+    data_dir = output / "data"
+    figures_dir = output / "figures"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    figures_dir.mkdir(parents=True, exist_ok=True)
+    inputs = build_figure2r_inputs(r1_paired_contrasts, r2_paired_contrasts)
+    csv_path = data_dir / "Figure_2R_Study1R_vs_Exploratory_R2_inputs.csv"
+    inputs.to_csv(csv_path, index=False, float_format="%.17g", lineterminator="\n")
+    figures = build_figure2r_study1r_vs_r2(
+        csv_path, figures_dir / "Figure_2R_Study1R_vs_Exploratory_R2"
+    )
+    return {"inputs": csv_path, "figures": figures}
+~~~~
+
+### `src/egms_study1r2/rollout.py`
+
+- SHA-256: `4ed6c941be08ac3e67a7d9827aeb4270d6c41909cbc520a79791d60d2a145920`
+- Bytes: `13370`
+
+~~~~python
+"""Paired closed-loop evaluation and raw episode reconstruction for Study 1-R."""
+
+from __future__ import annotations
+
+from typing import Mapping
+
+import numpy as np
+import pandas as pd
+
+from .common import (
+    ACTION_NAMES,
+    MODALITIES,
+    SEMANTIC_VARIABLES,
+    STATE_COLUMNS,
+    STATE_INDEX,
+    softmax,
+)
+from .generator import (
+    ObservationBatch,
+    ScenarioTape,
+    observe_state,
+    oracle_actions,
+    step_dynamics,
+)
+from .models import MODEL_BASELINE_B, MODEL_STRUCTURED, Study1RClassifier
+
+
+EVENT_COLUMNS = (
+    "replicate_id",
+    "training_seed",
+    "method",
+    "scenario_cell",
+    "episode_seed",
+    "episode_id",
+    "frame_id",
+    "time_s",
+    "event_type",
+    "event_value",
+    "threshold",
+    "source",
+)
+
+
+def _model_frame(previous: ObservationBatch, current: ObservationBatch) -> pd.DataFrame:
+    """Build the exact method-blind temporal observation frame used by both models."""
+
+    rows: dict[str, np.ndarray] = {}
+    for lag, batch in (("prev", previous), ("current", current)):
+        for modality_index, modality in enumerate(MODALITIES):
+            for variable_index, variable in enumerate(SEMANTIC_VARIABLES):
+                rows[f"{modality}_{lag}_{variable}"] = batch.values[
+                    :, modality_index, variable_index
+                ]
+            rows[f"q_{modality}_{lag}"] = batch.quality[:, modality_index]
+            rows[f"available_{modality}_{lag}"] = batch.available[
+                :, modality_index
+            ].astype(np.int8)
+    return pd.DataFrame(rows)
+
+
+def _state_columns(state: np.ndarray) -> dict[str, np.ndarray]:
+    return {
+        name: state[:, index].astype(float, copy=False)
+        for index, name in enumerate(STATE_COLUMNS)
+    }
+
+
+def run_paired_rollouts(
+    protocol: Mapping[str, object],
+    tape: ScenarioTape,
+    models: Mapping[str, Study1RClassifier],
+    *,
+    replicate_id: int,
+    training_seed: int,
+    protocol_sha256: str,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Evaluate both fitted methods on one immutable exogenous scenario tape.
+
+    The state trajectory may diverge after the first action, but every method receives
+    the same initial conditions and indexed exogenous noise.  Fixed-width step rows are
+    retained after termination with ``valid_step=0`` so completeness is auditable.
+    """
+
+    expected_methods = {MODEL_BASELINE_B, MODEL_STRUCTURED}
+    if set(models) != expected_methods:
+        raise ValueError(f"models must contain exactly {sorted(expected_methods)}")
+    tape.validate()
+    dt_s = float(protocol["data"]["dt_s"])
+    action_rows: list[pd.DataFrame] = []
+    event_rows: list[dict[str, object]] = []
+
+    for method in (MODEL_BASELINE_B, MODEL_STRUCTURED):
+        model = models[method]
+        state = tape.initial_state.copy()
+        previous = observe_state(state, tape, 0, protocol)
+        terminated = np.zeros(tape.n_episodes, dtype=bool)
+        termination_reason = np.full(tape.n_episodes, "", dtype=object)
+        collision_seen = np.zeros(tape.n_episodes, dtype=bool)
+        near_seen = np.zeros(tape.n_episodes, dtype=bool)
+        critical_seen = np.zeros(tape.n_episodes, dtype=bool)
+        completion_seen = np.zeros(tape.n_episodes, dtype=bool)
+
+        for step in range(tape.steps):
+            # At step zero this is an explicit identical-observation warm start.
+            # Thereafter ``previous`` is the prior pre-action state and ``current``
+            # is aligned to this pre-action state and tape index.
+            current = observe_state(state, tape, step, protocol)
+            model_input = _model_frame(previous, current)
+            logits = model.predict_logits(model_input)
+            probabilities = softmax(logits / float(model.temperature), axis=1)
+            predicted = probabilities.argmax(axis=1).astype(np.int8)
+            oracle = oracle_actions(state, protocol).astype(np.int8)
+            valid_before = ~terminated
+            executed = predicted.copy()
+            executed[terminated] = ACTION_NAMES.index("STOP")
+
+            next_state, events = step_dynamics(state, executed, tape, step, protocol)
+            for name, values in events.items():
+                events[name] = np.asarray(values).copy()
+            for name in events:
+                if name in {
+                    "collision",
+                    "near_miss",
+                    "critical_event",
+                    "route_goal_reached",
+                }:
+                    events[name] = events[name].astype(bool) & valid_before
+                else:
+                    events[name][~valid_before] = 0.0
+            next_state[~valid_before] = state[~valid_before]
+
+            collision_now = events["collision"] & ~collision_seen
+            near_now = events["near_miss"] & ~near_seen & ~collision_seen
+            critical_now = events["critical_event"] & ~critical_seen
+            complete_now = (
+                events["route_goal_reached"]
+                & ~completion_seen
+                & ~collision_seen
+                & ~collision_now
+            )
+            final_timeout = (step == tape.steps - 1) & valid_before & ~collision_now & ~complete_now
+            terminal_now = collision_now | complete_now | final_timeout
+
+            collision_seen |= events["collision"]
+            near_seen |= events["near_miss"]
+            critical_seen |= events["critical_event"]
+            completion_seen |= complete_now
+            termination_reason[collision_now] = "collision"
+            termination_reason[complete_now] = "route_complete"
+            termination_reason[final_timeout] = "timeout"
+
+            state_payload = _state_columns(next_state)
+            payload: dict[str, object] = {
+                "protocol_sha256": np.repeat(protocol_sha256, tape.n_episodes),
+                "replicate_id": np.repeat(int(replicate_id), tape.n_episodes),
+                "training_seed": np.repeat(int(training_seed), tape.n_episodes),
+                "method": np.repeat(method, tape.n_episodes),
+                "scenario_cell": tape.cell_id,
+                "episode_seed": tape.episode_seed,
+                "episode_id": tape.episode_id,
+                "route_goal_m": tape.route_goal_m,
+                "frame_id": np.repeat(step, tape.n_episodes),
+                # State and event fields below describe the post-action state.
+                "time_s": np.repeat(float((step + 1) * dt_s), tape.n_episodes),
+                "valid_step": valid_before.astype(np.int8),
+                "oracle_label": oracle,
+                "predicted_action": predicted,
+                "executed_action": executed,
+                "predicted_action_name": np.asarray(ACTION_NAMES, dtype=object)[predicted],
+                "executed_action_name": np.asarray(ACTION_NAMES, dtype=object)[executed],
+                "temperature": np.repeat(float(model.temperature), tape.n_episodes),
+                "commanded_acceleration_mps2": events["command_acceleration_mps2"],
+                "applied_acceleration_mps2": next_state[:, STATE_INDEX["acceleration_mps2"]],
+                "jerk_mps3": events["jerk_mps3"],
+                "ttc_s": events["ttc_s"],
+                "stopping_margin_m": events["stopping_margin_m"],
+                "collision_event": collision_now.astype(np.int8),
+                "near_miss_condition": events["near_miss"].astype(np.int8),
+                "critical_condition": events["critical_event"].astype(np.int8),
+                "route_complete_event": complete_now.astype(np.int8),
+                "terminal": terminal_now.astype(np.int8),
+                "termination_reason": np.where(terminal_now, termination_reason, ""),
+                **state_payload,
+            }
+            for class_index, action_name in enumerate(ACTION_NAMES):
+                payload[f"logit_{action_name}"] = logits[:, class_index]
+                payload[f"p_{action_name}"] = probabilities[:, class_index]
+            # Preserve the exact temporal observations consumed by the checkpoint
+            # so every stored rollout logit can be replayed without regenerating
+            # endogenous states.
+            for column in model_input.columns:
+                payload[column] = model_input[column].to_numpy(copy=False)
+            action_rows.append(pd.DataFrame(payload))
+
+            # Safety events can be triggered by more than one physical condition,
+            # so their ledger uses a neutral true/threshold pair instead of a
+            # potentially misleading single-condition value.
+            ones = np.ones(tape.n_episodes, dtype=float)
+            for event_name, mask, values, threshold in (
+                ("collision", collision_now, ones, 1.0),
+                ("near_miss_entry", near_now, ones, 1.0),
+                ("critical_entry", critical_now, ones, 1.0),
+                ("route_complete", complete_now, next_state[:, STATE_INDEX["progress_m"]], tape.route_goal_m),
+                ("timeout", final_timeout, next_state[:, STATE_INDEX["progress_m"]], tape.route_goal_m),
+            ):
+                for episode_index in np.flatnonzero(mask):
+                    threshold_value = (
+                        float(threshold[episode_index])
+                        if isinstance(threshold, np.ndarray)
+                        else float(threshold)
+                    )
+                    event_rows.append(
+                        {
+                            "replicate_id": int(replicate_id),
+                            "training_seed": int(training_seed),
+                            "method": method,
+                            "scenario_cell": str(tape.cell_id[episode_index]),
+                            "episode_seed": int(tape.episode_seed[episode_index]),
+                            "episode_id": str(tape.episode_id[episode_index]),
+                            "frame_id": int(step),
+                            "time_s": float((step + 1) * dt_s),
+                            "event_type": event_name,
+                            "event_value": float(values[episode_index]),
+                            "threshold": threshold_value,
+                            "source": "raw_rollout_recomputation",
+                        }
+                    )
+
+            terminated |= terminal_now
+            state = next_state
+            previous = current
+
+    actions = pd.concat(action_rows, ignore_index=True)
+    actions = actions.sort_values(
+        ["replicate_id", "method", "scenario_cell", "episode_id", "frame_id"],
+        kind="stable",
+    ).reset_index(drop=True)
+    events = pd.DataFrame.from_records(event_rows, columns=EVENT_COLUMNS)
+    if len(events):
+        events = events.sort_values(
+            ["replicate_id", "method", "scenario_cell", "episode_id", "frame_id", "event_type"],
+            kind="stable",
+        ).reset_index(drop=True)
+    return actions, events
+
+
+def derive_episode_metrics(action_records: pd.DataFrame, protocol: Mapping[str, object]) -> pd.DataFrame:
+    """Recompute every episode endpoint exclusively from persisted action rows."""
+
+    dt_s = float(protocol["data"]["dt_s"])
+    keys = [
+        "replicate_id",
+        "training_seed",
+        "method",
+        "scenario_cell",
+        "episode_seed",
+        "episode_id",
+    ]
+    rows: list[dict[str, object]] = []
+    for key_values, group in action_records.groupby(keys, sort=False):
+        valid = group.loc[group["valid_step"].astype(int).eq(1)].sort_values("frame_id")
+        if valid.empty:
+            raise ValueError(f"Episode has no valid steps: {key_values}")
+        collision = bool(valid["collision_event"].astype(bool).any())
+        near_miss = bool((not collision) and valid["near_miss_condition"].astype(bool).any())
+        critical = bool(valid["critical_condition"].astype(bool).any() or collision or near_miss)
+        route_completed = bool((not collision) and valid["route_complete_event"].astype(bool).any())
+        ttc = pd.to_numeric(valid["ttc_s"], errors="raise").to_numpy(float)
+        ttc = ttc[np.isfinite(ttc) & (ttc >= 0.0)]
+        jerk = np.abs(pd.to_numeric(valid["jerk_mps3"], errors="raise").to_numpy(float))
+        if len(ttc) == 0:
+            raise ValueError(f"Episode has no finite TTC values: {key_values}")
+        if len(jerk) == 0:
+            raise ValueError(f"Episode has no finite jerk values: {key_values}")
+        jerk_p95 = float(np.quantile(jerk, 0.95, method="linear"))
+        terminal_rows = valid.loc[valid["terminal"].astype(bool)]
+        reason = str(terminal_rows.iloc[0]["termination_reason"]) if len(terminal_rows) else ""
+        row = dict(zip(keys, key_values))
+        row.update(
+            {
+                "n_steps": int(len(valid)),
+                "collision": int(collision),
+                "near_miss": int(near_miss),
+                "critical_event": int(critical),
+                "route_completed": int(route_completed),
+                "ttc_p5": float(np.quantile(ttc, 0.05, method="linear")),
+                "jerk_p95": jerk_p95,
+                "termination_reason": reason,
+                "dt_s": dt_s,
+            }
+        )
+        rows.append(row)
+    return pd.DataFrame(rows).sort_values(
+        ["replicate_id", "method", "scenario_cell", "episode_id"], kind="stable"
+    ).reset_index(drop=True)
+
+
+__all__ = ["EVENT_COLUMNS", "run_paired_rollouts", "derive_episode_metrics"]
+~~~~
+
+### `src/egms_study1r2/runner.py`
+
+- SHA-256: `38ede81ceb932e60b7c89fb38a228a52b19753ba507bca5b2c2a6fb29ae7a004`
+- Bytes: `33020`
+
+~~~~python
+"""Frozen final evaluation runner for post-hoc exploratory Study 1-R2."""
+
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import gzip
+import io
+import json
+import os
+import platform
+from pathlib import Path
+import shutil
+import sys
+from typing import Any, Mapping
+
+import numpy as np
+import pandas as pd
+import scipy
+import sklearn
+import yaml
+
+from .common import ACTION_NAMES, load_protocol, sha256_file, softmax
+from .generator import generate_offline_split, make_scenario_tape
+from .models import MODEL_BASELINE_B, MODEL_STRUCTURED
+from .reporting import write_study1r2_reports
+from .rollout import derive_episode_metrics, run_paired_rollouts
+from .training import PairedTrainingResult, train_paired_models
+from .validation import validate_output
+
+
+def project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
+
+
+def _json(path: Path, payload: Mapping[str, Any]) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True, allow_nan=False)
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    return path
+
+
+def _write_csv(frame: pd.DataFrame, path: Path, *, compressed: bool = False) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    options: dict[str, Any] = {
+        "index": False,
+        "float_format": "%.17g",
+        "lineterminator": "\n",
+    }
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.unlink(missing_ok=True)
+    if compressed:
+        with temporary.open("wb") as raw:
+            with gzip.GzipFile(
+                filename="",
+                mode="wb",
+                fileobj=raw,
+                compresslevel=9,
+                mtime=0,
+            ) as zipped:
+                with io.TextIOWrapper(zipped, encoding="utf-8", newline="") as text:
+                    frame.to_csv(text, **options)
+        with gzip.open(temporary, "rb") as check:
+            for _ in iter(lambda: check.read(1024 * 1024), b""):
+                pass
+    else:
+        frame.to_csv(temporary, **options)
+    temporary.replace(path)
+    return path
+
+
+def _source_hashes(root: Path) -> dict[str, str]:
+    candidates = [
+        root / "run_study1r2.py",
+        root / "configs" / "study1r2_evaluation_frozen.yaml",
+        root / "docs" / "STUDY1R2_EVALUATION_PROTOCOL_FROZEN.md",
+        root / "docs" / "STUDY1R2_CLAIMS_BOUNDARY.md",
+        root / "docs" / "STUDY1R2_DEVELOPMENT_LOG.md",
+        root / "pyproject.toml",
+        root / "requirements-lock.txt",
+        *sorted((root / "src" / "egms_study1r2").glob("*.py")),
+        root / "src" / "egms_study1r" / "generator.py",
+    ]
+    return {
+        str(path.relative_to(root)): sha256_file(path)
+        for path in candidates
+        if path.is_file()
+    }
+
+
+def _prepare_output(root: Path, request: Path) -> Path:
+    allowed = (root / "outputs").resolve()
+    output = request if request.is_absolute() else root / request
+    output = output.resolve()
+    if output == allowed or not output.is_relative_to(allowed):
+        raise ValueError(f"Output must be a named descendant of {allowed}")
+    if output.is_symlink():
+        raise ValueError("Refusing a symbolic-link output path")
+    if output.exists():
+        raise FileExistsError(f"Final Study 1-R2 output already exists: {output}")
+    output.mkdir(parents=True, exist_ok=False)
+    return output
+
+
+CANDIDATE_BEHAVIOUR_FILES = {
+    "src/egms_study1r2/common.py",
+    "src/egms_study1r2/generator.py",
+    "src/egms_study1r2/models.py",
+    "src/egms_study1r2/training.py",
+    "src/egms_study1r2/rollout.py",
+    "src/egms_study1r2/development.py",
+}
+
+
+def _seed_firewall(protocol: Mapping[str, Any]) -> dict[str, object]:
+    expected = {
+        "training_data_seeds": [8101, 8111, 8117, 8123, 8147, 8161, 8171, 8191, 8209, 8219],
+        "model_training_seeds": [9103, 9127, 9133, 9151, 9173, 9181, 9199, 9209, 9221, 9239],
+        "fixed_validation_seed": 31013,
+        "fixed_test_seed": 31019,
+        "fixed_rollout_seed": 31033,
+        "bootstrap_seed": 171031,
+    }
+    observed = {
+        "training_data_seeds": [int(v) for v in protocol["data"]["training_data_seeds"]],
+        "model_training_seeds": [int(v) for v in protocol["models"]["model_training_seeds"]],
+        "fixed_validation_seed": int(protocol["data"]["fixed_validation_seed"]),
+        "fixed_test_seed": int(protocol["data"]["fixed_test_seed"]),
+        "fixed_rollout_seed": int(protocol["data"]["fixed_rollout_seed"]),
+        "bootstrap_seed": int(protocol["statistics"]["bootstrap_seed"]),
+    }
+    if observed != expected:
+        raise ValueError("Final Study 1-R2 seeds differ from the frozen firewall")
+    development = {
+        5129, 5171, 5227, 5273, 5323, 6121, 6173, 6229, 6271, 6323,
+        21013, 21017, 21019, 121031,
+    }
+    final_values = set(observed["training_data_seeds"]) | set(observed["model_training_seeds"])
+    final_values |= {observed["fixed_validation_seed"], observed["fixed_test_seed"], observed["fixed_rollout_seed"], observed["bootstrap_seed"]}
+    if final_values.intersection(development):
+        raise ValueError("Development and final seed registries overlap")
+    return observed
+
+
+def build_freeze_manifest(
+    root: Path,
+    evaluation_config: Path,
+    development_output: Path,
+    destination: Path,
+) -> Path:
+    """Freeze the selected candidate and all final-evaluation source hashes."""
+
+    if destination.exists():
+        raise FileExistsError(f"Freeze manifest already exists: {destination}")
+    protocol = load_protocol(evaluation_config)
+    selection_path = development_output / "selection.json"
+    development_manifest_path = development_output / "development_manifest.json"
+    ledger_path = development_output / "candidate_ledger.csv"
+    selection = json.loads(selection_path.read_text(encoding="utf-8"))
+    development_manifest = json.loads(development_manifest_path.read_text(encoding="utf-8"))
+    selected = str(selection["selected_candidate_id"])
+    if selected != "r2_c03" or selected != protocol["study1r2_evaluation"]["selected_candidate_id"]:
+        raise ValueError("Evaluation config and development selection disagree")
+    if sha256_file(ledger_path) != protocol["study1r2_evaluation"]["development_ledger_sha256"]:
+        raise ValueError("Development ledger hash differs from the frozen config")
+    current = _source_hashes(root)
+    behaviour = {key: current[key] for key in sorted(CANDIDATE_BEHAVIOUR_FILES)}
+    development_hashes = development_manifest["source_sha256"]
+    if any(development_hashes.get(key) != value for key, value in behaviour.items()):
+        raise ValueError("Candidate-behaviour source changed after development")
+    payload = {
+        "schema": "egms-drive-study1r2-freeze-manifest-1.0",
+        "project_id": "EGMS_DRIVE_STUDY_1R2",
+        "protocol_status": "FROZEN_AFTER_EXPLORATORY_DEVELOPMENT_BEFORE_FINAL_EVALUATION",
+        "protocol_path": str(evaluation_config.relative_to(root)),
+        "protocol_sha256": sha256_file(evaluation_config),
+        "development_manifest_path": str(development_manifest_path),
+        "development_manifest_sha256": sha256_file(development_manifest_path),
+        "selection_path": str(selection_path),
+        "selection_sha256": sha256_file(selection_path),
+        "candidate_ledger_path": str(ledger_path),
+        "candidate_ledger_sha256": sha256_file(ledger_path),
+        "selected_candidate_id": selected,
+        "selected_candidate_spec": selection["selected_candidate"],
+        "candidate_behaviour_source_sha256": behaviour,
+        "final_source_sha256": current,
+        "seed_firewall": _seed_firewall(protocol),
+        "original_study1r_generator_sha256": sha256_file(root / "src" / "egms_study1r" / "generator.py"),
+        "r2_generator_sha256": sha256_file(root / "src" / "egms_study1r2" / "generator.py"),
+        "post_hoc_after_study1r": True,
+        "not_preregistered": True,
+        "original_study1r_replaced": False,
+        "final_evaluation_once_only": True,
+        "validation_rule_requires_improvement": False,
+        "frozen_utc": datetime.now(timezone.utc).isoformat(),
+    }
+    if payload["original_study1r_generator_sha256"] != payload["r2_generator_sha256"]:
+        raise ValueError("Study 1-R2 generator source is not byte-identical to Study 1-R")
+    return _json(destination, payload)
+
+
+def _load_and_verify_freeze(root: Path, config_path: Path, freeze_path: Path) -> tuple[dict[str, Any], str]:
+    freeze = json.loads(freeze_path.read_text(encoding="utf-8"))
+    if freeze.get("schema") != "egms-drive-study1r2-freeze-manifest-1.0":
+        raise ValueError("Unsupported Study 1-R2 freeze manifest")
+    if freeze.get("protocol_sha256") != sha256_file(config_path):
+        raise ValueError("Frozen protocol hash mismatch")
+    if freeze.get("final_source_sha256") != _source_hashes(root):
+        raise ValueError("Final source differs from the frozen source set")
+    if freeze.get("selected_candidate_id") != "r2_c03":
+        raise ValueError("Unexpected frozen candidate")
+    if any(not bool(freeze.get(k)) for k in ("post_hoc_after_study1r", "not_preregistered", "final_evaluation_once_only")):
+        raise ValueError("Freeze manifest lacks required exploratory flags")
+    if bool(freeze.get("original_study1r_replaced")) or bool(freeze.get("validation_rule_requires_improvement")):
+        raise ValueError("Freeze manifest violates the claims or direction-neutral boundary")
+    return freeze, sha256_file(freeze_path)
+
+
+def _split_rows(
+    frame: pd.DataFrame,
+    *,
+    relative_path: str,
+    file_path: Path,
+    replicate_id: int,
+) -> list[dict[str, object]]:
+    digest = sha256_file(file_path)
+    size = file_path.stat().st_size
+    rows = []
+    for episode_id, group in frame.groupby("episode_id", sort=True):
+        first = group.iloc[0]
+        rows.append(
+            {
+                "split": str(first["split"]),
+                "replicate_id": int(replicate_id),
+                "scenario_cell": str(first["cell_id"]),
+                "episode_seed": int(first["episode_seed"]),
+                "episode_id": str(episode_id),
+                "generator_seed": int(first["data_seed"]),
+                "n_frames": int(len(group)),
+                "relative_data_path": relative_path,
+                "data_bytes": int(size),
+                "data_sha256": digest,
+            }
+        )
+    return rows
+
+
+def _offline_predictions(
+    test_frame: pd.DataFrame,
+    fitted: PairedTrainingResult,
+    *,
+    replicate_id: int,
+    training_seed: int,
+    protocol_sha256: str,
+) -> pd.DataFrame:
+    base = pd.DataFrame(
+        {
+            "protocol_sha256": protocol_sha256,
+            "split": "test",
+            "replicate_id": int(replicate_id),
+            "training_seed": int(training_seed),
+            "scenario_cell": test_frame["cell_id"].astype(str),
+            "episode_seed": test_frame["episode_seed"].astype(np.uint32),
+            "episode_id": test_frame["episode_id"].astype(str),
+            "frame_id": test_frame["frame"].astype(int),
+            "time_s": test_frame["time_s"].astype(float),
+            "sample_id": test_frame["sample_id"].astype(str),
+            "y_true": test_frame["y_true"].astype(int),
+        }
+    )
+    pieces = []
+    for method in (MODEL_BASELINE_B, MODEL_STRUCTURED):
+        model = fitted.results[method].model
+        logits = model.predict_logits(test_frame)
+        probabilities = softmax(logits / float(model.temperature), axis=1)
+        predictions = probabilities.argmax(axis=1).astype(int)
+        block = base.copy()
+        block.insert(4, "method", method)
+        block["y_pred"] = predictions
+        block["y_true_name"] = np.asarray(ACTION_NAMES, dtype=object)[block["y_true"]]
+        block["y_pred_name"] = np.asarray(ACTION_NAMES, dtype=object)[predictions]
+        block["temperature"] = float(model.temperature)
+        for class_index, action in enumerate(ACTION_NAMES):
+            block[f"logit_{action}"] = logits[:, class_index]
+            block[f"p_{action}"] = probabilities[:, class_index]
+        pieces.append(block)
+    return pd.concat(pieces, ignore_index=True)
+
+
+def _save_rollout_tape(tape: Any, output: Path) -> tuple[Path, pd.DataFrame]:
+    path = output / "generated" / "rollout_scenario_tape.npz"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    arrays = {
+        name: value
+        for name, value in vars(tape).items()
+        if isinstance(value, np.ndarray)
+    }
+    arrays.update(
+        {
+            "metadata_split": np.asarray(tape.split),
+            "metadata_data_seed": np.asarray(tape.data_seed, dtype=np.int64),
+            "metadata_training_replicate": np.asarray(
+                tape.training_replicate, dtype=np.int64
+            ),
+            "metadata_dt_s": np.asarray(tape.dt_s, dtype=np.float64),
+            "metadata_steps": np.asarray(tape.steps, dtype=np.int64),
+        }
+    )
+    np.savez_compressed(path, **arrays)
+    manifest = pd.DataFrame(
+        {
+            "split": "rollout",
+            "replicate_id": -1,
+            "scenario_cell": tape.cell_id,
+            "episode_seed": tape.episode_seed,
+            "episode_id": tape.episode_id,
+            "generator_seed": int(tape.data_seed),
+            "n_frames": int(tape.steps),
+            "relative_data_path": str(path.relative_to(output)),
+            "data_bytes": int(path.stat().st_size),
+            "data_sha256": sha256_file(path),
+            "tape_content_sha256": tape.digest(),
+        }
+    )
+    return path, manifest
+
+
+def _model_manifest_rows(
+    fitted: PairedTrainingResult,
+    *,
+    replicate_id: int,
+    training_seed: int,
+    training_data_path: Path,
+    training_data_sha256: str,
+    config_path: Path,
+    output: Path,
+) -> list[dict[str, object]]:
+    architecture = fitted.architecture.set_index("method")
+    rows = []
+    for method in (MODEL_BASELINE_B, MODEL_STRUCTURED):
+        result = fitted.results[method]
+        checkpoint = result.checkpoint_path
+        if checkpoint is None or result.checkpoint_sha256 is None:
+            raise RuntimeError("Formal training did not persist its selected checkpoint")
+        training_log = checkpoint.parent / "training_history.csv"
+        resolved = checkpoint.parent / "resolved_training.json"
+        row = architecture.loc[method]
+        rows.append(
+            {
+                "replicate_id": int(replicate_id),
+                "training_seed": int(training_seed),
+                "method": method,
+                "training_data_path": str(training_data_path.relative_to(output)),
+                "training_data_sha256": training_data_sha256,
+                "validation_data_sha256": "",
+                "resolved_config_path": str(config_path.relative_to(output)),
+                "resolved_config_sha256": sha256_file(config_path),
+                "checkpoint_path": str(checkpoint.relative_to(output)),
+                "checkpoint_bytes": int(checkpoint.stat().st_size),
+                "checkpoint_sha256": result.checkpoint_sha256,
+                "training_log_path": str(training_log.relative_to(output)),
+                "training_log_sha256": sha256_file(training_log),
+                "resolved_training_path": str(resolved.relative_to(output)),
+                "resolved_training_sha256": sha256_file(resolved),
+                "best_epoch": int(result.best_epoch),
+                "best_validation_nll": float(result.best_validation_nll),
+                "calibrated_validation_nll": float(result.calibrated_validation_nll),
+                "temperature": float(result.model.temperature),
+                "input_features": int(row["input_features"]),
+                "hidden_layer_sizes": str(row["hidden_layer_sizes"]),
+                "parameter_count": int(row["parameter_count"]),
+            }
+        )
+    return rows
+
+
+def _software_manifest() -> dict[str, object]:
+    return {
+        "python": sys.version.split()[0],
+        "implementation": platform.python_implementation(),
+        "platform": platform.platform(),
+        "machine": platform.machine(),
+        "processor": platform.processor(),
+        "numpy": np.__version__,
+        "pandas": pd.__version__,
+        "scipy": scipy.__version__,
+        "scikit_learn": sklearn.__version__,
+        "cpu_count": os.cpu_count(),
+    }
+
+
+def _artifact_manifest(output: Path) -> Path:
+    excluded = {"artifact_manifest.json", "SHA256SUMS", "validation_report.json"}
+    files = sorted(
+        path for path in output.rglob("*") if path.is_file() and path.name not in excluded
+    )
+    payload = {
+        "schema": "egms-drive-study1r2-artifact-manifest-1.0",
+        "hash_algorithm": "SHA-256",
+        "files": {
+            str(path.relative_to(output)): {
+                "bytes": int(path.stat().st_size),
+                "sha256": sha256_file(path),
+            }
+            for path in files
+        },
+    }
+    return _json(output / "artifact_manifest.json", payload)
+
+
+def _write_sha256sums(output: Path) -> Path:
+    destination = output / "SHA256SUMS"
+    files = sorted(path for path in output.rglob("*") if path.is_file() and path != destination)
+    destination.write_text(
+        "".join(f"{sha256_file(path)}  {path.relative_to(output).as_posix()}\n" for path in files),
+        encoding="utf-8",
+        newline="\n",
+    )
+    return destination
+
+
+def run_final(
+    config_request: Path,
+    freeze_manifest_request: Path,
+    output_request: Path,
+) -> dict[str, Any]:
+    root = project_root()
+    config_path = config_request if config_request.is_absolute() else root / config_request
+    config_path = config_path.resolve()
+    protocol = load_protocol(config_path)
+    if protocol["project"]["protocol_status"] != "FROZEN_AFTER_EXPLORATORY_DEVELOPMENT_BEFORE_FINAL_EVALUATION":
+        raise ValueError("run-final requires the frozen Study 1-R2 evaluation protocol")
+    freeze_path = freeze_manifest_request if freeze_manifest_request.is_absolute() else root / freeze_manifest_request
+    freeze_path = freeze_path.resolve()
+    freeze, freeze_sha256 = _load_and_verify_freeze(root, config_path, freeze_path)
+    seed_firewall = _seed_firewall(protocol)
+    access_root = root / "outputs" / "study1r2_final_access" / freeze_sha256
+    access_root.mkdir(parents=True, exist_ok=False)
+    output = _prepare_output(root, output_request)
+    started = datetime.now(timezone.utc)
+    initial_source_hashes = _source_hashes(root)
+    access_record = _json(
+        access_root / "evaluation_access_record.json",
+        {
+            "freeze_manifest_sha256": freeze_sha256,
+            "protocol_sha256": sha256_file(config_path),
+            "requested_output": str(output),
+            "accessed_utc": started.isoformat(),
+            "source_sha256": initial_source_hashes,
+            "final_seeds": seed_firewall,
+            "results_not_yet_computed": True,
+        },
+    )
+    resolved_config = output / "config_resolved.yaml"
+    shutil.copy2(config_path, resolved_config)
+    provenance = output / "provenance"
+    provenance.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(freeze_path, provenance / "freeze_manifest.json")
+    for source_key, target_name in (
+        ("development_manifest_path", "development_manifest.json"),
+        ("selection_path", "selection.json"),
+        ("candidate_ledger_path", "candidate_ledger.csv"),
+    ):
+        shutil.copy2(Path(freeze[source_key]), provenance / target_name)
+    shutil.copy2(access_record, provenance / "evaluation_access_record.json")
+    protocol_sha256 = sha256_file(resolved_config)
+
+    print("[1/7] Generating fixed validation/test data and rollout tape", flush=True)
+    validation = generate_offline_split(protocol, "validation")
+    test = generate_offline_split(protocol, "test")
+    validation_path = _write_csv(
+        validation, output / "generated" / "validation.csv.gz", compressed=True
+    )
+    test_path = _write_csv(test, output / "generated" / "test.csv.gz", compressed=True)
+    split_rows = []
+    split_rows.extend(
+        _split_rows(
+            validation,
+            relative_path=str(validation_path.relative_to(output)),
+            file_path=validation_path,
+            replicate_id=-1,
+        )
+    )
+    split_rows.extend(
+        _split_rows(
+            test,
+            relative_path=str(test_path.relative_to(output)),
+            file_path=test_path,
+            replicate_id=-1,
+        )
+    )
+    rollout_tape = make_scenario_tape(protocol, "rollout")
+    _, rollout_manifest = _save_rollout_tape(rollout_tape, output)
+    split_rows.extend(rollout_manifest.to_dict("records"))
+
+    model_seeds = [int(value) for value in protocol["models"]["model_training_seeds"]]
+    training_data_seeds = [int(value) for value in protocol["data"]["training_data_seeds"]]
+    all_offline: list[pd.DataFrame] = []
+    all_actions: list[pd.DataFrame] = []
+    all_events: list[pd.DataFrame] = []
+    all_histories: list[pd.DataFrame] = []
+    all_architecture: list[pd.DataFrame] = []
+    model_rows: list[dict[str, object]] = []
+    seed_rows: list[dict[str, object]] = []
+
+    print("[2/7] Training 10 paired Baseline B/Structured-R2 replicates", flush=True)
+    for replicate_id, (data_seed, training_seed) in enumerate(
+        zip(training_data_seeds, model_seeds)
+    ):
+        print(f"  replicate {replicate_id + 1:02d}/10", flush=True)
+        train = generate_offline_split(protocol, "train", training_replicate=replicate_id)
+        train_path = _write_csv(
+            train,
+            output / "generated" / f"train_replicate_{replicate_id:02d}.csv.gz",
+            compressed=True,
+        )
+        train_hash = sha256_file(train_path)
+        split_rows.extend(
+            _split_rows(
+                train,
+                relative_path=str(train_path.relative_to(output)),
+                file_path=train_path,
+                replicate_id=replicate_id,
+            )
+        )
+        fitted = train_paired_models(
+            train,
+            validation,
+            replicate_id=replicate_id,
+            training_seed=training_seed,
+            config=protocol,
+            output_root=output / "checkpoints",
+        )
+        history = fitted.history.copy()
+        history["training_data_seed"] = data_seed
+        all_histories.append(history)
+        architecture = fitted.architecture.copy()
+        architecture["replicate_id"] = replicate_id
+        all_architecture.append(architecture)
+        rows = _model_manifest_rows(
+            fitted,
+            replicate_id=replicate_id,
+            training_seed=training_seed,
+            training_data_path=train_path,
+            training_data_sha256=train_hash,
+            config_path=resolved_config,
+            output=output,
+        )
+        for row in rows:
+            row["validation_data_sha256"] = sha256_file(validation_path)
+        model_rows.extend(rows)
+        seed_rows.append(
+            {
+                "replicate_id": replicate_id,
+                "training_data_seed": data_seed,
+                "model_training_seed": training_seed,
+                "baseline_initialization_seed": training_seed,
+                "structured_initialization_seed": training_seed,
+                "validation_data_seed": int(protocol["data"]["fixed_validation_seed"]),
+                "offline_test_data_seed": int(protocol["data"]["fixed_test_seed"]),
+                "rollout_tape_seed": int(protocol["data"]["fixed_rollout_seed"]),
+                "bootstrap_seed": int(protocol["statistics"]["bootstrap_seed"]),
+            }
+        )
+        all_offline.append(
+            _offline_predictions(
+                test,
+                fitted,
+                replicate_id=replicate_id,
+                training_seed=training_seed,
+                protocol_sha256=protocol_sha256,
+            )
+        )
+        actions, events = run_paired_rollouts(
+            protocol,
+            rollout_tape,
+            fitted.models,
+            replicate_id=replicate_id,
+            training_seed=training_seed,
+            protocol_sha256=protocol_sha256,
+        )
+        all_actions.append(actions)
+        all_events.append(events)
+
+    print("[3/7] Writing frame-, action-, event-, and episode-level raw outputs", flush=True)
+    offline = pd.concat(all_offline, ignore_index=True)
+    actions = pd.concat(all_actions, ignore_index=True)
+    events = pd.concat(all_events, ignore_index=True) if any(len(frame) for frame in all_events) else pd.DataFrame()
+    episodes = derive_episode_metrics(actions, protocol)
+    offline_path = _write_csv(
+        offline,
+        output / "raw" / "offline_frame_predictions.csv.gz",
+        compressed=True,
+    )
+    action_path = _write_csv(
+        actions, output / "raw" / "action_records.csv.gz", compressed=True
+    )
+    event_path = _write_csv(
+        events, output / "raw" / "event_records.csv.gz", compressed=True
+    )
+    episode_path = _write_csv(
+        episodes, output / "raw" / "episode_metrics.csv.gz", compressed=True
+    )
+    del all_offline, all_actions, all_events
+
+    print("[4/7] Recomputing all metrics and paired 95% intervals from raw outputs", flush=True)
+    report_paths = write_study1r2_reports(
+        offline,
+        episodes,
+        output / "analysis",
+        repetitions=int(protocol["statistics"]["bootstrap_repetitions"]),
+        confidence=float(protocol["statistics"]["confidence_level"]),
+        bootstrap_seed=int(protocol["statistics"]["bootstrap_seed"]),
+    )
+
+    split_manifest = pd.DataFrame(split_rows).sort_values(
+        ["split", "replicate_id", "scenario_cell", "episode_id"], kind="stable"
+    )
+    _write_csv(split_manifest, output / "manifests" / "split_manifest.csv")
+    _write_csv(pd.DataFrame(seed_rows), output / "manifests" / "seed_registry.csv")
+    _write_csv(pd.DataFrame(model_rows), output / "manifests" / "model_manifest.csv")
+    _write_csv(
+        pd.concat(all_histories, ignore_index=True), output / "logs" / "training_history.csv"
+    )
+    _write_csv(
+        pd.concat(all_architecture, ignore_index=True), output / "logs" / "model_architecture.csv"
+    )
+
+    finished = datetime.now(timezone.utc)
+    final_source_hashes = _source_hashes(root)
+    if final_source_hashes != initial_source_hashes:
+        raise RuntimeError("Study 1-R2 source changed during the final run")
+    run_manifest = {
+        "schema": "egms-drive-study1r2-run-manifest-1.0",
+        "project_id": protocol["project"]["id"],
+        "evidence_label": protocol["project"]["evidence_label"],
+        "protocol_status": protocol["project"]["protocol_status"],
+        "protocol_sha256": protocol_sha256,
+        "analysis_status": "post_hoc_exploratory_final_evaluation",
+        "final_training_replicates": 10,
+        "methods": [MODEL_BASELINE_B, MODEL_STRUCTURED],
+        "training_data_seeds": training_data_seeds,
+        "model_training_seeds": model_seeds,
+        "fixed_test_episodes": int(test["episode_id"].nunique()),
+        "fixed_rollout_episodes": int(rollout_tape.n_episodes),
+        "rollout_tape_content_sha256": rollout_tape.digest(),
+        "started_utc": started.isoformat(),
+        "finished_utc": finished.isoformat(),
+        "elapsed_seconds": (finished - started).total_seconds(),
+        "source_sha256": final_source_hashes,
+        "freeze_manifest_path": "provenance/freeze_manifest.json",
+        "freeze_manifest_sha256": freeze_sha256,
+        "selected_candidate_id": freeze["selected_candidate_id"],
+        "selected_candidate_spec": freeze["selected_candidate_spec"],
+        "development_manifest_sha256": freeze["development_manifest_sha256"],
+        "selection_sha256": freeze["selection_sha256"],
+        "candidate_ledger_sha256": freeze["candidate_ledger_sha256"],
+        "seed_firewall": seed_firewall,
+        "post_hoc_after_study1r": True,
+        "not_preregistered": True,
+        "original_study1r_replaced": False,
+        "capacity_asymmetry_disclosure": "Baseline B has the original head; Structured-R2 has the frozen development-selected larger dual-path head.",
+        "software": _software_manifest(),
+        "raw_files": {
+            "offline": str(offline_path.relative_to(output)),
+            "actions": str(action_path.relative_to(output)),
+            "events": str(event_path.relative_to(output)),
+            "episodes": str(episode_path.relative_to(output)),
+        },
+        "selection_rule": "One development-selected candidate was frozen before final evaluation. No final replicate, endpoint, seed, or candidate was selected, removed, or substituted based on final results.",
+        "validation_rule_note": "No integrity rule requires Structured-R2 to outperform Baseline B.",
+        "interpretation_boundary": (
+            "Post-hoc exploratory controlled-synthetic Study 1-R2 only; not CARLA, public-dataset, real-vehicle, "
+            "or empirical safety evidence."
+        ),
+    }
+    _json(output / "run_manifest.json", run_manifest)
+    _artifact_manifest(output)
+
+    print("[5/7] Running direction-neutral integrity and raw-recomputation validation", flush=True)
+    validation_report = validate_output(output)
+    _write_sha256sums(output)
+    print("[6/7] PASS: all formal artifacts validated", flush=True)
+    print("[7/7] Figure 2 and manuscript source rows are ready", flush=True)
+    return {
+        "status": "completed",
+        "output": str(output),
+        "validation": validation_report,
+        "figure_png": str(report_paths["figure2"]["png"]),
+        "table2_csv": str(report_paths["table2"]["csv"]),
+    }
+
+
+run = run_final
+
+
+def analyze_existing(output_request: Path) -> dict[str, Any]:
+    root = project_root()
+    output = output_request if output_request.is_absolute() else root / output_request
+    output = output.resolve()
+    protocol = load_protocol(output / "config_resolved.yaml")
+    offline = pd.read_csv(output / "raw" / "offline_frame_predictions.csv.gz")
+    episodes = pd.read_csv(output / "raw" / "episode_metrics.csv.gz")
+    paths = write_study1r2_reports(
+        offline,
+        episodes,
+        output / "analysis",
+        repetitions=int(protocol["statistics"]["bootstrap_repetitions"]),
+        confidence=float(protocol["statistics"]["confidence_level"]),
+        bootstrap_seed=int(protocol["statistics"]["bootstrap_seed"]),
+    )
+    _artifact_manifest(output)
+    report = validate_output(output)
+    _write_sha256sums(output)
+    return {"status": "reanalyzed", "validation": report, "figure2": str(paths["figure2"]["png"])}
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    develop_parser = subparsers.add_parser("develop", help="Run validation-only R2 candidate development")
+    develop_parser.add_argument("--config", type=Path, required=True)
+    develop_parser.add_argument("--output", type=Path, required=True)
+    develop_parser.add_argument("--overwrite", action="store_true")
+    freeze_parser = subparsers.add_parser("freeze", help="Freeze one development-selected candidate")
+    freeze_parser.add_argument("--config", type=Path, required=True)
+    freeze_parser.add_argument("--development-output", type=Path, required=True)
+    freeze_parser.add_argument("--output", type=Path, required=True)
+    run_parser = subparsers.add_parser("run-final", help="Execute the once-only final Study 1-R2 evaluation")
+    run_parser.add_argument("--config", type=Path, required=True)
+    run_parser.add_argument("--freeze-manifest", type=Path, required=True)
+    run_parser.add_argument("--output", type=Path, required=True)
+    validate_parser = subparsers.add_parser("validate", help="Validate a completed Study 1-R2")
+    validate_parser.add_argument("--output", type=Path, required=True)
+    return parser
+
+
+def main() -> int:
+    args = build_parser().parse_args()
+    root = project_root()
+    if args.command == "develop":
+        from .development import run_development
+        result = run_development(root, args.config, args.output, overwrite=args.overwrite)
+    elif args.command == "freeze":
+        config = args.config if args.config.is_absolute() else root / args.config
+        development = args.development_output if args.development_output.is_absolute() else root / args.development_output
+        destination = args.output if args.output.is_absolute() else root / args.output
+        result = {"status": "frozen", "freeze_manifest": str(build_freeze_manifest(root, config.resolve(), development.resolve(), destination.resolve()))}
+    elif args.command == "run-final":
+        result = run_final(args.config, args.freeze_manifest, args.output)
+    else:
+        output = args.output if args.output.is_absolute() else root / args.output
+        result = validate_output(output.resolve())
+    print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+~~~~
+
+### `src/egms_study1r2/statistics.py`
+
+- SHA-256: `acb8f009acc5aaadbd56e8d9cba8115607854896d725324f95fdfba7e094470b`
+- Bytes: `31472`
+
+~~~~python
+"""Raw-output statistics for the frozen Study 1-R comparison.
+
+This module deliberately has no expected-performance constants.  It accepts a
+complete paired grid of Baseline B and Structured predictions, recomputes every
+endpoint from those rows, and retains favorable, null, and adverse effects.
+
+Study 1-R freezes a 15-bin *equal-width* ECE on [0, 1].  This differs from the
+equal-mass diagnostic used elsewhere in the repository and is intentional: the
+fixed bins yield exact additive sufficient statistics for the paired crossed
+bootstrap.  The right endpoint (confidence == 1) belongs to bin 15.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Iterable, Mapping
+
+import numpy as np
+import pandas as pd
+
+
+METHODS = ("Baseline B", "Structured-R2")
+ACTION_NAMES = ("KEEP", "SLOW", "YIELD", "STOP")
+PROBABILITY_COLUMNS = tuple(f"p_{name}" for name in ACTION_NAMES)
+LOGIT_COLUMNS = tuple(f"logit_{name}" for name in ACTION_NAMES)
+EPS = 1.0e-12
+DIRECTION_TOLERANCE = 1.0e-12
+
+
+@dataclass(frozen=True)
+class MetricSpec:
+    endpoint: str
+    label: str
+    orientation: str
+    unit: str
+    display_scale: float
+    panel: str
+
+    @property
+    def orientation_sign(self) -> float:
+        if self.orientation == "higher_is_better":
+            return 1.0
+        if self.orientation == "lower_is_better":
+            return -1.0
+        raise ValueError(f"Unknown metric orientation: {self.orientation}")
+
+
+METRIC_SPECS = (
+    MetricSpec("macro_f1", "Macro-F1", "higher_is_better", "raw difference", 1.0, "action"),
+    MetricSpec("nll", "NLL", "lower_is_better", "raw difference", 1.0, "action"),
+    MetricSpec("brier", "Brier", "lower_is_better", "raw difference", 1.0, "action"),
+    MetricSpec("ece", "ECE", "lower_is_better", "raw difference", 1.0, "action"),
+    MetricSpec("collision", "Collision", "lower_is_better", "percentage points", 100.0, "event"),
+    MetricSpec("near_miss", "Near miss", "lower_is_better", "percentage points", 100.0, "event"),
+    MetricSpec(
+        "critical_event",
+        "Critical event",
+        "lower_is_better",
+        "percentage points",
+        100.0,
+        "event",
+    ),
+    MetricSpec(
+        "route_completion",
+        "Route completion",
+        "higher_is_better",
+        "percentage points",
+        100.0,
+        "event",
+    ),
+    MetricSpec("ttc_p5", "TTC-P5", "higher_is_better", "seconds", 1.0, "ttc"),
+    MetricSpec("jerk_p95", "Jerk-P95", "lower_is_better", "m/s^3", 1.0, "jerk"),
+)
+METRIC_BY_ENDPOINT = {spec.endpoint: spec for spec in METRIC_SPECS}
+
+
+OFFLINE_REQUIRED_COLUMNS = {
+    "replicate_id",
+    "training_seed",
+    "method",
+    "episode_id",
+    "scenario_cell",
+    "frame_id",
+    "y_true",
+    "y_pred",
+    *LOGIT_COLUMNS,
+    *PROBABILITY_COLUMNS,
+}
+
+EPISODE_REQUIRED_COLUMNS = {
+    "replicate_id",
+    "training_seed",
+    "method",
+    "episode_id",
+    "scenario_cell",
+    "collision",
+    "near_miss",
+    "critical_event",
+    "route_completed",
+    "ttc_p5",
+    "jerk_p95",
+}
+
+
+def _require_columns(frame: pd.DataFrame, required: set[str], name: str) -> None:
+    missing = sorted(required.difference(frame.columns))
+    if missing:
+        raise ValueError(f"{name} is missing required columns: {missing}")
+
+
+def _as_binary(series: pd.Series, name: str) -> np.ndarray:
+    if series.dtype == bool:
+        return series.to_numpy(dtype=np.int8)
+    values = pd.to_numeric(series, errors="raise").to_numpy(dtype=float)
+    if not np.isfinite(values).all() or not np.isin(values, [0.0, 1.0]).all():
+        raise ValueError(f"{name} must contain only boolean/0/1 values")
+    return values.astype(np.int8)
+
+
+def _method_and_grid(
+    offline: pd.DataFrame,
+    episodes: pd.DataFrame,
+    *,
+    expected_replicates: int,
+    expected_episodes: int,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    offline_methods = set(offline["method"].astype(str).unique())
+    episode_methods = set(episodes["method"].astype(str).unique())
+    if offline_methods != set(METHODS) or episode_methods != set(METHODS):
+        raise ValueError(
+            f"Both inputs must contain exactly {METHODS}; found "
+            f"offline={sorted(offline_methods)}, episodes={sorted(episode_methods)}"
+        )
+
+    offline_replicates = np.sort(offline["replicate_id"].astype(int).unique())
+    episode_replicates = np.sort(episodes["replicate_id"].astype(int).unique())
+    if not np.array_equal(offline_replicates, episode_replicates):
+        raise ValueError("Offline and episode replicate IDs differ")
+    if len(offline_replicates) != expected_replicates:
+        raise ValueError(
+            f"Expected {expected_replicates} training replicates; "
+            f"found {len(offline_replicates)}"
+        )
+
+    offline_episode_ids = np.sort(offline["episode_id"].astype(str).unique())
+    rollout_episode_ids = np.sort(episodes["episode_id"].astype(str).unique())
+    if len(offline_episode_ids) != expected_episodes:
+        raise ValueError(
+            f"Expected {expected_episodes} fixed offline test episodes; "
+            f"found {len(offline_episode_ids)}"
+        )
+    if len(rollout_episode_ids) != expected_episodes:
+        raise ValueError(
+            f"Expected {expected_episodes} fixed closed-loop episodes; "
+            f"found {len(rollout_episode_ids)}"
+        )
+
+    return offline_replicates, offline_episode_ids, rollout_episode_ids
+
+
+def _validate_offline_grid(
+    frame: pd.DataFrame,
+    replicates: np.ndarray,
+    episode_ids: np.ndarray,
+) -> pd.DataFrame:
+    offline = frame.copy()
+    offline["replicate_id"] = pd.to_numeric(offline["replicate_id"], errors="raise").astype(int)
+    offline["frame_id"] = pd.to_numeric(offline["frame_id"], errors="raise").astype(int)
+    offline["episode_id"] = offline["episode_id"].astype(str)
+    offline["method"] = offline["method"].astype(str)
+
+    key = ["method", "replicate_id", "episode_id", "frame_id"]
+    if offline.duplicated(key).any():
+        examples = offline.loc[offline.duplicated(key, keep=False), key].head().to_dict("records")
+        raise ValueError(f"Duplicate offline prediction keys: {examples}")
+
+    probability = offline.loc[:, PROBABILITY_COLUMNS].apply(pd.to_numeric, errors="raise").to_numpy(float)
+    logits = offline.loc[:, LOGIT_COLUMNS].apply(pd.to_numeric, errors="raise").to_numpy(float)
+    if not np.isfinite(probability).all() or not np.isfinite(logits).all():
+        raise ValueError("Offline logits/probabilities contain non-finite values")
+    if np.any(probability < -1.0e-12) or np.any(probability > 1.0 + 1.0e-12):
+        raise ValueError("Offline probability lies outside [0,1]")
+    if not np.allclose(probability.sum(axis=1), 1.0, atol=1.0e-8, rtol=0.0):
+        raise ValueError("Offline probability rows do not sum to one")
+
+    truth = pd.to_numeric(offline["y_true"], errors="raise").to_numpy(dtype=int)
+    prediction = pd.to_numeric(offline["y_pred"], errors="raise").to_numpy(dtype=int)
+    if np.any(truth < 0) or np.any(truth >= len(ACTION_NAMES)):
+        raise ValueError("y_true is outside the frozen four-class action range")
+    if np.any(prediction < 0) or np.any(prediction >= len(ACTION_NAMES)):
+        raise ValueError("y_pred is outside the frozen four-class action range")
+    if not np.array_equal(prediction, probability.argmax(axis=1)):
+        raise ValueError("y_pred does not equal deterministic argmax of calibrated probabilities")
+
+    # The held-out frame grid and labels must be identical for both methods and
+    # every training replicate.  This is the offline paired comparison.
+    canonical_key = ["episode_id", "frame_id"]
+    canonical = offline.groupby(canonical_key, sort=False).agg(
+        rows=("y_true", "size"),
+        labels=("y_true", "nunique"),
+        cells=("scenario_cell", "nunique"),
+    )
+    expected_rows = len(METHODS) * len(replicates)
+    if not canonical["rows"].eq(expected_rows).all():
+        raise ValueError("The fixed offline frame grid is incomplete or contains extra rows")
+    if not canonical["labels"].eq(1).all() or not canonical["cells"].eq(1).all():
+        raise ValueError("A fixed test frame changes label or scenario cell across runs")
+
+    observed_pairs = offline[["replicate_id", "episode_id"]].drop_duplicates()
+    if len(observed_pairs) != len(replicates) * len(episode_ids):
+        raise ValueError("At least one replicate/test-episode pair is missing offline predictions")
+
+    offline.loc[:, PROBABILITY_COLUMNS] = probability
+    offline.loc[:, LOGIT_COLUMNS] = logits
+    offline["y_true"] = truth
+    offline["y_pred"] = prediction
+    return offline
+
+
+def _validate_episode_grid(
+    frame: pd.DataFrame,
+    offline: pd.DataFrame,
+    replicates: np.ndarray,
+    episode_ids: np.ndarray,
+) -> pd.DataFrame:
+    episodes = frame.copy()
+    episodes["replicate_id"] = pd.to_numeric(episodes["replicate_id"], errors="raise").astype(int)
+    episodes["episode_id"] = episodes["episode_id"].astype(str)
+    episodes["method"] = episodes["method"].astype(str)
+    key = ["method", "replicate_id", "episode_id"]
+    if episodes.duplicated(key).any():
+        examples = episodes.loc[episodes.duplicated(key, keep=False), key].head().to_dict("records")
+        raise ValueError(f"Duplicate episode metric keys: {examples}")
+    expected_rows = len(METHODS) * len(replicates) * len(episode_ids)
+    if len(episodes) != expected_rows:
+        raise ValueError(f"Expected {expected_rows} paired episode rows; found {len(episodes)}")
+
+    collision = _as_binary(episodes["collision"], "collision")
+    near_miss = _as_binary(episodes["near_miss"], "near_miss")
+    critical = _as_binary(episodes["critical_event"], "critical_event")
+    if np.any((collision == 1) & (near_miss == 1)):
+        raise ValueError("Near miss must exclude collision episodes in the frozen protocol")
+    if np.any(critical < np.maximum(collision, near_miss)):
+        raise ValueError("Every collision or near miss must also be a critical event")
+
+    for column in ("route_completed", "ttc_p5", "jerk_p95"):
+        episodes[column] = pd.to_numeric(episodes[column], errors="raise")
+        if not np.isfinite(episodes[column].to_numpy(float)).all():
+            raise ValueError(f"{column} contains non-finite values")
+    if not episodes["route_completed"].between(0.0, 1.0, inclusive="both").all():
+        raise ValueError("route_completed must be a flag or fraction in [0,1]")
+    if (episodes[["ttc_p5", "jerk_p95"]] < 0.0).any().any():
+        raise ValueError("TTC-P5 and jerk-P95 must be nonnegative")
+
+    episodes["collision"] = collision
+    episodes["near_miss"] = near_miss
+    episodes["critical_event"] = critical
+
+    # Training data seeds and scenario-cell identities are pairing metadata.
+    combined = pd.concat(
+        [
+            offline[["replicate_id", "method", "training_seed"]].drop_duplicates(),
+            episodes[["replicate_id", "method", "training_seed"]].drop_duplicates(),
+        ],
+        ignore_index=True,
+    )
+    if combined.groupby(["replicate_id", "method"])["training_seed"].nunique().gt(1).any():
+        raise ValueError("Training seed metadata disagrees between raw output tables")
+    if combined.groupby("replicate_id")["training_seed"].nunique().gt(1).any():
+        raise ValueError("Paired methods must use the same training-sample seed per replicate")
+
+    episode_cells = pd.concat(
+        [
+            offline[["episode_id", "scenario_cell"]].drop_duplicates(),
+            episodes[["episode_id", "scenario_cell"]].drop_duplicates(),
+        ],
+        ignore_index=True,
+    )
+    if episode_cells.groupby("episode_id")["scenario_cell"].nunique().gt(1).any():
+        raise ValueError("An episode_id maps to more than one scenario cell")
+    return episodes
+
+
+def _macro_f1(confusion: np.ndarray) -> np.ndarray:
+    """Vectorized macro-F1 for arrays ending in [true, predicted]."""
+
+    matrix = np.asarray(confusion, dtype=float)
+    tp = np.diagonal(matrix, axis1=-2, axis2=-1)
+    fp = matrix.sum(axis=-2) - tp
+    fn = matrix.sum(axis=-1) - tp
+    denominator = 2.0 * tp + fp + fn
+    scores = np.divide(
+        2.0 * tp,
+        denominator,
+        out=np.zeros_like(denominator, dtype=float),
+        where=denominator > 0.0,
+    )
+    return scores.mean(axis=-1)
+
+
+def expected_calibration_error(
+    y_true: Iterable[int],
+    probabilities: np.ndarray,
+    *,
+    n_bins: int = 15,
+) -> float:
+    """Return frozen Study 1-R top-label ECE with equal-width bins."""
+
+    truth = np.asarray(list(y_true), dtype=int)
+    probability = np.asarray(probabilities, dtype=float)
+    if probability.ndim != 2 or probability.shape[0] != len(truth):
+        raise ValueError("probabilities must have one row per y_true value")
+    confidence = probability.max(axis=1)
+    prediction = probability.argmax(axis=1)
+    bins = np.minimum((confidence * n_bins).astype(int), n_bins - 1)
+    count = np.bincount(bins, minlength=n_bins).astype(float)
+    confidence_sum = np.bincount(bins, weights=confidence, minlength=n_bins)
+    correct_sum = np.bincount(
+        bins,
+        weights=(prediction == truth).astype(float),
+        minlength=n_bins,
+    )
+    return float(np.abs(correct_sum - confidence_sum).sum() / max(1.0, count.sum()))
+
+
+def _offline_sufficient_statistics(
+    offline: pd.DataFrame,
+    replicates: np.ndarray,
+    episode_ids: np.ndarray,
+    *,
+    n_bins: int,
+) -> dict[str, np.ndarray]:
+    method_index = {name: index for index, name in enumerate(METHODS)}
+    replicate_index = {int(value): index for index, value in enumerate(replicates)}
+    episode_index = {str(value): index for index, value in enumerate(episode_ids)}
+    shape = (len(METHODS), len(replicates), len(episode_ids))
+    counts = np.zeros(shape, dtype=np.int32)
+    confusion = np.zeros(shape + (len(ACTION_NAMES), len(ACTION_NAMES)), dtype=np.int32)
+    nll_sum = np.zeros(shape, dtype=float)
+    brier_sum = np.zeros(shape, dtype=float)
+    bin_count = np.zeros(shape + (n_bins,), dtype=np.int32)
+    bin_confidence = np.zeros(shape + (n_bins,), dtype=float)
+    bin_correct = np.zeros(shape + (n_bins,), dtype=float)
+
+    for keys, group in offline.groupby(["method", "replicate_id", "episode_id"], sort=False):
+        method, replicate, episode = keys
+        index = (
+            method_index[str(method)],
+            replicate_index[int(replicate)],
+            episode_index[str(episode)],
+        )
+        truth = group["y_true"].to_numpy(dtype=int)
+        prediction = group["y_pred"].to_numpy(dtype=int)
+        probability = group.loc[:, PROBABILITY_COLUMNS].to_numpy(dtype=float)
+        counts[index] = len(group)
+        np.add.at(confusion[index], (truth, prediction), 1)
+        nll_sum[index] = float(-np.log(np.maximum(probability[np.arange(len(truth)), truth], EPS)).sum())
+        one_hot = np.eye(len(ACTION_NAMES), dtype=float)[truth]
+        brier_sum[index] = float(np.square(probability - one_hot).sum())
+        confidence = probability.max(axis=1)
+        bins = np.minimum((confidence * n_bins).astype(int), n_bins - 1)
+        np.add.at(bin_count[index], bins, 1)
+        np.add.at(bin_confidence[index], bins, confidence)
+        np.add.at(bin_correct[index], bins, (prediction == truth).astype(float))
+
+    if np.any(counts <= 0):
+        raise ValueError("At least one method/replicate/episode cell has no offline frames")
+    return {
+        "count": counts,
+        "confusion": confusion,
+        "nll_sum": nll_sum,
+        "brier_sum": brier_sum,
+        "ece_count": bin_count,
+        "ece_confidence_sum": bin_confidence,
+        "ece_correct_sum": bin_correct,
+    }
+
+
+def _episode_arrays(
+    episodes: pd.DataFrame,
+    replicates: np.ndarray,
+    episode_ids: np.ndarray,
+) -> dict[str, np.ndarray]:
+    ordered = (
+        episodes.assign(
+            method=pd.Categorical(episodes["method"], categories=list(METHODS), ordered=True),
+            replicate_id=pd.Categorical(episodes["replicate_id"], categories=list(replicates), ordered=True),
+            episode_id=pd.Categorical(episodes["episode_id"], categories=list(episode_ids), ordered=True),
+        )
+        .sort_values(["method", "replicate_id", "episode_id"])
+        .reset_index(drop=True)
+    )
+    expected = len(METHODS) * len(replicates) * len(episode_ids)
+    if len(ordered) != expected:
+        raise ValueError("Episode grid is incomplete")
+    shape = (len(METHODS), len(replicates), len(episode_ids))
+    columns = {
+        "collision": "collision",
+        "near_miss": "near_miss",
+        "critical_event": "critical_event",
+        "route_completion": "route_completed",
+        "ttc_p5": "ttc_p5",
+        "jerk_p95": "jerk_p95",
+    }
+    return {
+        endpoint: ordered[column].to_numpy(dtype=float).reshape(shape)
+        for endpoint, column in columns.items()
+    }
+
+
+def _aggregate_metrics(
+    offline_stats: Mapping[str, np.ndarray],
+    episode_arrays: Mapping[str, np.ndarray],
+    replicate_counts: np.ndarray,
+    episode_counts: np.ndarray,
+) -> dict[str, np.ndarray]:
+    """Aggregate metrics for shared crossed-bootstrap count vectors.
+
+    Inputs have shapes [draw, replicate] and [draw, episode].  The same two
+    count matrices are contracted against both methods for every endpoint.
+    """
+
+    rc = np.asarray(replicate_counts, dtype=float)
+    ec = np.asarray(episode_counts, dtype=float)
+    if rc.ndim != 2 or ec.ndim != 2 or rc.shape[0] != ec.shape[0]:
+        raise ValueError("Bootstrap count matrices must share a draw dimension")
+
+    frame_count = np.einsum("br,be,mre->bm", rc, ec, offline_stats["count"], optimize=True)
+    confusion = np.einsum(
+        "br,be,mreij->bmij",
+        rc,
+        ec,
+        offline_stats["confusion"],
+        optimize=True,
+    )
+    nll_sum = np.einsum("br,be,mre->bm", rc, ec, offline_stats["nll_sum"], optimize=True)
+    brier_sum = np.einsum("br,be,mre->bm", rc, ec, offline_stats["brier_sum"], optimize=True)
+    ece_confidence = np.einsum(
+        "br,be,mrek->bmk",
+        rc,
+        ec,
+        offline_stats["ece_confidence_sum"],
+        optimize=True,
+    )
+    ece_correct = np.einsum(
+        "br,be,mrek->bmk",
+        rc,
+        ec,
+        offline_stats["ece_correct_sum"],
+        optimize=True,
+    )
+
+    metrics: dict[str, np.ndarray] = {
+        "macro_f1": _macro_f1(confusion),
+        "nll": nll_sum / frame_count,
+        "brier": brier_sum / frame_count,
+        # count/N * |accuracy-confidence| simplifies exactly to
+        # |correct_sum-confidence_sum|/N for fixed equal-width bins.
+        "ece": np.abs(ece_correct - ece_confidence).sum(axis=-1) / frame_count,
+    }
+
+    episode_denominator = rc.sum(axis=1) * ec.sum(axis=1)
+    for endpoint in ("collision", "near_miss", "critical_event", "route_completion", "jerk_p95"):
+        numerator = np.einsum(
+            "br,be,mre->bm",
+            rc,
+            ec,
+            episode_arrays[endpoint],
+            optimize=True,
+        )
+        metrics[endpoint] = numerator / episode_denominator[:, None]
+
+    baseline_index = METHODS.index("Baseline B")
+    structured_index = METHODS.index("Structured-R2")
+    jointly_collision_free = (
+        (episode_arrays["collision"][baseline_index] == 0.0)
+        & (episode_arrays["collision"][structured_index] == 0.0)
+    ).astype(float)
+    eligible_count = np.einsum(
+        "br,be,re->b",
+        rc,
+        ec,
+        jointly_collision_free,
+        optimize=True,
+    )
+    if np.any(eligible_count <= 0.0):
+        raise ValueError("A bootstrap draw has no jointly collision-free TTC episode pair")
+    ttc_numerator = np.einsum(
+        "br,be,mre,re->bm",
+        rc,
+        ec,
+        episode_arrays["ttc_p5"],
+        jointly_collision_free,
+        optimize=True,
+    )
+    metrics["ttc_p5"] = ttc_numerator / eligible_count[:, None]
+    return metrics
+
+
+def exact_sign_flip_p(values: Iterable[float]) -> float:
+    """Two-sided exact sign-flip p value from all 2^R assignments."""
+
+    differences = np.asarray(list(values), dtype=float)
+    differences = differences[np.isfinite(differences)]
+    if len(differences) == 0:
+        return float("nan")
+    combinations = np.arange(2 ** len(differences), dtype=np.uint64)[:, None]
+    bits = (combinations >> np.arange(len(differences), dtype=np.uint64)) & 1
+    signs = 1.0 - 2.0 * bits
+    distribution = (signs * differences[None, :]).mean(axis=1)
+    observed = abs(float(differences.mean()))
+    return float(np.mean(np.abs(distribution) >= observed - 1.0e-15))
+
+
+def holm_adjust(p_values: Iterable[float]) -> np.ndarray:
+    """Holm step-down adjusted p values, restored to input order."""
+
+    values = np.asarray(list(p_values), dtype=float)
+    if values.ndim != 1 or not np.isfinite(values).all():
+        raise ValueError("Holm p values must be a finite one-dimensional array")
+    order = np.argsort(values, kind="stable")
+    adjusted = np.empty_like(values)
+    running = 0.0
+    count = len(values)
+    for rank, index in enumerate(order):
+        candidate = min(1.0, (count - rank) * values[index])
+        running = max(running, candidate)
+        adjusted[index] = running
+    return adjusted
+
+
+def _quantile_interval(
+    values: np.ndarray,
+    confidence: float,
+) -> tuple[np.ndarray, np.ndarray]:
+    alpha = 1.0 - confidence
+    quantiles = np.quantile(
+        np.asarray(values, dtype=float),
+        [alpha / 2.0, 1.0 - alpha / 2.0],
+        axis=0,
+        method="linear",
+    )
+    return quantiles[0], quantiles[1]
+
+
+def summarize_study1r(
+    offline_predictions: pd.DataFrame,
+    episode_metrics: pd.DataFrame,
+    *,
+    repetitions: int = 10_000,
+    confidence: float = 0.95,
+    bootstrap_seed: int = 71031,
+    calibration_bins: int = 15,
+    expected_replicates: int = 10,
+    expected_episodes: int = 360,
+) -> dict[str, pd.DataFrame]:
+    """Recompute and summarize all Study 1-R endpoints from raw outputs.
+
+    The bootstrap samples the training-replicate axis and the fixed test-episode
+    axis independently with replacement.  Both methods and all endpoints share
+    the identical count vectors in a draw.  Point estimates use every formal
+    replicate and episode exactly once.
+    """
+
+    if repetitions <= 0:
+        raise ValueError("repetitions must be positive")
+    if not 0.0 < confidence < 1.0:
+        raise ValueError("confidence must lie in (0,1)")
+    if calibration_bins != 15:
+        raise ValueError("Study 1-R freezes exactly 15 equal-width ECE bins")
+    _require_columns(offline_predictions, OFFLINE_REQUIRED_COLUMNS, "offline_predictions")
+    _require_columns(episode_metrics, EPISODE_REQUIRED_COLUMNS, "episode_metrics")
+
+    replicates, offline_episode_ids, rollout_episode_ids = _method_and_grid(
+        offline_predictions,
+        episode_metrics,
+        expected_replicates=expected_replicates,
+        expected_episodes=expected_episodes,
+    )
+    offline = _validate_offline_grid(
+        offline_predictions,
+        replicates,
+        offline_episode_ids,
+    )
+    episodes = _validate_episode_grid(
+        episode_metrics,
+        offline,
+        replicates,
+        rollout_episode_ids,
+    )
+    offline_stats = _offline_sufficient_statistics(
+        offline,
+        replicates,
+        offline_episode_ids,
+        n_bins=calibration_bins,
+    )
+    episode_arrays = _episode_arrays(episodes, replicates, rollout_episode_ids)
+
+    point_metrics = _aggregate_metrics(
+        offline_stats,
+        episode_arrays,
+        np.ones((1, len(replicates)), dtype=np.int16),
+        np.ones((1, len(offline_episode_ids)), dtype=np.int16),
+    )
+
+    rng = np.random.Generator(np.random.PCG64(int(bootstrap_seed)))
+    replicate_counts = rng.multinomial(
+        len(replicates),
+        np.full(len(replicates), 1.0 / len(replicates)),
+        size=int(repetitions),
+    ).astype(np.int16)
+    episode_counts = rng.multinomial(
+        len(offline_episode_ids),
+        np.full(len(offline_episode_ids), 1.0 / len(offline_episode_ids)),
+        size=int(repetitions),
+    ).astype(np.int16)
+    bootstrap_metrics = _aggregate_metrics(
+        offline_stats,
+        episode_arrays,
+        replicate_counts,
+        episode_counts,
+    )
+
+    # Replicate-level effects use all 360 fixed episodes and feed the exact
+    # sign-flip test and directionality inventory.
+    replicate_metrics = _aggregate_metrics(
+        offline_stats,
+        episode_arrays,
+        np.eye(len(replicates), dtype=np.int16),
+        np.ones((len(replicates), len(offline_episode_ids)), dtype=np.int16),
+    )
+    seed_map = (
+        episodes.groupby("replicate_id", sort=True)["training_seed"]
+        .first()
+        .reindex(replicates)
+        .to_dict()
+    )
+
+    method_rows: list[dict[str, object]] = []
+    contrast_rows: list[dict[str, object]] = []
+    replicate_rows: list[dict[str, object]] = []
+    bootstrap_frames: list[pd.DataFrame] = []
+    baseline_index = METHODS.index("Baseline B")
+    structured_index = METHODS.index("Structured-R2")
+
+    for spec in METRIC_SPECS:
+        point = point_metrics[spec.endpoint][0]
+        draws = bootstrap_metrics[spec.endpoint]
+        marginal_low, marginal_high = _quantile_interval(draws, confidence)
+        raw_draws = draws[:, structured_index] - draws[:, baseline_index]
+        raw_low, raw_high = _quantile_interval(raw_draws, confidence)
+        raw_difference = float(point[structured_index] - point[baseline_index])
+        benefit_draws = spec.orientation_sign * raw_draws
+        benefit_low, benefit_high = _quantile_interval(benefit_draws, confidence)
+        benefit_difference = spec.orientation_sign * raw_difference
+
+        for method_index, method in enumerate(METHODS):
+            method_rows.append(
+                {
+                    "endpoint": spec.endpoint,
+                    "metric": spec.label,
+                    "panel": spec.panel,
+                    "method": method,
+                    "estimate": float(point[method_index]),
+                    "ci_low": float(marginal_low[method_index]),
+                    "ci_high": float(marginal_high[method_index]),
+                    "unit": spec.unit,
+                    "display_scale": spec.display_scale,
+                    "orientation": spec.orientation,
+                    "ci_method": (
+                        f"{int(round(confidence * 100))}% percentile paired crossed bootstrap; "
+                        f"{repetitions} shared PCG64 draws; NumPy linear quantiles"
+                    ),
+                }
+            )
+
+        replicate_raw = (
+            replicate_metrics[spec.endpoint][:, structured_index]
+            - replicate_metrics[spec.endpoint][:, baseline_index]
+        )
+        replicate_benefit = spec.orientation_sign * replicate_raw
+        favorable = int(np.sum(replicate_benefit > DIRECTION_TOLERANCE))
+        tied = int(np.sum(np.abs(replicate_benefit) <= DIRECTION_TOLERANCE))
+        adverse = int(np.sum(replicate_benefit < -DIRECTION_TOLERANCE))
+        sign_flip_p = exact_sign_flip_p(replicate_raw)
+        eligible_pairs = (
+            int(
+                np.sum(
+                    (episode_arrays["collision"][baseline_index] == 0.0)
+                    & (episode_arrays["collision"][structured_index] == 0.0)
+                )
+            )
+            if spec.endpoint == "ttc_p5"
+            else len(replicates) * len(rollout_episode_ids)
+        )
+        contrast_rows.append(
+            {
+                "endpoint": spec.endpoint,
+                "metric": spec.label,
+                "panel": spec.panel,
+                "orientation": spec.orientation,
+                "unit": spec.unit,
+                "display_scale": spec.display_scale,
+                "baseline_estimate": float(point[baseline_index]),
+                "structured_estimate": float(point[structured_index]),
+                "raw_difference_structured_minus_baseline": raw_difference,
+                "raw_ci_low": float(raw_low),
+                "raw_ci_high": float(raw_high),
+                "benefit_difference": float(benefit_difference),
+                "benefit_ci_low": float(benefit_low),
+                "benefit_ci_high": float(benefit_high),
+                "favorable_replicates": favorable,
+                "tied_replicates": tied,
+                "adverse_replicates": adverse,
+                "total_training_replicates": len(replicates),
+                "paired_exact_sign_flip_p": sign_flip_p,
+                "eligible_replicate_episode_pairs": eligible_pairs,
+                "bootstrap_repetitions": int(repetitions),
+                "bootstrap_seed": int(bootstrap_seed),
+                "ci_method": (
+                    f"{int(round(confidence * 100))}% paired crossed percentile bootstrap "
+                    f"over {len(replicates)} training replicates and {len(offline_episode_ids)} fixed "
+                    f"test episodes; {repetitions} shared draws; NumPy linear quantiles"
+                ),
+                "ece_definition": "15 equal-width confidence bins on [0,1], right endpoint included",
+            }
+        )
+
+        for replicate_index, replicate_id in enumerate(replicates):
+            benefit = float(replicate_benefit[replicate_index])
+            direction = (
+                "favorable"
+                if benefit > DIRECTION_TOLERANCE
+                else "adverse"
+                if benefit < -DIRECTION_TOLERANCE
+                else "tie"
+            )
+            replicate_rows.append(
+                {
+                    "replicate_id": int(replicate_id),
+                    "training_seed": int(seed_map[int(replicate_id)]),
+                    "endpoint": spec.endpoint,
+                    "metric": spec.label,
+                    "baseline_estimate": float(replicate_metrics[spec.endpoint][replicate_index, baseline_index]),
+                    "structured_estimate": float(replicate_metrics[spec.endpoint][replicate_index, structured_index]),
+                    "raw_difference_structured_minus_baseline": float(replicate_raw[replicate_index]),
+                    "benefit_difference": benefit,
+                    "direction": direction,
+                }
+            )
+
+        bootstrap_frames.append(
+            pd.DataFrame(
+                {
+                    "draw": np.arange(int(repetitions), dtype=int),
+                    "endpoint": spec.endpoint,
+                    "baseline_estimate": draws[:, baseline_index],
+                    "structured_estimate": draws[:, structured_index],
+                    "raw_difference_structured_minus_baseline": raw_draws,
+                    "benefit_difference": benefit_draws,
+                    "bootstrap_seed": int(bootstrap_seed),
+                }
+            )
+        )
+
+    contrasts = pd.DataFrame(contrast_rows)
+    contrasts["holm_adjusted_p"] = holm_adjust(
+        contrasts["paired_exact_sign_flip_p"].to_numpy(dtype=float)
+    )
+    contrasts["direction_ci_consistency_met"] = (
+        (contrasts["benefit_ci_low"] > 0.0)
+        & (contrasts["favorable_replicates"] >= 8)
+    )
+    contrasts["support_rule_met"] = (
+        contrasts["direction_ci_consistency_met"]
+        & (contrasts["holm_adjusted_p"] < 0.05)
+    )
+    # This is a result field, never an acceptance criterion.
+    contrasts["validator_requires_support"] = False
+
+    return {
+        "metric_summary": pd.DataFrame(method_rows),
+        "paired_contrasts": contrasts,
+        "replicate_effects": pd.DataFrame(replicate_rows),
+        "bootstrap_draws": pd.concat(bootstrap_frames, ignore_index=True),
+    }
+~~~~
+
+### `src/egms_study1r2/training.py`
+
+- SHA-256: `7e160d25e3b73b3074519ed74fe5861d48808c925c620909f4dd66e0b24bf090`
+- Bytes: `22191`
+
+~~~~python
+"""Deterministic paired training for the Study 1-R model comparison.
+
+The caller supplies one method-blind training DataFrame and one external fixed
+validation DataFrame.  Both Baseline B and Structured receive identical rows,
+labels, epoch count, batch size, learning rate, regularization and deterministic
+epoch permutations.  The only intentional differences are their declared
+encoders.  The frozen shared head has the same hidden layers for both methods;
+their resulting parameter counts are reported rather than silently changing
+one architecture after the protocol was frozen.
+
+Each epoch is trained with ``MLPClassifier.partial_fit`` and balanced class
+weights.  Model selection uses uncalibrated validation NLL evaluated outside
+the estimator after every complete epoch; training never stops early.  The
+earliest minimum-NLL epoch is restored, then one temperature is fitted using
+the same fixed validation set.  Training history and the reloadable JSON
+checkpoint can be persisted beneath a replicate/method output directory.
+"""
+
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass
+import hashlib
+import inspect
+import json
+from pathlib import Path
+from typing import Any, Mapping
+
+import numpy as np
+import pandas as pd
+
+from .models import (
+    MODEL_BASELINE_B,
+    MODEL_SLUGS,
+    MODEL_STRUCTURED,
+    N_CLASSES,
+    BaselineBEncoder,
+    FeatureSchema,
+    StructuredEncoder,
+    Study1RClassifier,
+    make_classifier,
+    mlp_parameter_count,
+    multiclass_nll,
+)
+
+
+@dataclass(frozen=True)
+class TrainingSpec:
+    """Frozen common optimization budget for both Study 1-R methods."""
+
+    epochs: int = 50
+    batch_size: int = 128
+    learning_rate_init: float = 2.0e-3
+    alpha: float = 1.0e-4
+    hidden_layer_sizes: tuple[int, ...] = (48, 24)
+    class_weighting: str = "inverse_frequency_balanced_from_training_split"
+    temperature_lower_bound: float = 0.5
+    temperature_upper_bound: float = 5.0
+    label_column: str = "y_true"
+
+    def __post_init__(self) -> None:
+        if self.epochs < 1:
+            raise ValueError("epochs must be positive")
+        if self.batch_size < 1:
+            raise ValueError("batch_size must be positive")
+        if self.learning_rate_init <= 0.0:
+            raise ValueError("learning_rate_init must be positive")
+        if self.alpha < 0.0:
+            raise ValueError("alpha must be non-negative")
+        if not self.hidden_layer_sizes or any(value < 2 for value in self.hidden_layer_sizes):
+            raise ValueError("Every hidden-layer width must be at least 2")
+        if self.class_weighting != "inverse_frequency_balanced_from_training_split":
+            raise ValueError("Study 1-R class weighting must match the frozen protocol")
+        if not (0.0 < self.temperature_lower_bound < self.temperature_upper_bound):
+            raise ValueError("Temperature bounds must satisfy 0 < lower < upper")
+        if not self.label_column:
+            raise ValueError("label_column must be non-empty")
+
+    @classmethod
+    def from_mapping(cls, config: Mapping[str, Any]) -> "TrainingSpec":
+        """Read either a training section or a complete protocol mapping."""
+
+        section: Mapping[str, Any] = config
+        temperature: Mapping[str, Any] = {}
+        if isinstance(config.get("training"), Mapping):
+            section = config["training"]
+        elif isinstance(config.get("models"), Mapping):
+            models = config["models"]
+            if isinstance(models, Mapping):
+                shared = models.get("shared_head")
+                section = shared if isinstance(shared, Mapping) else models.get("training", models)
+                calibrated = models.get("temperature_scaling")
+                temperature = calibrated if isinstance(calibrated, Mapping) else {}
+        elif isinstance(config.get("shared_head"), Mapping):
+            section = config["shared_head"]
+            calibrated = config.get("temperature_scaling")
+            temperature = calibrated if isinstance(calibrated, Mapping) else {}
+        hidden = section.get(
+            "hidden_layer_sizes",
+            section.get("hidden_layers", (48, 24)),
+        )
+        if isinstance(hidden, (int, np.integer)):
+            hidden = (int(hidden),)
+        return cls(
+            epochs=int(section.get("epochs", 50)),
+            batch_size=int(section.get("batch_size", 128)),
+            learning_rate_init=float(
+                section.get("learning_rate_init", section.get("learning_rate", 2.0e-3))
+            ),
+            alpha=float(section.get("alpha", section.get("weight_decay", 1.0e-4))),
+            hidden_layer_sizes=tuple(int(value) for value in hidden),
+            class_weighting=str(
+                section.get(
+                    "class_weighting",
+                    "inverse_frequency_balanced_from_training_split",
+                )
+            ),
+            temperature_lower_bound=float(temperature.get("lower_bound", 0.5)),
+            temperature_upper_bound=float(temperature.get("upper_bound", 5.0)),
+            label_column=str(section.get("label_column", "y_true")),
+        )
+
+
+def method_training_specs(
+    config: TrainingSpec | Mapping[str, Any],
+) -> dict[str, TrainingSpec]:
+    """Resolve the explicitly asymmetric Study 1-R2 training budgets.
+
+    Baseline B retains the frozen Study-1R head and optimization budget.  The
+    exploratory Structured-R2 candidate may use a separately declared budget;
+    this capacity difference is exported in every architecture manifest.
+    """
+
+    if isinstance(config, TrainingSpec):
+        return {MODEL_BASELINE_B: config, MODEL_STRUCTURED: config}
+    models = config.get("models", {})
+    if not isinstance(models, Mapping):
+        shared = TrainingSpec.from_mapping(config)
+        return {MODEL_BASELINE_B: shared, MODEL_STRUCTURED: shared}
+    temperature = models.get("temperature_scaling", {})
+    shared = models.get("shared_head", {})
+    baseline = models.get("baseline_b_training", shared)
+    structured = models.get("structured_r2_training", shared)
+    if not isinstance(baseline, Mapping) or not isinstance(structured, Mapping):
+        raise ValueError("Method-specific training sections must be mappings")
+
+    def resolve(section: Mapping[str, Any]) -> TrainingSpec:
+        return TrainingSpec.from_mapping(
+            {
+                "models": {
+                    "shared_head": dict(section),
+                    "temperature_scaling": (
+                        dict(temperature) if isinstance(temperature, Mapping) else {}
+                    ),
+                }
+            }
+        )
+
+    return {
+        MODEL_BASELINE_B: resolve(baseline),
+        MODEL_STRUCTURED: resolve(structured),
+    }
+
+
+@dataclass
+class TrainingResult:
+    """One fitted method and its complete epoch-level audit record."""
+
+    model: Study1RClassifier
+    history: pd.DataFrame
+    best_epoch: int
+    best_validation_nll: float
+    calibrated_validation_nll: float
+    checkpoint_path: Path | None
+    checkpoint_sha256: str | None
+
+
+@dataclass
+class PairedTrainingResult:
+    """Baseline/Structured results trained under one paired replicate budget."""
+
+    results: dict[str, TrainingResult]
+    history: pd.DataFrame
+    architecture: pd.DataFrame
+
+    @property
+    def models(self) -> dict[str, Study1RClassifier]:
+        return {method: result.model for method, result in self.results.items()}
+
+
+def sha256(path: str | Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _labels(frame: pd.DataFrame, column: str) -> np.ndarray:
+    if column not in frame.columns:
+        raise ValueError(f"Missing label column: {column}")
+    numeric = pd.to_numeric(frame[column], errors="raise").to_numpy(dtype=np.int64)
+    if len(numeric) == 0:
+        raise ValueError("Training and validation frames must be non-empty")
+    if np.any((numeric < 0) | (numeric >= N_CLASSES)):
+        raise ValueError("Study 1-R labels must be integers in [0, 3]")
+    return numeric
+
+
+def balanced_class_weights(labels: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """Return sklearn-style balanced class and per-sample weights."""
+
+    y = np.asarray(labels, dtype=np.int64)
+    counts = np.bincount(y, minlength=N_CLASSES)
+    if np.any(counts == 0):
+        missing = np.flatnonzero(counts == 0).tolist()
+        raise ValueError(f"Training split is missing required action classes: {missing}")
+    class_weights = len(y) / (N_CLASSES * counts.astype(np.float64))
+    return class_weights, class_weights[y]
+
+
+def _partial_fit_supports_weights(model: Study1RClassifier) -> bool:
+    return "sample_weight" in inspect.signature(model.estimator.partial_fit).parameters
+
+
+def _history_row(
+    *,
+    replicate_id: int,
+    method: str,
+    epoch: int,
+    train_nll: float,
+    validation_nll: float,
+    n_batches: int,
+    training_seed: int,
+    spec: TrainingSpec,
+    parameter_count: int,
+) -> dict[str, Any]:
+    return {
+        "training_replicate": int(replicate_id),
+        "method": method,
+        "epoch": int(epoch),
+        "train_nll_uncalibrated": float(train_nll),
+        "validation_nll_uncalibrated": float(validation_nll),
+        "selected_checkpoint": False,
+        "epochs_budget": int(spec.epochs),
+        "batch_size_budget": int(spec.batch_size),
+        "learning_rate_init": float(spec.learning_rate_init),
+        "alpha": float(spec.alpha),
+        "batches_completed": int(n_batches),
+        "training_seed": int(training_seed),
+        "parameter_count": int(parameter_count),
+    }
+
+
+def _fit_one(
+    *,
+    method: str,
+    train_frame: pd.DataFrame,
+    validation_frame: pd.DataFrame,
+    replicate_id: int,
+    training_seed: int,
+    spec: TrainingSpec,
+    schema: FeatureSchema,
+    hidden_layer_sizes: tuple[int, ...],
+    output_directory: Path | None,
+) -> TrainingResult:
+    encoder = (
+        BaselineBEncoder(schema)
+        if method == MODEL_BASELINE_B
+        else StructuredEncoder(schema)
+    )
+    model = make_classifier(
+        method=method,
+        encoder=encoder,
+        hidden_layer_sizes=hidden_layer_sizes,
+        learning_rate_init=spec.learning_rate_init,
+        alpha=spec.alpha,
+        random_state=training_seed,
+    )
+    x_train_unscaled = encoder.transform(train_frame)
+    x_validation_unscaled = encoder.transform(validation_frame)
+    model.scaler.fit(x_train_unscaled)
+    x_train = model.scaler.transform(x_train_unscaled)
+    x_validation = model.scaler.transform(x_validation_unscaled)
+    y_train = _labels(train_frame, spec.label_column)
+    y_validation = _labels(validation_frame, spec.label_column)
+    classes = np.arange(N_CLASSES, dtype=np.int64)
+    class_weights, sample_weights = balanced_class_weights(y_train)
+    if not _partial_fit_supports_weights(model):
+        raise RuntimeError(
+            "This Study 1-R implementation requires a scikit-learn release whose "
+            "MLPClassifier.partial_fit supports sample_weight (scikit-learn >=1.7)."
+        )
+
+    history_rows: list[dict[str, Any]] = []
+    best_payload: dict[str, Any] | None = None
+    best_epoch = -1
+    best_validation_nll = float("inf")
+    n_rows = len(y_train)
+    n_batches = int(np.ceil(n_rows / spec.batch_size))
+
+    for epoch in range(1, spec.epochs + 1):
+        # Re-initializing from the same (replicate, epoch) seed yields identical
+        # row orders for both methods without sharing mutable RNG state.
+        epoch_seed = int(
+            np.random.SeedSequence([int(training_seed), int(epoch)]).generate_state(
+                1, dtype=np.uint32
+            )[0]
+        )
+        order = np.random.default_rng(epoch_seed).permutation(n_rows)
+        for start in range(0, n_rows, spec.batch_size):
+            indices = order[start : start + spec.batch_size]
+            kwargs: dict[str, Any] = {"sample_weight": sample_weights[indices]}
+            if epoch == 1 and start == 0:
+                kwargs["classes"] = classes
+            model.estimator.partial_fit(x_train[indices], y_train[indices], **kwargs)
+
+        train_probabilities = model.estimator.predict_proba(x_train)
+        validation_probabilities = model.estimator.predict_proba(x_validation)
+        train_nll = multiclass_nll(y_train, train_probabilities)
+        validation_nll = multiclass_nll(y_validation, validation_probabilities)
+        history_rows.append(
+            _history_row(
+                replicate_id=replicate_id,
+                method=method,
+                epoch=epoch,
+                train_nll=train_nll,
+                validation_nll=validation_nll,
+                n_batches=n_batches,
+                training_seed=training_seed,
+                spec=spec,
+                parameter_count=model.parameter_count(),
+            )
+        )
+        # Strict comparison preserves the earliest epoch on an exact tie.
+        if validation_nll < best_validation_nll:
+            best_validation_nll = validation_nll
+            best_epoch = epoch
+            model.metadata = {
+                "training_replicate": int(replicate_id),
+                "training_seed": int(training_seed),
+                "best_epoch": int(epoch),
+                "best_validation_nll_uncalibrated": float(validation_nll),
+                "epochs_budget": int(spec.epochs),
+                "batch_size_budget": int(spec.batch_size),
+                "learning_rate_init": float(spec.learning_rate_init),
+                "alpha": float(spec.alpha),
+                "class_counts": np.bincount(y_train, minlength=N_CLASSES).tolist(),
+                "class_weights": class_weights.tolist(),
+                "train_rows": int(len(train_frame)),
+                "validation_rows": int(len(validation_frame)),
+            }
+            best_payload = model.to_checkpoint_dict()
+
+    if best_payload is None or best_epoch < 1:
+        raise RuntimeError("No finite external-validation checkpoint was selected")
+    selected = Study1RClassifier.from_checkpoint_dict(best_payload)
+    selected.fit_temperature(
+        validation_frame,
+        y_validation,
+        lower_bound=spec.temperature_lower_bound,
+        upper_bound=spec.temperature_upper_bound,
+    )
+    calibrated_validation_nll = multiclass_nll(
+        y_validation, selected.predict_proba(validation_frame, calibrated=True)
+    )
+    selected.metadata.update(
+        {
+            "temperature": float(selected.temperature),
+            "validation_nll_calibrated": float(calibrated_validation_nll),
+            "selection_rule": (
+                "Earliest minimum uncalibrated NLL on the external fixed validation set; "
+                "all configured epochs were trained; temperature fitted after selection."
+            ),
+        }
+    )
+
+    history = pd.DataFrame(history_rows)
+    history.loc[history["epoch"].eq(best_epoch), "selected_checkpoint"] = True
+    checkpoint_path: Path | None = None
+    checkpoint_hash: str | None = None
+    if output_directory is not None:
+        output_directory.mkdir(parents=True, exist_ok=True)
+        checkpoint_path = selected.save_checkpoint(output_directory / "best_checkpoint.json")
+        checkpoint_hash = sha256(checkpoint_path)
+        history.to_csv(output_directory / "training_history.csv", index=False, lineterminator="\n")
+        resolved = {
+            "schema": "egms-drive-study1r-training-record-1.0",
+            "method": method,
+            "method_slug": MODEL_SLUGS[method],
+            "training_replicate": int(replicate_id),
+            "training_seed": int(training_seed),
+            "training_spec": asdict(spec),
+            "class_counts": np.bincount(y_train, minlength=N_CLASSES).tolist(),
+            "class_weights": class_weights.tolist(),
+            "encoder": selected.encoder.to_json_dict(),
+            "input_features": len(selected.encoder.feature_names),
+            "hidden_layer_sizes": list(hidden_layer_sizes),
+            "parameter_count": selected.parameter_count(),
+            "best_epoch": int(best_epoch),
+            "best_validation_nll_uncalibrated": float(best_validation_nll),
+            "temperature": float(selected.temperature),
+            "validation_nll_calibrated": float(calibrated_validation_nll),
+            "checkpoint": checkpoint_path.name,
+            "checkpoint_sha256": checkpoint_hash,
+        }
+        (output_directory / "resolved_training.json").write_text(
+            json.dumps(
+                resolved,
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=True,
+                allow_nan=False,
+            )
+            + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
+
+    return TrainingResult(
+        model=selected,
+        history=history,
+        best_epoch=best_epoch,
+        best_validation_nll=float(best_validation_nll),
+        calibrated_validation_nll=float(calibrated_validation_nll),
+        checkpoint_path=checkpoint_path,
+        checkpoint_sha256=checkpoint_hash,
+    )
+
+
+def train_paired_models(
+    train_frame: pd.DataFrame,
+    validation_frame: pd.DataFrame,
+    *,
+    replicate_id: int,
+    training_seed: int,
+    config: TrainingSpec | Mapping[str, Any],
+    output_root: str | Path | None = None,
+    schema: FeatureSchema | None = None,
+) -> PairedTrainingResult:
+    """Train Baseline B and Structured with a common frozen optimization budget.
+
+    Parameters
+    ----------
+    train_frame, validation_frame:
+        Frames containing the observation columns documented in ``models.py``
+        plus the configured label column (``y_true`` by default).
+    replicate_id, training_seed:
+        Recorded formal replicate identifiers.  Both methods receive the same
+        training seed and deterministic epoch permutations.
+    config:
+        ``TrainingSpec`` or a mapping containing ``training``/``models`` keys.
+    output_root:
+        If provided, artifacts are written under
+        ``replicate_XX/{baseline_b|structured}``.
+    """
+
+    specs = method_training_specs(config)
+    schema = schema or FeatureSchema()
+    # Validate labels before either method is trained so both have an identical
+    # failure boundary.
+    if len({value.label_column for value in specs.values()}) != 1:
+        raise ValueError("Both Study 1-R2 methods must use the same label column")
+    label_column = specs[MODEL_BASELINE_B].label_column
+    _labels(train_frame, label_column)
+    _labels(validation_frame, label_column)
+
+    baseline_encoder = BaselineBEncoder(schema)
+    structured_encoder = StructuredEncoder(schema)
+    # Transforming once here establishes exact dimensions and validates that
+    # both representations can be formed from the same source columns.
+    baseline_dim = baseline_encoder.transform(train_frame.iloc[:1]).shape[1]
+    structured_dim = structured_encoder.transform(train_frame.iloc[:1]).shape[1]
+    hidden_layers = {
+        method: tuple(specs[method].hidden_layer_sizes)
+        for method in (MODEL_BASELINE_B, MODEL_STRUCTURED)
+    }
+    dimensions = {
+        MODEL_BASELINE_B: baseline_dim,
+        MODEL_STRUCTURED: structured_dim,
+    }
+
+    root = Path(output_root) if output_root is not None else None
+    replicate_root = root / f"replicate_{int(replicate_id):02d}" if root else None
+    results: dict[str, TrainingResult] = {}
+    for method in (MODEL_BASELINE_B, MODEL_STRUCTURED):
+        method_output = replicate_root / MODEL_SLUGS[method] if replicate_root else None
+        results[method] = _fit_one(
+            method=method,
+            train_frame=train_frame,
+            validation_frame=validation_frame,
+            replicate_id=replicate_id,
+            training_seed=training_seed,
+            spec=specs[method],
+            schema=schema,
+            hidden_layer_sizes=hidden_layers[method],
+            output_directory=method_output,
+        )
+
+    history = pd.concat(
+        [results[method].history for method in (MODEL_BASELINE_B, MODEL_STRUCTURED)],
+        ignore_index=True,
+    )
+    architecture_rows = []
+    target_parameters = mlp_parameter_count(
+        baseline_dim, hidden_layers[MODEL_BASELINE_B], N_CLASSES
+    )
+    for method in (MODEL_BASELINE_B, MODEL_STRUCTURED):
+        spec = specs[method]
+        count = mlp_parameter_count(dimensions[method], hidden_layers[method], N_CLASSES)
+        architecture_rows.append(
+            {
+                "method": method,
+                "input_features": dimensions[method],
+                "hidden_layer_sizes": json.dumps(
+                    list(hidden_layers[method]), separators=(",", ":")
+                ),
+                "parameter_count": count,
+                "baseline_parameter_target": target_parameters,
+                "parameter_difference_from_baseline": count - target_parameters,
+                "epochs": spec.epochs,
+                "batch_size": spec.batch_size,
+                "learning_rate_init": spec.learning_rate_init,
+                "alpha": spec.alpha,
+            }
+        )
+    architecture = pd.DataFrame(architecture_rows)
+    if replicate_root is not None:
+        history.to_csv(
+            replicate_root / "training_history.csv", index=False, lineterminator="\n"
+        )
+        architecture.to_csv(
+            replicate_root / "architecture.csv", index=False, lineterminator="\n"
+        )
+
+    return PairedTrainingResult(
+        results=results,
+        history=history,
+        architecture=architecture,
+    )
+
+
+def load_paired_checkpoints(
+    output_root: str | Path, replicate_id: int
+) -> dict[str, Study1RClassifier]:
+    """Reload the two deterministic JSON checkpoints for one replicate."""
+
+    replicate_root = Path(output_root) / f"replicate_{int(replicate_id):02d}"
+    return {
+        method: Study1RClassifier.load_checkpoint(
+            replicate_root / MODEL_SLUGS[method] / "best_checkpoint.json"
+        )
+        for method in (MODEL_BASELINE_B, MODEL_STRUCTURED)
+    }
+
+
+__all__ = [
+    "TrainingSpec",
+    "TrainingResult",
+    "PairedTrainingResult",
+    "balanced_class_weights",
+    "train_paired_models",
+    "load_paired_checkpoints",
+    "sha256",
+]
+~~~~
+
+### `src/egms_study1r2/validation.py`
+
+- SHA-256: `d383895a431e826f702254169a0e5b55692afe6a46a8e654333eb6d9b567477c`
+- Bytes: `27717`
+
+~~~~python
+"""Direction-neutral integrity validator for exploratory Study 1-R2."""
+
+from __future__ import annotations
+
+import inspect
+import json
+from pathlib import Path
+from typing import Any
+from xml.etree import ElementTree
+import zlib
+
+import numpy as np
+import pandas as pd
+
+from .common import ACTION_NAMES, load_protocol, sha256_file, softmax
+from .models import MODEL_BASELINE_B, MODEL_STRUCTURED, Study1RClassifier
+from .reporting import build_figure_inputs, build_table2_source
+from .rollout import EVENT_COLUMNS, derive_episode_metrics
+from .statistics import summarize_study1r
+
+
+EXPECTED_EVIDENCE = "EXPLORATORY_CONTROLLED_SYNTHETIC_STUDY1R2_NOT_REAL_WORLD_SAFETY_EVIDENCE"
+EXPECTED_METHODS = (MODEL_BASELINE_B, MODEL_STRUCTURED)
+
+
+def _append_if(errors: list[str], condition: bool, message: str) -> None:
+    if condition:
+        errors.append(message)
+
+
+def _valid_png(path: Path) -> bool:
+    data = path.read_bytes()
+    if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+        return False
+    position = 8
+    while position + 12 <= len(data):
+        length = int.from_bytes(data[position : position + 4], "big")
+        kind = data[position + 4 : position + 8]
+        payload_end = position + 8 + length
+        chunk_end = payload_end + 4
+        if chunk_end > len(data):
+            return False
+        expected = int.from_bytes(data[payload_end:chunk_end], "big")
+        observed = zlib.crc32(kind + data[position + 8 : payload_end])
+        if expected != observed:
+            return False
+        position = chunk_end
+        if kind == b"IEND":
+            return position == len(data)
+    return False
+
+
+def _compare_frames(
+    observed: pd.DataFrame,
+    expected: pd.DataFrame,
+    *,
+    key: list[str],
+    label: str,
+    atol: float = 1.0e-10,
+) -> list[str]:
+    errors: list[str] = []
+    if set(observed.columns) != set(expected.columns):
+        return [
+            f"{label} columns differ; observed-only={sorted(set(observed.columns)-set(expected.columns))}, "
+            f"expected-only={sorted(set(expected.columns)-set(observed.columns))}"
+        ]
+    left = observed.sort_values(key, kind="stable").reset_index(drop=True)
+    right = expected.sort_values(key, kind="stable").reset_index(drop=True)
+    if len(left) != len(right):
+        return [f"{label} row count differs: {len(left)} versus {len(right)}"]
+    for column in left.columns:
+        if pd.api.types.is_numeric_dtype(left[column]) and pd.api.types.is_numeric_dtype(right[column]):
+            a = pd.to_numeric(left[column], errors="coerce").to_numpy(float)
+            b = pd.to_numeric(right[column], errors="coerce").to_numpy(float)
+            if not np.allclose(a, b, atol=atol, rtol=0.0, equal_nan=True):
+                errors.append(f"{label}.{column} fails raw recomputation")
+        elif not left[column].fillna("").astype(str).equals(right[column].fillna("").astype(str)):
+            errors.append(f"{label}.{column} differs after recomputation")
+    return errors
+
+
+def _validate_artifact_manifest(output: Path, errors: list[str]) -> int:
+    path = output / "artifact_manifest.json"
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    records = payload.get("files", {})
+    for relative, expected in records.items():
+        candidate = output / relative
+        _append_if(errors, not candidate.is_file(), f"Manifest file missing: {relative}")
+        if candidate.is_file():
+            _append_if(
+                errors,
+                candidate.stat().st_size != int(expected["bytes"]),
+                f"Manifest byte count differs: {relative}",
+            )
+            _append_if(
+                errors,
+                sha256_file(candidate) != expected["sha256"],
+                f"Manifest SHA-256 differs: {relative}",
+            )
+    return len(records)
+
+
+def _method_blind_contract(protocol: dict, errors: list[str]) -> None:
+    import egms_study1r2.generator as generator_module
+
+    forbidden = ("method", "baseline", "structured", "advantage", "bonus", "penalty")
+    generator_text = json.dumps(protocol.get("generator", {}), sort_keys=True).lower()
+    _append_if(
+        errors,
+        any(token in generator_text for token in forbidden),
+        "Generator configuration contains a method/performance-specific token",
+    )
+    for function in (
+        generator_module.make_scenario_tape,
+        generator_module.generate_offline_split,
+        generator_module.observe_state,
+        generator_module.oracle_actions,
+        generator_module.step_dynamics,
+    ):
+        parameters = {name.lower() for name in inspect.signature(function).parameters}
+        _append_if(
+            errors,
+            any("method" in name or "baseline" in name or "structured" in name for name in parameters),
+            f"Method-blind generator API violation: {function.__name__}",
+        )
+
+
+def _reconstruct_event_records(action: pd.DataFrame) -> pd.DataFrame:
+    """Rebuild the sparse event ledger exclusively from persisted action rows."""
+
+    keys = [
+        "replicate_id",
+        "training_seed",
+        "method",
+        "scenario_cell",
+        "episode_seed",
+        "episode_id",
+    ]
+    rows: list[dict[str, object]] = []
+    for key_values, group in action.groupby(keys, sort=False):
+        ordered = group.sort_values("frame_id", kind="stable")
+        collision_seen = False
+        near_seen = False
+        critical_seen = False
+        for record in ordered.itertuples(index=False):
+            if not bool(record.valid_step):
+                continue
+            entries: list[tuple[str, float, float]] = []
+            collision_now = bool(record.collision_event) and not collision_seen
+            near_now = (
+                bool(record.near_miss_condition)
+                and not near_seen
+                and not collision_seen
+            )
+            critical_now = bool(record.critical_condition) and not critical_seen
+            if collision_now:
+                entries.append(("collision", 1.0, 1.0))
+            if near_now:
+                entries.append(("near_miss_entry", 1.0, 1.0))
+            if critical_now:
+                entries.append(("critical_entry", 1.0, 1.0))
+            if bool(record.route_complete_event):
+                entries.append(
+                    ("route_complete", float(record.progress_m), float(record.route_goal_m))
+                )
+            if bool(record.terminal) and str(record.termination_reason) == "timeout":
+                entries.append(("timeout", float(record.progress_m), float(record.route_goal_m)))
+            for event_type, value, threshold in entries:
+                row = dict(zip(keys, key_values))
+                row.update(
+                    {
+                        "frame_id": int(record.frame_id),
+                        "time_s": float(record.time_s),
+                        "event_type": event_type,
+                        "event_value": value,
+                        "threshold": threshold,
+                        "source": "raw_rollout_recomputation",
+                    }
+                )
+                rows.append(row)
+            collision_seen |= bool(record.collision_event)
+            near_seen |= bool(record.near_miss_condition)
+            critical_seen |= bool(record.critical_condition)
+    result = pd.DataFrame.from_records(rows, columns=EVENT_COLUMNS)
+    if len(result):
+        result = result.sort_values(
+            ["replicate_id", "method", "scenario_cell", "episode_id", "frame_id", "event_type"],
+            kind="stable",
+        ).reset_index(drop=True)
+    return result
+
+
+def _validate_checkpoint_replay(
+    output: Path,
+    model_manifest: pd.DataFrame,
+    offline: pd.DataFrame,
+    action: pd.DataFrame,
+    errors: list[str],
+) -> None:
+    """Reload every checkpoint and reproduce fixed-test and rollout logits."""
+
+    test = pd.read_csv(output / "generated" / "test.csv.gz")
+    if not test["sample_id"].is_unique:
+        errors.append("Generated fixed-test sample IDs are not unique")
+        return
+    ordered_ids = test["sample_id"].astype(str).tolist()
+    probability_columns = [f"p_{name}" for name in ACTION_NAMES]
+    logit_columns = [f"logit_{name}" for name in ACTION_NAMES]
+    for manifest_row in model_manifest.itertuples(index=False):
+        replicate_id = int(manifest_row.replicate_id)
+        method = str(manifest_row.method)
+        label = f"checkpoint replay replicate={replicate_id}, method={method}"
+        try:
+            model = Study1RClassifier.load_checkpoint(
+                output / str(manifest_row.checkpoint_path)
+            )
+            logits = model.predict_logits(test)
+            probabilities = softmax(logits / float(model.temperature), axis=1)
+        except Exception as exc:  # preserve all validation findings in one report
+            errors.append(f"{label} could not be loaded/evaluated: {exc}")
+            continue
+        block = offline.loc[
+            offline["replicate_id"].astype(int).eq(replicate_id)
+            & offline["method"].astype(str).eq(method)
+        ].copy()
+        if len(block) != len(test) or not block["sample_id"].is_unique:
+            errors.append(f"{label} has an incomplete or duplicate raw-output grid")
+            continue
+        block["sample_id"] = block["sample_id"].astype(str)
+        block = block.set_index("sample_id").loc[ordered_ids]
+        _append_if(
+            errors,
+            not np.allclose(
+                block[logit_columns].to_numpy(float), logits, atol=1.0e-10, rtol=0.0
+            ),
+            f"{label} logits differ from archived raw output",
+        )
+        _append_if(
+            errors,
+            not np.allclose(
+                block[probability_columns].to_numpy(float),
+                probabilities,
+                atol=1.0e-10,
+                rtol=0.0,
+            ),
+            f"{label} probabilities differ from archived raw output",
+        )
+        _append_if(
+            errors,
+            not np.array_equal(block["y_pred"].to_numpy(int), probabilities.argmax(axis=1)),
+            f"{label} predicted classes differ from archived raw output",
+        )
+        rollout_block = action.loc[
+            action["replicate_id"].astype(int).eq(replicate_id)
+            & action["method"].astype(str).eq(method)
+        ].sort_values(["scenario_cell", "episode_id", "frame_id"], kind="stable")
+        try:
+            rollout_logits = model.predict_logits(rollout_block)
+            rollout_probabilities = softmax(
+                rollout_logits / float(model.temperature), axis=1
+            )
+        except Exception as exc:
+            errors.append(f"{label} rollout replay failed: {exc}")
+            continue
+        _append_if(
+            errors,
+            not np.allclose(
+                rollout_block[logit_columns].to_numpy(float),
+                rollout_logits,
+                atol=1.0e-10,
+                rtol=0.0,
+            ),
+            f"{label} rollout logits differ from archived action records",
+        )
+        _append_if(
+            errors,
+            not np.allclose(
+                rollout_block[probability_columns].to_numpy(float),
+                rollout_probabilities,
+                atol=1.0e-10,
+                rtol=0.0,
+            ),
+            f"{label} rollout probabilities differ from archived action records",
+        )
+
+
+def validate_output(output_dir: str | Path) -> dict[str, Any]:
+    output = Path(output_dir).resolve()
+    required = [
+        output / "config_resolved.yaml",
+        output / "run_manifest.json",
+        output / "artifact_manifest.json",
+        output / "manifests" / "split_manifest.csv",
+        output / "manifests" / "seed_registry.csv",
+        output / "manifests" / "model_manifest.csv",
+        output / "logs" / "training_history.csv",
+        output / "logs" / "model_architecture.csv",
+        output / "raw" / "offline_frame_predictions.csv.gz",
+        output / "raw" / "action_records.csv.gz",
+        output / "raw" / "event_records.csv.gz",
+        output / "raw" / "episode_metrics.csv.gz",
+        output / "provenance" / "freeze_manifest.json",
+        output / "provenance" / "development_manifest.json",
+        output / "provenance" / "selection.json",
+        output / "provenance" / "candidate_ledger.csv",
+        output / "provenance" / "evaluation_access_record.json",
+        output / "analysis" / "data" / "study1r2_metric_summary.csv",
+        output / "analysis" / "data" / "study1r2_paired_contrasts.csv",
+        output / "analysis" / "data" / "study1r2_replicate_effects.csv",
+        output / "analysis" / "data" / "study1r2_bootstrap_draws.csv",
+        output / "analysis" / "data" / "Figure_2B_Study1R2_Exploratory_inputs.csv",
+        output / "analysis" / "tables" / "Table_2B_Study1R2_Exploratory.csv",
+        output / "analysis" / "figures" / "Figure_2B_Study1R2_Exploratory.png",
+        output / "analysis" / "figures" / "Figure_2B_Study1R2_Exploratory.pdf",
+        output / "analysis" / "figures" / "Figure_2B_Study1R2_Exploratory.svg",
+    ]
+    errors = [f"Missing required file: {path.relative_to(output)}" for path in required if not path.is_file()]
+    if errors:
+        raise RuntimeError("Validation failed: " + "; ".join(errors))
+
+    protocol = load_protocol(output / "config_resolved.yaml")
+    manifest = json.loads((output / "run_manifest.json").read_text(encoding="utf-8"))
+    _append_if(errors, manifest.get("evidence_label") != EXPECTED_EVIDENCE, "Incorrect Study 1-R2 evidence label")
+    _append_if(errors, manifest.get("analysis_status") != "post_hoc_exploratory_final_evaluation", "Incorrect R2 analysis status")
+    _append_if(errors, int(manifest.get("final_training_replicates", -1)) != 10, "Exactly 10 final training replicates are required")
+    _append_if(errors, manifest.get("methods") != list(EXPECTED_METHODS), "Run manifest method order differs")
+    freeze_path = output / "provenance" / "freeze_manifest.json"
+    freeze = json.loads(freeze_path.read_text(encoding="utf-8"))
+    _append_if(errors, sha256_file(freeze_path) != manifest.get("freeze_manifest_sha256"), "Freeze manifest hash differs")
+    _append_if(errors, freeze.get("final_source_sha256") != manifest.get("source_sha256"), "Run and freeze source sets differ")
+    _append_if(errors, bool(freeze.get("validation_rule_requires_improvement")), "Freeze manifest incorrectly requires improvement")
+    _append_if(errors, sha256_file(output / "config_resolved.yaml") != manifest.get("protocol_sha256"), "Resolved protocol hash differs")
+    source_root = Path(__file__).resolve().parents[2]
+    source_hashes = manifest.get("source_sha256", {})
+    _append_if(errors, not isinstance(source_hashes, dict) or not source_hashes, "Run manifest lacks source hashes")
+    if isinstance(source_hashes, dict):
+        for relative, expected_hash in source_hashes.items():
+            source_path = source_root / str(relative)
+            _append_if(errors, not source_path.is_file(), f"Formal-run source file missing: {relative}")
+            if source_path.is_file():
+                _append_if(
+                    errors,
+                    sha256_file(source_path) != str(expected_hash),
+                    f"Formal-run source SHA-256 differs: {relative}",
+                )
+    _method_blind_contract(protocol, errors)
+
+    split = pd.read_csv(output / "manifests" / "split_manifest.csv")
+    split_counts = split.groupby("split")["episode_id"].nunique().to_dict()
+    _append_if(errors, split_counts.get("validation") != 90, "Validation split must contain 90 episodes")
+    _append_if(errors, split_counts.get("test") != 360, "Offline test must contain 360 fixed episodes")
+    _append_if(errors, split_counts.get("rollout") != 360, "Rollout test must contain 360 fixed episodes")
+    train = split[split["split"].eq("train")]
+    _append_if(errors, train["replicate_id"].nunique() != 10, "Training split lacks ten replicates")
+    train_counts = train.groupby("replicate_id")["episode_id"].nunique()
+    _append_if(errors, not train_counts.eq(180).all(), "Each training replicate must contain 180 episodes")
+    validation_ids = set(split.loc[split["split"].eq("validation"), "episode_id"].astype(str))
+    test_ids = set(split.loc[split["split"].eq("test"), "episode_id"].astype(str))
+    rollout_ids = set(split.loc[split["split"].eq("rollout"), "episode_id"].astype(str))
+    train_ids = set(train["episode_id"].astype(str))
+    _append_if(errors, bool(train_ids & validation_ids) or bool(train_ids & test_ids), "Training episode IDs leak into validation/test")
+    _append_if(errors, test_ids != rollout_ids, "Offline-test and rollout canonical episode IDs differ")
+    for relative, group in split.groupby("relative_data_path"):
+        path = output / str(relative)
+        _append_if(errors, not path.is_file(), f"Split data file missing: {relative}")
+        if path.is_file():
+            _append_if(errors, group["data_sha256"].nunique() != 1 or group["data_sha256"].iloc[0] != sha256_file(path), f"Split data hash differs: {relative}")
+
+    for replicate_id in range(10):
+        train_path = output / "generated" / f"train_replicate_{replicate_id:02d}.csv.gz"
+        if train_path.is_file():
+            generated_train = pd.read_csv(train_path, usecols=["y_true"])
+            _append_if(
+                errors,
+                set(generated_train["y_true"].astype(int)) != set(range(len(ACTION_NAMES))),
+                f"Training replicate {replicate_id} lacks at least one action class",
+            )
+
+    tape_path = output / "generated" / "rollout_scenario_tape.npz"
+    try:
+        with np.load(tape_path, allow_pickle=False) as tape_payload:
+            required_metadata = {
+                "metadata_split",
+                "metadata_data_seed",
+                "metadata_training_replicate",
+                "metadata_dt_s",
+                "metadata_steps",
+            }
+            _append_if(
+                errors,
+                not required_metadata.issubset(set(tape_payload.files)),
+                "Rollout tape lacks self-contained scalar metadata",
+            )
+    except Exception as exc:
+        errors.append(f"Rollout tape cannot be loaded: {exc}")
+
+    seeds = pd.read_csv(output / "manifests" / "seed_registry.csv")
+    _append_if(errors, len(seeds) != 10 or seeds["replicate_id"].nunique() != 10, "Seed registry must contain ten unique replicate rows")
+    _append_if(errors, seeds["training_data_seed"].nunique() != 10, "Training data seeds are not unique")
+    model_manifest = pd.read_csv(output / "manifests" / "model_manifest.csv")
+    _append_if(errors, len(model_manifest) != 20, "Model manifest must contain 20 fitted checkpoints")
+    _append_if(errors, set(model_manifest["method"]) != set(EXPECTED_METHODS), "Model manifest methods differ")
+    _append_if(errors, model_manifest.groupby("replicate_id")["training_data_sha256"].nunique().max() != 1, "Paired methods used different training data")
+    _append_if(errors, model_manifest.drop_duplicates("replicate_id")["training_data_sha256"].nunique() != 10, "Training replicate data hashes are not unique")
+    _append_if(errors, model_manifest["validation_data_sha256"].nunique() != 1, "Validation data hash is not fixed")
+    for row in model_manifest.itertuples(index=False):
+        for path_column, hash_column in (
+            ("checkpoint_path", "checkpoint_sha256"),
+            ("training_log_path", "training_log_sha256"),
+            ("resolved_training_path", "resolved_training_sha256"),
+            ("resolved_config_path", "resolved_config_sha256"),
+        ):
+            path = output / str(getattr(row, path_column))
+            _append_if(errors, not path.is_file(), f"Model artifact missing: {path_column}={path}")
+            if path.is_file():
+                _append_if(errors, sha256_file(path) != str(getattr(row, hash_column)), f"Model artifact hash differs: {path}")
+
+    history = pd.read_csv(output / "logs" / "training_history.csv")
+    expected_history = 10 * (
+        int(protocol["models"]["baseline_b_training"]["epochs"])
+        + int(protocol["models"]["structured_r2_training"]["epochs"])
+    )
+    _append_if(errors, len(history) != expected_history, "Training history grid is incomplete")
+    expected_epochs = {
+        MODEL_BASELINE_B: int(protocol["models"]["baseline_b_training"]["epochs"]),
+        MODEL_STRUCTURED: int(protocol["models"]["structured_r2_training"]["epochs"]),
+    }
+    for method, epochs in expected_epochs.items():
+        counts = history.loc[history["method"].eq(method)].groupby("training_replicate")["epoch"].nunique()
+        _append_if(errors, len(counts) != 10 or not counts.eq(epochs).all(), f"Training history epochs differ for {method}")
+    _append_if(errors, not history.groupby(["training_replicate", "method"])["selected_checkpoint"].sum().eq(1).all(), "Each run must select exactly one checkpoint")
+
+    offline = pd.read_csv(output / "raw" / "offline_frame_predictions.csv.gz")
+    action = pd.read_csv(output / "raw" / "action_records.csv.gz")
+    event = pd.read_csv(output / "raw" / "event_records.csv.gz")
+    episode = pd.read_csv(output / "raw" / "episode_metrics.csv.gz")
+    _append_if(errors, len(offline) != 10 * 2 * 360 * 16, "Offline prediction grid has the wrong row count")
+    _append_if(errors, len(action) != 10 * 2 * 360 * 20, "Action record grid has the wrong row count")
+    _append_if(errors, len(episode) != 10 * 2 * 360, "Episode metric grid has the wrong row count")
+    expected_time = (action["frame_id"].to_numpy(float) + 1.0) * float(protocol["data"]["dt_s"])
+    _append_if(
+        errors,
+        not np.allclose(action["time_s"].to_numpy(float), expected_time, atol=1.0e-12, rtol=0.0),
+        "Action records do not use the declared post-step timestamps",
+    )
+    expected_critical = (
+        action["collision_event"].astype(bool)
+        | action["near_miss_condition"].astype(bool)
+    )
+    _append_if(
+        errors,
+        not np.array_equal(action["critical_condition"].astype(bool), expected_critical),
+        "Action-row critical condition is not collision OR near miss",
+    )
+
+    _validate_checkpoint_replay(output, model_manifest, offline, action, errors)
+
+    probability_columns = [f"p_{name}" for name in ACTION_NAMES]
+    logit_columns = [f"logit_{name}" for name in ACTION_NAMES]
+    for frame, name, prediction_column in ((offline, "offline", "y_pred"), (action, "action", "predicted_action")):
+        p = frame[probability_columns].to_numpy(float)
+        z = frame[logit_columns].to_numpy(float)
+        temperature = frame["temperature"].to_numpy(float)
+        expected_probability = softmax(z / temperature[:, None], axis=1)
+        _append_if(errors, not np.isfinite(p).all() or not np.isfinite(z).all(), f"{name} logits/probabilities are non-finite")
+        _append_if(errors, not np.allclose(p.sum(axis=1), 1.0, atol=1.0e-8, rtol=0.0), f"{name} probability rows do not sum to one")
+        _append_if(errors, not np.allclose(p, expected_probability, atol=5.0e-8, rtol=0.0), f"{name} probabilities do not equal softmax(logits/temperature)")
+        _append_if(errors, not np.array_equal(frame[prediction_column].to_numpy(int), p.argmax(axis=1)), f"{name} predictions differ from argmax")
+
+    recomputed_episode = derive_episode_metrics(action, protocol)
+    errors.extend(
+        _compare_frames(
+            episode,
+            recomputed_episode,
+            key=["replicate_id", "method", "scenario_cell", "episode_id"],
+            label="episode_metrics",
+        )
+    )
+    recomputed_event = _reconstruct_event_records(action)
+    errors.extend(
+        _compare_frames(
+            event,
+            recomputed_event,
+            key=["replicate_id", "method", "scenario_cell", "episode_id", "frame_id", "event_type"],
+            label="event_records",
+        )
+    )
+
+    recomputed = summarize_study1r(
+        offline,
+        recomputed_episode,
+        repetitions=int(protocol["statistics"]["bootstrap_repetitions"]),
+        confidence=float(protocol["statistics"]["confidence_level"]),
+        bootstrap_seed=int(protocol["statistics"]["bootstrap_seed"]),
+    )
+    saved = {
+        "metric_summary": pd.read_csv(output / "analysis" / "data" / "study1r2_metric_summary.csv"),
+        "paired_contrasts": pd.read_csv(output / "analysis" / "data" / "study1r2_paired_contrasts.csv"),
+        "replicate_effects": pd.read_csv(output / "analysis" / "data" / "study1r2_replicate_effects.csv"),
+        "bootstrap_draws": pd.read_csv(output / "analysis" / "data" / "study1r2_bootstrap_draws.csv"),
+    }
+    keys = {
+        "metric_summary": ["endpoint", "method"],
+        "paired_contrasts": ["endpoint"],
+        "replicate_effects": ["endpoint", "replicate_id"],
+        "bootstrap_draws": ["endpoint", "draw"],
+    }
+    for name in saved:
+        errors.extend(_compare_frames(saved[name], recomputed[name], key=keys[name], label=name))
+
+    figure_inputs = pd.read_csv(output / "analysis" / "data" / "Figure_2B_Study1R2_Exploratory_inputs.csv")
+    expected_figure_inputs = build_figure_inputs(recomputed["metric_summary"], recomputed["paired_contrasts"])
+    errors.extend(_compare_frames(figure_inputs, expected_figure_inputs, key=["endpoint"], label="figure_inputs"))
+    table2 = pd.read_csv(output / "analysis" / "tables" / "Table_2B_Study1R2_Exploratory.csv", keep_default_na=False)
+    expected_table2 = build_table2_source(recomputed["paired_contrasts"])
+    errors.extend(_compare_frames(table2, expected_table2, key=["comparison_endpoint"], label="table2"))
+
+    png = output / "analysis" / "figures" / "Figure_2B_Study1R2_Exploratory.png"
+    _append_if(errors, not _valid_png(png), "Figure 2 PNG is invalid")
+    if _valid_png(png):
+        data = png.read_bytes()
+        _append_if(errors, tuple(int.from_bytes(data[index:index+4], "big") for index in (16,20)) != (3810,2522), "Figure 2 PNG dimensions differ")
+    pdf = png.with_suffix(".pdf")
+    _append_if(errors, not pdf.read_bytes().startswith(b"%PDF") or b"%%EOF" not in pdf.read_bytes()[-2048:], "Figure 2 PDF is invalid")
+    try:
+        ElementTree.parse(png.with_suffix(".svg"))
+    except ElementTree.ParseError:
+        errors.append("Figure 2 SVG is invalid")
+
+    manifest_records = _validate_artifact_manifest(output, errors)
+    report = {
+        "passed": not errors,
+        "errors": errors,
+        "evidence_label": manifest.get("evidence_label"),
+        "analysis_status": "post_hoc_exploratory_final_evaluation",
+        "final_training_replicates": int(offline["replicate_id"].nunique()),
+        "fitted_checkpoints": int(len(model_manifest)),
+        "fixed_test_episodes": int(offline["episode_id"].nunique()),
+        "offline_prediction_rows": int(len(offline)),
+        "action_record_rows": int(len(action)),
+        "event_record_rows": int(len(event)),
+        "episode_metric_rows": int(len(episode)),
+        "artifact_manifest_records": manifest_records,
+        "paired_contrast_rows": int(len(recomputed["paired_contrasts"])),
+        "bootstrap_draw_rows": int(len(recomputed["bootstrap_draws"])),
+        "raw_recomputation": "All ten endpoints and intervals recomputed from archived raw rows.",
+        "checkpoint_replay": "All 20 checkpoints reloaded and reproduced full fixed-test and rollout logits.",
+        "validation_rule_note": "No rule requires Structured-R2 to outperform Baseline B.",
+    }
+    (output / "validation_report.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    if errors:
+        raise RuntimeError("Validation failed: " + "; ".join(errors))
+    return report
+
+
+__all__ = ["validate_output"]
 ~~~~

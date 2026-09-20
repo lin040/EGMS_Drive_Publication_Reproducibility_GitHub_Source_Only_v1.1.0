@@ -4,8 +4,8 @@ message: >-
   this archived software release and preserve its evidence-boundary statements.
 title: EGMS-Drive Publication Reproducibility
 type: software
-version: 1.1.0
-date-released: 2026-08-16
+version: 2.1.0
+date-released: 2026-08-26
 authors:
   - family-names: Lin
     given-names: Shih-Lin
@@ -15,15 +15,20 @@ authors:
 abstract: >-
   Code-first reproduction package for the EGMS-Drive manuscript figures,
   tables, compact supplementary material, controlled synthetic mechanism
-  analyses, and prospective collision-power analysis. This source-only edition
-  omits generated outputs and persisted prediction archives. Study 1 is limited to
-  an audited exported-results snapshot; Studies 2-3 are controlled synthetic
-  surrogates; power outputs are conditional planning quantities. The release
+  analyses, and prospective collision-power analysis. The revised Study 1 is
+  a post-hoc exploratory comparison of Baseline B and Structured fusion using
+  a method-blind generator, ten paired fitted-model replicates, raw frame and
+  episode outputs, checkpoints, exact interval code, and direction-neutral
+  validation.
+  Studies 2-3 are controlled synthetic surrogates; power outputs are conditional
+  planning quantities. The release
   contains no CARLA, public-dataset, real-vehicle, or empirical LLM evidence.
 keywords:
   - autonomous driving
   - controlled synthetic mechanism evaluation
   - multisensor fusion
+  - paired training replicates
+  - raw-output validation
   - temporal scene graph
   - power analysis
   - reproducible research

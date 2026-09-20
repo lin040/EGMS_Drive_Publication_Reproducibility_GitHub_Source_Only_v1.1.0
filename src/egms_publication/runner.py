@@ -10,7 +10,8 @@ import pandas as pd
 
 from egms_power.pipeline import run_power_analysis
 
-from .figures import build_figure2, build_figure3, build_figure4
+from .figures import build_figure3, build_figure4
+from .study1_figure import build as build_figure2
 from .tables import build_main_table2, build_table_s2, build_table_s3, build_table_s4
 from .utils import sha256, write_table
 from .validation import validate_outputs, verify_manifest, write_manifest
@@ -24,6 +25,10 @@ REQUIRED_CONTROLLED_TABLES = (
     "table_s3_main.csv",
     "table_s3_negative_controls.csv",
     "table_s3_primary_contrasts.csv",
+)
+REQUIRED_STUDY1_TABLES = (
+    "study1_metric_summary.csv",
+    "study1_paired_contrasts.csv",
 )
 
 
@@ -51,7 +56,7 @@ def _prepare_output(root: Path, requested: Path, overwrite: bool) -> Path:
 def _publication_input_tables(root: Path) -> Path:
     """Return the small, frozen Study 2--3 tables used by publication mode.
 
-    This source-only release intentionally omits persisted prediction frames and
+    This compact GitHub release intentionally omits persisted prediction frames and
     previously generated result directories.  A full controlled-synthetic refit
     remains available through ``run_studies.py run``; publication mode uses only
     the six verified summary tables needed by Figures 3--4 and Table 2.
@@ -62,6 +67,21 @@ def _publication_input_tables(root: Path) -> Path:
     if missing:
         raise FileNotFoundError(
             "Missing publication input table(s): " + ", ".join(missing)
+        )
+    return tables
+
+
+def _study1_input_tables(root: Path) -> Path:
+    """Return the frozen reader-facing Study 1 publication inputs."""
+
+    tables = root / "data" / "study1_frozen"
+    missing = [name for name in REQUIRED_STUDY1_TABLES if not (tables / name).is_file()]
+    if missing:
+        raise FileNotFoundError(
+            "Missing Study 1 publication input table(s): "
+            + ", ".join(missing)
+            + ". Restore the validated public inputs recorded in "
+            "data/study1_frozen/PROVENANCE.json."
         )
     return tables
 
@@ -77,7 +97,7 @@ Supplementary Section S4 in the compact manuscript.
 
 | Manuscript item | Generated file |
 |---|---|
-| Figure 2 | `manuscript/figures/Figure_2_Study1.*` |
+| Figure 2 | `manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.*` |
 | Figure 3 | `manuscript/figures/Figure_3_Study2.*` |
 | Figure 4 | `manuscript/figures/Figure_4_Study3.*` |
 | Table 2 | `manuscript/tables/Table_2_main_effects.*` |
@@ -129,12 +149,14 @@ The complete six-figure and eleven-table planning outputs remain in
 
 The generated inventory lists source, configuration, frozen numeric inputs,
 derived tables, figures, and validation artifacts with SHA-256 hashes. Study 1
-is limited to an exported/audited summary snapshot; the original model,
-checkpoint, split manifest, raw frames, and several interval algorithms are
-not available. Studies 2-3 are executable controlled synthetic mechanism
-surrogates, not the full neural EGMS-Drive architecture. The power analysis is
-prospective. No CARLA, public-dataset, real-vehicle, or empirical LLM result is
-contained in this package.
+is a post-hoc exploratory controlled-synthetic evaluation generated from a
+method-blind protocol, ten paired training replicates, raw outputs, manifests,
+checkpoints, and a direction-neutral validator. Its public comparison is
+Baseline B versus Structured fusion. Studies
+2-3 are executable controlled synthetic mechanism surrogates, not the full
+neural EGMS-Drive architecture. The power analysis is prospective. No CARLA,
+public-dataset, real-vehicle, or empirical LLM result is contained in this
+package.
 """
     (compact / "S3_Digital_Reproducibility_Inventory.md").write_text(inventory_text, encoding="utf-8")
     earlier = output / "supplement" / "earlier_full_numbering"
@@ -168,7 +190,9 @@ def _write_inventory(root: Path, output: Path) -> pd.DataFrame:
         )
     candidates.extend(
         path for path in output.rglob("*")
-        if path.is_file() and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
+        if path.is_file()
+        and not path.name.endswith(".tmp")
+        and path.name not in {"artifact_manifest.json", "publication_outputs.zip"}
     )
     for path in sorted(candidates):
         if path.is_relative_to(output):
@@ -210,7 +234,7 @@ def _zip_outputs(output: Path) -> Path:
     destination = output / "publication_outputs.zip"
     with zipfile.ZipFile(destination, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in sorted(output.rglob("*")):
-            if path.is_file() and path != destination:
+            if path.is_file() and path != destination and not path.name.endswith(".tmp"):
                 relative = path.relative_to(output).as_posix()
                 info = zipfile.ZipInfo(relative, date_time=(1980, 1, 1, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
@@ -233,15 +257,20 @@ def run_publication(
     root = project_root()
     output = _prepare_output(root, output_request, overwrite)
     tables_dir = _publication_input_tables(root)
+    study1_dir = _study1_input_tables(root)
+
+    manuscript_figures = output / "manuscript" / "figures"
+    # Render Figure 2 before the independent power-analysis plotters mutate
+    # global Matplotlib defaults. This preserves the exact manuscript PNG.
+    build_figure2(
+        study1_dir / "study1_metric_summary.csv",
+        study1_dir / "study1_paired_contrasts.csv",
+        manuscript_figures,
+    )
 
     power_output = output / "power_full"
     run_power_analysis(root / "configs" / "power_protocol.yaml", power_output)
 
-    manuscript_figures = output / "manuscript" / "figures"
-    build_figure2(
-        root / "data" / "study1" / "study1_figure_inputs.csv",
-        manuscript_figures / "Figure_2_Study1",
-    )
     build_figure3(
         tables_dir / "table_s2_primary_contrasts.csv",
         manuscript_figures / "Figure_3_Study2",
@@ -249,7 +278,7 @@ def run_publication(
     build_figure4(tables_dir, manuscript_figures / "Figure_4_Study3")
 
     table2 = build_main_table2(
-        root / "data" / "study1" / "study1_table2_inputs.csv",
+        study1_dir / "study1_paired_contrasts.csv",
         tables_dir,
         output / "manuscript" / "tables" / "Table_2_main_effects",
     )

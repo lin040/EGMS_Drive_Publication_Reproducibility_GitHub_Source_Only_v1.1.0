@@ -1,39 +1,63 @@
-# EGMS-Drive Publication Reproducibility — Source-Only Edition v1.1.0
+# EGMS-Drive Publication Reproducibility — Study 1 Revision
 
-**Release version:** `v1.1.0` (software version `1.1.0`; released 2026-08-16)
+This v2.1 repository reproduces the figures and tables for the revised
+EGMS-Drive manuscript. The principal change is Study 1; the controlled
+synthetic Studies 2–3 source, frozen inputs, and numerical results are
+unchanged from v1.1.
 
-This repository regenerates the publication figures, tables, compact
-supplement, and prospective power analysis for **EGMS-Drive** from readable
-Python, YAML, and eight small canonical CSV inputs.
+Reader-facing Study 1 artifacts use one comparison only:
+**Baseline B versus Structured fusion**. The frozen evaluation source and
+audit records retain an archived machine identifier for the modified
+Structured fusion implementation so that source hashes and checkpoint
+provenance remain verifiable. It is not a third method and never appears in
+the manuscript figure or Table 2.
 
-本版專為 GitHub Code 區整理：只保留完整原始碼、設定、測試、乾淨 Colab
-與重建出版圖表不可缺少的小型數值輸入。它**不包含**預先生成的
-PNG/PDF/SVG、結果表、output ZIP、已執行 Notebook，或大型 prediction/raw
-results archive。
+## What changed
 
-## What is included
+- Replaced the unavailable exported dry-run Study 1 inputs with a complete,
+  post-hoc exploratory controlled-synthetic evaluation.
+- Used a method-blind generator, ten paired training-data/model-seed
+  replicates, fixed validation/test/rollout tapes, 20 fitted checkpoints, and
+  direction-neutral validation.
+- Preserved frame labels, logits, probabilities, action/event records, split
+  and seed manifests, interval algorithms, software versions, and SHA-256
+  records in the companion complete-evidence archive.
+- Rebuilt Figure 2 from validated numeric inputs and expanded Table 2 to all
+  ten Study 1 endpoints.
+- Removed the obsolete exported dry-run inputs and earlier Study 1 result
+  snapshots from the public repository.
 
-- Complete source under `src/`, plus `run_publication.py` and `run_studies.py`.
-- Two auditable YAML configurations under `configs/`.
-- Eight canonical publication-input CSV files (about 42 KB total).
-- A human-readable Colab notebook; every source/input file is shown in a
-  separate `%%writefile` cell and SHA-256 verified. There is no encoded payload.
-- Tests, GitHub Actions, documentation, license, citation metadata, and a
-  deterministic release builder.
-- `COMPLETE_SOURCE_CODE.md`, a generated reading copy of every canonical
-  computational Python/YAML file.
+## Evidence boundary
 
-## What is intentionally excluded
+Study 1 is post-hoc exploratory. Structured fusion was modified after the
+earlier result, selected using development/validation data, and frozen before
+the once-only final evaluation. Baseline B used 56 features, 4,012 fitted
+parameters, and 50 epochs; Structured fusion used 145 features, 29,156 fitted
+parameters, and 80 epochs. The comparison therefore evaluates the complete
+implementations and does not isolate fusion from capacity or optimization.
 
-- The entire pre-generated `outputs/` tree.
-- PNG, PDF, SVG, Word, and screenshot inputs or outputs.
-- The executed notebook containing embedded result images/tables.
-- Persisted Study 2–3 prediction frames, raw metrics, model/split manifests,
-  and previous run reports.
+Only Macro-F1, NLL, and Brier met the frozen support rule. ECE, collision,
+near miss, critical event, route completion, TTC-P5, and jerk-P95 did not
+establish a Structured fusion benefit. No CARLA server, public-dataset
+benchmark, real-vehicle record, or empirical LLM output was used; rollout
+endpoints are controlled-synthetic proxies, not deployment-safety evidence.
 
-The six small Study 2–3 summary tables and two Study 1 audit tables retained in
-`data/` are **required numeric inputs**, not pre-generated deliverables. Without
-them, Figures 2–4 and Table 2 cannot be reproduced in quick publication mode.
+## Included
+
+- Publication orchestration under `src/egms_publication/`.
+- Complete frozen Study 1 implementation under its archived machine package,
+  plus the public `run_study1.py` entry point.
+- Reader-facing Study 1 inputs and provenance under `data/study1_frozen/`.
+- Unchanged Studies 2–3 source and inputs under `src/egms_studies23/` and
+  `data/studies23_frozen/`.
+- Unchanged prospective power-analysis source and protocol.
+- Tests, CI, Colab builder, deterministic release builder, license, and
+  citation metadata.
+- Ready-to-use revised Figure 2 and Table 2 under `publication_assets/`.
+
+Bulky Study 1 raw outputs, checkpoints, split manifests, and bootstrap draws
+are distributed separately in the companion archive named in
+`data/study1_frozen/PROVENANCE.json`.
 
 ## Quick start
 
@@ -41,62 +65,43 @@ Python 3.11 or 3.12 is supported.
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate             # Windows PowerShell: .venv\Scripts\Activate.ps1
+source .venv/bin/activate             # Windows: .venv\Scripts\activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-deps
-
 python run_publication.py --output outputs/reproduction
 ```
 
-To replace an output directory previously created by this program:
-
-```bash
-python run_publication.py --output outputs/reproduction --overwrite
-```
-
-The runner creates all figures/tables, validates them, writes SHA-256 records,
-and packages the newly generated results as
-`outputs/reproduction/publication_outputs.zip`.
-
-## Reproduced manuscript items
+The command regenerates and validates:
 
 | Manuscript item | Generated path |
 |---|---|
-| Figure 2 | `manuscript/figures/Figure_2_Study1.{png,pdf,svg}` |
+| Figure 2 | `manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.{png,pdf,svg}` |
 | Figure 3 | `manuscript/figures/Figure_3_Study2.{png,pdf,svg}` |
 | Figure 4 | `manuscript/figures/Figure_4_Study3.{png,pdf,svg}` |
 | Table 2 | `manuscript/tables/Table_2_main_effects.{csv,md,tex}` |
 | Figure S1 | `power_full/figures/figure1_unpaired_power_curve.{png,pdf,svg}` |
 | Tables S2–S4 | `supplement/compact/Tables/` |
-| Supplement S3 inventory | `supplement/compact/S3_Digital_Reproducibility_Inventory.*` |
 
-Every figure is drawn by the program from structured numeric inputs. The
-pipeline never reads manuscript media, an existing figure, or a screenshot.
+Every figure is drawn from structured numeric inputs. The pipeline never reads
+a manuscript image, Word media, or screenshot.
 
-## Canonical input boundary
+## Study 1 audit and evidence replay
 
-Publication mode reads only:
+`run_study1.py` exposes the frozen implementation. The once-only final
+evaluation is not rerun by the fast publication workflow. After extracting the
+companion complete-evidence archive into a named directory under `outputs/`,
+validate it with:
 
-```text
-configs/power_protocol.yaml
-data/study1/study1_figure_inputs.csv
-data/study1/study1_table2_inputs.csv
-data/studies23_frozen/tables/table_s2_primary_contrasts.csv
-data/studies23_frozen/tables/table_s3_by_regime.csv
-data/studies23_frozen/tables/table_s3_latency.csv
-data/studies23_frozen/tables/table_s3_main.csv
-data/studies23_frozen/tables/table_s3_negative_controls.csv
-data/studies23_frozen/tables/table_s3_primary_contrasts.csv
+```bash
+python run_study1.py validate --output outputs/COMPLETE_EVIDENCE_DIRECTORY
 ```
 
-The power engine regenerates all prospective planning tables/figures from the
-YAML protocol. The publication runner validates required files before running.
+The validator checks completeness, source/input/checkpoint hashes, split and
+seed separation, all 20 checkpoint replays, and raw-output recomputation. It
+does not require Structured fusion to improve any endpoint.
 
-## Optional full controlled-synthetic refit
-
-The complete Studies 2–3 source and frozen configuration remain included. A
-new controlled-synthetic run can be generated from scratch:
+## Optional Studies 2–3 refit
 
 ```bash
 python run_studies.py run \
@@ -104,66 +109,43 @@ python run_studies.py run \
   --output outputs/studies23_refit
 ```
 
-This source-only edition does not include the previous persisted raw-output
-archive, so the old publication option `--reanalyze-controlled` has been
-removed. Use the command above when a fresh full refit is required.
-
-## Google Colab
-
-Open `notebooks/EGMS_Drive_Publication_Reproduction_Colab.ipynb` and run all
-cells. The notebook reconstructs the same readable source/config/CSV files,
-SHA-256 verifies them, runs the publication pipeline, displays Figures 2–4,
-Figure S1, Table 2, and Tables S2–S4, then offers the newly generated output
-ZIP for download. It contains no saved execution outputs.
+These are lightweight controlled-synthetic mechanism surrogates, not the full
+neural EGMS-Drive architecture.
 
 ## Validation
 
 ```bash
-python -m compileall -q src tools tests run_publication.py run_studies.py
+python -m compileall -q src tools tests run_publication.py run_study1.py run_study1r2.py run_studies.py
 python tools/build_complete_source_document.py --check
 python -m egms_power.cli validate --config configs/power_protocol.yaml
 python run_publication.py --output outputs/qa
 EGMS_PUBLICATION_OUTPUT="$PWD/outputs/qa" python -m unittest discover -s tests -v
 ```
 
-The checks cover source/input boundaries, numeric selections, figure
-dimensions and formats, table row counts, the 33 passing Supplement checks,
-manifest hashes, readable Colab reconstruction, and release packaging.
+The tests verify the ten Study 1 endpoints and public method names, exact
+Figure 2 PNG hash, 20-row Table 2, Studies 2–3 consistency, output formats,
+input boundaries, manifests, Colab reconstruction, and release packaging.
 
-## GitHub upload
+## GitHub package
 
-GitHub does not unpack a ZIP placed in the Code area. For a normal repository,
-extract the delivered ZIP first, then commit/push its contents. This package
-contains fewer than 100 files and no file near GitHub's 25 MiB browser-upload
-limit, so it can also be uploaded through **Add file → Upload files** after
-extraction. See `GITHUB_UPLOAD_GUIDE.md` for exact commands.
+The delivered ZIP is a source-and-publication-assets package. Extract it, then
+commit and push the extracted files; GitHub does not expand a ZIP placed on the
+Code page. See `GITHUB_UPLOAD_GUIDE.md`.
 
-To rebuild the deterministic source-only ZIP:
+Rebuild the deterministic package with:
 
 ```bash
 python tools/build_complete_source_document.py
 python tools/build_colab.py
 python tools/build_github_release.py \
-  --output EGMS_Drive_Publication_Reproducibility_GitHub_Source_Only_v1.1.0.zip \
+  --output EGMS_Drive_Publication_Reproducibility_GitHub_v2.1.zip \
   --overwrite
 ```
 
-`RELEASE_MANIFEST.json` records the byte size and SHA-256 of every archived
-file. The builder excludes all `outputs/`, binary result formats, temporary
-files, executed notebooks, and bulky archived run data.
-
-## Evidence boundary
-
-1. Study 1 is an exported/audited summary reproduction. Its original training
-   program, checkpoint, split manifest, raw frames, and full CI procedure are
-   unavailable.
-2. Studies 2–3 are controlled synthetic lightweight mechanism surrogates, not
-   the complete EGMS-Drive neural architecture and not CARLA/public-dataset/
-   real-vehicle evidence.
-3. Collision-power outputs are prospective planning quantities conditional on
-   assumed risks and dependence, not observed safety performance.
+`RELEASE_MANIFEST.json` records the byte count and SHA-256 of every archived
+file.
 
 ## License and citation
 
-Released under the MIT License. Cite the software metadata in `CITATION.cff`
-and retain the evidence-boundary statements when using generated artifacts.
+Released under the MIT License. Cite `CITATION.cff` and preserve the evidence
+boundary and post-hoc exploratory designation when reusing the artifacts.

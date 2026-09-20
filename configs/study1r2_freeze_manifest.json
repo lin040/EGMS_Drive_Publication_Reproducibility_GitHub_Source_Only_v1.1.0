@@ -1,0 +1,93 @@
+{
+  "candidate_behaviour_source_sha256": {
+    "src/egms_study1r2/common.py": "d56f08b66c69aafff2f40ec7bfc196b26c19001390b78717deea4a46e30d0e86",
+    "src/egms_study1r2/development.py": "0e52b541530babe37d660fc6db39efaac8f8b32b093b66793bd77523c58ed6f1",
+    "src/egms_study1r2/generator.py": "acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0",
+    "src/egms_study1r2/models.py": "9dd5691fc5f5615fdf7f0186b8d78c16f320a66d45681645c8abef20ccec04c8",
+    "src/egms_study1r2/rollout.py": "4ed6c941be08ac3e67a7d9827aeb4270d6c41909cbc520a79791d60d2a145920",
+    "src/egms_study1r2/training.py": "7e160d25e3b73b3074519ed74fe5861d48808c925c620909f4dd66e0b24bf090"
+  },
+  "candidate_ledger_path": "/workspace/scratch/529b2f3945b3/EGMS_Drive_Study1R_v2_0/outputs/study1r2_development_v1_20260826/candidate_ledger.csv",
+  "candidate_ledger_sha256": "c756ef260f1eb4b97a6a94c38e34301238eff0a2100578103b80abb7711bfc89",
+  "development_manifest_path": "/workspace/scratch/529b2f3945b3/EGMS_Drive_Study1R_v2_0/outputs/study1r2_development_v1_20260826/development_manifest.json",
+  "development_manifest_sha256": "2a30a92d7744acf4db0423b2202c0e464a3fd0557da79270c5228dbefbb8a977",
+  "final_evaluation_once_only": true,
+  "final_source_sha256": {
+    "configs/study1r2_evaluation_frozen.yaml": "e0417b77987cb5ab50d6e1aa45353a1dd00d642d6d38985b1169ded28c357513",
+    "docs/STUDY1R2_CLAIMS_BOUNDARY.md": "30be62d6418d656bbec930b763e5cdf77a3157e6543f367b25c253d2de448e1f",
+    "docs/STUDY1R2_DEVELOPMENT_LOG.md": "f9c41a275d607e868179aa560dce870dbf460d6aa5a08ea0f0271e5d78bd04f7",
+    "docs/STUDY1R2_EVALUATION_PROTOCOL_FROZEN.md": "99e6f6209c8c3a415af37987d409b2a1207dda0f1e97e666c31ea2a0707e0969",
+    "pyproject.toml": "269b32371cc374e436899872ac8f106a26a725d1282dfb6b1538fe70ead907b0",
+    "requirements-lock.txt": "5034f58d400a4808107f9cc71726405cc3631cc3fcc95f3949f78e3f8ceb92bc",
+    "run_study1r2.py": "91a3b4c2442a8b2e5fd0f355edfbdd9f9981ec1d5539d1bcc96b87a8de31d85b",
+    "src/egms_study1r/generator.py": "acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0",
+    "src/egms_study1r2/__init__.py": "a2b894983aaf98a507e78bc4fc4a7080329d01debfb3b29e1b6be4edf8680701",
+    "src/egms_study1r2/common.py": "d56f08b66c69aafff2f40ec7bfc196b26c19001390b78717deea4a46e30d0e86",
+    "src/egms_study1r2/development.py": "0e52b541530babe37d660fc6db39efaac8f8b32b093b66793bd77523c58ed6f1",
+    "src/egms_study1r2/generator.py": "acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0",
+    "src/egms_study1r2/models.py": "9dd5691fc5f5615fdf7f0186b8d78c16f320a66d45681645c8abef20ccec04c8",
+    "src/egms_study1r2/plotting.py": "3f5292d615acd40c784e8b8dd83f8a3058e105f56dc8e787e445921d80653a6c",
+    "src/egms_study1r2/reporting.py": "3a8fc906a8870968d4898f43e232a921c4b685cf9c8d9ee75e3d36f66aea9529",
+    "src/egms_study1r2/rollout.py": "4ed6c941be08ac3e67a7d9827aeb4270d6c41909cbc520a79791d60d2a145920",
+    "src/egms_study1r2/runner.py": "38ede81ceb932e60b7c89fb38a228a52b19753ba507bca5b2c2a6fb29ae7a004",
+    "src/egms_study1r2/statistics.py": "acb8f009acc5aaadbd56e8d9cba8115607854896d725324f95fdfba7e094470b",
+    "src/egms_study1r2/training.py": "7e160d25e3b73b3074519ed74fe5861d48808c925c620909f4dd66e0b24bf090",
+    "src/egms_study1r2/validation.py": "d383895a431e826f702254169a0e5b55692afe6a46a8e654333eb6d9b567477c"
+  },
+  "frozen_utc": "2026-08-26T03:48:35.378269+00:00",
+  "not_preregistered": true,
+  "original_study1r_generator_sha256": "acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0",
+  "original_study1r_replaced": false,
+  "post_hoc_after_study1r": true,
+  "project_id": "EGMS_DRIVE_STUDY_1R2",
+  "protocol_path": "configs/study1r2_evaluation_frozen.yaml",
+  "protocol_sha256": "e0417b77987cb5ab50d6e1aa45353a1dd00d642d6d38985b1169ded28c357513",
+  "protocol_status": "FROZEN_AFTER_EXPLORATORY_DEVELOPMENT_BEFORE_FINAL_EVALUATION",
+  "r2_generator_sha256": "acced78e81d3259fbc4714a46ab01a6d192b61005e39a0abfc358f2f5092c1b0",
+  "schema": "egms-drive-study1r2-freeze-manifest-1.0",
+  "seed_firewall": {
+    "bootstrap_seed": 171031,
+    "fixed_rollout_seed": 31033,
+    "fixed_test_seed": 31019,
+    "fixed_validation_seed": 31013,
+    "model_training_seeds": [
+      9103,
+      9127,
+      9133,
+      9151,
+      9173,
+      9181,
+      9199,
+      9209,
+      9221,
+      9239
+    ],
+    "training_data_seeds": [
+      8101,
+      8111,
+      8117,
+      8123,
+      8147,
+      8161,
+      8171,
+      8191,
+      8209,
+      8219
+    ]
+  },
+  "selected_candidate_id": "r2_c03",
+  "selected_candidate_spec": {
+    "alpha": 0.001,
+    "candidate_id": "r2_c03",
+    "epochs": 80,
+    "hidden_layer_sizes": [
+      128,
+      64,
+      32
+    ],
+    "learning_rate_init": 0.001
+  },
+  "selection_path": "/workspace/scratch/529b2f3945b3/EGMS_Drive_Study1R_v2_0/outputs/study1r2_development_v1_20260826/selection.json",
+  "selection_sha256": "f2e991c95e357c252b21b274af06a91c97d55f5bac7c30b40165951c1980da53",
+  "validation_rule_requires_improvement": false
+}

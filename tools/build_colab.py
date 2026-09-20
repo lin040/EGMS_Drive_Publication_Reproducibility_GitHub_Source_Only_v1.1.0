@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 
@@ -21,10 +22,13 @@ OUTPUT = ROOT / "notebooks" / "EGMS_Drive_Publication_Reproduction_Colab.ipynb"
 # text configuration and numeric CSV inputs.
 CANONICAL_PATHS = (
     "run_publication.py",
+    "run_study1.py",
+    "run_study1r2.py",
     "run_studies.py",
     "src/egms_publication/__init__.py",
     "src/egms_publication/figures.py",
     "src/egms_publication/runner.py",
+    "src/egms_publication/study1_figure.py",
     "src/egms_publication/style.py",
     "src/egms_publication/tables.py",
     "src/egms_publication/utils.py",
@@ -34,6 +38,22 @@ CANONICAL_PATHS = (
     "src/egms_power/config.py",
     "src/egms_power/pipeline.py",
     "src/egms_power/statistics.py",
+    "src/egms_study1r/__init__.py",
+    "src/egms_study1r/common.py",
+    "src/egms_study1r/generator.py",
+    "src/egms_study1r/runner.py",
+    "src/egms_study1r2/__init__.py",
+    "src/egms_study1r2/common.py",
+    "src/egms_study1r2/development.py",
+    "src/egms_study1r2/generator.py",
+    "src/egms_study1r2/models.py",
+    "src/egms_study1r2/plotting.py",
+    "src/egms_study1r2/reporting.py",
+    "src/egms_study1r2/rollout.py",
+    "src/egms_study1r2/runner.py",
+    "src/egms_study1r2/statistics.py",
+    "src/egms_study1r2/training.py",
+    "src/egms_study1r2/validation.py",
     "src/egms_studies23/__init__.py",
     "src/egms_studies23/common.py",
     "src/egms_studies23/plots.py",
@@ -44,8 +64,10 @@ CANONICAL_PATHS = (
     "src/egms_studies23/validation.py",
     "configs/power_protocol.yaml",
     "configs/studies23.yaml",
-    "data/study1/study1_figure_inputs.csv",
-    "data/study1/study1_table2_inputs.csv",
+    "configs/study1r2_development.yaml",
+    "configs/study1r2_evaluation_frozen.yaml",
+    "data/study1_frozen/study1_metric_summary.csv",
+    "data/study1_frozen/study1_paired_contrasts.csv",
     "data/studies23_frozen/tables/table_s2_primary_contrasts.csv",
     "data/studies23_frozen/tables/table_s3_by_regime.csv",
     "data/studies23_frozen/tables/table_s3_latency.csv",
@@ -127,15 +149,9 @@ def build() -> Path:
     prepare_source = f'''import importlib.metadata
 import importlib.util
 import os
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
-
-try:
-    from packaging.requirements import Requirement
-except ModuleNotFoundError:
-    from pip._vendor.packaging.requirements import Requirement
 
 try:
     IS_COLAB = importlib.util.find_spec("google.colab") is not None
@@ -143,42 +159,19 @@ except ModuleNotFoundError:
     IS_COLAB = False
 
 requirements = {{
-    "numpy": "numpy>=2.0,<3",
-    "pandas": "pandas>=2.2,<3",
-    "scipy": "scipy>=1.12,<2",
+    "numpy": "numpy>=1.26,<3",
+    "pandas": "pandas>=2.1,<3",
+    "scipy": "scipy>=1.11,<2",
     "matplotlib": "matplotlib>=3.8,<4",
     "seaborn": "seaborn>=0.13,<1",
     "yaml": "PyYAML>=6.0,<7",
     "PIL": "Pillow>=10,<13",
     "sklearn": "scikit-learn>=1.4,<2",
 }}
-
-
-def needs_install(module, spec):
-    if importlib.util.find_spec(module) is None:
-        return True
-    requirement = Requirement(spec)
-    try:
-        installed = importlib.metadata.version(requirement.name)
-    except importlib.metadata.PackageNotFoundError:
-        return True
-    return not requirement.specifier.contains(installed, prereleases=True)
-
-
-missing_or_incompatible = [
-    spec for module, spec in requirements.items() if needs_install(module, spec)
-]
-if missing_or_incompatible:
+missing = [spec for module, spec in requirements.items() if importlib.util.find_spec(module) is None]
+if missing:
     subprocess.run(
-        [
-            sys.executable,
-            "-m",
-            "pip",
-            "install",
-            "--quiet",
-            "--disable-pip-version-check",
-            *missing_or_incompatible,
-        ],
+        [sys.executable, "-m", "pip", "install", "--quiet", "--disable-pip-version-check", *missing],
         check=True,
     )
 
@@ -235,7 +228,7 @@ print("No image, PDF, Word, archive, or compressed data file was embedded as an 
 
 Run all cells to regenerate **Figures 2–4, Figure S1, Table 2, and Tables S2–S4** from the same Python source, frozen YAML protocols, and machine-readable numeric inputs used by the GitHub release. Every program, configuration, and CSV input appears below as complete readable text in its own `%%writefile` cell. No source is hidden in an encoded or compressed payload, and the notebook does not embed or read any PNG, PDF, SVG, Word, archive, or compressed data file as a plotting input.
 
-Evidence boundary: Study 1 is an audited exported-summary reproduction; Studies 2–3 are controlled synthetic mechanism surrogates; the power analysis is prospective. These outputs are not CARLA, public-dataset, real-vehicle, or empirical LLM evidence."""
+Evidence boundary: Study 1 is a post-hoc exploratory controlled-synthetic paired evaluation with raw-output recomputation; Studies 2–3 are controlled synthetic mechanism surrogates; the power analysis is prospective. These outputs are not CARLA, public-dataset, real-vehicle, or empirical LLM evidence."""
         ),
         _markdown("## 1. Check the runtime and prepare a clean working directory"),
         _code(prepare_source),
@@ -324,7 +317,7 @@ for title, path in table_paths:
                 '''from PIL import Image as PILImage
 
 figure_paths = [
-    ("Figure 2 — Study 1 exported-summary diagnostics", OUTPUT_DIR / "manuscript/figures/Figure_2_Study1.png"),
+    ("Figure 2 — Baseline B versus Structured fusion", OUTPUT_DIR / "manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.png"),
     ("Figure 3 — Study 2 mechanism contrasts", OUTPUT_DIR / "manuscript/figures/Figure_3_Study2.png"),
     ("Figure 4 — Study 3 graph, intent, and trajectory diagnostics", OUTPUT_DIR / "manuscript/figures/Figure_4_Study3.png"),
     ("Figure S1 — prospective independent-design power", OUTPUT_DIR / "power_full/figures/figure1_unpaired_power_curve.png"),
@@ -375,14 +368,14 @@ if IS_COLAB:
 '''
             ),
             _markdown(
-                """## 7. Optional full controlled Studies 2–3 refit
+                """## 7. Optional full Studies 2–3 refit
 
-The readable notebook includes `run_studies.py` and every module under `src/egms_studies23/`, so the complete controlled synthetic refit is inspectable. It is intentionally disabled by default because it is much slower and produces large intermediate prediction files. Set the flag in the next cell to `True` only when that full refit is required."""
+The readable notebook includes the complete frozen Study 1 source for audit, but does not rerun the once-only post-hoc final evaluation. The full raw Study 1 run remains in its companion evidence archive. The Studies 2–3 refit below is disabled by default because it produces a larger run directory."""
             ),
             _code(
-                '''RUN_FULL_CONTROLLED_REFIT = False
+                '''RUN_FULL_CONTROLLED_STUDIES23_REFIT = False
 
-if RUN_FULL_CONTROLLED_REFIT:
+if RUN_FULL_CONTROLLED_STUDIES23_REFIT:
     import subprocess
     import sys
 
@@ -406,7 +399,7 @@ else:
             _markdown(
                 """## Interpretation boundary
 
-The notebook regenerates the publication graphics and tables from numeric inputs and executable statistical code; it never copies an attached manuscript image. Study 1 remains limited by unavailable raw training/evaluation provenance. Studies 2–3 remain controlled synthetic mechanism validation, and all power values remain prospective planning quantities."""
+The notebook regenerates the publication graphics and tables from numeric inputs and executable statistical code; it never copies an attached manuscript image. Study 1 is post-hoc exploratory, uses capacity- and optimization-asymmetric implementations, and provides no CARLA or real-world safety evidence. Studies 2–3 remain controlled synthetic mechanism validation, and all power values remain prospective planning quantities."""
             ),
         ]
     )

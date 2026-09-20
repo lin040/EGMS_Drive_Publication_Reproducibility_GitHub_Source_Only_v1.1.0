@@ -32,7 +32,6 @@ class CompleteSourceDocumentTests(unittest.TestCase):
     def test_has_no_encoded_transport_payload(self) -> None:
         document = render_document().lower()
         self.assertNotIn("base64", document)
-        self.assertNotIn("gzip", document)
         self.assertNotIn(".ipynb", document)
         self.assertNotIn("payload = {'", document)
 

@@ -19,25 +19,66 @@ def _signed(value: float, decimals: int = 4) -> str:
     return f"{value:+.{decimals}f}"
 
 
+def _signed_or_zero(value: float, decimals: int) -> str:
+    if abs(value) < 0.5 * 10 ** (-decimals):
+        return f"{0.0:.{decimals}f}"
+    return _signed(value, decimals)
+
+
+def _study1_rows(contrasts: pd.DataFrame) -> list[dict[str, str]]:
+    """Derive all ten manuscript Study 1 rows from the paired contrasts."""
+
+    specifications = (
+        ("macro_f1", "S1 action", "Structured fusion vs Baseline B; Macro-F1 ↑", 4, ""),
+        ("nll", "S1 probability", "NLL ↓", 4, ""),
+        ("brier", "S1 probability", "Brier ↓", 4, ""),
+        ("ece", "S1 calibration", "ECE ↓", 4, ""),
+        ("collision", "S1 collision proxy", "Collision rate ↓", 2, " pp"),
+        ("near_miss", "S1 near-miss proxy", "Near-miss rate ↓", 2, " pp"),
+        ("critical_event", "S1 critical-event proxy", "Critical-event rate ↓", 2, " pp"),
+        ("route_completion", "S1 completion", "Route completion ↑", 2, " pp"),
+        ("ttc_p5", "S1 conditional TTC", "TTC-P5 ↑", 4, " s"),
+        ("jerk_p95", "S1 jerk proxy", "Jerk-P95 ↓", 4, " m/s³"),
+    )
+    rows: list[dict[str, str]] = []
+    for endpoint, module, label, decimals, suffix in specifications:
+        row = select_one(contrasts, endpoint=endpoint)
+        scale = float(row["display_scale"])
+        effect = scale * float(row["raw_difference_structured_minus_baseline"])
+        low = scale * float(row["raw_ci_low"])
+        high = scale * float(row["raw_ci_high"])
+        direction = (
+            f"{int(row['favorable_replicates'])}/"
+            f"{int(row['tied_replicates'])}/"
+            f"{int(row['adverse_replicates'])}"
+        )
+        prefix = "Supported" if _as_bool(row["support_rule_met"]) else "Benefit not clearly established"
+        rows.append(
+            {
+                "Study/module": module,
+                "Comparison and endpoint": label,
+                "Effect*": f"{_signed(effect, decimals)}{suffix}",
+                "95% CI": (
+                    f"{_signed_or_zero(low, decimals)} to "
+                    f"{_signed_or_zero(high, decimals)}{suffix}"
+                ),
+                "Evidence status": (
+                    f"{prefix}; {direction}; Holm p = {float(row['holm_adjusted_p']):.4f}"
+                ),
+            }
+        )
+    return rows
+
+
 def build_main_table2(
-    study1_csv: Path,
+    study1_contrasts_csv: Path,
     studies_tables: Path,
     output_stem: Path,
 ) -> pd.DataFrame:
-    """Build the manuscript's 16-row Table 2 from numeric source tables."""
+    """Build the manuscript's 20-row Table 2 from numeric source tables."""
 
-    s1 = pd.read_csv(study1_csv, keep_default_na=False)
-    records: list[dict[str, str]] = []
-    for row in s1.itertuples(index=False):
-        records.append(
-            {
-                "Study/module": row.study_module,
-                "Comparison and endpoint": row.comparison_endpoint,
-                "Effect*": row.effect_display.strip(),
-                "95% CI": row.ci_display.strip(),
-                "Evidence status": row.evidence_status,
-            }
-        )
+    s1 = pd.read_csv(study1_contrasts_csv, keep_default_na=False)
+    records = _study1_rows(s1)
 
     s2 = pd.read_csv(studies_tables / "table_s2_primary_contrasts.csv")
     s2_specs = [
@@ -176,8 +217,8 @@ def build_main_table2(
         )
 
     table = pd.DataFrame.from_records(records)
-    if len(table) != 16:
-        raise ValueError(f"Table 2 must contain 16 rows; found {len(table)}")
+    if len(table) != 20:
+        raise ValueError(f"Table 2 must contain 20 rows; found {len(table)}")
     write_table(table, output_stem)
     return table
 
@@ -326,4 +367,3 @@ def build_table_s4(power_output: Path, output_stem: Path) -> pd.DataFrame:
         raise ValueError("Table S4 must contain 33 passing checks")
     write_table(table, output_stem)
     return table
-

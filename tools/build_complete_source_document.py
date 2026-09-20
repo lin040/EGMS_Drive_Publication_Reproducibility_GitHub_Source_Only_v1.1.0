@@ -20,6 +20,8 @@ DEFAULT_OUTPUT = ROOT / "COMPLETE_SOURCE_CODE.md"
 ROOT_ENTRY_POINTS = (
     ROOT / "run_publication.py",
     ROOT / "run_studies.py",
+    ROOT / "run_study1.py",
+    ROOT / "run_study1r2.py",
 )
 SOURCE_DIRECTORIES = (
     ROOT / "src",

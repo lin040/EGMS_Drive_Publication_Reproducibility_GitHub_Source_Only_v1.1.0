@@ -1,0 +1,89 @@
+name: publication-reproducibility-ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    name: Reproduce publication assets (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    env:
+      MPLBACKEND: Agg
+      MPLCONFIGDIR: ${{ github.workspace }}/.mplconfig-ci
+      PYTHONHASHSEED: "0"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+
+      - name: Install fixed dependencies and package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-lock.txt
+          python -m pip install -e . --no-deps
+
+      - name: Compile source tree
+        run: python -m compileall -q src tools run_publication.py run_study1.py run_study1r2.py run_studies.py
+
+      - name: Verify consolidated readable source
+        run: python tools/build_complete_source_document.py --check
+
+      - name: Validate prospective power protocol
+        run: egms-power validate --config configs/power_protocol.yaml
+
+      - name: Run revised Study 1 unit tests
+        run: python -m unittest tests.test_study1_publication -v
+
+      - name: Reproduce publication figures and tables
+        run: >-
+          egms-publication
+          --output outputs/ci-reproduction-py${{ matrix.python-version }}
+
+      - name: Check publication validation report
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("outputs/ci-reproduction-py${{ matrix.python-version }}")
+          report = json.loads((root / "validation_report.json").read_text(encoding="utf-8"))
+          if not report.get("passed"):
+              raise SystemExit(json.dumps(report, indent=2))
+          if not (root / "publication_outputs.zip").is_file():
+              raise SystemExit("publication_outputs.zip was not generated")
+          print("Publication validation passed.")
+          PY
+
+      - name: Run release consistency tests
+        env:
+          EGMS_PUBLICATION_OUTPUT: ${{ github.workspace }}/outputs/ci-reproduction-py${{ matrix.python-version }}
+        run: python -m pytest -q
+
+      - name: Upload generated validation records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-py${{ matrix.python-version }}
+          path: |
+            outputs/ci-reproduction-py${{ matrix.python-version }}/validation_report.json
+            outputs/ci-reproduction-py${{ matrix.python-version }}/run_summary.json
+            outputs/ci-reproduction-py${{ matrix.python-version }}/artifact_manifest.json
+          if-no-files-found: warn

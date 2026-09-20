@@ -1,0 +1,21 @@
+Study/module,Comparison and endpoint,Effect*,95% CI,Evidence status
+S1 action,Structured fusion vs Baseline B; Macro-F1 ↑,+0.0241,+0.0137 to +0.0352,Supported; 10/0/0; Holm p = 0.0195
+S1 probability,NLL ↓,-0.0383,-0.0514 to -0.0256,Supported; 10/0/0; Holm p = 0.0195
+S1 probability,Brier ↓,-0.0313,-0.0400 to -0.0229,Supported; 10/0/0; Holm p = 0.0195
+S1 calibration,ECE ↓,+0.0052,-0.0034 to +0.0085,Benefit not clearly established; 4/0/6; Holm p = 1.0000
+S1 collision proxy,Collision rate ↓,-0.22 pp,-0.67 to 0.00 pp,Benefit not clearly established; 5/5/0; Holm p = 0.4375
+S1 near-miss proxy,Near-miss rate ↓,+0.19 pp,-0.83 to +1.25 pp,Benefit not clearly established; 3/2/5; Holm p = 1.0000
+S1 critical-event proxy,Critical-event rate ↓,-0.03 pp,-1.08 to +1.03 pp,Benefit not clearly established; 4/3/3; Holm p = 1.0000
+S1 completion,Route completion ↑,+0.03 pp,-0.83 to +0.97 pp,Benefit not clearly established; 5/0/5; Holm p = 1.0000
+S1 conditional TTC,TTC-P5 ↑,-0.0538 s,-0.1519 to +0.0401 s,Benefit not clearly established; 4/0/6; Holm p = 0.7031
+S1 jerk proxy,Jerk-P95 ↓,-0.0648 m/s³,-0.1447 to +0.0156 m/s³,Benefit not clearly established; 7/0/3; Holm p = 0.5625
+S2 reliability,Full vs Equal weighting; adverse NLL ↓,-0.0080,-0.0107 to -0.0056,Surrogate reliability response supported
+S2 alignment,Full vs No alignment; clean SAS ↑,+2.6021,+2.5999 to +2.6042,Surrogate alignment response supported
+S2 temporal,Full vs No temporal; one-step error ↓,-0.0548,-0.0593 to -0.0505,Surrogate temporal response supported
+S2 missing modality,Full vs No dropout–distillation; F1 drop ↓,-0.0013,-0.0027 to +0.0002,Benefit not clearly established
+S3 temporal graph,Full vs No graph; history minFDE₆ ↓,-0.3837 m,-0.7087 to -0.1564 m,History-dependent graph response supported
+S3 temporal relation,Full vs Spatial-only; history minFDE₆ ↓,-0.7285 m,-1.2536 to -0.3139 m,Temporal-relation response supported
+S3 intent gate,Full vs No intent gate; Brier-minFDE₆ ↓,-6.3895,-7.6837 to -5.2031,Intent-gating joint-endpoint response supported
+S3 top-1,Full top-1 vs fitted K=1; MR₁ ↓,-2.06 pp,-4.65 to +0.41 pp,Top-1 benefit not clearly established
+S3 neg. control,Independent: Full vs No graph; minFDE₆,+0.0675 m,-0.0624 to +0.2140 m,Compatible with ±0.25-m descriptive range; not TOST
+S3 neg. control,Spatial: Full vs Spatial-only; minFDE₆,+0.1985 m,-0.0178 to +0.5432 m,Not wholly within descriptive range; not TOST

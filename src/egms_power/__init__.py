@@ -16,4 +16,4 @@ __all__ = [
     "two_independent_proportions_power",
 ]
 
-__version__ = "1.1.0"
+__version__ = "1.0.3"

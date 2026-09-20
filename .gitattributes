@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# Keep generated and compressed artifacts byte-stable across platforms.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.gz binary
+*.npz binary
+*.zip binary
+*.docx binary

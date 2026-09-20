@@ -59,6 +59,48 @@ class DataConsistencyTests(unittest.TestCase):
         tolerance = 0.500001 * 10 ** (-decimals)
         self.assertAlmostEqual(observed, expected, delta=tolerance)
 
+    def test_figure2_and_table2_use_the_revised_study1_results(self) -> None:
+        frozen = REPO_ROOT / "data" / "study1_frozen"
+        contrasts = pd.read_csv(frozen / "study1_paired_contrasts.csv")
+        summary = pd.read_csv(frozen / "study1_metric_summary.csv")
+        table2 = pd.read_csv(
+            OUTPUT_ROOT / "manuscript/tables/Table_2_main_effects.csv",
+            keep_default_na=False,
+        )
+        svg = (
+            OUTPUT_ROOT
+            / "manuscript/figures/Figure_2_Study1_Baseline_B_vs_Structured_fusion.svg"
+        ).read_text(encoding="utf-8")
+
+        self.assertEqual(set(summary["method"]), {"Baseline B", "Structured fusion"})
+        self.assertEqual(len(contrasts), 10)
+        self.assertTrue(
+            (
+                contrasts["favorable_replicates"]
+                + contrasts["tied_replicates"]
+                + contrasts["adverse_replicates"]
+            ).eq(10).all()
+        )
+        self.assertIn("Baseline B", svg)
+        self.assertIn("Structured fusion", svg)
+        self.assertNotIn("Structured-R2", svg)
+        self.assertNotIn("Study 1-R2", svg)
+
+        expected = [
+            ("S1 action", "Structured fusion vs Baseline B; Macro-F1 ↑", "+0.0241", "+0.0137 to +0.0352", "Supported; 10/0/0; Holm p = 0.0195"),
+            ("S1 probability", "NLL ↓", "-0.0383", "-0.0514 to -0.0256", "Supported; 10/0/0; Holm p = 0.0195"),
+            ("S1 probability", "Brier ↓", "-0.0313", "-0.0400 to -0.0229", "Supported; 10/0/0; Holm p = 0.0195"),
+            ("S1 calibration", "ECE ↓", "+0.0052", "-0.0034 to +0.0085", "Benefit not clearly established; 4/0/6; Holm p = 1.0000"),
+            ("S1 collision proxy", "Collision rate ↓", "-0.22 pp", "-0.67 to 0.00 pp", "Benefit not clearly established; 5/5/0; Holm p = 0.4375"),
+            ("S1 near-miss proxy", "Near-miss rate ↓", "+0.19 pp", "-0.83 to +1.25 pp", "Benefit not clearly established; 3/2/5; Holm p = 1.0000"),
+            ("S1 critical-event proxy", "Critical-event rate ↓", "-0.03 pp", "-1.08 to +1.03 pp", "Benefit not clearly established; 4/3/3; Holm p = 1.0000"),
+            ("S1 completion", "Route completion ↑", "+0.03 pp", "-0.83 to +0.97 pp", "Benefit not clearly established; 5/0/5; Holm p = 1.0000"),
+            ("S1 conditional TTC", "TTC-P5 ↑", "-0.0538 s", "-0.1519 to +0.0401 s", "Benefit not clearly established; 4/0/6; Holm p = 0.7031"),
+            ("S1 jerk proxy", "Jerk-P95 ↓", "-0.0648 m/s³", "-0.1447 to +0.0156 m/s³", "Benefit not clearly established; 7/0/3; Holm p = 0.5625"),
+        ]
+        observed = [tuple(row) for row in table2.iloc[:10].itertuples(index=False, name=None)]
+        self.assertEqual(observed, expected)
+
     def test_figure3_selections_and_table2_use_the_same_study2_contrasts(self) -> None:
         tables = REPO_ROOT / "data" / "studies23_frozen" / "tables"
         source = pd.read_csv(tables / "table_s2_primary_contrasts.csv")
@@ -305,4 +347,3 @@ class DataConsistencyTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

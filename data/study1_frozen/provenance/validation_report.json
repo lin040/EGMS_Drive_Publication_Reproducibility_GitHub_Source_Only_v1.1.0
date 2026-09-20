@@ -1,0 +1,19 @@
+{
+  "action_record_rows": 144000,
+  "analysis_status": "post_hoc_exploratory_final_evaluation",
+  "artifact_manifest_records": 125,
+  "bootstrap_draw_rows": 100000,
+  "checkpoint_replay": "All 20 checkpoints reloaded and reproduced full fixed-test and rollout logits.",
+  "episode_metric_rows": 7200,
+  "errors": [],
+  "event_record_rows": 10606,
+  "evidence_label": "EXPLORATORY_CONTROLLED_SYNTHETIC_STUDY1R2_NOT_REAL_WORLD_SAFETY_EVIDENCE",
+  "final_training_replicates": 10,
+  "fitted_checkpoints": 20,
+  "fixed_test_episodes": 360,
+  "offline_prediction_rows": 115200,
+  "paired_contrast_rows": 10,
+  "passed": true,
+  "raw_recomputation": "All ten endpoints and intervals recomputed from archived raw rows.",
+  "validation_rule_note": "No rule requires Structured-R2 to outperform Baseline B."
+}

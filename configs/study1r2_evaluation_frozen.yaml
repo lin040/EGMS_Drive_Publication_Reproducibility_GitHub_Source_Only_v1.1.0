@@ -1,0 +1,223 @@
+project:
+  id: EGMS_DRIVE_STUDY_1R2
+  title: Post-hoc exploratory evaluation of Structured-R2 versus Baseline B
+  version: 1.0.0
+  evidence_label: EXPLORATORY_CONTROLLED_SYNTHETIC_STUDY1R2_NOT_REAL_WORLD_SAFETY_EVIDENCE
+  frozen_on: 2026-08-26
+  protocol_status: FROZEN_AFTER_EXPLORATORY_DEVELOPMENT_BEFORE_FINAL_EVALUATION
+  carla_executed: false
+  public_datasets_executed: false
+  real_vehicle_executed: false
+
+actions:
+  names: [KEEP, SLOW, YIELD, STOP]
+  class_ids: [0, 1, 2, 3]
+
+scenario_matrix:
+  families: [cut_in, platoon_brake, occluded_crossing, right_turn, merge]
+  environments: [clear, rain, fog]
+  densities: [low, medium, high]
+  expected_cells: 45
+
+data:
+  dt_s: 0.2
+  frames_per_episode: 16
+  rollout_frames: 20
+  train_episodes_per_cell: 4
+  validation_episodes_per_cell: 2
+  test_episodes_per_cell: 8
+  rollout_episodes_per_cell: 8
+  fixed_validation_seed: 31013
+  fixed_test_seed: 31019
+  fixed_rollout_seed: 31033
+  training_data_seeds: [8101, 8111, 8117, 8123, 8147, 8161, 8171, 8191, 8209, 8219]
+  formal_training_replicates: 10
+  pilot_training_data_seeds: [5129, 5171, 5227, 5273, 5323]
+
+generator:
+  semantic_variables: [gap_m, closing_speed_mps, ego_speed_mps, crossing_risk, route_urgency]
+  modalities: [camera, lidar, radar, ego]
+  observation_clips:
+    gap_m: [-5.0, 80.0]
+    closing_speed_mps: [-12.0, 20.0]
+    ego_speed_mps: [0.0, 30.0]
+    crossing_risk: [0.0, 1.0]
+    route_urgency: [0.0, 1.0]
+  environment_quality:
+    clear: {camera: 0.94, lidar: 0.93, radar: 0.88, ego: 0.99}
+    rain:  {camera: 0.55, lidar: 0.65, radar: 0.91, ego: 0.98}
+    fog:   {camera: 0.34, lidar: 0.58, radar: 0.92, ego: 0.98}
+  density_quality_reduction: {low: 0.00, medium: 0.03, high: 0.07}
+  base_noise_sd:
+    camera: {gap_m: 2.00, closing_speed_mps: 1.10, ego_speed_mps: 0.60, crossing_risk: 0.10, route_urgency: 0.10}
+    lidar:  {gap_m: 0.70, closing_speed_mps: 0.55, ego_speed_mps: 0.45, crossing_risk: 0.18, route_urgency: 0.15}
+    radar:  {gap_m: 1.30, closing_speed_mps: 0.25, ego_speed_mps: 0.55, crossing_risk: 0.22, route_urgency: 0.20}
+    ego:    {gap_m: 4.00, closing_speed_mps: 1.80, ego_speed_mps: 0.08, crossing_risk: 0.16, route_urgency: 0.04}
+  density_profiles:
+    low:    {initial_gap_m: 34.0, initial_ego_speed_mps: 15.0, background_crossing_risk: 0.04}
+    medium: {initial_gap_m: 25.0, initial_ego_speed_mps: 12.5, background_crossing_risk: 0.08}
+    high:   {initial_gap_m: 18.0, initial_ego_speed_mps: 10.0, background_crossing_risk: 0.13}
+  family_profiles:
+    cut_in:
+      gap_adjustment_m: -3.0
+      initial_closing_speed_mps: 2.3
+      lead_acceleration_peak_mps2: -1.0
+      gap_impulse_m: -7.0
+      crossing_risk_peak: 0.46
+      route_urgency_peak: 0.30
+    platoon_brake:
+      gap_adjustment_m: 0.0
+      initial_closing_speed_mps: 1.0
+      lead_acceleration_peak_mps2: -4.0
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.20
+      route_urgency_peak: 0.24
+    occluded_crossing:
+      gap_adjustment_m: 8.0
+      initial_closing_speed_mps: 0.2
+      lead_acceleration_peak_mps2: -0.4
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.97
+      route_urgency_peak: 0.44
+    right_turn:
+      gap_adjustment_m: 3.0
+      initial_closing_speed_mps: 0.8
+      lead_acceleration_peak_mps2: -1.5
+      gap_impulse_m: 0.0
+      crossing_risk_peak: 0.74
+      route_urgency_peak: 0.91
+    merge:
+      gap_adjustment_m: -2.0
+      initial_closing_speed_mps: 1.6
+      lead_acceleration_peak_mps2: -1.2
+      gap_impulse_m: -4.0
+      crossing_risk_peak: 0.69
+      route_urgency_peak: 0.78
+  initial_gap_sd_m: 2.5
+  initial_speed_sd_mps: 0.8
+  initial_closing_speed_sd_mps: 0.45
+  event_center_fraction: 0.55
+  event_center_jitter_sd: 0.05
+  event_width_fraction: 0.14
+  exogenous_acceleration_noise_sd_mps2: 0.12
+  episode_health_low: 0.85
+  episode_health_high: 1.05
+  quality_observation_sd: 0.04
+  dropout_base_probability: 0.02
+  dropout_quality_slope: 0.12
+  outlier_base_probability: 0.01
+  outlier_quality_slope: 0.05
+  outlier_scale: 6.0
+
+oracle:
+  ttc_cap_s: 20.0
+  comfortable_deceleration_mps2: 4.5
+  standstill_gap_m: 2.0
+  reaction_time_s: 0.7
+  stop_ttc_s: 1.20
+  stop_crossing_risk: 0.88
+  yield_ttc_s: 2.40
+  yield_crossing_risk: 0.66
+  slow_ttc_s: 5.00
+  slow_crossing_risk: 0.36
+  yield_stopping_margin_m: 0.0
+  slow_stopping_margin_m: 5.0
+
+dynamics:
+  acceleration_lag: 0.55
+  maximum_acceleration_mps2: 2.0
+  maximum_deceleration_mps2: -6.0
+  slow_command_mps2: -1.2
+  yield_command_mps2: -2.8
+  stop_command_mps2: -5.0
+  keep_speed_gain: 0.8
+  keep_acceleration_limit_mps2: 1.4
+  collision_gap_m: 0.75
+  near_miss_ttc_s: 1.50
+  near_miss_gap_m: 3.0
+  crossing_collision_risk: 0.985
+  crossing_collision_speed_mps: 4.0
+  crossing_near_miss_risk: 0.80
+  route_goal_fraction_of_nominal_progress: 0.72
+
+models:
+  shared_head:
+    hidden_layer_sizes: [48, 24]
+    activation: relu
+    solver: adam
+    alpha: 0.0001
+    batch_size: 128
+    learning_rate_init: 0.002
+    epochs: 50
+    class_weighting: inverse_frequency_balanced_from_training_split
+    checkpoint_selection: minimum_fixed_validation_nll
+  baseline_b:
+    encoder: quality_gated_raw_temporal_concatenation_with_availability
+    missing_value_handling: zero_after_quality_gating
+    input_feature_count: 56
+    scaling: training_standardization
+  structured:
+    encoder: dual_path_raw_plus_compact_plus_inverse_variance_physics
+    missing_value_handling: zero_when_no_reliable_support
+    derived_physics_features: [ttc_s, positive_closing_gap_ratio, crossing_closing_interaction, urgency_crossing_interaction]
+    input_feature_count: 145
+  baseline_b_training:
+    hidden_layer_sizes: [48, 24]
+    alpha: 0.0001
+    batch_size: 128
+    learning_rate_init: 0.002
+    epochs: 50
+    class_weighting: inverse_frequency_balanced_from_training_split
+  structured_r2_training:
+    candidate_id: r2_c03
+    hidden_layer_sizes: [128, 64, 32]
+    alpha: 0.0010
+    batch_size: 128
+    learning_rate_init: 0.0010
+    epochs: 80
+    class_weighting: inverse_frequency_balanced_from_training_split
+    scaling: training_standardization
+  model_training_seeds: [9103, 9127, 9133, 9151, 9173, 9181, 9199, 9209, 9221, 9239]
+  temperature_scaling:
+    enabled: true
+    lower_bound: 0.5
+    upper_bound: 5.0
+    fitted_on: fixed_validation
+
+metrics:
+  action: [macro_f1, nll, multiclass_brier, ece]
+  action_classes: 4
+  ece_bins: 15
+  ece_binning: equal_width
+  episode: [collision_rate, near_miss_rate, critical_event_rate, route_completion_rate, ttc_p5_s, jerk_p95_mps3]
+  ttc_conditioning: jointly_collision_free_episode_pairs_only
+  jerk_definition: per_episode_p95_absolute_acceleration_difference_over_dt
+
+statistics:
+  estimand: structured_r2_minus_baseline_b
+  paired_dimensions: [training_replicate, fixed_test_episode]
+  bootstrap_type: paired_crossed_cluster_percentile
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 171031
+  confidence_level: 0.95
+  quantile_algorithm: numpy_linear
+  directionality_tolerance: 1.0e-12
+  sign_flip_tests: exact_all_1024_sign_patterns
+  multiplicity_adjustment: holm
+
+artifacts:
+  float_output_decimals: 10
+  compressed_csv_gzip_mtime: 0
+  checkpoint_format: deterministic_portable_json
+  hash_algorithm: SHA-256
+  legacy_study1_summary_inputs_allowed: false
+
+study1r2_evaluation:
+  post_hoc_after_study1r: true
+  not_preregistered: true
+  selected_candidate_id: r2_c03
+  development_ledger_sha256: c756ef260f1eb4b97a6a94c38e34301238eff0a2100578103b80abb7711bfc89
+  freeze_manifest_sha256_recorded_in_run_manifest: true
+  original_study1r_replaced: false
+  final_evaluation_once_only: true
+  validation_rule_requires_improvement: false

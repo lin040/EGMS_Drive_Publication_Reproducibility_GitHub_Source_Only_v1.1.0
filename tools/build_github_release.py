@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a deterministic source-only GitHub ZIP and SHA-256 manifest."""
+"""Build a deterministic GitHub source-and-revised-assets ZIP."""
 
 from __future__ import annotations
 
@@ -16,39 +16,30 @@ except ImportError:  # Direct execution: python tools/build_github_release.py
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXCLUDED_PARTS = {
-    ".git",
-    ".ipynb_checkpoints",
-    ".mplconfig",
-    ".mypy_cache",
-    ".nox",
-    ".pytest_cache",
-    ".ruff_cache",
-    ".tox",
-    ".venv",
-    "__pycache__",
-    "build",
-    "dist",
-    "env",
-    "htmlcov",
-    "outputs",
-    "venv",
+EXCLUDED_PARTS = {".git", ".mplconfig", ".pytest_cache", "__pycache__"}
+EXCLUDED_NAMES = {
+    ".DS_Store",
+    "RELEASE_MANIFEST.json",
+    "publication_outputs.zip",
+    "COMPLETE_EVIDENCE_RELEASE_MANIFEST.json",
 }
-EXCLUDED_PART_PREFIXES = (".coverage", ".mplconfig")
-EXCLUDED_PART_SUFFIXES = (".egg-info",)
-EXCLUDED_NAMES = {".DS_Store", "RELEASE_MANIFEST.json", "publication_outputs.zip"}
 EXCLUDED_SUFFIXES = {
     ".pyc", ".pyo", ".tmp", ".bak", ".orig", ".swp",
     ".png", ".jpg", ".jpeg", ".pdf", ".svg", ".doc", ".docx",
-    ".7z", ".arrow", ".bin", ".bz2", ".db", ".dll", ".dylib",
-    ".exe", ".feather", ".gz", ".h5", ".hdf5", ".joblib", ".mat",
-    ".npy", ".npz", ".onnx", ".parquet", ".pickle", ".pkl", ".pt",
-    ".pth", ".rar", ".rds", ".so", ".sqlite", ".sqlite3", ".tar",
-    ".tgz", ".whl", ".xz", ".zip",
+    ".gz", ".npz", ".zip",
 }
 ALLOWED_DATA_FILES = {
-    "data/study1/study1_figure_inputs.csv",
-    "data/study1/study1_table2_inputs.csv",
+    "data/study1_frozen/PROVENANCE.json",
+    "data/study1_frozen/study1_metric_summary.csv",
+    "data/study1_frozen/study1_paired_contrasts.csv",
+    "data/study1_frozen/study1_replicate_effects.csv",
+    "data/study1_frozen/provenance/model_architecture.csv",
+    "data/study1_frozen/provenance/run_manifest.json",
+    "data/study1_frozen/provenance/seed_registry.csv",
+    "data/study1_frozen/provenance/study1_metric_summary_internal.csv",
+    "data/study1_frozen/provenance/study1_paired_contrasts_internal.csv",
+    "data/study1_frozen/provenance/study1_replicate_effects_internal.csv",
+    "data/study1_frozen/provenance/validation_report.json",
     "data/studies23_frozen/tables/table_s2_primary_contrasts.csv",
     "data/studies23_frozen/tables/table_s3_by_regime.csv",
     "data/studies23_frozen/tables/table_s3_latency.csv",
@@ -56,9 +47,16 @@ ALLOWED_DATA_FILES = {
     "data/studies23_frozen/tables/table_s3_negative_controls.csv",
     "data/studies23_frozen/tables/table_s3_primary_contrasts.csv",
 }
+ALLOWED_ASSET_FILES = {
+    "publication_assets/manuscript/Figure_2_Study1_Baseline_B_vs_Structured_fusion.png",
+    "publication_assets/manuscript/Figure_2_Study1_Baseline_B_vs_Structured_fusion.pdf",
+    "publication_assets/manuscript/Figure_2_Study1_Baseline_B_vs_Structured_fusion.svg",
+    "publication_assets/manuscript/Table_2_main_effects.csv",
+    "publication_assets/manuscript/Table_2_main_effects.md",
+    "publication_assets/manuscript/Table_2_main_effects.tex",
+}
 MAX_WEB_FILES = 100
 MAX_WEB_FILE_BYTES = 25 * 1024 * 1024
-RELEASE_VERSION = "1.1.0"
 REQUIRED_READABLE_SOURCE_FILES = (
     ROOT / "SOURCE_CODE_INDEX.md",
     ROOT / "COMPLETE_SOURCE_CODE.md",
@@ -73,51 +71,26 @@ def digest(path: Path) -> str:
     return value.hexdigest()
 
 
-def is_excluded_release_path(relative: Path) -> bool:
-    """Return whether a repository-relative path is outside the release.
-
-    The comparison is case-insensitive for generated-directory names so a
-    release built on Windows behaves like one built on Linux.  Package
-    metadata directories are matched by suffix because editable installs may
-    create project-specific names such as ``egms_drive.egg-info`` under
-    ``src/`` before the builder runs.
-    """
-
-    folded_parts = tuple(part.casefold() for part in relative.parts)
-    if any(part in EXCLUDED_PARTS for part in folded_parts):
-        return True
-    if any(
-        part.startswith(prefix)
-        for part in folded_parts
-        for prefix in EXCLUDED_PART_PREFIXES
-    ):
-        return True
-    if any(
-        part.endswith(suffix)
-        for part in folded_parts
-        for suffix in EXCLUDED_PART_SUFFIXES
-    ):
-        return True
-
-    relative_text = relative.as_posix()
-    if relative.parts and relative.parts[0].casefold() == "data":
-        if relative_text not in ALLOWED_DATA_FILES:
-            return True
-    if relative_text.casefold().endswith("_executed.ipynb"):
-        return True
-    if path_name := relative.name:
-        if path_name.casefold() in {name.casefold() for name in EXCLUDED_NAMES}:
-            return True
-    return relative.suffix.casefold() in EXCLUDED_SUFFIXES
-
-
 def included_files() -> list[Path]:
     files: list[Path] = []
     for path in ROOT.rglob("*"):
         if not path.is_file():
             continue
         relative = path.relative_to(ROOT)
-        if is_excluded_release_path(relative):
+        if any(part in EXCLUDED_PARTS for part in relative.parts):
+            continue
+        relative_text = relative.as_posix()
+        if relative.parts and relative.parts[0] in {"outputs", "deliverables", "formal_run"}:
+            continue
+        if relative.parts and relative.parts[0] == "data" and relative_text not in ALLOWED_DATA_FILES:
+            continue
+        if relative.parts and relative.parts[0] == "publication_assets" and relative_text not in ALLOWED_ASSET_FILES:
+            continue
+        if relative_text.endswith("_Executed.ipynb"):
+            continue
+        if path.name in EXCLUDED_NAMES:
+            continue
+        if path.suffix.lower() in EXCLUDED_SUFFIXES and relative_text not in ALLOWED_ASSET_FILES:
             continue
         files.append(path)
     return sorted(files, key=lambda item: item.relative_to(ROOT).as_posix())
@@ -163,13 +136,18 @@ def build(destination: Path, *, overwrite: bool) -> dict[str, object]:
     if oversized:
         raise RuntimeError(f"Files exceed the GitHub web-upload size target: {oversized}")
     manifest = {
-        "schema": "egms-drive-source-only-release-manifest-1.1",
-        "release_version": RELEASE_VERSION,
+        "schema": "egms-drive-github-release-manifest-2.1",
         "note": (
-            "Source-only GitHub package: no generated outputs, executed notebook, or persisted "
-            "raw prediction archive. Plotting inputs are eight required numeric CSV files plus "
-            "YAML configuration. Canonical Python/YAML is plain text and is also reproduced "
-            "verbatim in COMPLETE_SOURCE_CODE.md."
+            "GitHub source-and-revised-assets package: no generated output workspace, "
+            "executed notebook, raw prediction archive, checkpoint, or bootstrap-draw file. "
+            "Reader-facing Study 1 inputs use Baseline B and Structured fusion only; archived "
+            "machine identifiers occur solely in frozen source and provenance records. "
+            "Full raw Study 1 outputs, splits, checkpoints, and SHA-256 evidence are "
+            "distributed in the companion complete-evidence archive. The revised Figure 2 "
+            "and 20-row Table 2 are included under publication_assets; Figures 3–4 and the "
+            "Study 2–3/power inputs remain unchanged. "
+            "Canonical Python/YAML is plain text and is also reproduced verbatim in "
+            "COMPLETE_SOURCE_CODE.md."
         ),
         "files": {
             path.relative_to(ROOT).as_posix(): {
@@ -189,11 +167,11 @@ def build(destination: Path, *, overwrite: bool) -> dict[str, object]:
         with zipfile.ZipFile(temporary, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
             for path in files:
                 relative = path.relative_to(ROOT).as_posix()
-                info = zipfile.ZipInfo(relative, date_time=(2026, 8, 15, 0, 0, 0))
+                info = zipfile.ZipInfo(relative, date_time=(2026, 8, 26, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o100644 << 16
                 archive.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
-            info = zipfile.ZipInfo("RELEASE_MANIFEST.json", date_time=(2026, 8, 15, 0, 0, 0))
+            info = zipfile.ZipInfo("RELEASE_MANIFEST.json", date_time=(2026, 8, 26, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, manifest_bytes, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)

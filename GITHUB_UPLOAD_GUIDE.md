@@ -1,7 +1,8 @@
-# GitHub Upload Guide — Source-Only Edition v1.1.0
+# GitHub Upload Guide — Source and Revised Study 1 Assets
 
-This archive is a repository source package, not a generated-results archive.
-It contains no committed `outputs/` directory and no large raw-results files.
+This archive is a repository source package with the revised Figure 2 and
+Table 2 under `publication_assets/`. It contains no committed `outputs/`
+directory and no bulky raw-result, checkpoint, or bootstrap files.
 
 ## Recommended: Git command line
 
@@ -12,27 +13,9 @@ It contains no committed `outputs/` directory and no large raw-results files.
 ```bash
 git init -b main
 git add .
-git commit -m "Add EGMS-Drive source-only reproducibility package"
+git commit -m "Add EGMS-Drive reproducibility source and revised Study 1 assets"
 git remote add origin https://github.com/OWNER/REPOSITORY.git
 git push -u origin main
-```
-
-After the first push, confirm that the hidden workflow file is present:
-
-```bash
-git ls-files .github/workflows/ci.yml
-```
-
-The command must print `.github/workflows/ci.yml`. GitHub Actions only detects
-workflow YAML files committed below the repository-root `.github/workflows/`
-directory. A browser or file manager may omit dot-prefixed folders during a
-drag-and-drop upload, so the command-line method is recommended.
-
-To identify this exact software release in GitHub after validation:
-
-```bash
-git tag -a v1.1.0 -m "EGMS-Drive source-only reproducibility release v1.1.0"
-git push origin v1.1.0
 ```
 
 If the remote repository already contains an initial README commit, fetch it
@@ -42,7 +25,7 @@ before pushing or create a new empty repository without starter files.
 
 GitHub's Code page does not expand ZIP archives. Extract this archive first,
 then choose **Add file → Upload files** and upload the extracted files/folders.
-The source-only release is intentionally kept below 100 files, and every file
+The curated release is intentionally kept below 100 files, and every file
 is below the web uploader's 25 MiB per-file limit.
 
 ## Verify before upload
@@ -51,7 +34,7 @@ is below the web uploader's 25 MiB per-file limit.
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-deps
 python tools/build_complete_source_document.py --check
-python -m compileall -q src tools tests run_publication.py run_studies.py
+python -m compileall -q src tools tests run_publication.py run_study1.py run_study1r2.py run_studies.py
 python run_publication.py --output outputs/github_check
 EGMS_PUBLICATION_OUTPUT="$PWD/outputs/github_check" \
   python -m unittest discover -s tests -v

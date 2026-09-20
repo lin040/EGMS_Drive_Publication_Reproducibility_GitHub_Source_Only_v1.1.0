@@ -1,0 +1,41 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and build products
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Notebook and editor state
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Matplotlib runtime cache
+.mplconfig/
+matplotlib-cache/
+
+# Generated publication workspaces (curated Figure 2/Table 2 assets live separately)
+outputs/
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.bak
+~$*
+
+# OS metadata
+.DS_Store
+Thumbs.db
